@@ -5,17 +5,17 @@ const nextConfig = {
     return [
       {
         source: '/facebook',
-        destination: 'https://www.facebook.com/Skill09.ger',
+        destination: 'https://www.facebook.com/GermanITSkills',
         permanent: false,
       },
       {
         source: '/instagram',
-        destination: 'https://www.instagram.com/skill.09/',
+        destination: 'https://www.instagram.com/german.it.skills',
         permanent: false,
       },
       {
         source: '/twitter',
-        destination: 'https://twitter.com/Skill09_ger',
+        destination: 'https://twitter.com/GermanITSkills',
         permanent: false,
       },
       {
