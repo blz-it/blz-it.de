@@ -1,0 +1,21 @@
+---
+export interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="refresh" content={`0; url=${url}`} />
+  </head>
+  <body>
+    <p>
+      Wenn Du nicht automatisch weitergeleitet wirst, klicke bitte auf <a
+        href={url}>diesen Link</a
+      >.
+    </p>
+  </body>
+</html>
