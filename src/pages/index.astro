@@ -1,72 +1,9 @@
 ---
-import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Bundesleistungszentren der Softwareentwicklung">
-  <main>
-    <h2>Willkommen bei den Bundesleistungszentren der Softwareentwicklung</h2>
-    <p class="instructions">
-      Diese Webseite befindet sich derzeit in Wartung und wird in Kürze wieder
-      verfügbar sein.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://www.worldskillsgermany.com/de/"
-        title="WorldSkills Germany"
-        body="Besucht die Webseite von WorldSkills Germany"
-      />
-      <Card
-        href="https://youtube.de/@GermanITSkills"
-        title="YouTube"
-        body="Zu unserem YouTube-Kanal"
-      />
-      <Card
-        href="https://instagram.com/german.it.skills"
-        title="Instagram"
-        body="Zu unserem Instagram-Profil"
-      />
-      <Card
-        href="https://facebook.com/GermanITSkills"
-        title="Facebook"
-        body="Zu unserem Facebook-Profil"
-      />
-    </ul>
-  </main>
+<Layout title="Startseite">
+  <h2 class="text-3xl">
+    Willkommen bei den Bundesleistungszentren der Softwareentwicklung
+  </h2>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h2 {
-    text-align: center;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
