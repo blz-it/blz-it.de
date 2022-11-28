@@ -1,0 +1,58 @@
+---
+import FacebookIcon from './socials/FacebookIcon.astro';
+import InstagramIcon from './socials/InstagramIcon.astro';
+import YouTubeIcon from './socials/YouTubeIcon.astro';
+
+const socials = [
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/GermanITSkills',
+    icon: FacebookIcon,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/german.it.skills',
+    icon: InstagramIcon,
+  },
+  {
+    name: 'YouTube',
+    href: 'https://youtube.de/@GermanITSkills',
+    icon: YouTubeIcon,
+  },
+];
+---
+
+<footer class="bg-gray-800">
+  <div
+    class="mx-auto max-w-7xl overflow-hidden py-10 px-4 sm:px-6 lg:px-8 md:flex md:items-center md:justify-between"
+  >
+    <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+      <div class="px-5 py-2">
+        <a href="#" class="text-base text-gray-400 hover:text-gray-100"
+          >Impressum</a
+        >
+      </div>
+
+      <div class="px-5 py-2">
+        <a href="#" class="text-base text-gray-400 hover:text-gray-100"
+          >Datenschutz</a
+        >
+      </div>
+    </nav>
+    <div class="mt-8 md:mt-0 flex justify-center space-x-6">
+      {
+        socials.map((it) => (
+          <a
+            href={it.href}
+            class="text-gray-400 hover:text-gray-100"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="sr-only">{it.name}</span>
+            <it.icon />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</footer>
