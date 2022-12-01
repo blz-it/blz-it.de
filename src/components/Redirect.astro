@@ -1,4 +1,7 @@
 ---
+import i18next, { t } from "i18next";
+import { Trans } from "astro-i18next/components";
+
 export interface Props {
   url: string;
 }
@@ -7,15 +10,17 @@ const { url } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={i18next.language}>
   <head>
     <meta http-equiv="refresh" content={`0; url=${url}`} />
   </head>
   <body>
     <p>
-      Wenn Du nicht automatisch weitergeleitet wirst, klicke bitte auf <a
-        href={url}>diesen Link</a
-      >.
+      <Trans i18nKey="redirect.hint">
+        If you are not automatically redirected, please click on <a href={url}
+          >this link</a
+        >.
+      </Trans>
     </p>
   </body>
 </html>
