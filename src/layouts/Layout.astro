@@ -26,7 +26,8 @@ const { title } = Astro.props;
     <slot />
     <style is:global>
       :root {
-        --accent: #ed8a00;
+        --accent: 237, 139, 0;
+        --accentRGB: #ed8a00;
         --accent-gradient: linear-gradient(
           45deg,
           rgb(var(--accent)),
@@ -34,12 +35,15 @@ const { title } = Astro.props;
           white 60%
         );
 
-        --background: #fff;
+        --background: #f6f6f6;
+        --surface: #fff;
       }
+
       html {
         font-family: system-ui, sans-serif;
-        background-color: #f6f6f6;
+        background-color: var(--background);
       }
+
       code {
         font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
           DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
@@ -54,32 +58,31 @@ const { title } = Astro.props;
         background-position: right 0.5rem center;
         background-repeat: no-repeat;
         background-size: 1.5em 1.5em;
-        -webkit-print-color-adjust: exact;
-        color-adjust: exact;
-
-        font-family: inherit;
-        font-size: 100%;
-        font-weight: inherit;
-        line-height: inherit;
-        color: inherit;
-        margin: 0;
-
-        text-transform: none;
 
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        background-color: var(--background);
-        border-radius: 0.375rem;
-        border: 1px solid lightgray;
-        padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+
+        font-family: inherit;
         font-size: 0.875rem;
         line-height: 1.25rem;
+        text-transform: none;
+
+        color: inherit;
+        background-color: var(--surface);
+
+        margin: 0;
+        padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+        border-radius: 0.375rem;
+        border: 1px solid lightgray;
       }
 
       select:focus {
-        border-color: var(--accent);
-        outline: 1px solid var(--accent);
+        border-color: var(--accentRGB);
+        outline: 1px solid var(--accentRGB);
       }
 
       .language-selection {
