@@ -1,11 +1,7 @@
 ---
-import i18n, { t, init } from "i18next";
+import { t } from "i18next";
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
-
-init((data) => {
-  console.log("loaded", data);
-});
 ---
 
 <Layout title={t("home.title")}>
