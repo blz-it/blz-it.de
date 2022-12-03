@@ -1,35 +1,33 @@
 ---
-import Card from '../components/Card.astro';
-import Layout from '../layouts/Layout.astro';
+import { t } from "i18next";
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Bundesleistungszentren der Softwareentwicklung">
+<Layout title={t("home.title")}>
   <main>
-    <h2>Willkommen bei den Bundesleistungszentren der Softwareentwicklung</h2>
-    <p class="instructions">
-      Diese Webseite befindet sich derzeit in Wartung und wird in Kürze wieder
-      verfügbar sein.
-    </p>
+    <h2>{t("home.welcome")}</h2>
+    <p class="instructions">{t("warnings.maintenance")}</p>
     <ul role="list" class="link-card-grid">
       <Card
         href="https://www.worldskillsgermany.com/de/"
-        title="WorldSkills Germany"
-        body="Besucht die Webseite von WorldSkills Germany"
+        title={t("home.wsgCard.title")}
+        body={t("home.wsgCard.body")}
       />
       <Card
         href="https://youtube.de/@GermanITSkills"
-        title="YouTube"
-        body="Zu unserem YouTube-Kanal"
+        title={t("home.ytCard.title")}
+        body={t("home.ytCard.body")}
       />
       <Card
         href="https://instagram.com/german.it.skills"
-        title="Instagram"
-        body="Zu unserem Instagram-Profil"
+        title={t("home.igCard.title")}
+        body={t("home.igCard.body")}
       />
       <Card
         href="https://facebook.com/GermanITSkills"
-        title="Facebook"
-        body="Zu unserem Facebook-Profil"
+        title={t("home.fbCard.title")}
+        body={t("home.fbCard.body")}
       />
     </ul>
   </main>
