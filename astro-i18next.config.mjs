@@ -3,8 +3,9 @@ export default {
   defaultLocale: "de",
   locales: ["de", "en"],
 
-  // workaround for for leading '/' in path
-  // will be fixed in next release
+  /** Workaround for for leading '/' in path. Will be fixed in next release.
+   * @see https://github.com/yassinedoghri/astro-i18next/issues/79
+   */
   i18nextServer: {
     backend: {
       loadPath: "./public/locales/{{lng}}/{{ns}}.json"
