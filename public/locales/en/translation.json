@@ -20,6 +20,15 @@
         }
 
     },
+    "layout": {
+        "footer": {
+            "imprint": "Imprint",
+            "privacy": "Privacy Policy"
+        },
+        "header": {
+            "home": "Home"
+        }
+    },
     "redirect": {
         "hint": "If you are not automatically redirected, please click on <0>this link</0>."
     },
