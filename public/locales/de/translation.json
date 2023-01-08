@@ -1,0 +1,29 @@
+{
+    "home": {
+        "title": "Bundesleistungszentren der Softwareentwicklung",
+        "welcome": "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
+        "wsgCard": {
+            "title": "WorldSkills Germany",
+            "body": "Besucht die Webseite von WorldSkills Germany"
+        },
+        "ytCard": {
+            "title": "YouTube",
+            "body": "Zu unserem YouTube-Kanal"
+        },
+        "igCard": {
+            "title": "Instagram",
+            "body": "Zu unserem Instagram-Profil"
+        },
+        "fbCard": {
+            "title": "Facebook",
+            "body": "Zu unserem Facebook-Profil"
+        }
+    },
+    "redirect": {
+        "hint": "Wenn Du nicht automatisch weitergeleitet wirst, klicke bitte auf <0>diesen Link</0>.",
+        "thisLink": ""
+    },
+    "warnings": {
+        "maintenance": "Diese Webseite befindet sich derzeit in Wartung und wird in Kürze wieder verfügbar sein."
+    }
+}

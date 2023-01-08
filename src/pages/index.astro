@@ -1,9 +1,34 @@
 ---
+import { t } from 'i18next';
+import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Startseite">
-  <h2 class="text-3xl">
-    Willkommen bei den Bundesleistungszentren der Softwareentwicklung
-  </h2>
+<Layout title={t('home.title')}>
+  <main>
+    <h2>{t('home.welcome')}</h2>
+    <p class="instructions">{t('warnings.maintenance')}</p>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://www.worldskillsgermany.com/de/"
+        title={t('home.wsgCard.title')}
+        body={t('home.wsgCard.body')}
+      />
+      <Card
+        href="https://youtube.de/@GermanITSkills"
+        title={t('home.ytCard.title')}
+        body={t('home.ytCard.body')}
+      />
+      <Card
+        href="https://instagram.com/german.it.skills"
+        title={t('home.igCard.title')}
+        body={t('home.igCard.body')}
+      />
+      <Card
+        href="https://facebook.com/GermanITSkills"
+        title={t('home.fbCard.title')}
+        body={t('home.fbCard.body')}
+      />
+    </ul>
+  </main>
 </Layout>
