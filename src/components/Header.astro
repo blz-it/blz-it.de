@@ -32,12 +32,12 @@ const navigation = [
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
           {
-            navigation.map((item) => (
+            navigation.map((it) => (
               <a
-                href={item.href}
+                href={it.href}
                 class="text-base font-medium text-white hover:text-indigo-50"
               >
-                {item.name}
+                {it.name}
               </a>
             ))
           }
@@ -49,12 +49,12 @@ const navigation = [
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
       {
-        navigation.map((item) => (
+        navigation.map((it) => (
           <a
-            href={item.href}
+            href={it.href}
             class="text-base font-medium text-white hover:text-indigo-50"
           >
-            {item.name}
+            {it.name}
           </a>
         ))
       }

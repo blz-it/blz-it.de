@@ -1,23 +1,21 @@
 ---
-import FacebookIcon from './socials/FacebookIcon.astro';
-import InstagramIcon from './socials/InstagramIcon.astro';
-import YouTubeIcon from './socials/YouTubeIcon.astro';
+import { Icon } from 'astro-icon';
 
 const socials = [
   {
     name: 'Facebook',
     href: 'https://facebook.com/GermanITSkills',
-    icon: FacebookIcon,
+    icon: 'ic:baseline-facebook',
   },
   {
     name: 'Instagram',
     href: 'https://instagram.com/german.it.skills',
-    icon: InstagramIcon,
+    icon: 'mdi:instagram',
   },
   {
     name: 'YouTube',
     href: 'https://youtube.de/@GermanITSkills',
-    icon: YouTubeIcon,
+    icon: 'bi:youtube',
   },
 ];
 ---
@@ -49,7 +47,7 @@ const socials = [
             rel="noopener noreferrer"
           >
             <span class="sr-only">{it.name}</span>
-            <it.icon />
+            <Icon name={it.icon} class="h-6 w-6" />
           </a>
         ))
       }
