@@ -1,6 +1,6 @@
 ---
-import { Icon } from 'astro-icon';
-import { t } from 'i18next';
+import { Icon } from "astro-icon";
+import { t } from "i18next";
 
 interface Social {
   name: string;
@@ -9,19 +9,19 @@ interface Social {
 }
 const socials: Social[] = [
   {
-    name: 'Facebook',
-    href: 'https://facebook.com/GermanITSkills',
-    icon: 'ic:baseline-facebook',
+    name: "Facebook",
+    href: "https://facebook.com/GermanITSkills",
+    icon: "ic:baseline-facebook",
   },
   {
-    name: 'Instagram',
-    href: 'https://instagram.com/german.it.skills',
-    icon: 'mdi:instagram',
+    name: "Instagram",
+    href: "https://instagram.com/german.it.skills",
+    icon: "mdi:instagram",
   },
   {
-    name: 'YouTube',
-    href: 'https://youtube.de/@GermanITSkills',
-    icon: 'bi:youtube',
+    name: "YouTube",
+    href: "https://youtube.de/@GermanITSkills",
+    icon: "bi:youtube",
   },
 ];
 ---
@@ -33,13 +33,13 @@ const socials: Social[] = [
     <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
       <div class="px-5 py-2">
         <a href="#" class="text-base text-gray-400 hover:text-gray-100"
-          >{t('layout.footer.imprint')}</a
+          >{t("layout.footer.imprint")}</a
         >
       </div>
 
       <div class="px-5 py-2">
         <a href="#" class="text-base text-gray-400 hover:text-gray-100"
-          >{t('layout.footer.privacy')}</a
+          >{t("layout.footer.privacy")}</a
         >
       </div>
     </nav>
