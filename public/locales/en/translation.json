@@ -34,5 +34,26 @@
     },
     "warnings": {
         "maintenance": "This website is currently under maintenance and will be available again soon."
+  },
+  "skills": {
+    "general": {
+      "title": "General Information",
+      "subtitle": "Everything you need to know about this Skill"
+    },
+    "nationalTeam": {
+      "title": "Out national team",
+      "subtitle": "",
+      "noTeamSubtitle": "There is currently no national team. <0>Apply now!</0>"
+    },
+    "upcoming": {
+      "title": "Upcoming Events"
+    },
+    "history": "History",
+    "08": {
+      "description": "Mobile Applications Developers use technology and design to create apps which are appealing and function well on phones."
+    },
+    "09": {
+      "description": "Creating new systems and modifying existing ones to provide software solutions to large and small businesses."
+    }
     }
 }

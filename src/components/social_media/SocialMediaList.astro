@@ -1,0 +1,11 @@
+---
+import type { SocialMediaListProps } from "../../data/types";
+import SocialMediaButton from "./SocialMediaButton.astro";
+
+type Props = SocialMediaListProps;
+const { links } = Astro.props;
+---
+
+<ul role="list" class="flex justify-center space-x-5">
+  {links.map((link) => <SocialMediaButton {...link} />)}
+</ul>

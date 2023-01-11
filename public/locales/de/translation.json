@@ -34,5 +34,26 @@
     },
     "warnings": {
         "maintenance": "Diese Webseite befindet sich derzeit in Wartung und wird in Kürze wieder verfügbar sein."
+  },
+  "skills": {
+    "general": {
+      "title": "Allgemeine Informationen",
+      "subtitle": "Alles, was du über diesen Skill wissen musst"
+    },
+    "nationalTeam": {
+      "title": "Das Nationalteam",
+      "subtitle": "",
+      "noTeam": "Derzeit gibt es kein Nationalteam. <0>Bewirb dich jetzt!</0>"
+    },
+    "upcoming": {
+      "title": "Kommende Events"
+    },
+    "history": "Geschichte",
+    "08": {
+      "description": "Entwickler mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln."
+    },
+    "09": {
+      "description": "Erstellen neuer Systeme und Modifizieren bestehender Systeme, um Softwarelösungen für große und kleine Unternehmen bereitzustellen."
+    }
     }
 }
