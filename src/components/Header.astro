@@ -2,7 +2,11 @@
 import { LanguageSelector } from 'astro-i18next/components';
 import { t } from 'i18next';
 
-const navigation = [
+interface NavigationItem {
+  name: string;
+  href: string;
+}
+const navigation: NavigationItem[] = [
   {
     name: t('layout.header.home'),
     href: '/',
