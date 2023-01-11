@@ -1,0 +1,42 @@
+---
+import { t } from "i18next";
+import { redirectLang, updateLang } from "../routing/lang";
+import { classNames } from "../utils/classNames";
+import { buildLink } from "../routing/buildLink";
+
+updateLang(Astro.url.pathname);
+const newPath = redirectLang(Astro.url.pathname);
+---
+
+{
+  newPath || (
+    <main class="p-10 w-1/2 mx-auto grid grid-cols-2 text-center justify-items-center">
+      <h1 class="col-span-2 text-4xl font-bold text-wsg-orange-500">404</h1>
+      <h2 class="col-span-2 mt-10 text-2xl">{t("errors.404.title")}</h2>
+      <button
+        onclick={`window.location.href = ${buildLink("/")}`}
+        class={classNames(
+          "mt-20 w-1/2",
+          "bg-wsi-blue-500 text-wsi-onBlue rounded-md p-3",
+          "transition hover:bg-wsi-blue-600 shadow-md hover:shadow-lg active:bg-wsi-blue-500 active:shadow"
+        )}
+      >
+        {t("errors.404.toHome")}
+      </button>
+      <button
+        onclick="history.back()"
+        class={classNames(
+          "mt-20 w-1/2",
+          "bg-wsi-blue-500 text-wsi-onBlue rounded-md p-3",
+          "transition hover:bg-wsi-blue-600 shadow-md hover:shadow-lg active:bg-wsi-blue-500 active:shadow"
+        )}
+        set:html={t("errors.404.back")}
+      />
+    </main>
+  )
+}
+<script is:inline define:vars={{ newPath }}>
+  if (newPath) {
+    window.location.href = newPath;
+  }
+</script>

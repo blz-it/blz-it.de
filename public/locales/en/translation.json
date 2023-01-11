@@ -1,39 +1,45 @@
 {
-    "home": {
-        "title": "National centers of software development",
-        "welcome": "Welcome to the national centers of software development",
-        "wsgCard": {
-            "title": "WorldSkills Germany",
-            "body": "Visit the website of WorldSkills Germany"
-        },
-        "ytCard": {
-            "title": "YouTube",
-            "body": "To our YouTube channel"
-        },
-        "igCard": {
-            "title": "Instagram",
-            "body": "To our Instagram profile"
-        },
-        "fbCard": {
-            "title": "Facebook",
-            "body": "To our Facebook profile"
-        }
-
+  "home": {
+    "title": "National centers of software development",
+    "welcome": "Welcome to the national centers of software development",
+    "wsgCard": {
+      "title": "WorldSkills Germany",
+      "body": "Visit the website of WorldSkills Germany"
     },
-    "layout": {
-        "footer": {
-            "imprint": "Imprint",
-            "privacy": "Privacy Policy"
-        },
-        "header": {
-            "home": "Home"
-        }
+    "ytCard": {
+      "title": "YouTube",
+      "body": "To our YouTube channel"
     },
-    "redirect": {
-        "hint": "If you are not automatically redirected, please click on <0>this link</0>."
+    "igCard": {
+      "title": "Instagram",
+      "body": "To our Instagram profile"
     },
-    "warnings": {
-        "maintenance": "This website is currently under maintenance and will be available again soon."
+    "fbCard": {
+      "title": "Facebook",
+      "body": "To our Facebook profile"
+    }
+  },
+  "layout": {
+    "footer": {
+      "imprint": "Imprint",
+      "privacy": "Privacy Policy"
+    },
+    "header": {
+      "home": "Home"
+    }
+  },
+  "redirect": {
+    "hint": "If you are not automatically redirected, please click on <0>this link</0>."
+  },
+  "warnings": {
+    "maintenance": "This website is currently under maintenance and will be available again soon."
+  },
+  "errors": {
+    "404": {
+      "title": "Ups, this page does not exist (anymore)",
+      "toHome": "To home page",
+      "back": "Back to last page"
+    }
   },
   "skills": {
     "general": {
@@ -55,5 +61,5 @@
     "09": {
       "description": "Creating new systems and modifying existing ones to provide software solutions to large and small businesses."
     }
-    }
+  }
 }

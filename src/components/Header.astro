@@ -1,6 +1,6 @@
 ---
-import { LanguageSelector } from "astro-i18next/components";
-import { t } from "i18next";
+import i18n, { t } from "i18next";
+import { buildLink } from "../routing/buildLink";
 
 interface NavigationItem {
   name: string;
@@ -13,16 +13,16 @@ const navigation: NavigationItem[] = [
   },
   {
     name: "Skill 08",
-    href: "#",
+    href: "skill08",
   },
   {
     name: "Skill 09",
-    href: "#",
+    href: "skill09",
   },
 ];
 ---
 
-<header class="bg-wsg-orange">
+<header class="bg-wsg-orange-500">
   <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
     <div
       class="flex w-full items-center justify-between border-b border-white py-6 lg:border-none"
@@ -39,7 +39,7 @@ const navigation: NavigationItem[] = [
           {
             navigation.map((it) => (
               <a
-                href={it.href}
+                href={buildLink(it.href)}
                 class="text-base font-medium text-white hover:text-gray-100"
               >
                 {it.name}
@@ -48,7 +48,6 @@ const navigation: NavigationItem[] = [
           }
         </div>
       </div>
-      <LanguageSelector showFlag={true} class="language-selection" />
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
       {

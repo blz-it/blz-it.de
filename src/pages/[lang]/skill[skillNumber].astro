@@ -1,6 +1,6 @@
 ---
 import { skillsData } from "../../data/skills";
-import { getStaticLangPaths } from "../../routing/lang";
+import { getStaticLangPaths, updateLang } from "../../routing/lang";
 import SkillHeading from "../../components/skill/SkillHeading.astro";
 import Layout from "../../layouts/Layout.astro";
 import HeadedSection from "../../layouts/sections/HeadedSection.astro";
@@ -17,6 +17,8 @@ export const getStaticPaths = () =>
       params: { ...langPrams.params, skillNumber },
     }))
   );
+
+updateLang(Astro.url.pathname);
 
 const { skillNumber, skillName, img, nationalTeam, timelineEntries } =
   skillsData[Astro.params.skillNumber as keyof typeof skillsData];

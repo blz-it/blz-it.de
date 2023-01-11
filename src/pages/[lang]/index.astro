@@ -1,7 +1,11 @@
 ---
 import { t } from "i18next";
-import Card from "../components/Card.astro";
-import Layout from "../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getStaticLangPaths, updateLang } from "../../routing/lang";
+
+export const getStaticPaths = getStaticLangPaths;
+updateLang(Astro.url.pathname);
 ---
 
 <Layout title={t("home.title")}>
