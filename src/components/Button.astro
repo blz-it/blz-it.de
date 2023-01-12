@@ -1,0 +1,19 @@
+---
+import { classNames } from "../utils/classNames";
+
+type Props = {
+  onclick: string;
+};
+
+const { text, onclick } = Astro.props;
+---
+
+<button
+  onclick={onclick}
+  class={classNames(
+    "mt-20 w-1/2",
+    "bg-wsi-blue-300 text-wsi-onBlue rounded-md p-3",
+    "transition duration-300 hover:bg-wsi-blue-400 shadow-md hover:shadow-lg active:bg-wsi-blue-300 active:shadow"
+  )}
+  ><slot />
+</button>
