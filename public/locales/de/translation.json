@@ -19,6 +19,15 @@
             "body": "Zu unserem Facebook-Profil"
         }
     },
+    "layout": {
+        "footer": {
+            "imprint": "Impressum",
+            "privacy": "Datenschutz"
+        },
+        "header": {
+            "home": "Startseite"
+        }
+    },
     "redirect": {
         "hint": "Wenn Du nicht automatisch weitergeleitet wirst, klicke bitte auf <0>diesen Link</0>.",
         "thisLink": ""

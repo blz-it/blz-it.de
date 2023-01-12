@@ -1,0 +1,66 @@
+---
+import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
+
+interface NavigationItem {
+  name: string;
+  href: string;
+}
+const navigation: NavigationItem[] = [
+  {
+    name: t("layout.header.home"),
+    href: "/",
+  },
+  {
+    name: "Skill 08",
+    href: "#",
+  },
+  {
+    name: "Skill 09",
+    href: "#",
+  },
+];
+---
+
+<header class="bg-wsg-orange">
+  <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
+    <div
+      class="flex w-full items-center justify-between border-b border-white py-6 lg:border-none"
+    >
+      <div class="flex items-center">
+        <a href="#">
+          <img
+            class="h-10 w-auto"
+            src="https://tailwindui.com/img/logos/mark.svg?color=white"
+            alt=""
+          />
+        </a>
+        <div class="ml-10 hidden space-x-8 lg:block">
+          {
+            navigation.map((it) => (
+              <a
+                href={it.href}
+                class="text-base font-medium text-white hover:text-gray-100"
+              >
+                {it.name}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      <LanguageSelector showFlag={true} class="language-selection" />
+    </div>
+    <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
+      {
+        navigation.map((it) => (
+          <a
+            href={it.href}
+            class="text-base font-medium text-white hover:text-gray-100"
+          >
+            {it.name}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</header>
