@@ -1,8 +1,13 @@
 ---
-import type { PersonProps } from "../../data/types";
+import type { PropsOf } from "../../utils/types";
 import SocialMediaList from "../social_media/SocialMediaList.astro";
 
-type Props = PersonProps;
+type Props = PropsOf<typeof SocialMediaList> & {
+  name: string;
+  img: string;
+  info?: string;
+};
+
 const { name, img, info, links = [] } = Astro.props;
 ---
 

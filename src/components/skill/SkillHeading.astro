@@ -1,8 +1,12 @@
 ---
 import { t } from "i18next";
-import type { SkillHeadingProps } from "../../data/types";
 
-type Props = SkillHeadingProps;
+type Props = {
+  skillNumber: string;
+  skillName: string;
+  img: string;
+};
+
 const { skillNumber, skillName, img } = Astro.props;
 ---
 
@@ -21,8 +25,8 @@ const { skillNumber, skillName, img } = Astro.props;
     >
       Skill {skillNumber} - {skillName}
     </h1>
-    <p class="mt-6 max-w-3xl text-xl text-wsg-orange-1000">
-      {t(`skills.${skillNumber}.description`)}
+    <p class="mt-6 max-w-4xl text-xl text-wsg-orange-1000">
+      {t(`skills.${skillNumber}.short`)}
     </p>
   </div>
   <svg

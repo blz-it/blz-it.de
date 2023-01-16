@@ -1,0 +1,28 @@
+---
+import SkillPage from "../../layouts/SkillPage.astro";
+import { getStaticLangPaths, updateLang } from "../../routing/lang";
+
+export const getStaticPaths = getStaticLangPaths;
+updateLang(Astro.url.pathname);
+---
+
+<SkillPage
+  skillNumber="08"
+  skillName="Mobile Applications Development"
+  img="https:////live.staticflickr.com/65535/52434467221_676ae1bf70_h.jpg"
+  icon="uil:android"
+  iconClass="text-green-500"
+  nationalTeam={[]}
+  timelineEntries={[
+    {
+      title: "WorldSkills 2022 SE",
+      date: "13-16 October 2022",
+      text: "Hello there",
+    },
+    {
+      title: "WorldSkills 2022 SE",
+      date: "13-16 October 2022",
+      text: "Hello there",
+    },
+  ]}
+/>

@@ -1,7 +1,15 @@
 ---
-import type { TimeLineEntryProps } from "../../data/types";
+type TimelineInfoItem = {
+  date: string;
+  title: string;
+  text: string;
+};
 
-type Props = TimeLineEntryProps;
+type TimelinePeriodItem = {
+  period: string;
+};
+
+type Props = TimelineInfoItem | TimelinePeriodItem;
 const { date, title, text, period } = Astro.props;
 ---
 

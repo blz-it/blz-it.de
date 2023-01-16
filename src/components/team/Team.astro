@@ -1,9 +1,9 @@
 ---
+import type { PropsOf } from "../../utils/types";
 import Person from "./Person.astro";
-import type { PersonProps } from "../../data/types";
 
 type Props = {
-  members: PersonProps[];
+  members: PropsOf<typeof Person>[];
 };
 
 const { members } = Astro.props;

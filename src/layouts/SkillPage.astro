@@ -1,0 +1,87 @@
+---
+import SkillHeading from "../components/skill/SkillHeading.astro";
+import Layout from "../layouts/Layout.astro";
+import HeadedSection from "../layouts/sections/HeadedSection.astro";
+import WavedSection from "../layouts/sections/WavedSection.astro";
+import Team from "../components/team/Team.astro";
+import { Trans } from "astro-i18next/components";
+import Link from "../components/Link.astro";
+import TimeLine from "../components/timeline/TimeLine.astro";
+import { t } from "i18next";
+import Icon from "astro-icon";
+import { classNames } from "../utils/classNames";
+import type { PropsOf } from "../utils/types";
+import type Person from "../components/team/Person.astro";
+import type TimeLineEntry from "../components/timeline/TimeLineEntry.astro";
+
+type Props = PropsOf<typeof SkillHeading> & {
+  icon: string;
+  iconClass?: string;
+  nationalTeam: PropsOf<typeof Person>[];
+  timelineEntries: PropsOf<typeof TimeLineEntry>[];
+};
+
+const {
+  skillNumber,
+  skillName,
+  img,
+  icon,
+  iconClass,
+  nationalTeam,
+  timelineEntries,
+} = Astro.props;
+---
+
+<Layout title={skillName}>
+  <main class="text-lg">
+    <SkillHeading skillNumber={skillNumber} skillName={skillName} img={img} />
+    <HeadedSection
+      title={t("skills.general.title")}
+      subtitle={t("skills.general.subtitle")}
+    >
+      <div class="flex">
+        <div class="text-justify">
+          <p class="" set:html={t(`skills.${skillNumber}.description`)} />
+          <br />
+          <br />
+          <h3 class="font-bold text-2xl mb-3 text-wsi-blue-300">
+            {t(`skills.${skillNumber}.requirementsTitle`)}
+          </h3>
+          <p>
+            {t(`skills.${skillNumber}.requirements`)}
+          </p>
+          <br />
+          <Trans i18nKey={"skills.general.interested"}>
+            You are interested?{" "}
+            <Link href="#">Apply now!</Link>
+          </Trans>
+        </div>
+        <Icon
+          name={icon}
+          class={classNames(iconClass, "pl-8 py-3 w-7/12 drop-shadow-md")}
+          aria-hidden="true"
+        />
+      </div>
+    </HeadedSection>
+  </main>
+  <WavedSection type={"top"} title={t("skills.nextWSC.title")}>
+    <div>Events here</div>
+  </WavedSection>
+  <WavedSection type={"bottom"} title={t("skills.nationalTeam.title")}>
+    {
+      nationalTeam.length ? (
+        <Team members={nationalTeam} />
+      ) : (
+        <div>
+          <Trans i18nKey={"skills.nationalTeam.noTeam"}>
+            There is currently no national team.{" "}
+            <Link href="#">Apply now!</Link>
+          </Trans>
+        </div>
+      )
+    }
+  </WavedSection>
+  <WavedSection type={"top"} title={t("skills.history")}>
+    <TimeLine entries={timelineEntries} />
+  </WavedSection>
+</Layout>

@@ -44,22 +44,28 @@
   "skills": {
     "general": {
       "title": "General Information",
-      "subtitle": "Everything you need to know about this Skill"
+      "subtitle": "Everything you need to know about this Skill",
+      "interested": "You are interested? <0>Apply now!</0>"
     },
     "nationalTeam": {
       "title": "Out national team",
-      "subtitle": "",
       "noTeamSubtitle": "There is currently no national team. <0>Apply now!</0>"
     },
-    "upcoming": {
-      "title": "Upcoming Events"
+    "nextWSC": {
+      "title": "WorldSkills Lyon 2024"
     },
     "history": "History",
     "08": {
-      "description": "Mobile Applications Developers use technology and design to create apps which are appealing and function well on phones."
+      "short": "Mobile Applications Developers use technology and design to create apps which are appealing and function well on phones.",
+      "description": "As a software developer with a specialization in mobile applications, you are a programmer and designer in one. You ensure that the apps work on users' mobile devices, look appealing, and are fun to use.<br /><br/>For the job, you need a certain understanding of technology and design. You need to understand the requirements and wishes of the clients and develop a product that is reliable, updatable, easy for users to understand and use.",
+      "requirementsTitle": "What experience should you bring with you?",
+      "requirements": "You master at least one programming language, e.g. Kotlin, and program mobile apps, also taking into account the link to web interfaces and the use of integrated sensors. You understand English-language task assignments."
     },
     "09": {
-      "description": "Creating new systems and modifying existing ones to provide software solutions to large and small businesses."
+      "short": "Creating new systems and modifying existing ones to provide software solutions to large and small businesses.",
+      "description": "Text here",
+      "requirementsTitle": "Text here",
+      "requirements": "Text here"
     }
   }
 }

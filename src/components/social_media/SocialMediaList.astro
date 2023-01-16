@@ -1,8 +1,11 @@
 ---
-import type { SocialMediaListProps } from "../../data/types";
+import type { PropsOf } from "../../utils/types";
 import SocialMediaButton from "./SocialMediaButton.astro";
 
-type Props = SocialMediaListProps;
+type Props = {
+  links: PropsOf<typeof SocialMediaButton>[];
+};
+
 const { links } = Astro.props;
 ---
 
