@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import SkillPage from "../../layouts/SkillPage.astro";
 import { getStaticLangPaths, updateLang } from "../../routing/lang";
 
@@ -21,6 +22,18 @@ updateLang(Astro.url.pathname);
       title: "WorldSkills 2022 SE",
       date: "13-16 October 2022",
       text: "Hello there",
+    },
+  ]}
+  additionalLinks={[
+    {
+      name: "worldskills.org",
+      text: t("skills.09.links.wsi"),
+      href: "https://worldskills.org/skills/id/221/",
+    },
+    {
+      name: "worldskills2022se.com",
+      text: t("skills.09.links.ws2022"),
+      href: "https://worldskills2022se.com/skills/it-software-solutions-business/",
     },
   ]}
 />

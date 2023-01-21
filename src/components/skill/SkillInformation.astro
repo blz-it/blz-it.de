@@ -1,0 +1,43 @@
+---
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
+import HeadedSection from "../../layouts/sections/HeadedSection.astro";
+import Link from "../Link.astro";
+import Headline from "../typography/Headline.astro";
+
+type Props = {
+  skillNumber: string;
+};
+
+const { skillNumber } = Astro.props;
+---
+
+<div class="text-left">
+  <div class="xl:flex items-center">
+    <div class="flex-1 xl:pr-12 xl:border-r border-gray-200">
+      <p class="" set:html={t(`skills.${skillNumber}.description`)} />
+      <br />
+      <br />
+      <Headline>{t(`skills.${skillNumber}.requirementsTitle`)}</Headline>
+      <p>{t(`skills.${skillNumber}.requirements`)}</p>
+      <br />
+      <Trans i18nKey={"skills.general.interested"}>
+        You are interested?{" "}
+        <Link href="#">Apply now!</Link>
+      </Trans>
+    </div>
+    <div class="flex-1 xl:pl-12 mt-20 xl:mt-0">
+      <iframe
+        class="w-full sm:w-3/4 md:w-7/12 xl:w-full aspect-[560/315] mx-auto shadow-md"
+        src={t(`skills.${skillNumber}.video`)}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="mt-16">
+    <Headline class="text-lg"
+      >{t(`skills.${skillNumber}.occupation.title`)}</Headline
+    >
+    <p set:html={t(`skills.${skillNumber}.occupation.text`)} />
+  </div>
+</div>

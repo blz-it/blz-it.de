@@ -37,7 +37,8 @@
   },
   "errors": {
     "404": {
-      "title": "Ups, diese Seite existiert nicht (mehr)",
+      "title": "Seite nicht gefunden",
+      "subtitle": "Bitte überprüfe die URL in der Adressleiste und versuche es erneut.",
       "toHome": "Zur Startseite",
       "back": "Zur&uuml;ck zur letzten Seite"
     }
@@ -56,17 +57,36 @@
       "title": "WorldSkills Lyon 2024"
     },
     "history": "Geschichte",
+    "additionalLinks": "Weitere Links",
     "08": {
+      "video": "https://www.youtube.com/embed/v7I124lty3s",
       "short": "Entwickler mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln.",
       "description": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmier*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar, für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
       "requirementsTitle": "Was solltest du an Erfahrungen mitbringen?",
-      "requirements": "Du beherrschst mindestens eine Programmiersprache, z.B. Kotlin, und programmierst Mobile Apps, auch unter Einbeziehung der Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen."
+      "requirements": "Du beherrschst mindestens eine Programmiersprache, z.B. Kotlin, und programmierst Mobile Apps, auch unter Einbeziehung der Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen.",
+      "occupation": {
+        "title": "Ein Beruf mit Zukunft und stets am Puls der Zeit",
+        "text": "Die Möglichkeiten der Kommunikation und des Informationsaustauschs nehmen stetig zu. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca. 12 % mehr IT-Talente gesucht als im Vorjahr. Der Mobile Applications Developer ist somit einer der am schnellsten wachsenden Berufe.<br />Dein Hauptarbeitsmittel ist dein Laptop. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das einzige, was du brauchst, ist eine stabile Internetverbindung."
+      },
+      "links": {
+        "wsi": "Skill 08 bei WorldSkills",
+        "ws2022": "Skill 08 bei den WorldSkills 2022 SE"
+      }
     },
     "09": {
+      "video": "https://www.youtube.com/embed/3F0T3nOrp70",
       "short": "Erstellen neuer Systeme und Modifizieren bestehender Systeme, um Softwarelösungen für große und kleine Unternehmen bereitzustellen.",
       "description": "Text hier",
       "requirementsTitle": "Text hier",
-      "requirements": "Text hier"
+      "requirements": "Text hier",
+      "occupation": {
+        "title": "Text hier",
+        "text": "Text hier"
+      },
+      "links": {
+        "wsi": "Skill 09 bei WorldSkills",
+        "ws2022": "Skill 09 bei den WorldSkills 2022 SE"
+      }
     }
   }
 }

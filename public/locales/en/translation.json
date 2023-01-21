@@ -36,7 +36,8 @@
   },
   "errors": {
     "404": {
-      "title": "Ups, this page does not exist (anymore)",
+      "title": "Page not found",
+      "subtitle": "Please check the URL in the address bar and try again.",
       "toHome": "To home page",
       "back": "Back to last page"
     }
@@ -48,24 +49,43 @@
       "interested": "You are interested? <0>Apply now!</0>"
     },
     "nationalTeam": {
-      "title": "Out national team",
-      "noTeamSubtitle": "There is currently no national team. <0>Apply now!</0>"
+      "title": "Our national team",
+      "noTeam": "There is currently no national team. <0>Apply now!</0>"
     },
     "nextWSC": {
       "title": "WorldSkills Lyon 2024"
     },
     "history": "History",
+    "additionalLinks": "Additional Links",
     "08": {
+      "video": "https://www.youtube.com/embed/Qe0ZaQAOQUY",
       "short": "Mobile Applications Developers use technology and design to create apps which are appealing and function well on phones.",
       "description": "As a software developer with a specialization in mobile applications, you are a programmer and designer in one. You ensure that the apps work on users' mobile devices, look appealing, and are fun to use.<br /><br/>For the job, you need a certain understanding of technology and design. You need to understand the requirements and wishes of the clients and develop a product that is reliable, updatable, easy for users to understand and use.",
       "requirementsTitle": "What experience should you bring with you?",
-      "requirements": "You master at least one programming language, e.g. Kotlin, and program mobile apps, also taking into account the link to web interfaces and the use of integrated sensors. You understand English-language task assignments."
+      "requirements": "You master at least one programming language, e.g. Kotlin, and program mobile apps, also taking into account the link to web interfaces and the use of integrated sensors. You understand English-language task assignments.",
+      "occupation": {
+        "title": "A Career with a future and always on the cutting edge",
+        "text": "The possibilities of communication and information exchange are constantly increasing. With a degree in IT, you are in demand: in 2021, about 12% more IT talents were sought than in the previous year. The Mobile Applications Developer is therefore one of the fastest growing occupations.<br/>Your main working tool is your laptop, so you are almost unrestricted in terms of work location and time, as long as there is no customer appointment. The only thing you need is a stable internet connection."
+      },
+      "links": {
+        "wsi": "Skill 08 at WorldSkills",
+        "ws2022": "Skill 08 at the WorldSkills 2022 SE"
+      }
     },
     "09": {
+      "video": "https://www.youtube.com/embed/tSGg8S-_I4k",
       "short": "Creating new systems and modifying existing ones to provide software solutions to large and small businesses.",
       "description": "Text here",
       "requirementsTitle": "Text here",
-      "requirements": "Text here"
+      "requirements": "Text here",
+      "occupation": {
+        "title": "Text here",
+        "text": "Text here"
+      },
+      "links": {
+        "wsi": "Skill 09 at WorldSkills",
+        "ws2022": "Skill 09 at the WorldSkills 2022 SE"
+      }
     }
   }
 }

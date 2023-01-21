@@ -19,18 +19,20 @@ const { skillNumber, skillName, img } = Astro.props;
     >
     </div>
   </div>
-  <div class="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+  <div
+    class="relative mx-auto max-w-7xl py-8 px-4 sm:py-16 md:y-32 sm:px-6 lg:px-8"
+  >
     <h1
-      class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+      class="font-bold tracking-tight text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
     >
       Skill {skillNumber} - {skillName}
     </h1>
-    <p class="mt-6 max-w-4xl text-xl text-wsg-orange-1000">
+    <p class="mt-6 max-w-4xl sm:text-xl text-wsg-orange-1000">
       {t(`skills.${skillNumber}.short`)}
     </p>
   </div>
   <svg
-    class="relative w-full h-16 sm:h-20 md:h-24"
+    class="relative w-full h-8 sm:h-16 md:h-24"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 24 150 28"

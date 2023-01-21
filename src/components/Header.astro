@@ -1,6 +1,7 @@
 ---
 import i18n, { t } from "i18next";
 import { buildLink } from "../routing/buildLink";
+import Dropdown from "./Dropdown.astro";
 
 interface NavigationItem {
   name: string;
@@ -47,6 +48,12 @@ const navigation: NavigationItem[] = [
             ))
           }
         </div>
+      </div>
+      <div>
+        <Dropdown
+          item={i18n.language.toUpperCase()}
+          options={i18n.languages.map((lang) => lang.toUpperCase())}
+        />
       </div>
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">

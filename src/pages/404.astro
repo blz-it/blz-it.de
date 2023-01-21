@@ -2,7 +2,6 @@
 import { t } from "i18next";
 import { redirectLang, updateLang } from "../routing/lang";
 import { buildLink } from "../routing/buildLink";
-import Button from "../components/Button.astro";
 import Layout from "../layouts/Layout.astro";
 
 updateLang(Astro.url.pathname);
@@ -10,21 +9,45 @@ const newPath = redirectLang(Astro.url.pathname);
 ---
 
 {
-  newPath || (
-    <Layout title="404">
-      <div class="p-10 w-1/2 mx-auto grid grid-cols-2 text-center justify-items-center">
-        <h1 class="col-span-2 text-4xl font-bold text-wsg-orange-500">404</h1>
-        <h2 class="col-span-2 mt-10 text-2xl">{t("errors.404.title")}</h2>
-        <Button onclick={`window.location.href = ${buildLink("/")}`}>
-          {t("errors.404.toHome")}
-        </Button>
-        <Button onclick="history.back()" set:html={t("errors.404.back")} />
+  newPath ? undefined : (
+    <Layout title="404" mainClass="h-full">
+      <div class="min-h-full bg-white py-16 px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
+        <div class="mx-auto max-w-max">
+          <main class="sm:flex">
+            <p class="text-4xl font-bold tracking-tight text-wsg-orange-500 sm:text-5xl">
+              404
+            </p>
+            <div class="sm:ml-6">
+              <div class="sm:border-l sm:border-gray-200 sm:pl-6">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                  {t("errors.404.title")}
+                </h1>
+                <p class="mt-1 text-base text-gray-500">
+                  {t("errors.404.subtitle")}
+                </p>
+              </div>
+              <div class="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
+                <button
+                  onclick={`location.href = ${buildLink("/")}`}
+                  class="inline-flex items-center rounded-md border border-transparent bg-wsg-orange-600 px-4 py-2 text-sm font-medium shadow-sm hover:bg-wsg-orange-700 focus:outline-none focus:ring-2 focus:ring-wsg-orange-600 focus:ring-offset-2"
+                >
+                  {t("errors.404.toHome")}
+                </button>
+                <button
+                  set:html={t("errors.404.back")}
+                  onclick="history.back()"
+                  class="inline-flex items-center rounded-md border border-transparent bg-wsg-orange-900 px-4 py-2 text-sm font-medium  hover:bg-wsg-orange-800 focus:outline-none focus:ring-2 focus:ring-wsg-orange-600 focus:ring-offset-2"
+                />
+              </div>
+            </div>
+          </main>
+        </div>
       </div>
     </Layout>
   )
 }
 <script is:inline define:vars={{ newPath }}>
   if (newPath) {
-    window.location.href = newPath;
+    location.href = newPath;
   }
 </script>
