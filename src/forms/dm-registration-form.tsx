@@ -1,18 +1,50 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Alert from "./components/alert";
 import { Button } from "./components/button";
 import { Input } from "./components/Input";
 import { Select } from "./components/select";
 import { Participant, participantSchema } from "./schemas/participant";
 
 export default function DmRegistrationForm() {
+  const [serverMessage, setServerMessage] = useState("");
+  const [serverMessageIsError, setServerMessageIsError] = useState(false);
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { isSubmitting, errors },
   } = useForm<Participant>({ resolver: zodResolver(participantSchema) });
 
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit = handleSubmit(async (data) => {
+    const response = await fetch(
+      "https://dm-registration.api.blz-it.de/participants",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
+
+    if (response.ok) {
+      setServerMessage("Erfolgreich angemeldet!");
+      setServerMessageIsError(false);
+      reset();
+    } else {
+      const json = await response.json();
+      if (json.message) {
+        setServerMessage(json.message);
+      } else {
+        setServerMessage(
+          "Es ist ein unbekannter Fehler aufgetreten! Bitte versuche es erneut."
+        );
+      }
+
+      setServerMessageIsError(true);
+    }
+  });
 
   return (
     <form className="space-y-8 divide-y divide-gray-200" onSubmit={onSubmit}>
@@ -215,6 +247,12 @@ export default function DmRegistrationForm() {
       </div>
 
       <div className="pt-5">
+        {serverMessage && (
+          <div className="mb-3">
+            <Alert isError={serverMessageIsError}>{serverMessage}</Alert>
+          </div>
+        )}
+
         <div className="flex justify-end">
           <Button type="submit" isLoading={isSubmitting}>
             Absenden
