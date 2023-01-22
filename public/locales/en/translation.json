@@ -1,38 +1,93 @@
 {
-    "home": {
-        "title": "National centers of software development",
-        "welcome": "Welcome to the national centers of software development",
-        "wsgCard": {
-            "title": "WorldSkills Germany",
-            "body": "Visit the website of WorldSkills Germany"
+  "dmRegistration": {
+    "title": "Registration for the German Nationals 2023",
+    "form": {
+      "personalInformation": {
+        "title": "Personal Information",
+        "subtitle": "The following information is required for registration."
+      },
+      "additionalPersonalInformation": {
+        "title": "Additional Personal Information",
+        "subtitle": "The following information is optional."
+      },
+      "companyInformation": {
+        "title": "Your Company",
+        "subtitle": "If you work in a company, you can enter it here."
+      },
+      "submit": "Submit",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "birthday": "Birthday",
+        "email": "Email address",
+        "phone": "Phone",
+        "street": "Street",
+        "zip": "Zip code",
+        "city": "City",
+        "companyName": "Company name",
+        "occupation": {
+          "title": "Occupation",
+          "apprentice": "Apprentice",
+          "pupil": "Pupil",
+          "student": "Student",
+          "employee": "Employee",
+          "other": "Other"
         },
-        "ytCard": {
-            "title": "YouTube",
-            "body": "To our YouTube channel"
-        },
-        "igCard": {
-            "title": "Instagram",
-            "body": "To our Instagram profile"
-        },
-        "fbCard": {
-            "title": "Facebook",
-            "body": "To our Facebook profile"
+        "state": {
+          "title": "State",
+          "badenWuerttemberg": "Baden-Württemberg",
+          "bavaria": "Bayern",
+          "berlin": "Berlin",
+          "brandenburg": "Brandenburg",
+          "bremen": "Bremen",
+          "hamburg": "Hamburg",
+          "hesse": "Hesse",
+          "mecklenburgWesternPomerania": "Mecklenburg-Western Pomerania",
+          "lowerSaxony": "Lower Saxony",
+          "northRhineWestphalia": "North Rhine-Westphalia",
+          "rhinelandPalatinate": "Rhineland-Palatinate",
+          "saarland": "Saarland",
+          "saxony": "Saxony",
+          "saxonyAnhalt": "Saxony-Anhalt",
+          "schleswigHolstein": "Schleswig-Holstein",
+          "thuringia": "Thuringia"
         }
-
-    },
-    "layout": {
-        "footer": {
-            "imprint": "Imprint",
-            "privacy": "Privacy Policy"
-        },
-        "header": {
-            "home": "Home"
-        }
-    },
-    "redirect": {
-        "hint": "If you are not automatically redirected, please click on <0>this link</0>."
-    },
-    "warnings": {
-        "maintenance": "This website is currently under maintenance and will be available again soon."
+      }
     }
+  },
+  "home": {
+    "title": "National centers of software development",
+    "welcome": "Welcome to the national centers of software development",
+    "wsgCard": {
+      "title": "WorldSkills Germany",
+      "body": "Visit the website of WorldSkills Germany"
+    },
+    "ytCard": {
+      "title": "YouTube",
+      "body": "To our YouTube channel"
+    },
+    "igCard": {
+      "title": "Instagram",
+      "body": "To our Instagram profile"
+    },
+    "fbCard": {
+      "title": "Facebook",
+      "body": "To our Facebook profile"
+    }
+  },
+  "layout": {
+    "footer": {
+      "imprint": "Imprint",
+      "privacy": "Privacy Policy"
+    },
+    "header": {
+      "home": "Home"
+    }
+  },
+  "redirect": {
+    "hint": "If you are not automatically redirected, please click on <0>this link</0>."
+  },
+  "warnings": {
+    "maintenance": "This website is currently under maintenance and will be available again soon."
+  }
 }

@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import DmRegistrationForm from "../forms/dm-registration-form";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -8,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
   <div class="mx-auto max-w-4xl py-12">
     <div class="bg-white p-8 rounded-xl">
       <h2 class="text-2xl sm:text-3xl text-center">
-        Registrierung für die Deutsche Meisterschaft 2023
+        {t("dmRegistration.title")}
       </h2>
       <DmRegistrationForm client:only />
     </div>

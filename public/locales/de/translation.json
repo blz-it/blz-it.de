@@ -1,38 +1,94 @@
 {
-    "home": {
-        "title": "Bundesleistungszentren der Softwareentwicklung",
-        "welcome": "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
-        "wsgCard": {
-            "title": "WorldSkills Germany",
-            "body": "Besucht die Webseite von WorldSkills Germany"
+  "dmRegistration": {
+    "title": "Registrierung für die Deutsche Meisterschaft 2023",
+    "form": {
+      "personalInformation": {
+        "title": "Persönliche Informationen",
+        "subtitle": "Die folgenden Angaben sind für die Anmeldung verpflichtend."
+      },
+      "additionalPersonalInformation": {
+        "title": "Zusätzliche Persönliche Informationen",
+        "subtitle": "Die folgenden Angaben sind vollkommen optional."
+      },
+      "companyInformation": {
+        "title": "Deine Firma",
+        "subtitle": "Falls du in einer Firma arbeitest, kannst du diese hier angeben."
+      },
+      "submit": "Absenden",
+      "fields": {
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "birthday": "Geburtstag",
+        "email": "E-Mail-Adresse",
+        "phone": "Telefonnummer",
+        "street": "Straße",
+        "zip": "Postleitzahl",
+        "city": "Stadt",
+        "companyName": "Firmenname",
+        "occupation": {
+          "title": "Beruf",
+          "apprentice": "Auszubildender",
+          "pupil": "Schüler",
+          "student": "Student",
+          "employee": "Angestellter",
+          "other": "Sonstiges"
         },
-        "ytCard": {
-            "title": "YouTube",
-            "body": "Zu unserem YouTube-Kanal"
-        },
-        "igCard": {
-            "title": "Instagram",
-            "body": "Zu unserem Instagram-Profil"
-        },
-        "fbCard": {
-            "title": "Facebook",
-            "body": "Zu unserem Facebook-Profil"
+        "state": {
+          "title": "Bundesland",
+          "badenWuerttemberg": "Baden-Württemberg",
+          "bavaria": "Bayern",
+          "berlin": "Berlin",
+          "brandenburg": "Brandenburg",
+          "bremen": "Bremen",
+          "hamburg": "Hamburg",
+          "hesse": "Hessen",
+          "mecklenburgWesternPomerania": "Mecklenburg-Vorpommern",
+          "lowerSaxony": "Niedersachsen",
+          "northRhineWestphalia": "Nordrhein-Westfalen",
+          "rhinelandPalatinate": "Rheinland-Pfalz",
+          "saarland": "Saarland",
+          "saxony": "Sachsen",
+          "saxonyAnhalt": "Sachsen-Anhalt",
+          "schleswigHolstein": "Schleswig-Holstein",
+          "thuringia": "Thüringen"
         }
-    },
-    "layout": {
-        "footer": {
-            "imprint": "Impressum",
-            "privacy": "Datenschutz"
-        },
-        "header": {
-            "home": "Startseite"
-        }
-    },
-    "redirect": {
-        "hint": "Wenn Du nicht automatisch weitergeleitet wirst, klicke bitte auf <0>diesen Link</0>.",
-        "thisLink": ""
-    },
-    "warnings": {
-        "maintenance": "Diese Webseite befindet sich derzeit in Wartung und wird in Kürze wieder verfügbar sein."
+      }
     }
+  },
+  "home": {
+    "title": "Bundesleistungszentren der Softwareentwicklung",
+    "welcome": "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
+    "wsgCard": {
+      "title": "WorldSkills Germany",
+      "body": "Besucht die Webseite von WorldSkills Germany"
+    },
+    "ytCard": {
+      "title": "YouTube",
+      "body": "Zu unserem YouTube-Kanal"
+    },
+    "igCard": {
+      "title": "Instagram",
+      "body": "Zu unserem Instagram-Profil"
+    },
+    "fbCard": {
+      "title": "Facebook",
+      "body": "Zu unserem Facebook-Profil"
+    }
+  },
+  "layout": {
+    "footer": {
+      "imprint": "Impressum",
+      "privacy": "Datenschutz"
+    },
+    "header": {
+      "home": "Startseite"
+    }
+  },
+  "redirect": {
+    "hint": "Wenn Du nicht automatisch weitergeleitet wirst, klicke bitte auf <0>diesen Link</0>.",
+    "thisLink": ""
+  },
+  "warnings": {
+    "maintenance": "Diese Webseite befindet sich derzeit in Wartung und wird in Kürze wieder verfügbar sein."
+  }
 }

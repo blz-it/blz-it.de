@@ -1,9 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { t } from "i18next";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Alert from "./components/alert";
 import { Button } from "./components/button";
-import { Input } from "./components/Input";
+import { Input } from "./components/input";
 import { Select } from "./components/select";
 import { Participant, participantSchema } from "./schemas/participant";
 
@@ -52,17 +53,17 @@ export default function DmRegistrationForm() {
         <div className="pt-8">
           <div>
             <h3 className="text-lg font-medium leading-6 text-gray-900">
-              Persönliche Informationen
+              {t("dmRegistration.form.personalInformation.title")}
             </h3>
             <p className="mt-1 text-sm text-gray-500">
-              Die folgenden Angaben sind für die Anmeldung verpflichtend.
+              {t("dmRegistration.form.personalInformation.subtitle")}
             </p>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
             <div className="sm:col-span-3">
               <Input
                 id="firstName"
-                label="Vorname"
+                label={t("dmRegistration.form.fields.firstName")}
                 type="text"
                 error={errors.firstName?.message}
                 {...register("firstName")}
@@ -71,7 +72,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-3">
               <Input
                 id="lastName"
-                label="Nachname"
+                label={t("dmRegistration.form.fields.lastName")}
                 type="text"
                 error={errors.lastName?.message}
                 {...register("lastName")}
@@ -81,7 +82,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-3">
               <Input
                 id="birthday"
-                label="Geburtstag"
+                label={t("dmRegistration.form.fields.birthday")}
                 type="date"
                 error={errors.birthday?.message}
                 {...register("birthday")}
@@ -90,7 +91,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-3">
               <Input
                 id="email"
-                label="E-Mail-Adresse"
+                label={t("dmRegistration.form.fields.email")}
                 type="email"
                 error={errors.email?.message}
                 {...register("email")}
@@ -100,44 +101,84 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-3">
               <Select
                 id="occupation"
-                label="Beruf"
+                label={t("dmRegistration.form.fields.occupation.title")}
                 error={errors.occupation?.message}
                 {...register("occupation")}
               >
-                <option value="APPRENTICE">Apprentice</option>
-                <option value="PUPIL">Pupil</option>
-                <option value="STUDENT">Student</option>
-                <option value="EMPLOYEE">Employee</option>
-                <option value="OTHER">Other</option>
+                <option value="APPRENTICE">
+                  {t("dmRegistration.form.fields.occupation.apprentice")}
+                </option>
+                <option value="PUPIL">
+                  {t("dmRegistration.form.fields.occupation.pupil")}
+                </option>
+                <option value="STUDENT">
+                  {t("dmRegistration.form.fields.occupation.student")}
+                </option>
+                <option value="EMPLOYEE">
+                  {t("dmRegistration.form.fields.occupation.employee")}
+                </option>
+                <option value="OTHER">
+                  {t("dmRegistration.form.fields.occupation.other")}
+                </option>
               </Select>
             </div>
             <div className="sm:col-span-3">
               <Select
                 id="state"
-                label="Bundesland"
+                label={t("dmRegistration.form.fields.state.title")}
                 error={errors.state?.message}
                 {...register("state")}
               >
-                <option value="BADEN_WUERTTEMBERG">Baden-Württemberg</option>
-                <option value="BAVARIA">Bayern</option>
-                <option value="BERLIN">Berlin</option>
-                <option value="BRANDENBURG">Brandenburg</option>
-                <option value="BREMEN">Bremen</option>
-                <option value="HAMBURG">Hamburg</option>
-                <option value="HESSE">Hessen</option>
+                <option value="BADEN_WUERTTEMBERG">
+                  {t("dmRegistration.form.fields.state.badenWuerttemberg")}
+                </option>
+                <option value="BAVARIA">
+                  {t("dmRegistration.form.fields.state.bavaria")}
+                </option>
+                <option value="BERLIN">
+                  {t("dmRegistration.form.fields.state.berlin")}
+                </option>
+                <option value="BRANDENBURG">
+                  {t("dmRegistration.form.fields.state.brandenburg")}
+                </option>
+                <option value="BREMEN">
+                  {t("dmRegistration.form.fields.state.bremen")}
+                </option>
+                <option value="HAMBURG">
+                  {t("dmRegistration.form.fields.state.hamburg")}
+                </option>
+                <option value="HESSE">
+                  {t("dmRegistration.form.fields.state.hesse")}
+                </option>
                 <option value="MECKLENBURG_WESTERN_POMERANIA">
-                  Mecklenburg-Vorpommern
+                  {t(
+                    "dmRegistration.form.fields.state.mecklenburgWesternPomerania"
+                  )}
                 </option>
-                <option value="LOWER_SAXONY">Niedersachsen</option>
+                <option value="LOWER_SAXONY">
+                  {t("dmRegistration.form.fields.state.lowerSaxony")}
+                </option>
                 <option value="NORTH_RHINE_WESTPHALIA">
-                  Nordrhein-Westfalen
+                  {t("dmRegistration.form.fields.state.northRhineWestphalia")}
                 </option>
-                <option value="RHINELAND_PALATINATE">Rheinland-Pfalz</option>
-                <option value="SAARLAND">Saarland</option>
-                <option value="SAXONY">Sachsen</option>
-                <option value="SAXONY_ANHALT">Sachsen-Anhalt</option>
-                <option value="SCHLESWIG_HOLSTEIN">Schleswig-Holstein</option>
-                <option value="THURINGIA">Thüringen</option>
+                <option value="RHINELAND_PALATINATE">
+                  {t("dmRegistration.form.fields.state.rhinelandPalatinate")}
+                </option>
+                <option value="SAARLAND">
+                  {t("dmRegistration.form.fields.state.saarland")}
+                </option>
+                <option value="SAXONY">
+                  {t("dmRegistration.form.fields.state.saxony")}
+                </option>
+                <option value="SAXONY_ANHALT">
+                  {t("dmRegistration.form.fields.state.saxonyAnhalt")}
+                </option>
+                <option value="SCHLESWIG_HOLSTEIN">
+                  {t("dmRegistration.form.fields.state.schleswigHolstein")}
+                </option>
+                <option value="THURINGIA">
+                  {t("dmRegistration.form.fields.state.thuringia")}
+                </option>
               </Select>
             </div>
           </div>
@@ -146,17 +187,17 @@ export default function DmRegistrationForm() {
         <div className="pt-8">
           <div>
             <h3 className="text-lg font-medium leading-6 text-gray-900">
-              Zusätzliche Persönliche Informationen
+              {t("dmRegistration.form.additionalPersonalInformation.title")}
             </h3>
             <p className="mt-1 text-sm text-gray-500">
-              Die folgenden Angaben sind vollkommen optional.
+              {t("dmRegistration.form.additionalPersonalInformation.subtitle")}
             </p>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
             <div className="sm:col-span-3">
               <Input
                 id="phone"
-                label="Telefonnummer"
+                label={t("dmRegistration.form.fields.phone")}
                 type="text"
                 error={errors.phone?.message}
                 {...register("phone")}
@@ -166,7 +207,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-6">
               <Input
                 id="address-street"
-                label="Straße"
+                label={t("dmRegistration.form.fields.street")}
                 type="text"
                 error={errors.address?.street?.message}
                 {...register("address.street")}
@@ -176,7 +217,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-3">
               <Input
                 id="address-zip"
-                label="Postleitzahl"
+                label={t("dmRegistration.form.fields.zip")}
                 type="number"
                 error={errors.address?.zip?.message}
                 {...register("address.zip")}
@@ -185,7 +226,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-3">
               <Input
                 id="address-city"
-                label="Stadt"
+                label={t("dmRegistration.form.fields.city")}
                 type="text"
                 error={errors.address?.city?.message}
                 {...register("address.city")}
@@ -197,17 +238,17 @@ export default function DmRegistrationForm() {
         <div className="pt-8">
           <div>
             <h3 className="text-lg font-medium leading-6 text-gray-900">
-              Deine Firma
+              {t("dmRegistration.form.companyInformation.title")}
             </h3>
             <p className="mt-1 text-sm text-gray-500">
-              Falls du in einer Firma arbeitest, kannst du diese hier angeben.
+              {t("dmRegistration.form.companyInformation.subtitle")}
             </p>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
             <div className="sm:col-span-3">
               <Input
                 id="company-name"
-                label="Firmenname"
+                label={t("dmRegistration.form.fields.companyName")}
                 type="text"
                 error={errors.company?.name?.message}
                 {...register("company.name")}
@@ -217,7 +258,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-6">
               <Input
                 id="company-address-street"
-                label="Straße"
+                label={t("dmRegistration.form.fields.street")}
                 type="text"
                 error={errors.company?.address?.street?.message}
                 {...register("company.address.street")}
@@ -227,7 +268,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-3">
               <Input
                 id="company-address-zip"
-                label="Postleitzahl"
+                label={t("dmRegistration.form.fields.zip")}
                 type="number"
                 error={errors.company?.address?.zip?.message}
                 {...register("company.address.zip")}
@@ -236,7 +277,7 @@ export default function DmRegistrationForm() {
             <div className="sm:col-span-3">
               <Input
                 id="company-address-city"
-                label="Stadt"
+                label={t("dmRegistration.form.fields.city")}
                 type="text"
                 error={errors.company?.address?.city?.message}
                 {...register("company.address.city")}
@@ -255,7 +296,7 @@ export default function DmRegistrationForm() {
 
         <div className="flex justify-end">
           <Button type="submit" isLoading={isSubmitting}>
-            Absenden
+            {t("dmRegistration.form.submit")}
           </Button>
         </div>
       </div>
