@@ -1,4 +1,61 @@
 {
+  "dmRegistration": {
+    "title": "Registrierung für die Deutsche Meisterschaft 2023",
+    "subtitle": "Bitte beachte, dass du nicht älter als 22 Jahre alt sein darfst, um an der Deutschen Meisterschaft teilnehmen zu können.",
+    "form": {
+      "personalInformation": {
+        "title": "Persönliche Informationen",
+        "subtitle": "Die folgenden Angaben sind für die Anmeldung verpflichtend."
+      },
+      "additionalPersonalInformation": {
+        "title": "Zusätzliche Persönliche Informationen",
+        "subtitle": "Die folgenden Angaben sind vollkommen optional."
+      },
+      "companyInformation": {
+        "title": "Deine Firma",
+        "subtitle": "Falls du in einer Firma arbeitest, kannst du diese hier angeben."
+      },
+      "submit": "Absenden",
+      "fields": {
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "birthday": "Geburtstag",
+        "email": "E-Mail-Adresse",
+        "phone": "Telefonnummer",
+        "street": "Straße",
+        "zip": "Postleitzahl",
+        "city": "Stadt",
+        "companyName": "Firmenname",
+        "occupation": {
+          "title": "Beruf",
+          "apprentice": "Auszubildender",
+          "pupil": "Schüler",
+          "student": "Student",
+          "employee": "Angestellter",
+          "other": "Sonstiges"
+        },
+        "state": {
+          "title": "Bundesland",
+          "badenWuerttemberg": "Baden-Württemberg",
+          "bavaria": "Bayern",
+          "berlin": "Berlin",
+          "brandenburg": "Brandenburg",
+          "bremen": "Bremen",
+          "hamburg": "Hamburg",
+          "hesse": "Hessen",
+          "mecklenburgWesternPomerania": "Mecklenburg-Vorpommern",
+          "lowerSaxony": "Niedersachsen",
+          "northRhineWestphalia": "Nordrhein-Westfalen",
+          "rhinelandPalatinate": "Rheinland-Pfalz",
+          "saarland": "Saarland",
+          "saxony": "Sachsen",
+          "saxonyAnhalt": "Sachsen-Anhalt",
+          "schleswigHolstein": "Schleswig-Holstein",
+          "thuringia": "Thüringen"
+        }
+      }
+    }
+  },
   "home": {
     "title": "Bundesleistungszentren der Softwareentwicklung",
     "welcome": "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",

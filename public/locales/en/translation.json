@@ -1,4 +1,61 @@
 {
+  "dmRegistration": {
+    "title": "Registration for the German Nationals 2023",
+    "subtitle": "Please note that you must not be older than 22 years old to participate in the German Nationals.",
+    "form": {
+      "personalInformation": {
+        "title": "Personal Information",
+        "subtitle": "The following information is required for registration."
+      },
+      "additionalPersonalInformation": {
+        "title": "Additional Personal Information",
+        "subtitle": "The following information is optional."
+      },
+      "companyInformation": {
+        "title": "Your Company",
+        "subtitle": "If you work in a company, you can enter it here."
+      },
+      "submit": "Submit",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "birthday": "Birthday",
+        "email": "Email address",
+        "phone": "Phone",
+        "street": "Street",
+        "zip": "Zip code",
+        "city": "City",
+        "companyName": "Company name",
+        "occupation": {
+          "title": "Occupation",
+          "apprentice": "Apprentice",
+          "pupil": "Pupil",
+          "student": "Student",
+          "employee": "Employee",
+          "other": "Other"
+        },
+        "state": {
+          "title": "State",
+          "badenWuerttemberg": "Baden-Württemberg",
+          "bavaria": "Bayern",
+          "berlin": "Berlin",
+          "brandenburg": "Brandenburg",
+          "bremen": "Bremen",
+          "hamburg": "Hamburg",
+          "hesse": "Hesse",
+          "mecklenburgWesternPomerania": "Mecklenburg-Western Pomerania",
+          "lowerSaxony": "Lower Saxony",
+          "northRhineWestphalia": "North Rhine-Westphalia",
+          "rhinelandPalatinate": "Rhineland-Palatinate",
+          "saarland": "Saarland",
+          "saxony": "Saxony",
+          "saxonyAnhalt": "Saxony-Anhalt",
+          "schleswigHolstein": "Schleswig-Holstein",
+          "thuringia": "Thuringia"
+        }
+      }
+    }
+  },
   "home": {
     "title": "National centers of software development",
     "welcome": "Welcome to the national centers of software development",
