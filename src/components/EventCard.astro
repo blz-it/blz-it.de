@@ -7,8 +7,7 @@ type Props = {
   img: string;
   date: string;
   link: string;
-  hoverTextColor?: string;
-  hoverTextShadowColor?: string;
+  hoverTextColor?: "black" | "white";
 };
 
 const {
@@ -18,8 +17,9 @@ const {
   date,
   link,
   hoverTextColor = "black",
-  hoverTextShadowColor = "#ffffff7f",
 } = Astro.props;
+const hoverTextShadowColor =
+  hoverTextColor === "black" ? "#ffffff7f" : "#0000007f";
 ---
 
 <div
@@ -55,14 +55,13 @@ const {
         {title}
       </h4>
       <p
+        set:html={date}
         class={classNames(
           "card-date",
           "text-center md:text-base text-gray-200 tracking-wider mt-8",
           "transition-all group-hover:opacity-0 group-hover:mt-0"
         )}
-      >
-        {date}
-      </p>
+      />
     </div>
     <div
       class="overlay absolute w-full h-full opacity-50 bg-black transition-opacity hover:opacity-0 peer-hover:opacity-0"

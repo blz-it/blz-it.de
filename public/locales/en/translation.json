@@ -50,13 +50,22 @@
     },
     "nationalTeam": {
       "title": "Our national team",
-      "noTeam": "There is currently no national team. <0>Apply now!</0>"
+      "noTeam": "There is currently no national team. <0>Register now!</0>"
     },
     "nextWSC": {
       "title": "WorldSkills Lyon 2024",
-      "germanChampionship": "German Championship",
-      "einsteinCup": "Albert-Einstein-Cup",
-      "wsc": "WorldSkills Lyon"
+      "germanChampionship": {
+        "title": "German Championship",
+        "date": "May 22.&thinsp;&ndash;&thinsp;25.&nbsp;2023"
+      },
+      "einsteinCup": {
+        "title": "Albert-Einstein-Cup",
+        "date": "May 13.&thinsp;&ndash;&thinsp;16.&nbsp;2024"
+      },
+      "wsc": {
+        "title": "WorldSkills Lyon",
+        "date": "September 10.&thinsp;&ndash;&thinsp;15.&nbsp;2024"
+      }
     },
     "history": "History",
     "additionalLinks": "Additional Links",
