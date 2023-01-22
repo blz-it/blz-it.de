@@ -47,29 +47,32 @@
     "general": {
       "title": "Allgemeine Informationen",
       "subtitle": "Alles, was du über diesen Skill wissen musst",
-      "interested": "Du bist interessiert? <0>Bewirb dich jetzt!</0>"
+      "interested": "Du bist interessiert? <0>Registriere dich jetzt!</0>"
     },
     "nationalTeam": {
       "title": "Das Nationalteam",
       "noTeam": "Derzeit gibt es kein Nationalteam. <0>Bewirb dich jetzt!</0>"
     },
     "nextWSC": {
-      "title": "WorldSkills Lyon 2024"
+      "title": "WorldSkills Lyon 2024",
+      "germanChampionship": "Deutsche Meisterschaft",
+      "einsteinCup": "Albert-Einstein-Cup",
+      "wsc": "WorldSkills Lyon"
     },
     "history": "Geschichte",
     "additionalLinks": "Weitere Links",
     "08": {
       "video": "https://www.youtube.com/embed/v7I124lty3s",
-      "short": "Entwickler mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln.",
-      "description": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmier*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar, für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
+      "short": "Entwickler*innen mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln.",
+      "description": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmier*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar und für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
       "requirementsTitle": "Was solltest du an Erfahrungen mitbringen?",
-      "requirements": "Du beherrschst mindestens eine Programmiersprache, z.B. Kotlin, und programmierst Mobile Apps, auch unter Einbeziehung der Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen.",
+      "requirements": "Du beherrschst mindestens eine Programmiersprache, z.&thinsp;B. Dart oder Kotlin, und programmierst mobile Apps, auch unter Einbeziehung der Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen.",
       "occupation": {
         "title": "Ein Beruf mit Zukunft und stets am Puls der Zeit",
-        "text": "Die Möglichkeiten der Kommunikation und des Informationsaustauschs nehmen stetig zu. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca. 12 % mehr IT-Talente gesucht als im Vorjahr. Der Mobile Applications Developer ist somit einer der am schnellsten wachsenden Berufe.<br />Dein Hauptarbeitsmittel ist dein Laptop. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das einzige, was du brauchst, ist eine stabile Internetverbindung."
+        "text": "Die Möglichkeiten der Kommunikation und des Informationsaustauschs nehmen stetig zu. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca.&nbsp;12&thinsp;% mehr IT-Talente gesucht als im Vorjahr. Der Mobile Applications Developer ist somit einer der am schnellsten wachsenden Berufe.<br /><br />Dein Hauptarbeitsmittel ist dein Laptop. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das einzige, was du brauchst, ist eine stabile Internetverbindung."
       },
       "links": {
-        "wsi": "Skill 08 bei WorldSkills",
+        "wsi": "Skill 08 bei WorldSkills International",
         "ws2022": "Skill 08 bei den WorldSkills 2022 SE"
       }
     },
@@ -84,7 +87,7 @@
         "text": "Text hier"
       },
       "links": {
-        "wsi": "Skill 09 bei WorldSkills",
+        "wsi": "Skill 09 bei WorldSkills International",
         "ws2022": "Skill 09 bei den WorldSkills 2022 SE"
       }
     }

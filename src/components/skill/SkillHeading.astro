@@ -25,7 +25,7 @@ const { skillNumber, skillName, img } = Astro.props;
     <h1
       class="font-bold tracking-tight text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
     >
-      Skill {skillNumber} - {skillName}
+      Skill {skillNumber}: {skillName}
     </h1>
     <p class="mt-6 max-w-4xl sm:text-xl text-wsg-orange-1000">
       {t(`skills.${skillNumber}.short`)}

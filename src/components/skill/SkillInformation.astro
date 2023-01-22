@@ -19,7 +19,7 @@ const { skillNumber } = Astro.props;
       <br />
       <br />
       <Headline>{t(`skills.${skillNumber}.requirementsTitle`)}</Headline>
-      <p>{t(`skills.${skillNumber}.requirements`)}</p>
+      <p set:html={t(`skills.${skillNumber}.requirements`)} />
       <br />
       <Trans i18nKey={"skills.general.interested"}>
         You are interested?{" "}

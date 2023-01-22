@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import EventCard from "../EventCard.astro";
 ---
 
@@ -44,24 +45,26 @@ import EventCard from "../EventCard.astro";
       stroke-dasharray="13 22"></path>
   </svg>
   <EventCard
-    title="Deutsche Meisterschaft"
-    img="https://via.placeholder.com/720x1280.png"
-    date="22.05.2023 - 25.05.2023"
+    title={t("skills.nextWSC.germanChampionship")}
+    img="/imgs/germanChampionship.jpg"
+    date="22. – 25. Mai 2023"
     link="https://www.worldskillsgermany.com/de/termine/dm-mobile-app-development-it-software-solutions-for-business/"
     className="xl:mt-0"
+    hoverTextColor="white"
+    hoverTextShadowColor="#0000007f"
   />
   <EventCard
     img="https://www.worldskillsgermany.com/de/wp-content/uploads/sites/17/2022/06/C3-Competitors-Experts.jpg"
-    link="https://youtu.be/R3r-SHKOwFg"
-    title="Einstein-Cup"
-    date="13.05.2024 - 16.05.2024"
+    link="https://youtu.be/Cvrt7g8es9k"
+    title={t("skills.nextWSC.einsteinCup")}
+    date="13. – 16. Mai 2024"
     className="md:float-right md:mt-[-4rem]"
     hoverTextColor="white"
     hoverTextShadowColor="#0000007f"
   />
   <EventCard
-    title="WorldSkills Lyon"
-    date="10.09.2024 - 15.09.2024"
+    title={t("skills.nextWSC.wsc")}
+    date="10. – 15. September 2024"
     img="https://worldskills2024.com/wp-content/uploads/2022/11/One-pager-WSI-Header-1440x1080-OK.jpg"
     link="https://worldskills2024.com/"
     className="md:mt-64 md:ml-40 lg:mt-72 lg:ml-48 xl:mt-96 xl:ml-64"
