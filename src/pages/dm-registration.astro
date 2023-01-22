@@ -1,0 +1,16 @@
+---
+import DmRegistrationForm from "../forms/dm-registration-form";
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- TODO(Benjamin-Frost): Change styling as soon as #14 is merged -->
+<Layout title="DM Registration">
+  <div class="mx-auto max-w-4xl py-12">
+    <div class="bg-white p-8 rounded-xl">
+      <h2 class="text-2xl sm:text-3xl text-center">
+        Registrierung für die Deutsche Meisterschaft 2023
+      </h2>
+      <DmRegistrationForm client:only />
+    </div>
+  </div>
+</Layout>
