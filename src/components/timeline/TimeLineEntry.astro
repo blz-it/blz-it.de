@@ -25,12 +25,12 @@ const { date, title, text, period } = Astro.props;
   ) : (
     <li class="timeline-item">
       <div class="timeline-info">
-        <span>{date}</span>
+        <span set:html={date} />
       </div>
       <div class="timeline-marker" />
       <div class="timeline-content">
         <h3 class="timeline-title">{title}</h3>
-        <p>{text}</p>
+        <p set:html={text} />
       </div>
     </li>
   )
