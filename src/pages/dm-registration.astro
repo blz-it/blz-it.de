@@ -11,6 +11,11 @@ import Layout from "../layouts/Layout.astro";
       <h2 class="text-2xl sm:text-3xl text-center">
         {t("dmRegistration.title")}
       </h2>
+      <div class="rounded-md mt-8 p-4 bg-blue-50">
+        <p class="text-sm text-center text-blue-700">
+          {t("dmRegistration.subtitle")}
+        </p>
+      </div>
       <DmRegistrationForm client:only />
     </div>
   </div>
