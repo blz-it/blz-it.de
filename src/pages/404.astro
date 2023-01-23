@@ -1,63 +1,11 @@
 ---
-import i18n, { t } from "i18next";
-import { updateLang } from "../routing/lang";
-import { buildLink } from "../routing/buildLink";
-import Layout from "../layouts/Layout.astro";
-
-updateLang(Astro.url.pathname);
+import i18n from "i18next";
 ---
 
 <script is:inline define:vars={{ i18n }}>
-  const redirectLang = (path) =>
-    i18n.languages.some((lang) => path.startsWith(`/${lang}`))
-      ? undefined
-      : `/${i18n.language}${path}`;
-
-  const newPath = redirectLang(location.pathname);
-  if (newPath) {
-    location.href = newPath;
+  const path = location.pathname;
+  const pathLang = i18n.languages.find((lang) => path.startsWith(`/${lang}`));
+  if (!pathLang) {
+    location.href = `/${i18n.language}${path}`;
   }
 </script>
-
-<Layout title="404" mainClass="h-full">
-  <div
-    class="min-h-full bg-white py-16 px-6 sm:py-24 md:grid md:place-items-center lg:px-8"
-  >
-    <div class="mx-auto max-w-max">
-      <main class="sm:flex">
-        <p
-          class="text-4xl font-bold tracking-tight text-wsg-orange-500 sm:text-5xl"
-        >
-          404
-        </p>
-        <div class="sm:ml-6">
-          <div class="sm:border-l sm:border-gray-200 sm:pl-6">
-            <h1
-              class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
-            >
-              {t("errors.404.title")}
-            </h1>
-            <p class="mt-1 text-base text-gray-500">
-              {t("errors.404.subtitle")}
-            </p>
-          </div>
-          <div
-            class="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6"
-          >
-            <button
-              onclick={`location.href = ${buildLink("/")}`}
-              class="inline-flex items-center rounded-md border border-transparent bg-wsg-orange-600 px-4 py-2 text-sm font-medium shadow-sm hover:bg-wsg-orange-700 focus:outline-none focus:ring-2 focus:ring-wsg-orange-600 focus:ring-offset-2"
-            >
-              {t("errors.404.toHome")}
-            </button>
-            <button
-              set:html={t("errors.404.back")}
-              onclick="history.back()"
-              class="inline-flex items-center rounded-md border border-transparent bg-wsg-orange-900 px-4 py-2 text-sm font-medium hover:bg-wsg-orange-800 focus:outline-none focus:ring-2 focus:ring-wsg-orange-600 focus:ring-offset-2"
-            />
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
-</Layout>
