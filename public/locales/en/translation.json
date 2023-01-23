@@ -78,8 +78,12 @@
   },
   "layout": {
     "footer": {
+      "allRightsReserved": "All rights reserved",
+      "contact": "Contact",
       "imprint": "Imprint",
-      "privacy": "Privacy Policy"
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "website": "Website"
     },
     "header": {
       "home": "Home"
