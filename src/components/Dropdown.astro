@@ -1,6 +1,7 @@
 ---
 import Icon from "astro-icon";
 import classNames from "classnames";
+import { v4 as uuid4 } from "uuid";
 
 type Props = {
   item: string;
@@ -9,21 +10,27 @@ type Props = {
 };
 
 const { item, options, onOptionClick } = Astro.props;
+const id = uuid4();
 ---
 
 <div class="min-w-[6rem]">
   <div class="relative mt-1">
     <button
+      onclick={`document.getElementBy('${id}').classList.toggle('focus');`}
       type="button"
       class="peer relative w-full cursor-default rounded-md py-2 pl-3 pr-10 text-left text-white hover:bg-wsg-orange-400 hover:bg-opacity-50 focus:ring-1 focus:ring-wsi-blue-300 sm:text-sm"
       aria-haspopup="listbox"
       aria-expanded="true"
-      aria-labelledby="listbox-label"
     >
       <span class="block truncate text-base font-medium">{item}</span>
     </button>
     <ul
-      class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm opacity-0 pointer-events-none hover:pointer-events-auto peer-focus:pointer-events-auto peer-focus:opacity-100 transition-opacity"
+      id={id}
+      class={classNames(
+        "absolute z-10 mt-1 max-h-60 w-full bg-white py-1 overflow-auto rounded-md shadow-lg ring-1 ring-black ring-opacity-5 sm:text-sm",
+        "opacity-0 transition-opacity peer-focus:opacity-100 focus:outline-none",
+        "pointer-events-none hover:pointer-events-auto peer-focus:pointer-events-auto focus:pointer-events-auto"
+      )}
       tabindex="-1"
       role="listbox"
       aria-labelledby="listbox-label"
