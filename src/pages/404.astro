@@ -1,21 +1,19 @@
 ---
 import i18n, { t } from "i18next";
-import { updateLang } from "../routing/lang";
 import { buildLink } from "../routing/buildLink";
 import Layout from "../layouts/Layout.astro";
 
+import { getStaticLangPaths, updateLang } from "../routing/lang";
+
+export const getStaticPaths = getStaticLangPaths;
 updateLang(Astro.url.pathname);
 ---
 
 <script is:inline define:vars={{ i18n }}>
-  const redirectLang = (path) =>
-    i18n.languages.some((lang) => path.startsWith(`/${lang}`))
-      ? undefined
-      : `/${i18n.language}${path}`;
-
-  const newPath = redirectLang(location.pathname);
-  if (newPath) {
-    location.href = newPath;
+  const path = location.pathname;
+  const pathLang = i18n.languages.find((lang) => path.startsWith(`/${lang}`));
+  if (!pathLang) {
+    location.href = `/${i18n.language}${path}`;
   }
 </script>
 
