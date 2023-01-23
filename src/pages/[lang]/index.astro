@@ -1,6 +1,8 @@
 ---
+import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
-import Hero from "../../components/home/Hero.astro";
+import Cta from "../../components/Cta.astro";
+import Hero from "../../components/Hero.astro";
 import Link from "../../components/Link.astro";
 import Layout from "../../layouts/Layout.astro";
 import HeadedSection from "../../layouts/sections/HeadedSection.astro";
@@ -13,36 +15,36 @@ updateLang(Astro.url.pathname);
 ---
 
 <Layout title={t("home.title")}>
-  <Hero />
+  <Hero title={t("home.title")} img="/img/hero-bg.jpg" />
   <HeadedSection
-    title="Allgemeine Informationen"
-    subtitle="Wer sind wir uns was ist unser Ziel?"
+    title={t("home.general.title")}
+    subtitle={t("home.general.subtitle")}
   >
-    <p class="text-gray-800 sm:text-xl">
-      Die WorldSkills Germany - Bundesleistungszentren haben die Aufgabe,
-      zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst
-      breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen
-      Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu
-      trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt.
-      Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen,
-      Institutionen) gemeinsam mit WorldSkills Germany.
-    </p>
+    <p class="text-gray-800 sm:text-xl">{t("home.general.text")}</p>
   </HeadedSection>
-  <WavedSection type={"top"} title="Unsere Skills">
+  <WavedSection type={"top"} title={t("home.skills.title")}>
     <p class="sm:text-xl">
-      Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am
-      <Link href="https://aeg-nb.de" openInNewTab
-        >Albert-Einstein-Gymnasium Neubrandenburg</Link
-      >. An diesem Standort sind <Link href={buildLink("skill08")}
-        >Skill 08: Mobile Applications Development</Link
-      > und
-      <Link href={buildLink("skill09")}
-        >Skill 09: IT Software Solutions for Business</Link
-      > vertreten. Mehr Informationen zu den einzelnen Skills sind auf den jeweiligen
-      Unterseiten.
+      <Trans i18nKey="home.skills.text">
+        The Federal Centres of Excellence in Software Development are located at
+        the <Link href="https://aeg-nb.de" openInNewTab
+          >Albert-Einstein-Gymnasium Neubrandenburg</Link
+        >. At this location, <Link href={buildLink("skill08")}
+          >Skill 08: Mobile Applications Development</Link
+        > and <Link href={buildLink("skill09")}
+          >Skill 09: IT Software Solutions for Business</Link
+        > are represented. More information on the individual skills can be found
+        on the respective subpages.
+      </Trans>
     </p>
   </WavedSection>
-  <WavedSection type={"bottom"} title="Werde Teil unseres Nationalteams">
-    <p>Here Apply CTA</p>
+  <WavedSection type={"bottom"}>
+    <Cta
+      title={t("home.cta.title")}
+      subtitle={t("home.cta.subtitle")}
+      action={{
+        label: t("home.cta.button"),
+        url: buildLink("dm-registration"),
+      }}
+    />
   </WavedSection>
 </Layout>

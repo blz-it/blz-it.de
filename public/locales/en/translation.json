@@ -57,23 +57,20 @@
     }
   },
   "home": {
-    "title": "National centers of software development",
-    "welcome": "Welcome to the national centers of software development",
-    "wsgCard": {
-      "title": "WorldSkills Germany",
-      "body": "Visit the website of WorldSkills Germany"
+    "title": "Welcome to the national centers of software development",
+    "general": {
+      "title": "General Information",
+      "subtitle": "Who are we and what is our goal?",
+      "text": "The WorldSkills Germany - National Training Centres have the task of training future members of the German national team and thus participants in international competitions, in addition to training according to WorldSkills principles for as broad a group of participants as possible. They are appointed exclusively only once per skills discipline. The appointment is made by the skills mentors (associations, companies, institutions) together with WorldSkills Germany."
     },
-    "ytCard": {
-      "title": "YouTube",
-      "body": "To our YouTube channel"
+    "skills": {
+      "title": "Our Skills",
+      "text": "The Federal Centres of Excellence in Software Development are located at the <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. At this location, <1>Skill 08: Mobile Applications Development</1> and <2>Skill 09: IT Software Solutions for Business</2> are represented. More information on the individual skills can be found on the respective subpages."
     },
-    "igCard": {
-      "title": "Instagram",
-      "body": "To our Instagram profile"
-    },
-    "fbCard": {
-      "title": "Facebook",
-      "body": "To our Facebook profile"
+    "cta": {
+      "title": "Become part of our national team",
+      "subtitle": "Have you always wanted to take part in a software development competition and compete with the best of the best? Then apply now for the online qualification and get a chance to be part of our national team.",
+      "button": "Register now"
     }
   },
   "layout": {

@@ -1,9 +1,15 @@
 ---
+export interface Props {
+  title: string;
+  img: string;
+}
+
+const { title, img } = Astro.props;
 ---
 
 <div class="relative bg-accent-300">
   <div class="absolute inset-0">
-    <img class="h-full w-full object-cover" src="/img/hero-bg.jpg" alt="" />
+    <img class="h-full w-full object-cover" src={img} alt="" />
     <div
       class="absolute inset-0 mix-blend-multiply bg-wsg-orange-400"
       aria-hidden="true"
@@ -16,7 +22,7 @@
     <h1
       class="font-bold tracking-tight text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
     >
-      Willkommen bei den Bundesleistungszentren der Softwareentwicklung
+      {title}
     </h1>
   </div>
   <svg
