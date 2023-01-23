@@ -57,23 +57,20 @@
     }
   },
   "home": {
-    "title": "Bundesleistungszentren der Softwareentwicklung",
-    "welcome": "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
-    "wsgCard": {
-      "title": "WorldSkills Germany",
-      "body": "Besucht die Webseite von WorldSkills Germany"
+    "title": "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
+    "general": {
+      "title": "Allgemeine Informationen",
+      "subtitle": "Wer sind wir und was ist unser Ziel?",
+      "text": "Die Bundesleistungszentren von <0>WorldSkills Germany</0> haben die Aufgabe, zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany."
     },
-    "ytCard": {
-      "title": "YouTube",
-      "body": "Zu unserem YouTube-Kanal"
+    "skills": {
+      "title": "Unsere Skills",
+      "text": "Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. An diesem Standort sind <1>Skill 08: Mobile Applications Development</1> und <2>Skill 09: IT Software Solutions for Business</2> vertreten. Mehr Informationen zu den einzelnen Skills sind auf den jeweiligen Unterseiten."
     },
-    "igCard": {
-      "title": "Instagram",
-      "body": "Zu unserem Instagram-Profil"
-    },
-    "fbCard": {
-      "title": "Facebook",
-      "body": "Zu unserem Facebook-Profil"
+    "cta": {
+      "title": "Werde Teil unseres Nationalteams",
+      "subtitle": "Wolltest du schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen? Dann registriere dich jetzt für die Online-Qualifikation und erhalte eine Chance, Teil unseres Nationalteams zu werden.",
+      "button": "Registriere dich jetzt"
     }
   },
   "layout": {

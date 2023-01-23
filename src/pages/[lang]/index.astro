@@ -1,7 +1,13 @@
 ---
+import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
-import Card from "../../components/Card.astro";
+import Cta from "../../components/Cta.astro";
+import Hero from "../../components/Hero.astro";
+import Link from "../../components/Link.astro";
 import Layout from "../../layouts/Layout.astro";
+import HeadedSection from "../../layouts/sections/HeadedSection.astro";
+import WavedSection from "../../layouts/sections/WavedSection.astro";
+import { buildLink } from "../../routing/buildLink";
 import { getStaticLangPaths, updateLang } from "../../routing/lang";
 
 export const getStaticPaths = getStaticLangPaths;
@@ -9,66 +15,48 @@ updateLang(Astro.url.pathname);
 ---
 
 <Layout title={t("home.title")}>
-  <main>
-    <h2>{t("home.welcome")}</h2>
-    <p class="instructions">{t("warnings.maintenance")}</p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://www.worldskillsgermany.com/de/"
-        title={t("home.wsgCard.title")}
-        body={t("home.wsgCard.body")}
-      />
-      <Card
-        href="https://youtube.de/@GermanITSkills"
-        title={t("home.ytCard.title")}
-        body={t("home.ytCard.body")}
-      />
-      <Card
-        href="https://instagram.com/german.it.skills"
-        title={t("home.igCard.title")}
-        body={t("home.igCard.body")}
-      />
-      <Card
-        href="https://facebook.com/GermanITSkills"
-        title={t("home.fbCard.title")}
-        body={t("home.fbCard.body")}
-      />
-    </ul>
-  </main>
+  <Hero title={t("home.title")} img="/img/hero-bg.jpg" size="lg" textCenter />
+  <HeadedSection
+    title={t("home.general.title")}
+    subtitle={t("home.general.subtitle")}
+  >
+    <p class="text-gray-800 sm:text-xl">
+      <Trans i18nKey="home.general.text">
+        The National Training Centres by <Link
+          href="https://www.worldskillsgermany.com"
+          openInNewTab>WorldSkills Germany</Link
+        > have the task of training future members of the German national team and
+        thus participants in international competitions, in addition to training
+        according to WorldSkills principles for as broad a group of participants
+        as possible. They are appointed exclusively only once per skills discipline.
+        The appointment is made by the skills mentors (associations, companies, institutions)
+        together with WorldSkills Germany.
+      </Trans>
+    </p>
+  </HeadedSection>
+  <WavedSection type={"top"} title={t("home.skills.title")}>
+    <p class="sm:text-xl">
+      <Trans i18nKey="home.skills.text">
+        The Federal Centres of Excellence in Software Development are located at
+        the <Link href="https://aeg-nb.de" openInNewTab
+          >Albert-Einstein-Gymnasium Neubrandenburg</Link
+        >. At this location, <Link href={buildLink("skill08")}
+          >Skill 08: Mobile Applications Development</Link
+        > and <Link href={buildLink("skill09")}
+          >Skill 09: IT Software Solutions for Business</Link
+        > are represented. More information on the individual skills can be found
+        on the respective subpages.
+      </Trans>
+    </p>
+  </WavedSection>
+  <WavedSection type={"bottom"}>
+    <Cta
+      title={t("home.cta.title")}
+      subtitle={t("home.cta.subtitle")}
+      action={{
+        label: t("home.cta.button"),
+        url: buildLink("dm-registration"),
+      }}
+    />
+  </WavedSection>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h2 {
-    text-align: center;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>

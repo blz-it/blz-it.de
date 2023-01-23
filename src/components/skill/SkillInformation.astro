@@ -1,7 +1,7 @@
 ---
-import { t } from "i18next";
 import { Trans } from "astro-i18next/components";
-import HeadedSection from "../../layouts/sections/HeadedSection.astro";
+import { t } from "i18next";
+import { buildLink } from "../../routing/buildLink";
 import Link from "../Link.astro";
 import Headline from "../typography/Headline.astro";
 
@@ -23,7 +23,7 @@ const { skillNumber } = Astro.props;
       <br />
       <Trans i18nKey={"skills.general.interested"}>
         You are interested?{" "}
-        <Link href="#">Apply now!</Link>
+        <Link href={buildLink("dm-registration")}>Apply now!</Link>
       </Trans>
     </div>
     <div class="flex-1 xl:pl-12 mt-20 xl:mt-0">

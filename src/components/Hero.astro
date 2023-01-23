@@ -1,0 +1,82 @@
+---
+import classNames from "classnames";
+
+export interface Props {
+  title: string;
+  subtitle?: string | null;
+  img: string;
+  textCenter?: boolean;
+  size?: "md" | "lg";
+}
+
+const { title, subtitle, img, textCenter, size = "md" } = Astro.props;
+---
+
+<div class="relative bg-accent-300">
+  <div class="absolute inset-0">
+    <img class="h-full w-full object-cover" src={img} alt="" />
+    <div
+      class="absolute inset-0 mix-blend-multiply bg-wsg-orange-400"
+      aria-hidden="true"
+    >
+    </div>
+  </div>
+  <div
+    class={classNames(
+      "relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+      { "text-center": textCenter },
+      { "py-8 sm:py-16 md:py-32": size === "md" },
+      { "py-16 sm:py-32 md:py-64": size === "lg" }
+    )}
+  >
+    <h1
+      class="font-bold tracking-tight text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
+    >
+      {title}
+    </h1>
+    <p class="mt-6 max-w-4xl sm:text-xl text-wsg-orange-1000">
+      {subtitle}
+    </p>
+  </div>
+  <svg
+    class="relative w-full h-8 sm:h-16 md:h-24"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      ></path>
+    </defs>
+    <g>
+      <use
+        class="translate-x-[-95px]"
+        xlink:href="#gentle-wave"
+        x="48"
+        y="0"
+        fill="rgba(255,255,255,0.7"></use>
+      <use
+        class="translate-x-[-20px]"
+        xlink:href="#gentle-wave"
+        x="48"
+        y="3"
+        fill="rgba(255,255,255,0.5)"></use>
+      <use
+        class="translate-x-[50px]"
+        xlink:href="#gentle-wave"
+        x="48"
+        y="5"
+        fill="rgba(255,255,255,0.3)"></use>
+      <use
+        class="translate-x-[60px]"
+        xlink:href="#gentle-wave"
+        x="48"
+        y="7"
+        fill="#fff"></use>
+    </g>
+  </svg>
+</div>

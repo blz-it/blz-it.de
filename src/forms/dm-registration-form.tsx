@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { t } from "i18next";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import Alert from "./components/alert";
 import { Button } from "./components/button";
 import { Input } from "./components/input";
@@ -9,6 +9,8 @@ import { Select } from "./components/select";
 import { Participant, participantSchema } from "./schemas/participant";
 
 export default function DmRegistrationForm() {
+  const { t } = useTranslation();
+
   const [serverMessage, setServerMessage] = useState("");
   const [serverMessageIsError, setServerMessageIsError] = useState(false);
 
