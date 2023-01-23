@@ -95,5 +95,88 @@
   },
   "warnings": {
     "maintenance": "Diese Webseite befindet sich derzeit in Wartung und wird in Kürze wieder verfügbar sein."
+  },
+  "errors": {
+    "404": {
+      "title": "Seite nicht gefunden",
+      "subtitle": "Bitte überprüfe die URL in der Adressleiste und versuche es erneut.",
+      "toHome": "Zur Startseite",
+      "back": "Zur&uuml;ck zur letzten Seite"
+    }
+  },
+  "skills": {
+    "general": {
+      "title": "Allgemeine Informationen",
+      "subtitle": "Alles, was du über diesen Skill wissen musst",
+      "interested": "Du bist interessiert? <0>Registriere dich jetzt!</0>"
+    },
+    "nationalTeam": {
+      "title": "Das Nationalteam",
+      "noTeam": "Derzeit gibt es kein Nationalteam. <0>Registriere dich jetzt!</0>"
+    },
+    "nextWSC": {
+      "title": "WorldSkills Lyon 2024",
+      "germanChampionship": {
+        "title": "Deutsche Meisterschaft",
+        "date": "22.&thinsp;&ndash;&thinsp;25.&nbsp;Mai 2023"
+      },
+      "einsteinCup": {
+        "title": "Albert-Einstein-Cup",
+        "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Mai 2024"
+      },
+      "wsc": {
+        "title": "WorldSkills Lyon",
+        "date": "10.&thinsp;&ndash;&thinsp;15.&nbsp;September 2024"
+      }
+    },
+    "history": "Geschichte",
+    "additionalLinks": "Weitere Links",
+    "08": {
+      "video": "https://www.youtube.com/embed/v7I124lty3s",
+      "short": "Entwickler*innen mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln.",
+      "description": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmier*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar und für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
+      "requirementsTitle": "Was solltest du an Erfahrungen mitbringen?",
+      "requirements": "Du beherrschst mindestens eine Programmiersprache, z.&thinsp;B. Dart oder Kotlin, und programmierst mobile Apps, auch unter Einbeziehung der Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen.",
+      "occupation": {
+        "title": "Ein Beruf mit Zukunft und stets am Puls der Zeit",
+        "text": "Die Möglichkeiten der Kommunikation und des Informationsaustauschs nehmen stetig zu. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca.&nbsp;12&thinsp;% mehr IT-Talente gesucht als im Vorjahr. Der Mobile Applications Developer ist somit einer der am schnellsten wachsenden Berufe.<br /><br />Dein Hauptarbeitsmittel ist dein Laptop. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das einzige, was du brauchst, ist eine stabile Internetverbindung."
+      },
+      "links": {
+        "wsi": "Skill 08 bei WorldSkills International",
+        "ws2022": "Skill 08 bei den WorldSkills 2022 SE"
+      },
+      "timeline": {
+        "chancellery2022": {
+          "date": "08.&nbsp;Dezember 2022",
+          "title": "Empfang im Bundeskanzleramt",
+          "text": "Justin Konratt bekommt von Bundeskanzler Olaf Scholz die &ldquo;Best of Nation&rdquo;-Medaille verliehen"
+        },
+        "wsc2022": {
+          "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Oktober 2022",
+          "title": "WorldSkills Competition 2022 Special Edition",
+          "text": "Justin Konratt holt in Goyang, Korea bei der Weltmeisterschaft die Bronzemedaille für Deutschland"
+        },
+        "einsteinCup2022": {
+          "date": "30.&nbsp;Mai&thinsp;&ndash;&thinsp;02.&nbsp;Juni 2022",
+          "title": "Albert-Einstein-Cup",
+          "text": "Die Gewinner beim Albert-Einstein-Cup in Neubrandenburg sind: Joachim Schiller (Deutschland), Justin Konratt (Deutschland) und Kantubhukta Lavanya Sai Kumar (Indien). Justin Konratt gewinnt außerdem die Zusatzdisziplin Speed-Programming"
+        }
+      }
+    },
+    "09": {
+      "video": "https://www.youtube.com/embed/3F0T3nOrp70",
+      "short": "Erstellen neuer Systeme und Modifizieren bestehender Systeme, um Softwarelösungen für große und kleine Unternehmen bereitzustellen.",
+      "description": "Text hier",
+      "requirementsTitle": "Text hier",
+      "requirements": "Text hier",
+      "occupation": {
+        "title": "Text hier",
+        "text": "Text hier"
+      },
+      "links": {
+        "wsi": "Skill 09 bei WorldSkills International",
+        "ws2022": "Skill 09 bei den WorldSkills 2022 SE"
+      }
+    }
   }
 }

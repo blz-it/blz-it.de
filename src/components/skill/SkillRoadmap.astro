@@ -1,0 +1,72 @@
+---
+import { t } from "i18next";
+import moment from "moment";
+import EventCard from "../EventCard.astro";
+---
+
+<div
+  class="flex flex-col gap-8 items-center sm:flex-row sm:justify-evenly md:block"
+>
+  <svg
+    class="absolute hidden md:block max-w-[60rem] lg:max-w-[76rem] pointer-events-none"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="-160 0 1100 900"
+  >
+    <defs>
+      <linearGradient id="strokeGradient">
+        <stop stop-color="#ffa11f" offset="0"></stop>
+        <stop stop-color="#ed8b00" offset="1"></stop>
+      </linearGradient>
+    </defs>
+    <path
+      d="M78,196,137,201C270,216,416,301,503,283C590,255,642,168,720,160C720,160,880,130,838,325"
+      fill="none"
+      stroke-width="5"
+      stroke='url("#strokeGradient")'
+      stroke-linecap="round"
+      stroke-dasharray="13 22"></path>
+  </svg>
+  <svg
+    class="absolute hidden md:block max-w-[60rem] lg:max-w-[76rem] pointer-events-none"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="-160 45 1100 900"
+  >
+    <defs>
+      <linearGradient id="strokeGradientInverse">
+        <stop stop-color="#ed8b00" offset="0"></stop>
+        <stop stop-color="#ffa11f" offset="1"></stop>
+      </linearGradient>
+    </defs>
+    <path
+      d="M745,667C741,691,694,822,605,811C517,799,352,616,274,611C197,605,189,751,180,807"
+      fill="none"
+      stroke-width="5"
+      stroke='url("#strokeGradientInverse")'
+      stroke-linecap="round"
+      stroke-dasharray="13 22"></path>
+  </svg>
+  <EventCard
+    img="/imgs/germanChampionship.jpg"
+    title={t("skills.nextWSC.germanChampionship.title")}
+    date={t("skills.nextWSC.germanChampionship.date")}
+    link="https://www.worldskillsgermany.com/de/termine/dm-mobile-app-development-it-software-solutions-for-business/"
+    className="xl:mt-0"
+    hoverTextColor="white"
+  />
+  <EventCard
+    img="https://www.worldskillsgermany.com/de/wp-content/uploads/sites/17/2022/06/C3-Competitors-Experts.jpg"
+    link="https://youtu.be/Cvrt7g8es9k"
+    title={t("skills.nextWSC.einsteinCup.title")}
+    date={t("skills.nextWSC.einsteinCup.date")}
+    className="md:float-right md:mt-[-4rem]"
+    hoverTextColor="white"
+  />
+  <EventCard
+    title={t("skills.nextWSC.wsc.title")}
+    date={t("skills.nextWSC.wsc.date")}
+    img="https://worldskills2024.com/wp-content/uploads/2022/11/One-pager-WSI-Header-1440x1080-OK.jpg"
+    link="https://worldskills2024.com/"
+    className="md:mt-64 md:ml-40 lg:mt-72 lg:ml-48 xl:mt-96 xl:ml-64"
+    hoverTextColor="white"
+  />
+</div>

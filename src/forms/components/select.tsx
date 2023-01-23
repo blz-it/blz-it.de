@@ -14,7 +14,8 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
       "block w-full rounded-md focus:outline-none shadow-sm sm:text-sm",
       {
         "border-red-300 focus:border-red-500 focus:ring-red-500": error,
-        "border-gray-300 focus:border-wsg-orange focus:ring-wsg-orange": !error,
+        "border-gray-300 focus:border-wsg-orange-500 focus:ring-wsg-orange-500":
+          !error,
       }
     );
 

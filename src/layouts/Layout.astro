@@ -3,12 +3,14 @@ import { HeadHrefLangs } from "astro-i18next/components";
 import i18next from "i18next";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import classNames from "classnames";
 
 export interface Props {
   title: string;
+  mainClass?: string;
 }
 
-const { title } = Astro.props;
+const { title, mainClass } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -17,14 +19,20 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>BLZ IT | {title}</title>
     <HeadHrefLangs />
   </head>
-  <body>
+  <body class="font-['Poppins']">
     <div class="flex flex-col h-screen">
       <Header />
-      <main class="mb-auto">
+      <main class={classNames(mainClass, "mb-auto")}>
         <slot />
       </main>
       <Footer />
@@ -47,43 +55,6 @@ const { title } = Astro.props;
       html {
         font-family: system-ui, sans-serif;
         background-color: var(--background);
-      }
-
-      code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      select {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-        background-position: right 0.5rem center;
-        background-repeat: no-repeat;
-        background-size: 1.5em 1.5em;
-
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-
-        font-family: inherit;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        text-transform: none;
-
-        color: inherit;
-        background-color: var(--surface);
-
-        margin: 0;
-        padding: 0.5rem 2.5rem 0.5rem 0.75rem;
-        border-radius: 0.375rem;
-        border: 1px solid lightgray;
-      }
-
-      select:focus {
-        border-color: var(--accentRGB);
-        outline: 1px solid var(--accentRGB);
       }
     </style>
   </body>

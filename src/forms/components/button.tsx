@@ -8,7 +8,7 @@ interface Props extends ComponentPropsWithRef<"button"> {
 
 export const Button = ({ isLoading, children, ...rest }: Props) => {
   const buttonClasses = classNames(
-    "inline-flex justify-center rounded-md border border-transparent bg-wsg-orange py-2 px-4 text-sm font-medium text-white shadow-sm",
+    "inline-flex justify-center rounded-md border border-transparent bg-wsg-orange-500 py-2 px-4 text-sm font-medium text-white shadow-sm",
     {
       "cursor-not-allowed opacity-60": isLoading,
     }

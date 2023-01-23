@@ -1,0 +1,24 @@
+---
+import classNames from "classnames";
+
+export interface Props {
+  href: string;
+  class?: string;
+}
+
+const props = Astro.props;
+---
+
+<a
+  {...props}
+  class={classNames(
+    props.class,
+    "pb-0.5",
+    "text-wsg-orange-500 active:text-wsg-orange-400",
+    "bg-gradient-to-r from-wsg-orange-500 to-wsg-orange-600 active:from-wsg-orange-400 active:to-wsg-orange-600",
+    "bg-left-bottom bg-[size:0%_2px] bg-no-repeat",
+    "[transition:_background-size_0.3s,_background-position_0s_0.3s]",
+    "[&:hover]:bg-right-bottom [&:hover]:bg-[size:100%_2px]"
+  )}
+  ><slot />
+</a>
