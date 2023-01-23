@@ -1,7 +1,11 @@
 ---
 import { t } from "i18next";
-import Card from "../../components/Card.astro";
+import Hero from "../../components/home/Hero.astro";
+import Link from "../../components/Link.astro";
 import Layout from "../../layouts/Layout.astro";
+import HeadedSection from "../../layouts/sections/HeadedSection.astro";
+import WavedSection from "../../layouts/sections/WavedSection.astro";
+import { buildLink } from "../../routing/buildLink";
 import { getStaticLangPaths, updateLang } from "../../routing/lang";
 
 export const getStaticPaths = getStaticLangPaths;
@@ -9,66 +13,36 @@ updateLang(Astro.url.pathname);
 ---
 
 <Layout title={t("home.title")}>
-  <main>
-    <h2>{t("home.welcome")}</h2>
-    <p class="instructions">{t("warnings.maintenance")}</p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://www.worldskillsgermany.com/de/"
-        title={t("home.wsgCard.title")}
-        body={t("home.wsgCard.body")}
-      />
-      <Card
-        href="https://youtube.de/@GermanITSkills"
-        title={t("home.ytCard.title")}
-        body={t("home.ytCard.body")}
-      />
-      <Card
-        href="https://instagram.com/german.it.skills"
-        title={t("home.igCard.title")}
-        body={t("home.igCard.body")}
-      />
-      <Card
-        href="https://facebook.com/GermanITSkills"
-        title={t("home.fbCard.title")}
-        body={t("home.fbCard.body")}
-      />
-    </ul>
-  </main>
+  <Hero />
+  <HeadedSection
+    title="Allgemeine Informationen"
+    subtitle="Wer sind wir uns was ist unser Ziel?"
+  >
+    <p class="text-gray-800 sm:text-xl">
+      Die WorldSkills Germany - Bundesleistungszentren haben die Aufgabe,
+      zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst
+      breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen
+      Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu
+      trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt.
+      Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen,
+      Institutionen) gemeinsam mit WorldSkills Germany.
+    </p>
+  </HeadedSection>
+  <WavedSection type={"top"} title="Unsere Skills">
+    <p class="sm:text-xl">
+      Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am
+      <Link href="https://aeg-nb.de" openInNewTab
+        >Albert-Einstein-Gymnasium Neubrandenburg</Link
+      >. An diesem Standort sind <Link href={buildLink("skill08")}
+        >Skill 08: Mobile Applications Development</Link
+      > und
+      <Link href={buildLink("skill09")}
+        >Skill 09: IT Software Solutions for Business</Link
+      > vertreten. Mehr Informationen zu den einzelnen Skills sind auf den jeweiligen
+      Unterseiten.
+    </p>
+  </WavedSection>
+  <WavedSection type={"bottom"} title="Werde Teil unseres Nationalteams">
+    <p>Here Apply CTA</p>
+  </WavedSection>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h2 {
-    text-align: center;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
