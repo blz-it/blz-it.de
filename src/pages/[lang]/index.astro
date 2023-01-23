@@ -15,12 +15,24 @@ updateLang(Astro.url.pathname);
 ---
 
 <Layout title={t("home.title")}>
-  <Hero title={t("home.title")} img="/img/hero-bg.jpg" />
+  <Hero title={t("home.title")} img="/img/hero-bg.jpg" size="lg" textCenter />
   <HeadedSection
     title={t("home.general.title")}
     subtitle={t("home.general.subtitle")}
   >
-    <p class="text-gray-800 sm:text-xl">{t("home.general.text")}</p>
+    <p class="text-gray-800 sm:text-xl">
+      <Trans i18nKey="home.general.text">
+        The National Training Centres by <Link
+          href="https://www.worldskillsgermany.com"
+          openInNewTab>WorldSkills Germany</Link
+        > have the task of training future members of the German national team and
+        thus participants in international competitions, in addition to training
+        according to WorldSkills principles for as broad a group of participants
+        as possible. They are appointed exclusively only once per skills discipline.
+        The appointment is made by the skills mentors (associations, companies, institutions)
+        together with WorldSkills Germany.
+      </Trans>
+    </p>
   </HeadedSection>
   <WavedSection type={"top"} title={t("home.skills.title")}>
     <p class="sm:text-xl">

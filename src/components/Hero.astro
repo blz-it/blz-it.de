@@ -1,10 +1,15 @@
 ---
+import classNames from "classnames";
+
 export interface Props {
   title: string;
+  subtitle?: string | null;
   img: string;
+  textCenter?: boolean;
+  size?: "md" | "lg";
 }
 
-const { title, img } = Astro.props;
+const { title, subtitle, img, textCenter, size = "md" } = Astro.props;
 ---
 
 <div class="relative bg-accent-300">
@@ -17,13 +22,21 @@ const { title, img } = Astro.props;
     </div>
   </div>
   <div
-    class="relative text-center mx-auto max-w-7xl py-16 px-4 sm:py-32 md:py-64 sm:px-6 lg:px-8"
+    class={classNames(
+      "relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+      { "text-center": textCenter },
+      { "py-8 sm:py-16 md:py-32": size === "md" },
+      { "py-16 sm:py-32 md:py-64": size === "lg" }
+    )}
   >
     <h1
       class="font-bold tracking-tight text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
     >
       {title}
     </h1>
+    <p class="mt-6 max-w-4xl sm:text-xl text-wsg-orange-1000">
+      {subtitle}
+    </p>
   </div>
   <svg
     class="relative w-full h-8 sm:h-16 md:h-24"

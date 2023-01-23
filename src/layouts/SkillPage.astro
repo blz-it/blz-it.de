@@ -1,9 +1,9 @@
 ---
 import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
+import Hero from "../components/Hero.astro";
 import Link from "../components/Link.astro";
 import LinkCard from "../components/LinkCard.astro";
-import SkillHeading from "../components/skill/SkillHeading.astro";
 import SkillInformation from "../components/skill/SkillInformation.astro";
 import SkillRoadmap from "../components/skill/SkillRoadmap.astro";
 import type Person from "../components/team/Person.astro";
@@ -16,7 +16,7 @@ import WavedSection from "../layouts/sections/WavedSection.astro";
 import { buildLink } from "../routing/buildLink";
 import type { PropsOf } from "../utils/types";
 
-type Props = PropsOf<typeof SkillHeading> & {
+type Props = PropsOf<typeof Hero> & {
   nationalTeam: PropsOf<typeof Person>[];
   timelineEntries: PropsOf<typeof TimeLineEntry>[];
   additionalLinks: PropsOf<typeof LinkCard>[];
@@ -34,7 +34,11 @@ const {
 
 <Layout title={skillName}>
   <div class="lg:text-lg">
-    <SkillHeading skillNumber={skillNumber} skillName={skillName} img={img} />
+    <Hero
+      title={`Skill ${skillNumber}: ${skillName}`}
+      subtitle={t(`skills.${skillNumber}.short`)}
+      img={img}
+    />
     <HeadedSection
       title={t("skills.general.title")}
       subtitle={t("skills.general.subtitle")}
