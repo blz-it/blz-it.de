@@ -165,16 +165,23 @@
     "09": {
       "video": "https://www.youtube.com/embed/tSGg8S-_I4k",
       "short": "Creating new systems and modifying existing ones to provide software solutions to large and small businesses.",
-      "description": "Text here",
-      "requirementsTitle": "Text here",
-      "requirements": "Text here",
+      "description": "The skill IT Software Solutions for Business represents the entire spectrum of software-developing IT professions. All full-stack programmers are suitable. This includes desktop, server, database, mobile app and web development.<br /><br />For this job you need a good technical understanding and logical thinking. You need to understand the requirements and wishes of the client and develop programs that are reliable, updatable, and easy for users to understand and use.",
+      "requirementsTitle": "What experience should you bring with you?",
+      "requirements": "You are proficient in at least one programming language, e.g., C#, can program desktop, server, web, and mobile applications, have knowledge of UML and databases (SQL), and understand English-language tasks.",
       "occupation": {
-        "title": "Text here",
-        "text": "Text here"
+        "title": "A Career with a future and always on the cutting edge",
+        "text": "The possibilities for communication and information exchange are constantly increasing. With a degree in IT, you are in demand: In 2021, approximately 12&thinsp;% more IT talents were sought than in the previous year. As a software developer, you belong to one of the fastest growing occupational groups.<br /><br />Your main working tool is the computer. This means that you are almost unrestricted in terms of where and when you work, as long as you don't have a customer appointment. The only thing you need is a stable Internet connection."
       },
       "links": {
         "wsi": "Skill 09 at WorldSkills International",
         "ws2022": "Skill 09 at the WorldSkills 2022 SE"
+      },
+      "timeline": {
+        "comingSoon": {
+          "date": "&mdash;",
+          "title": "Available soon",
+          "text": "The history will be available soon"
+        }
       }
     }
   }

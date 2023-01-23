@@ -139,7 +139,7 @@
       "requirements": "Du beherrschst mindestens eine Programmiersprache, z.&thinsp;B. Dart oder Kotlin, und programmierst mobile Apps, auch unter Einbeziehung der Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen.",
       "occupation": {
         "title": "Ein Beruf mit Zukunft und stets am Puls der Zeit",
-        "text": "Die Möglichkeiten der Kommunikation und des Informationsaustauschs nehmen stetig zu. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca.&nbsp;12&thinsp;% mehr IT-Talente gesucht als im Vorjahr. Der Mobile Applications Developer ist somit einer der am schnellsten wachsenden Berufe.<br /><br />Dein Hauptarbeitsmittel ist dein Laptop. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das einzige, was du brauchst, ist eine stabile Internetverbindung."
+        "text": "Die Möglichkeiten der Kommunikation und des Informationsaustauschs nehmen stetig zu. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca.&nbsp;12&thinsp;% mehr IT-Talente gesucht als im Vorjahr. Der Mobile Applications Developer ist somit einer der am schnellsten wachsenden Berufe.<br /><br />Dein Hauptarbeitsmittel ist dein Laptop. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das Einzige, was du brauchst, ist eine stabile Internetverbindung."
       },
       "links": {
         "wsi": "Skill 08 bei WorldSkills International",
@@ -166,16 +166,23 @@
     "09": {
       "video": "https://www.youtube.com/embed/3F0T3nOrp70",
       "short": "Erstellen neuer Systeme und Modifizieren bestehender Systeme, um Softwarelösungen für große und kleine Unternehmen bereitzustellen.",
-      "description": "Text hier",
-      "requirementsTitle": "Text hier",
-      "requirements": "Text hier",
+      "description": "Die Disziplin IT Software Solutions for Business bildet das gesamte Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle Full- Stack-Programmierer*innen. Dazu zählen Desktop-, Server-, Datenbank-, Mobile-App- und Webentwicklung.<br /><br />Für den Beruf brauchst du ein gutes technisches Verständnis und logisches Denkvermögen. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und Programme entwickeln, die zuverlässig, aktualisierbar und für Benutzer*innen leicht zu verstehen und zu verwenden sind.",
+      "requirementsTitle": "Was solltest du an Erfahrungen mitbringen?",
+      "requirements": "Du beherrschst mindestens eine Programmiersprache, z.&thinsp;B. C#, programmierst Desktop-, Server-, Web- und Mobile Anwendungen, hast Kenntnisse in UML und Datenbanken (SQL) und verstehst englischsprachige Aufgabenstellungen.",
       "occupation": {
-        "title": "Text hier",
-        "text": "Text hier"
+        "title": "Ein Beruf mit Zukunft und stets am Puls der Zeit",
+        "text": "Die Möglichkeiten der Kommunikation und des Informationsaustauschs nehmen stetig zu. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca. 12&thinsp;% mehr IT-Talente gesucht als im Vorjahr. Als Softwareentwickler*in gehörst du somit zu einer der am schnellsten wachsenden Berufsgruppen.<br /><br />Dein Hauptarbeitsmittel ist der Computer. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das einzige, was du brauchst, ist eine stabile Internetverbindung."
       },
       "links": {
         "wsi": "Skill 09 bei WorldSkills International",
         "ws2022": "Skill 09 bei den WorldSkills 2022 SE"
+      },
+      "timeline": {
+        "comingSoon": {
+          "date": "&mdash;",
+          "title": "Bald verfügbar",
+          "text": "Die Geschichte ist bald verfügbar"
+        }
       }
     }
   }

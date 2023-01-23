@@ -12,18 +12,11 @@ updateLang(Astro.url.pathname);
   skillName="IT Software Solutions for Business"
   img="https:////live.staticflickr.com/65535/52434272561_5e10bb3507_h.jpg"
   nationalTeam={[]}
-  timelineEntries={[
-    {
-      title: "WorldSkills 2022 SE",
-      date: "13-16 October 2022",
-      text: "Hello there",
-    },
-    {
-      title: "WorldSkills 2022 SE",
-      date: "13-16 October 2022",
-      text: "Hello there",
-    },
-  ]}
+  timelineEntries={["comingSoon"].map((entryId) => ({
+    title: t(`skills.09.timeline.${entryId}.title`),
+    date: t(`skills.09.timeline.${entryId}.date`),
+    text: t(`skills.09.timeline.${entryId}.text`),
+  }))}
   additionalLinks={[
     {
       name: "worldskills.org",
