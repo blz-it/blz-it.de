@@ -1,15 +1,14 @@
 ---
 import Icon from "astro-icon";
-import { pathWithoutLanguage } from "../routing/lang";
 import classNames from "classnames";
 
 type Props = {
   item: string;
   options: readonly string[];
+  onOptionClick: (option: string) => string | undefined;
 };
 
-const pathWithoutLang = pathWithoutLanguage(Astro.url.pathname);
-const { item, options } = Astro.props;
+const { item, options, onOptionClick } = Astro.props;
 ---
 
 <div class="min-w-[6rem]">
@@ -36,11 +35,7 @@ const { item, options } = Astro.props;
 
           return (
             <li
-              onclick={
-                isSelected
-                  ? undefined
-                  : `location.href = '/${option.toLowerCase()}${pathWithoutLang}'`
-              }
+              onclick={isSelected ? undefined : onOptionClick(option)}
               class="text-gray-900 text-base relative cursor-default select-none py-2 pl-3 pr-9 hover:bg-wsg-orange-700"
               role="option"
             >
