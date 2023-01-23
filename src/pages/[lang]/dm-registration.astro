@@ -1,7 +1,12 @@
 ---
 import { t } from "i18next";
-import DmRegistrationForm from "../forms/dm-registration-form";
-import Layout from "../layouts/Layout.astro";
+import DmRegistrationForm from "../../forms/dm-registration-form";
+import Layout from "../../layouts/Layout.astro";
+
+import { getStaticLangPaths, updateLang } from "../../routing/lang";
+
+export const getStaticPaths = getStaticLangPaths;
+updateLang(Astro.url.pathname);
 ---
 
 <!-- TODO(Benjamin-Frost): Change styling as soon as #14 is merged -->
