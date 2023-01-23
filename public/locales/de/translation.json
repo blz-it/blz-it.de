@@ -60,8 +60,8 @@
     "title": "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
     "general": {
       "title": "Allgemeine Informationen",
-      "subtitle": "Wer sind wir uns was ist unser Ziel?",
-      "text": "Die WorldSkills Germany - Bundesleistungszentren haben die Aufgabe, zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany."
+      "subtitle": "Wer sind wir und was ist unser Ziel?",
+      "text": "Die Bundesleistungszentren von WorldSkills Germany haben die Aufgabe, zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany."
     },
     "skills": {
       "title": "Unsere Skills",
@@ -69,7 +69,7 @@
     },
     "cta": {
       "title": "Werde Teil unseres Nationalteams",
-      "subtitle": "Wolltest du schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen? Dann bewirb dich jetzt für die Online-Qualifikation und erhalte eine Chance, Teil unseres Nationalteams zu werden.",
+      "subtitle": "Wolltest du schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen? Dann registriere dich jetzt für die Online-Qualifikation und erhalte eine Chance, Teil unseres Nationalteams zu werden.",
       "button": "Registriere dich jetzt"
     }
   },

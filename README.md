@@ -1,8 +1,8 @@
 # Welcome to [BLZ IT](https://blz-it.de)
 
-`BLZ IT` stands for `Bundesleistungszentrum IT` which can roughly be translated to `Federal Training Center IT`. Interested young people are being prepared to compete in competitions such as the German IT Nationals or [WorldSkills](https://worldskills.org/).
+`BLZ IT` stands for `Bundesleistungszentrum IT`, which can roughly be translated to `Federal Training Center IT`. Interested young people are being prepared to compete in competitions such as the German IT Nationals or [WorldSkills](https://worldskills.org/).
 
-The Project was built using [Astro](https://astro.build). Currently it is being hosted at https://blz-it.de.
+The Project was built using [Astro](https://astro.build). Currently, it is being hosted at https://blz-it.de.
 
 ## 🚀 Project Structure
 
