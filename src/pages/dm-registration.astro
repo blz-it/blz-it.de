@@ -1,0 +1,22 @@
+---
+import { t } from "i18next";
+import DmRegistrationForm from "../forms/dm-registration-form";
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- TODO(Benjamin-Frost): Change styling as soon as #14 is merged -->
+<Layout title="DM Registration">
+  <div class="mx-auto max-w-4xl py-12">
+    <div class="bg-white p-8 rounded-xl">
+      <h2 class="text-2xl sm:text-3xl text-center">
+        {t("dmRegistration.title")}
+      </h2>
+      <div class="rounded-md mt-8 p-4 bg-blue-50">
+        <p class="text-sm text-center text-blue-700">
+          {t("dmRegistration.subtitle")}
+        </p>
+      </div>
+      <DmRegistrationForm client:only />
+    </div>
+  </div>
+</Layout>
