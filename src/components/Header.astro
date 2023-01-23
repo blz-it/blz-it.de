@@ -11,15 +11,15 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
   {
     name: t("layout.header.home"),
-    href: "/",
+    href: buildLink("/"),
   },
   {
     name: "Skill 08",
-    href: "skill08",
+    href: buildLink("skill08"),
   },
   {
     name: "Skill 09",
-    href: "skill09",
+    href: buildLink("skill09"),
   },
 ];
 
@@ -39,7 +39,7 @@ const pathWithoutLang = pathWithoutLanguage(Astro.url.pathname);
           {
             navigation.map((it) => (
               <a
-                href={buildLink(it.href)}
+                href={it.href}
                 class="text-base font-medium text-white hover:text-gray-100"
               >
                 {it.name}
