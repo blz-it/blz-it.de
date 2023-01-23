@@ -1,19 +1,20 @@
 ---
+import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
+import Link from "../components/Link.astro";
+import LinkCard from "../components/LinkCard.astro";
 import SkillHeading from "../components/skill/SkillHeading.astro";
+import SkillInformation from "../components/skill/SkillInformation.astro";
+import SkillRoadmap from "../components/skill/SkillRoadmap.astro";
+import type Person from "../components/team/Person.astro";
+import Team from "../components/team/Team.astro";
+import TimeLine from "../components/timeline/TimeLine.astro";
+import type TimeLineEntry from "../components/timeline/TimeLineEntry.astro";
 import Layout from "../layouts/Layout.astro";
 import HeadedSection from "../layouts/sections/HeadedSection.astro";
 import WavedSection from "../layouts/sections/WavedSection.astro";
-import Team from "../components/team/Team.astro";
-import { Trans } from "astro-i18next/components";
-import Link from "../components/Link.astro";
-import TimeLine from "../components/timeline/TimeLine.astro";
-import { t } from "i18next";
+import { buildLink } from "../routing/buildLink";
 import type { PropsOf } from "../utils/types";
-import type Person from "../components/team/Person.astro";
-import type TimeLineEntry from "../components/timeline/TimeLineEntry.astro";
-import LinkCard from "../components/LinkCard.astro";
-import SkillRoadmap from "../components/skill/SkillRoadmap.astro";
-import SkillInformation from "../components/skill/SkillInformation.astro";
 
 type Props = PropsOf<typeof SkillHeading> & {
   nationalTeam: PropsOf<typeof Person>[];
@@ -53,7 +54,7 @@ const {
           <div>
             <Trans i18nKey={"skills.nationalTeam.noTeam"}>
               There is currently no national team.{" "}
-              <Link href="#">Apply now!</Link>
+              <Link href={buildLink("dm-registration")}>Apply now!</Link>
             </Trans>
           </div>
         )
