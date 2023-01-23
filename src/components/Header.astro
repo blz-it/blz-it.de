@@ -32,7 +32,7 @@ const pathWithoutLang = pathWithoutLanguage(Astro.url.pathname);
       class="flex w-full items-center justify-between border-b border-white py-6 lg:border-none"
     >
       <div class="flex items-center">
-        <a href="/">
+        <a href={buildLink("/")}>
           <img class="h-10 w-auto" src="/img/wsg_hands.svg" alt="" />
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
