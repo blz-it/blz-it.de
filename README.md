@@ -1,12 +1,8 @@
-# Welcome to [Astro](https://astro.build)
+# Welcome to [BLZ IT](https://blz-it.de)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+`BLZ IT` stands for `Bundesleistungszentrum IT` which can roughly be translated to `Federal Training Center IT`. Interested young people are being prepared to compete in competitions such as the German IT Nationals or [WorldSkills](https://worldskills.org/).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
+The Project was built using [Astro](https://astro.build). Currently it is being hosted at https://blz-it.de.
 
 ## 🚀 Project Structure
 
@@ -44,7 +40,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`      | Preview your build locally, before deploying       |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `npm run astro --help` | Get help using the Astro CLI                       |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
