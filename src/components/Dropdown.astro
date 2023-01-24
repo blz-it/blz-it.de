@@ -16,9 +16,12 @@ const id = uuid4();
 <div class="min-w-[6rem]">
   <div class="relative mt-1">
     <button
-      onclick={`document.getElementBy('${id}').classList.toggle('focus');`}
       type="button"
-      class="peer relative w-full cursor-default rounded-md py-2 pl-3 pr-10 text-left text-white hover:bg-wsg-orange-400 hover:bg-opacity-50 focus:ring-1 focus:ring-wsi-blue-300 sm:text-sm"
+      class={classNames(
+        `open-dropdown-${id}`,
+        "peer relative w-full cursor-default rounded-md py-2 pl-3 pr-10 text-left text-white sm:text-sm",
+        "hover:bg-wsg-orange-400 hover:bg-opacity-50 focus:ring-1 focus:ring-wsi-blue-300"
+      )}
       aria-haspopup="listbox"
       aria-expanded="true"
     >
@@ -28,7 +31,7 @@ const id = uuid4();
       id={id}
       class={classNames(
         "absolute z-10 mt-1 max-h-60 w-full bg-white py-1 overflow-auto rounded-md shadow-lg ring-1 ring-black ring-opacity-5 sm:text-sm",
-        "opacity-0 transition-opacity peer-focus:opacity-100 focus:outline-none",
+        "opacity-0 transition-opacity peer-focus:opacity-100 focus:opacity-100 focus:outline-none",
         "pointer-events-none hover:pointer-events-auto peer-focus:pointer-events-auto focus:pointer-events-auto"
       )}
       tabindex="-1"
@@ -67,3 +70,11 @@ const id = uuid4();
     </ul>
   </div>
 </div>
+
+<script is:inline define:vars={{ id }}>
+  document
+    .getElementById(`open-dropdown-${id}`)
+    .addEventListener("click", () =>
+      document.getElementById(id).classList.toggle("focus")
+    );
+</script>
