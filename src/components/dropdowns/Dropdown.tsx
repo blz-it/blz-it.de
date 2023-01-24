@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid/index";
 import classNames from "classnames";
 
 export type DropDownProps = {
