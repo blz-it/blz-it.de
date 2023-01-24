@@ -28,10 +28,10 @@
         "companyName": "Firmenname",
         "occupation": {
           "title": "Beruf",
-          "apprentice": "Auszubildender",
-          "pupil": "Schüler",
-          "student": "Student",
-          "employee": "Angestellter",
+          "apprentice": "Auszubildende*r",
+          "pupil": "Schüler*in",
+          "student": "Student*in",
+          "employee": "Angestellte*r",
           "other": "Sonstiges"
         },
         "state": {
@@ -131,7 +131,7 @@
     "08": {
       "video": "https://www.youtube.com/embed/v7I124lty3s",
       "short": "Entwickler*innen mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln.",
-      "description": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmier*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar und für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
+      "description": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar und für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
       "requirementsTitle": "Was solltest du an Erfahrungen mitbringen?",
       "requirements": "Du beherrschst mindestens eine Programmiersprache, z.&thinsp;B. Dart oder Kotlin, und programmierst mobile Apps, auch unter Einbeziehung der Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen.",
       "occupation": {
@@ -156,7 +156,7 @@
         "einsteinCup2022": {
           "date": "30.&nbsp;Mai&thinsp;&ndash;&thinsp;02.&nbsp;Juni 2022",
           "title": "Albert-Einstein-Cup",
-          "text": "Die Gewinner beim Albert-Einstein-Cup in Neubrandenburg sind: Joachim Schiller (Deutschland), Justin Konratt (Deutschland) und Kantubhukta Lavanya Sai Kumar (Indien). Justin Konratt gewinnt außerdem die Zusatzdisziplin Speed-Programming"
+          "text": "Die Gewinner beim Albert-Einstein-Cup in Neubrandenburg sind: Joachim Schiller (Deutschland), Justin Konratt (Deutschland) und Kantabhukta Lavanya Sai Kumar (Indien). Justin Konratt gewinnt außerdem die Zusatzdisziplin Speed-Programming"
         }
       }
     },
