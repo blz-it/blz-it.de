@@ -12,7 +12,10 @@ export type DropDownProps = {
 
 export const Dropdown = ({ item, options, onChange, label }: DropDownProps) => {
   return (
-    <Listbox value={item} onChange={onChange}>
+    <Listbox
+      value={item}
+      onChange={(option) => option !== item && onChange(option)}
+    >
       {({ open }) => (
         <div className="min-w-[6rem]">
           {label && (
