@@ -1,8 +1,7 @@
 ---
-import i18n, { t } from "i18next";
+import { t } from "i18next";
 import { buildLink } from "../routing/buildLink";
-import { pathWithoutLanguage } from "../routing/lang";
-import Dropdown from "./Dropdown.astro";
+import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
 
 interface NavigationItem {
   name: string;
@@ -22,8 +21,6 @@ const navigation: NavigationItem[] = [
     href: buildLink("skill09"),
   },
 ];
-
-const pathWithoutLang = pathWithoutLanguage(Astro.url.pathname);
 ---
 
 <header class="bg-wsg-orange-500 shadow">
@@ -48,14 +45,7 @@ const pathWithoutLang = pathWithoutLanguage(Astro.url.pathname);
           }
         </div>
       </div>
-      <div>
-        <Dropdown
-          item={i18n.language.toUpperCase()}
-          options={i18n.languages.map((lang) => lang.toUpperCase())}
-          onOptionClick={(option) =>
-            `location.href = '/${option.toLowerCase()}${pathWithoutLang}'`}
-        />
-      </div>
+      <LanguageDropdown client:only currentPath={Astro.url.pathname} />
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
       {
