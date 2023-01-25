@@ -1,16 +1,29 @@
 ---
 import i18n, { t } from "i18next";
+import type { ResourceStore } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import { updateLang } from "../routing/lang";
 
 updateLang(Astro.url.pathname);
+
+const texts = i18n.languages.reduce(
+  (allTexts, lang) => ({
+    ...allTexts,
+    // @ts-ignore
+    [lang]: i18n.store.data[lang].translation.errors["404"],
+  }),
+  {}
+);
 ---
 
-<script is:inline define:vars={{ i18n }}>
+<script
+  is:inline
+  define:vars={{ languages: i18n.languages, currentLanguage: i18n.language }}
+>
   const path = location.pathname;
-  const pathLang = i18n.languages.find((lang) => path.startsWith(`/${lang}`));
+  const pathLang = languages.find((lang) => path.startsWith(`/${lang}`));
   if (!pathLang) {
-    location.href = `/${i18n.language}${path}`;
+    location.href = `/${currentLanguage}${path}`;
   }
 </script>
 
@@ -59,20 +72,15 @@ updateLang(Astro.url.pathname);
   </div>
 </Layout>
 
-<script define:vars={{ i18n }}>
+<script define:vars={{ texts }}>
   const path = location.pathname;
   const pathLang = i18n.languages.find((lang) => path.startsWith(`/${lang}`));
 
-  document.getElementById("title").innerHTML =
-    i18n.store[pathLang].translation.errors["404"].title;
-
-  document.getElementById("subtitle").innerHTML =
-    i18n.store[pathLang].translation.errors["404"].subtitle;
+  document.getElementById("title").innerHTML = texts.title;
+  document.getElementById("subtitle").innerHTML = texts.subtitle;
+  document.getElementById("backButton").innerHTML = texts.back;
 
   const homeButton = document.getElementById("homeButton");
-  homeButton.innerHTML = i18n.store[pathLang].translation.errors["404"].toHome;
+  homeButton.innerHTML = texts.toHome;
   homeButton.addEventListener("click", () => (location.href = `/${pathLang}/`));
-
-  document.getElementById("backButton").innerHTML =
-    i18n.store[pathLang].translation.errors["404"].back;
 </script>
