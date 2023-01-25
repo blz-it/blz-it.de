@@ -1,7 +1,6 @@
 ---
 import i18n, { t } from "i18next";
 import Layout from "../layouts/Layout.astro";
-import { buildLink } from "../routing/buildLink";
 import { updateLang } from "../routing/lang";
 
 updateLang(Astro.url.pathname);
@@ -29,11 +28,12 @@ updateLang(Astro.url.pathname);
         <div class="sm:ml-6">
           <div class="sm:border-l sm:border-gray-200 sm:pl-6">
             <h1
+              id="title"
               class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
             >
               {t("errors.404.title")}
             </h1>
-            <p class="mt-1 text-base text-gray-500">
+            <p id="subtitle" class="mt-1 text-base text-gray-500">
               {t("errors.404.subtitle")}
             </p>
           </div>
@@ -41,12 +41,13 @@ updateLang(Astro.url.pathname);
             class="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6"
           >
             <button
-              onclick={`location.href = ${buildLink("/")}`}
+              id="homeButton"
               class="inline-flex items-center rounded-md border border-transparent bg-wsg-orange-600 px-4 py-2 text-sm font-medium shadow-sm hover:bg-wsg-orange-700 focus:outline-none focus:ring-2 focus:ring-wsg-orange-600 focus:ring-offset-2"
             >
               {t("errors.404.toHome")}
             </button>
             <button
+              id="backButton"
               set:html={t("errors.404.back")}
               onclick="history.back()"
               class="inline-flex items-center rounded-md border border-transparent bg-wsg-orange-900 px-4 py-2 text-sm font-medium hover:bg-wsg-orange-800 focus:outline-none focus:ring-2 focus:ring-wsg-orange-600 focus:ring-offset-2"
@@ -57,3 +58,21 @@ updateLang(Astro.url.pathname);
     </div>
   </div>
 </Layout>
+
+<script define:vars={{ i18n }}>
+  const path = location.pathname;
+  const pathLang = i18n.languages.find((lang) => path.startsWith(`/${lang}`));
+
+  document.getElementById("title").innerHTML =
+    i18n.store[pathLang].translation.errors["404"].title;
+
+  document.getElementById("subtitle").innerHTML =
+    i18n.store[pathLang].translation.errors["404"].subtitle;
+
+  const homeButton = document.getElementById("homeButton");
+  homeButton.innerHTML = i18n.store[pathLang].translation.errors["404"].toHome;
+  homeButton.addEventListener("click", () => (location.href = `/${pathLang}/`));
+
+  document.getElementById("backButton").innerHTML =
+    i18n.store[pathLang].translation.errors["404"].back;
+</script>
