@@ -72,15 +72,16 @@ const texts = i18n.languages.reduce(
   </div>
 </Layout>
 
-<script define:vars={{ texts }}>
+<script define:vars={{ texts, languages: i18n.languages }}>
   const path = location.pathname;
-  const pathLang = i18n.languages.find((lang) => path.startsWith(`/${lang}`));
+  const pathLang = languages.find((lang) => path.startsWith(`/${lang}`));
+  const localizedTexts = texts[pathLang];
 
-  document.getElementById("title").innerHTML = texts.title;
-  document.getElementById("subtitle").innerHTML = texts.subtitle;
-  document.getElementById("backButton").innerHTML = texts.back;
+  document.getElementById("title").innerHTML = localizedTexts.title;
+  document.getElementById("subtitle").innerHTML = localizedTexts.subtitle;
+  document.getElementById("backButton").innerHTML = localizedTexts.back;
 
   const homeButton = document.getElementById("homeButton");
-  homeButton.innerHTML = texts.toHome;
+  homeButton.innerHTML = localizedTexts.toHome;
   homeButton.addEventListener("click", () => (location.href = `/${pathLang}/`));
 </script>
