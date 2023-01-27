@@ -3,9 +3,13 @@ import i18n from "i18next";
 import { pathWithoutLanguage, getPathLang } from "../../routing/lang";
 import { useEffect, useState } from "react";
 
-export const LanguageDropdown = () => {
+type LanguageDropdownProps = {
+  astroPath: string;
+};
+
+export const LanguageDropdown = ({ astroPath }: LanguageDropdownProps) => {
   const [pathWithoutLang, setPathWithoutLang] = useState("/");
-  const [lang, setLang] = useState("");
+  const [lang, setLang] = useState(getPathLang(astroPath));
 
   useEffect(() => {
     const path = location.pathname;
