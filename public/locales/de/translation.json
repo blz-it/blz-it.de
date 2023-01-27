@@ -86,6 +86,10 @@
       "home": "Startseite"
     }
   },
+  "legal": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
   "redirect": {
     "hint": "Wenn Du nicht automatisch weitergeleitet wirst, klicke bitte auf <0>diesen Link</0>.",
     "thisLink": ""

@@ -86,6 +86,10 @@
       "home": "Home"
     }
   },
+  "legal": {
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy"
+  },
   "redirect": {
     "hint": "If you are not automatically redirected, please click on <0>this link</0>."
   },
