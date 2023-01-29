@@ -17,13 +17,15 @@ export const LanguageDropdown = ({ astroPath }: LanguageDropdownProps) => {
     setLang(getPathLang(path) || "");
   }, []);
 
-  return lang ? (
-    <Dropdown
-      item={lang.toUpperCase()}
-      options={i18n.languages.map((lang) => lang.toUpperCase())}
-      onChange={(option) =>
-        (location.href = `/${option.toLowerCase()}${pathWithoutLang}`)
-      }
-    />
-  ) : null;
+  return (
+    lang && (
+      <Dropdown
+        item={lang.toUpperCase()}
+        options={i18n.languages.map((lang) => lang.toUpperCase())}
+        onChange={(option) =>
+          (location.href = `/${option.toLowerCase()}${pathWithoutLang}`)
+        }
+      />
+    )
+  );
 };
