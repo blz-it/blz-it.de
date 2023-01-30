@@ -4,13 +4,25 @@ import Layout from "../layouts/Layout.astro";
 import { updateLang } from "../routing/lang";
 
 updateLang(Astro.url.pathname);
+
+const texts = i18n.languages.reduce(
+  (allTexts, lang) => ({
+    ...allTexts,
+    // @ts-ignore
+    [lang]: i18n.store.data[lang].translation.errors["404"],
+  }),
+  {}
+);
 ---
 
-<script is:inline define:vars={{ i18n }}>
+<script
+  is:inline
+  define:vars={{ languages: i18n.languages, currentLanguage: i18n.language }}
+>
   const path = location.pathname;
-  const pathLang = i18n.languages.find((lang) => path.startsWith(`/${lang}`));
+  const pathLang = languages.find((lang) => path.startsWith(`/${lang}`));
   if (!pathLang) {
-    location.href = `/${i18n.language}${path}`;
+    location.href = `/${currentLanguage}${path}`;
   }
 </script>
 
@@ -59,20 +71,16 @@ updateLang(Astro.url.pathname);
   </div>
 </Layout>
 
-<script define:vars={{ i18n }}>
+<script define:vars={{ texts, languages: i18n.languages }}>
   const path = location.pathname;
-  const pathLang = i18n.languages.find((lang) => path.startsWith(`/${lang}`));
+  const pathLang = languages.find((lang) => path.startsWith(`/${lang}`));
+  const localizedTexts = texts[pathLang];
 
-  document.getElementById("title").innerHTML =
-    i18n.store[pathLang].translation.errors["404"].title;
-
-  document.getElementById("subtitle").innerHTML =
-    i18n.store[pathLang].translation.errors["404"].subtitle;
+  document.getElementById("title").innerHTML = localizedTexts.title;
+  document.getElementById("subtitle").innerHTML = localizedTexts.subtitle;
+  document.getElementById("backButton").innerHTML = localizedTexts.back;
 
   const homeButton = document.getElementById("homeButton");
-  homeButton.innerHTML = i18n.store[pathLang].translation.errors["404"].toHome;
+  homeButton.innerHTML = localizedTexts.toHome;
   homeButton.addEventListener("click", () => (location.href = `/${pathLang}/`));
-
-  document.getElementById("backButton").innerHTML =
-    i18n.store[pathLang].translation.errors["404"].back;
 </script>
