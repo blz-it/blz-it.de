@@ -117,6 +117,14 @@
     },
     "nextWSC": {
       "title": "WorldSkills Lyon 2024",
+      "registration": {
+        "title": "Registrierung",
+        "date": "25.&nbsp;Januar&thinsp;&ndash;&thinsp;24.&nbsp;Februar 2023"
+      },
+      "onlineCompetition": {
+        "title": "Online-Vorausscheid",
+        "date": "28.&nbsp;Februar&thinsp;&ndash;&thinsp;27.&nbsp;März 2023"
+      },
       "germanChampionship": {
         "title": "Deutsche Meisterschaft",
         "date": "22.&thinsp;&ndash;&thinsp;25.&nbsp;Mai 2023"
