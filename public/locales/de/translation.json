@@ -1,7 +1,7 @@
 {
   "dmRegistration": {
     "title": "Registrierung für die Deutsche Meisterschaft 2023",
-    "requirements": "Um teilzunehmen solltest du mindestens eine Programmiersprache beherrschen, Android-Apps programmieren können, grundlegende Kenntnisse in UML und Datenbanken besitzen und englischsprachige Aufgabenstellungen verstehen können.",
+    "requirements": "Der Online-Wettkampf und die Deutschen Meisterschaften werden von beiden Skills gemeinsam durchgeführt. Die Aufteilung des Nationalteams auf Skill&nbsp;08 und Skill&nbsp;09 erfolgt erst im Februar&nbsp;2024 im Rahmen eines Wettkampfes, also vor dem internationalen Albert-Einstein-Cup.<br /><br />Um teilzunehmen solltest du mindestens eine Programmiersprache beherrschen, Android-Apps programmieren können, grundlegende Kenntnisse in UML und Datenbanken besitzen und englischsprachige Aufgabenstellungen verstehen können.",
     "ageDisclaimer": "Bitte beachte, dass du im Wettkampfjahr 2023 nicht älter als 22&nbsp;Jahre werden darfst, d.&thinsp;h. Jahrgänge 01.01.2002 und aufwärts.",
     "form": {
       "personalInformation": {
@@ -120,23 +120,28 @@
       "title": "WorldSkills Lyon 2024",
       "registration": {
         "title": "Registrierung",
-        "date": "25.&nbsp;Januar&thinsp;&ndash;&thinsp;24.&nbsp;Februar 2023"
+        "date": "25.&nbsp;Januar&thinsp;&ndash;&thinsp;24.&nbsp;Februar 2023",
+        "description": "<0>Du registrierst dich</0> und erhältst weitere Informationen sowie nach Abschluss des Registrierungszeitraumes deine Zugangsdaten."
       },
       "onlineCompetition": {
         "title": "Online-Vorausscheid",
-        "date": "28.&nbsp;Februar&thinsp;&ndash;&thinsp;27.&nbsp;März 2023"
+        "date": "28.&nbsp;Februar&thinsp;&ndash;&thinsp;27.&nbsp;März 2023",
+        "description": "Innerhalb der Laufzeit des Online-Ausscheids löst du zu einem Zeitpunkt deiner Wahl mehrere komplexe Testaufgaben, die jeweils ca. 60&thinsp;&ndash;&thinsp;120&nbsp;Minuten dauern. Diese kannst du auch über mehrere Tage verteilen. Die Wahl deiner Programmiersprache spielt hierbei noch keine Rolle."
       },
       "germanChampionship": {
         "title": "Deutsche Meisterschaft",
-        "date": "22.&thinsp;&ndash;&thinsp;25.&nbsp;Mai 2023"
+        "date": "22.&thinsp;&ndash;&thinsp;25.&nbsp;Mai 2023",
+        "description": "Die gemeinsame Deutsche Meisterschaft für beide Skills findet am Bundesleistungszentrum in Neubrandenburg statt. Hier werden über vier Tage komplexe Desktopanwendungen und Android-Apps programmiert. Damit wird das gemeinsame vier- bis sechsköpfige Nationalteam bestimmt. Es sind nur noch die folgenden Entwicklungsumgebungen/Programmiersprachen zugelassen:<0><1>Visual Studio (C#) für Desktopanwendungen</1><2>Xamarin (C#), Flutter (Dart) und Android Studio (Kotlin bzw. Java) für Android-App-Entwicklung</2><3>Microsoft SQL Server</3></0>"
       },
       "einsteinCup": {
         "title": "Albert-Einstein-Cup",
-        "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Mai 2024"
+        "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Mai 2024",
+        "description": "Das gemeinsame Nationalteam wird von unserem Trainerteam in mehreren Trainingslagern und online auf die weiteren Wettkämpfe vorbereitet und im Februar&nbsp;2024 im Rahmen eines Wettkampfes auf die beiden Skill-Teams aufgeteilt.<br /><br />Beim Albert-Einstein-Cup treten beide Nationalteams in ihren Wettbewerbsberufen gegen die besten Softwareentwickler*innen Europas und anderer Kontinente an. Im Ergebnis werden die beiden deutschen Teilnehmer*innen für die WorldSkills Lyon&nbsp;2024 bestimmt."
       },
       "wsc": {
         "title": "WorldSkills Lyon",
-        "date": "10.&thinsp;&ndash;&thinsp;15.&nbsp;September 2024"
+        "date": "10.&thinsp;&ndash;&thinsp;15.&nbsp;September 2024",
+        "description": "Jeweils ein*e Teilnehmer*in vertritt Deutschland in den beiden Skills bei den WorldSkills in Lyon. Der Wettkampf geht über vier Tage."
       }
     },
     "history": "Geschichte",

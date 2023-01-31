@@ -1,68 +1,103 @@
 ---
+import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
+import { buildLink } from "../../routing/buildLink";
 import EventCard from "../EventCard.astro";
+import Link from "../Link.astro";
 ---
 
-<div
-  class="flex flex-col gap-8 items-center sm:flex-row sm:justify-evenly md:block"
->
-  <svg
-    class="absolute hidden md:block max-w-[60rem] lg:max-w-[76rem] pointer-events-none"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="-160 0 1100 1800"
+<div>
+  <div
+    class="flex flex-col gap-8 items-center sm:flex-row sm:justify-evenly md:block"
   >
-    <defs>
-      <linearGradient id="strokeGradient">
-        <stop stop-color="#ffa11f" offset="0"></stop>
-        <stop stop-color="#ed8b00" offset="1"></stop>
-      </linearGradient>
-    </defs>
-    <path
-      d="M41 197l96 4c133 15 279 100 366 82s187-121 217-123 130-46 118 165-42 424-185 410-299-198-423-197-156 91-135 247 44 299 173 275 386-56 396 13 52 322-100 380-255 10-317 16"
-      fill="none"
-      stroke-width="5"
-      stroke='url("#strokeGradient")'
-      stroke-linecap="round"
-      stroke-dasharray="13 22"></path>
-  </svg>
-  <EventCard
-    img="/imgs/registration.jpg"
-    title={t("skills.nextWSC.registration.title")}
-    date={t("skills.nextWSC.registration.date")}
-    link="dm-registration"
-    className="xl:mt-0"
-    hoverTextColor="white"
-  />
-  <EventCard
-    img="/imgs/onlineCompetition.jpg"
-    title={t("skills.nextWSC.onlineCompetition.title")}
-    date={t("skills.nextWSC.onlineCompetition.date")}
-    link="dm-registration"
-    className="md:float-right md:mt-[-4rem]"
-    hoverTextColor="white"
-  />
-  <EventCard
-    img="/imgs/germanChampionship.jpg"
-    title={t("skills.nextWSC.germanChampionship.title")}
-    date={t("skills.nextWSC.germanChampionship.date")}
-    link="https://www.worldskillsgermany.com/de/termine/dm-mobile-app-development-it-software-solutions-for-business/"
-    className="md:mt-48 md:ml-20 lg:mt-54 lg:ml-24 xl:mt-72 xl:ml-32"
-    hoverTextColor="white"
-  />
-  <EventCard
-    img="https://www.worldskillsgermany.com/de/wp-content/uploads/sites/17/2022/06/C3-Competitors-Experts.jpg"
-    link="https://youtu.be/Cvrt7g8es9k"
-    title={t("skills.nextWSC.einsteinCup.title")}
-    date={t("skills.nextWSC.einsteinCup.date")}
-    className="md:float-right md:mt-[-4rem] md:mr-20 lg:mr-24 xl:mr-32"
-    hoverTextColor="white"
-  />
-  <EventCard
-    title={t("skills.nextWSC.wsc.title")}
-    date={t("skills.nextWSC.wsc.date")}
-    img="https://worldskills2024.com/wp-content/uploads/2022/11/One-pager-WSI-Header-1440x1080-OK.jpg"
-    link="https://worldskills2024.com/"
-    className="md:mt-64 md:ml-60 lg:mt-72 lg:ml-72 xl:mt-96 xl:ml-96"
-    hoverTextColor="white"
-  />
+    <svg
+      class="absolute hidden md:block max-w-[60rem] lg:max-w-[76rem] pointer-events-none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="-160 0 1100 1800"
+    >
+      <defs>
+        <linearGradient id="strokeGradient">
+          <stop stop-color="#ffa11f" offset="0"></stop>
+          <stop stop-color="#ed8b00" offset="1"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        d="M41 197l96 4c133 15 279 100 366 82s187-121 217-123 130-46 118 165-42 424-185 410-299-198-423-197-156 91-135 247 44 299 173 275 386-56 396 13 52 322-100 380-255 10-317 16"
+        fill="none"
+        stroke-width="5"
+        stroke='url("#strokeGradient")'
+        stroke-linecap="round"
+        stroke-dasharray="13 22"></path>
+    </svg>
+    <EventCard
+      img="/imgs/registration.jpg"
+      title={t("skills.nextWSC.registration.title")}
+      date={t("skills.nextWSC.registration.date")}
+      link={buildLink("dm-registration")}
+      className="xl:mt-0"
+      hoverTextColor="white"
+    />
+    <EventCard
+      img="/imgs/onlineCompetition.jpg"
+      title={t("skills.nextWSC.onlineCompetition.title")}
+      date={t("skills.nextWSC.onlineCompetition.date")}
+      link="dm-registration"
+      className="md:float-right md:mt-[-4rem]"
+      hoverTextColor="white"
+    />
+    <EventCard
+      img="/imgs/germanChampionship.jpg"
+      title={t("skills.nextWSC.germanChampionship.title")}
+      date={t("skills.nextWSC.germanChampionship.date")}
+      link="https://www.worldskillsgermany.com/de/termine/dm-mobile-app-development-it-software-solutions-for-business/"
+      className="md:mt-48 md:ml-20 lg:mt-54 lg:ml-24 xl:mt-72 xl:ml-32"
+      hoverTextColor="white"
+    />
+    <EventCard
+      img="https://www.worldskillsgermany.com/de/wp-content/uploads/sites/17/2022/06/C3-Competitors-Experts.jpg"
+      link="https://youtu.be/Cvrt7g8es9k"
+      title={t("skills.nextWSC.einsteinCup.title")}
+      date={t("skills.nextWSC.einsteinCup.date")}
+      className="md:float-right md:mt-[-4rem] md:mr-20 lg:mr-24 xl:mr-32"
+      hoverTextColor="white"
+    />
+    <EventCard
+      title={t("skills.nextWSC.wsc.title")}
+      date={t("skills.nextWSC.wsc.date")}
+      img="https://worldskills2024.com/wp-content/uploads/2022/11/One-pager-WSI-Header-1440x1080-OK.jpg"
+      link="https://worldskills2024.com/"
+      className="md:mt-64 md:ml-60 lg:mt-72 lg:ml-72 xl:mt-96 xl:ml-96"
+      hoverTextColor="white"
+    />
+  </div>
+
+  <ol class="sm:pt-8 md:pt-16 list-decimal space-y-4 text-left">
+    <li>
+      <Trans i18nKey="skills.nextWSC.registration.description">
+        <Link href={buildLink("dm-registration")}>You register yourself</Link> and
+        receive further information as well as, after the registration is closed,
+        your credentials.
+      </Trans>
+    </li>
+    <li set:html={t("skills.nextWSC.onlineCompetition.description")} />
+    <li>
+      <Trans i18nKey="skills.nextWSC.germanChampionship.description">
+        The shared German Championship for both Skills takes place at the
+        National Training Centre in Neubrandenburg. Over four competition days,
+        you will develop complex desktop and Android applications. This
+        determines the joint four- to six-strong national team. Only the
+        following development environments / programming languages can be used:
+        <ul class="list-disc pt-4 pl-4">
+          <li>Visual Studio (C#) for desktop applications</li>
+          <li>
+            Xamarin (C#), Flutter (Dart), and Android Studio (Kotlin or Java)
+            for Android app development
+          </li>
+          <li>Microsoft SQL Server</li>
+        </ul>
+      </Trans>
+    </li>
+    <li set:html={t("skills.nextWSC.einsteinCup.description")} />
+    <li set:html={t("skills.nextWSC.wsc.description")} />
+  </ol>
 </div>
