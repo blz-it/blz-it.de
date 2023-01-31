@@ -16,7 +16,10 @@ import WavedSection from "../layouts/sections/WavedSection.astro";
 import { buildLink } from "../routing/buildLink";
 import type { PropsOf } from "../utils/types";
 
-type Props = PropsOf<typeof Hero> & {
+type Props = {
+  skillNumber: string;
+  skillName: string;
+  img: string;
   nationalTeam: PropsOf<typeof Person>[];
   timelineEntries: PropsOf<typeof TimeLineEntry>[];
   additionalLinks: PropsOf<typeof LinkCard>[];
