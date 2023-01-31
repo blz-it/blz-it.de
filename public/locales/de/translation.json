@@ -1,7 +1,8 @@
 {
   "dmRegistration": {
     "title": "Registrierung für die Deutsche Meisterschaft 2023",
-    "subtitle": "Bitte beachte, dass du im Wettkampfjahr nicht älter als 22 Jahre werden darfst, d.&thinsp;h. Jahrgänge 01.01.2002 und aufwärts.",
+    "requirements": "Um teilzunehmen solltest du mindestens eine Programmiersprache beherrschen, Android-Apps programmieren können, grundlegende Kenntnisse in UML und Datenbanken besitzen und englischsprachige Aufgabenstellungen verstehen können.",
+    "ageDisclaimer": "Bitte beachte, dass du im Wettkampfjahr 2023 nicht älter als 22&nbsp;Jahre werden darfst, d.&thinsp;h. Jahrgänge 01.01.2002 und aufwärts.",
     "form": {
       "personalInformation": {
         "title": "Persönliche Informationen",

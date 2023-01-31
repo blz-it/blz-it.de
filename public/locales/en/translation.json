@@ -1,7 +1,8 @@
 {
   "dmRegistration": {
     "title": "Registration for the German Nationals 2023",
-    "subtitle": "Please note that you must not be older than 22 years in the competition year, i.e., born 01.01.2002 or later.",
+    "requirements": "To participate, you should be confident in at least one programming language, be able to program Android apps, have basic knowledge of UML and databases, and be able to understand tasks written in English.",
+    "ageDisclaimer": "Please note that you must not be older than 22&nbsp;years in the competition year 2023, i.e., born 01&nbsp;January 2002 or later.",
     "form": {
       "personalInformation": {
         "title": "Personal Information",
