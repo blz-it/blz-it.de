@@ -1,7 +1,8 @@
 {
   "dmRegistration": {
     "title": "Registration for the German Nationals 2023",
-    "subtitle": "Please note that you must not be older than 22 years in the competition year, i.e., born 01.01.2002 or later.",
+    "requirements": "The online competition and German championship are shared between both Skills. The national team will be divided up into Skill&nbsp;08 and Skill&nbsp;09 in February&nbsp;2024 (before the international Albert Einstein Cup).<br /><br />To participate, you should be confident in at least one programming language, be able to program Android apps, have basic knowledge of UML and databases, and be able to understand tasks written in English.",
+    "ageDisclaimer": "Please note that you must not be older than 22&nbsp;years in the competition year 2023, i.e., born 01&nbsp;January 2002 or later.",
     "form": {
       "personalInformation": {
         "title": "Personal Information",
@@ -37,7 +38,7 @@
         "state": {
           "title": "State",
           "badenWuerttemberg": "Baden-Württemberg",
-          "bavaria": "Bayern",
+          "bavaria": "Bavaria",
           "berlin": "Berlin",
           "brandenburg": "Brandenburg",
           "bremen": "Bremen",
@@ -116,17 +117,30 @@
     },
     "nextWSC": {
       "title": "WorldSkills Lyon 2024",
+      "registration": {
+        "title": "Registration",
+        "date": "25&nbsp;January&nbsp;&thinsp;&ndash;&thinsp;24&nbsp;February 2023",
+        "description": "<0>You register yourself</0> and receive further information as well as, after the registration is closed, your credentials."
+      },
+      "onlineCompetition": {
+        "title": "Online Competition",
+        "date": "28&nbsp;February&nbsp;&thinsp;&ndash;&thinsp;27&nbsp;March 2023",
+        "description": "During this month, you solve multiple complex tasks at a time of your choosing. Each task takes around 60&thinsp;&ndash;&thinsp;120&nbsp;minutes, but you can distribute them across multiple days. The programming language that you use is not relevant."
+      },
       "germanChampionship": {
         "title": "German Championship",
-        "date": "May 22.&thinsp;&ndash;&thinsp;25.&nbsp;2023"
+        "date": "22&thinsp;&ndash;&thinsp;25 May 2023",
+        "description": "The shared German Championship for both Skills takes place at the National Training Centre in Neubrandenburg. Over four competition days, you will develop complex desktop and Android applications. This determines the joint four- to six-strong national team. Only the following development environments / programming languages can be used:<0><1>Visual Studio (C#) for desktop applications</1><2>Xamarin (C#), Flutter (Dart), and Android Studio (Kotlin or Java) for Android app development</2><3>Microsoft SQL Server</3></0>"
       },
       "einsteinCup": {
         "title": "Albert-Einstein-Cup",
-        "date": "May 13.&thinsp;&ndash;&thinsp;16.&nbsp;2024"
+        "date": "13&thinsp;&ndash;&thinsp;16 May 2024",
+        "description": "The joint national team is being prepared for the following competitions online and in multiple training camps by our trainer team. In February&nbsp;2024, the Competitors are divided into two separate national teams, one for each Skill.<br /><br />At the Albert Einstein Cup, both national teams compete against the best software developers of Europe and other continents in their respective Skill. As a result, the two German Competitors for the WorldSkills Lyon&nbsp;2024 will be determined."
       },
       "wsc": {
         "title": "WorldSkills Lyon",
-        "date": "September 10.&thinsp;&ndash;&thinsp;15.&nbsp;2024"
+        "date": "10&thinsp;&ndash;&thinsp;15 September 2024",
+        "description": "In each of the two Skills, one Competitor represents Germany at the WorldSkills in Lyon. The Competition takes place over four days."
       }
     },
     "history": "History",
@@ -147,17 +161,17 @@
       },
       "timeline": {
         "chancellery2022": {
-          "date": "December 08.&nbsp;2022",
-          "title": "Chancellery",
+          "date": "08&nbsp;December 2022",
+          "title": "Federal Chancellery",
           "text": "Justin Konratt receives the &ldquo;Best of Nation&rdquo; medal from Chancellor Olaf Scholz"
         },
         "wsc2022": {
-          "date": "October 13.&thinsp;&ndash;&thinsp;16.&nbsp;2022",
+          "date": "13&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
           "title": "WorldSkills Competition 2022 Special Edition",
           "text": "Justin Konratt wins the bronze medal for Germany at the World Championships in Goyang, Korea"
         },
         "einsteinCup2022": {
-          "date": "Mai 30.&thinsp;&ndash;&thinsp;June 02.&nbsp;2022",
+          "date": "30&nbsp;Mai&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
           "title": "Albert-Einstein-Cup",
           "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Joachim Schiller (Germany), Justin Konratt (Germany) and Kantubhukta Lavanya Sai Kumar (India). Justin Konratt also wins the additional discipline of Speed-Programming"
         }
