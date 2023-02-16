@@ -126,12 +126,12 @@
       "onlineCompetition": {
         "title": "Online-Vorausscheid",
         "date": "28.&nbsp;Februar&thinsp;&ndash;&thinsp;27.&nbsp;März 2023",
-        "description": "Innerhalb der Laufzeit des Online-Ausscheids löst du zu einem Zeitpunkt deiner Wahl mehrere komplexe Testaufgaben, die jeweils ca. 60&thinsp;&ndash;&thinsp;120&nbsp;Minuten dauern. Diese kannst du auch über mehrere Tage verteilen. Die Wahl deiner Programmiersprache spielt hierbei noch keine Rolle."
+        "description": "Innerhalb der Laufzeit des Online-Ausscheids löst du zu einem Zeitpunkt deiner Wahl mehrere anspruchsvolle Testaufgaben, die jeweils ca. 60&thinsp;&ndash;&thinsp;120&nbsp;Minuten dauern. Diese kannst du auch über mehrere Tage verteilen. Die Wahl deiner Programmiersprache spielt hierbei noch keine Rolle."
       },
       "germanChampionship": {
         "title": "Deutsche Meisterschaft",
         "date": "22.&thinsp;&ndash;&thinsp;25.&nbsp;Mai 2023",
-        "description": "Die gemeinsame Deutsche Meisterschaft für beide Skills findet am Bundesleistungszentrum in Neubrandenburg statt. Hier werden über vier Tage komplexe Desktopanwendungen und Android-Apps programmiert. Damit wird das gemeinsame vier- bis sechsköpfige Nationalteam bestimmt. Es sind nur noch die folgenden Entwicklungsumgebungen/Programmiersprachen zugelassen:<0><1>Visual Studio (C#) für Desktopanwendungen</1><2>Xamarin (C#), Flutter (Dart) und Android Studio (Kotlin bzw. Java) für Android-App-Entwicklung</2><3>Microsoft SQL Server</3></0>"
+        "description": "Die gemeinsame Deutsche Meisterschaft für beide Skills findet am Bundesleistungszentrum in Neubrandenburg statt. Hier werden über vier Tage anspruchsvolle Desktopanwendungen und Android-Apps programmiert. Damit wird das gemeinsame vier- bis sechsköpfige Nationalteam bestimmt. Es sind nur noch die folgenden Entwicklungsumgebungen/Programmiersprachen zugelassen:<0><1>Visual Studio (C#) für Desktopanwendungen</1><2>Xamarin (C#), Flutter (Dart) und Android Studio (Kotlin bzw. Java) für Android-App-Entwicklung</2><3>Microsoft SQL Server</3></0>"
       },
       "einsteinCup": {
         "title": "Albert-Einstein-Cup",
@@ -149,7 +149,7 @@
     "08": {
       "video": "https://www.youtube.com/embed/v7I124lty3s",
       "short": "Entwickler*innen mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln.",
-      "description": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar und für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
+      "description": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar und für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
       "requirementsTitle": "Was solltest du an Erfahrungen mitbringen?",
       "requirements": "Du beherrschst mindestens eine Programmiersprache, z.&thinsp;B. Dart oder Kotlin, und programmierst Android-Apps, auch mit Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen.",
       "occupation": {
