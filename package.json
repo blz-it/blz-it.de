@@ -20,7 +20,7 @@
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.25",
-    "@types/react-dom": "^18.2.8",
+    "@types/react-dom": "^18.2.13",
     "astro": "^1.9.2",
     "astro-i18next": "^1.0.0-beta.21",
     "astro-icon": "^0.8.1",
