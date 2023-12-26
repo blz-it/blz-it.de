@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Install, Build, and Upload
-        uses: withastro/action@v0
+        uses: withastro/action@v1
 
   deploy:
     needs: build
