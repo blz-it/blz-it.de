@@ -23,7 +23,7 @@
     "@types/react-dom": "^18.2.18",
     "astro": "^1.9.2",
     "astro-i18next": "^1.0.0-beta.21",
-    "astro-icon": "^0.8.1",
+    "astro-icon": "^1.0.3",
     "classnames": "^2.5.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
