@@ -6,7 +6,7 @@ interface Action {
 export interface Props {
   title: string;
   subtitle?: string | null;
-  action: Action | null;
+  action?: Action;
 }
 
 const { title, subtitle, action } = Astro.props;
