@@ -53,7 +53,7 @@ const {
         <SkillRoadmap />
       </div>
     </WavedSection>
-    <WavedSection type={"bottom"} title={t("skills.nationalTeam.title")}>
+    <!-- <WavedSection type={"bottom"} title={t("skills.nationalTeam.title")}>
       {
         nationalTeam.length ? (
           <Team members={nationalTeam} />
@@ -66,11 +66,11 @@ const {
           </div>
         )
       }
-    </WavedSection>
-    <WavedSection type={"top"} title={t("skills.history")}>
+    </WavedSection> -->
+    <WavedSection type={"bottom"} title={t("skills.history")}>
       <TimeLine entries={timelineEntries} />
     </WavedSection>
-    <WavedSection type={"bottom"} title={t("skills.additionalLinks")}>
+    <WavedSection type={"top"} title={t("skills.additionalLinks")}>
       <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
         {additionalLinks.map((link) => <LinkCard {...link} />)}
       </dl>
