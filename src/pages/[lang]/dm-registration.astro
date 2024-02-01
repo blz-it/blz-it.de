@@ -1,6 +1,5 @@
 ---
 import { t } from "i18next";
-import DmRegistrationForm from "../../forms/dm-registration-form";
 import Layout from "../../layouts/Layout.astro";
 
 import { getStaticLangPaths, updateLang } from "../../routing/lang";
@@ -20,13 +19,13 @@ updateLang(Astro.url.pathname);
       class="mt-8 text-sm"
       set:html={t("dmRegistration.requirements")}
       />
-      <div class="rounded-md mt-8 p-4 bg-blue-50">
+      <!-- <div class="rounded-md mt-8 p-4 bg-blue-50">
         <p
           class="text-sm text-center text-blue-700"
           set:html={t("dmRegistration.ageDisclaimer")}
         />
-      </div>
-      <DmRegistrationForm client:only />
+      </div> -->
+      <!-- <DmRegistrationForm client:only /> -->
     </div>
   </div>
 </Layout>

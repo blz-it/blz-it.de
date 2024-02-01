@@ -1,8 +1,8 @@
 {
   "dmRegistration": {
-    "title": "Registrierung für die Deutsche Meisterschaft 2023",
-    "requirements": "Der Online-Wettkampf und die Deutschen Meisterschaften werden von beiden Skills gemeinsam durchgeführt. Die Aufteilung des Nationalteams auf Skill&nbsp;08 und Skill&nbsp;09 erfolgt erst im Februar&nbsp;2024 im Rahmen eines Wettkampfes, also vor dem internationalen Albert-Einstein-Cup.<br /><br />Um teilzunehmen solltest du mindestens eine Programmiersprache beherrschen, Android-Apps programmieren können, grundlegende Kenntnisse in UML und Datenbanken besitzen und englischsprachige Aufgabenstellungen verstehen können.",
-    "ageDisclaimer": "Bitte beachte, dass du im Wettkampfjahr 2023 nicht älter als 22&nbsp;Jahre werden darfst, d.&thinsp;h. Jahrgänge 01.01.2002 und aufwärts.",
+    "title": "Registrierung für die Deutsche Meisterschaft 2025",
+    "requirements": "Die Registrierung startet Anfang 2025.",
+    "ageDisclaimer": "Bitte beachte, dass du im Wettkampfjahr 2026 nicht älter als 22&nbsp;Jahre werden darfst, d.&thinsp;h. Jahrgänge 01.01.2004 und aufwärts.",
     "form": {
       "personalInformation": {
         "title": "Persönliche Informationen",
@@ -70,7 +70,7 @@
     },
     "cta": {
       "title": "Werde Teil unseres Nationalteams",
-      "subtitle": "Wolltest du schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen? Dann registriere dich jetzt für die Online-Qualifikation und erhalte eine Chance, Teil unseres Nationalteams zu werden.",
+      "subtitle": "Wolltest du schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen? Die nächste Registrierung startet Anfang 2025.",
       "button": "Registriere dich jetzt"
     }
   },

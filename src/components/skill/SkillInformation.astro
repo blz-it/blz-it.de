@@ -21,10 +21,10 @@ const { skillNumber } = Astro.props;
       <Headline>{t(`skills.${skillNumber}.requirementsTitle`)}</Headline>
       <p set:html={t(`skills.${skillNumber}.requirements`)} />
       <br />
-      <Trans i18nKey={"skills.general.interested"}>
+      <!-- <Trans i18nKey={"skills.general.interested"}>
         You are interested?{" "}
         <Link href={buildLink("dm-registration")}>Apply now!</Link>
-      </Trans>
+      </Trans> -->
     </div>
     <div class="flex-1 xl:pl-12 mt-20 xl:mt-0">
       <iframe

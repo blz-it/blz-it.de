@@ -1,7 +1,7 @@
 {
   "dmRegistration": {
-    "title": "Registration for the German Nationals 2023",
-    "requirements": "The online competition and German championship are shared between both Skills. The national team will be divided up into Skill&nbsp;08 and Skill&nbsp;09 in February&nbsp;2024 (before the international Albert Einstein Cup).<br /><br />To participate, you should be confident in at least one programming language, be able to program Android apps, have basic knowledge of UML and databases, and be able to understand tasks written in English.",
+    "title": "Registration for the German Nationals 2025",
+    "requirements": "The registration opens in the beginning of 2025.",
     "ageDisclaimer": "Please note that you must not be older than 22&nbsp;years in the competition year 2023, i.e., born 01&nbsp;January 2002 or later.",
     "form": {
       "personalInformation": {
@@ -70,7 +70,7 @@
     },
     "cta": {
       "title": "Become part of our national team",
-      "subtitle": "Have you always wanted to take part in a software development competition and compete with the best of the best? Then register now for the online qualification and get a chance to be part of our national team.",
+      "subtitle": "Have you always wanted to take part in a software development competition and compete with the best of the best? The next registration starts in the beginning of 2025.",
       "button": "Register now"
     }
   },
