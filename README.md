@@ -8,7 +8,7 @@ The Project was built using [Astro](https://astro.build). Currently, it is being
 
 Inside of your Astro project, you'll see the following folders and files:
 
-```
+```plaintext
 /
 ├── public/
 │   └── favicon.svg
