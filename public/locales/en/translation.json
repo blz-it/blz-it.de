@@ -158,23 +158,6 @@
       "links": {
         "wsi": "Skill 08 at WorldSkills International",
         "ws2022": "Skill 08 at the WorldSkills 2022 SE"
-      },
-      "timeline": {
-        "chancellery2022": {
-          "date": "08&nbsp;December 2022",
-          "title": "Federal Chancellery",
-          "text": "Justin Konratt receives the &ldquo;Best of Nation&rdquo; medal from Chancellor Olaf Scholz"
-        },
-        "wsc2022": {
-          "date": "13&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
-          "title": "WorldSkills Competition 2022 Special Edition",
-          "text": "Justin Konratt wins the bronze medal for Germany at the World Championships in Goyang, Korea"
-        },
-        "einsteinCup2022": {
-          "date": "30&nbsp;Mai&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
-          "title": "Albert-Einstein-Cup",
-          "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Joachim Schiller (Germany), Justin Konratt (Germany) and Kantubhukta Lavanya Sai Kumar (India). Justin Konratt also wins the additional discipline of Speed-Programming"
-        }
       }
     },
     "09": {
@@ -190,13 +173,6 @@
       "links": {
         "wsi": "Skill 09 at WorldSkills International",
         "ws2022": "Skill 09 at the WorldSkills 2022 SE"
-      },
-      "timeline": {
-        "comingSoon": {
-          "date": "&mdash;",
-          "title": "Available soon",
-          "text": "The history will be available soon"
-        }
       }
     }
   }

@@ -1,0 +1,54 @@
+{
+  "de": {
+    "skill08": {
+      "chancellery2022": {
+        "date": "08.&nbsp;Dezember 2022",
+        "title": "Empfang im Bundeskanzleramt",
+        "text": "Justin Konratt bekommt von Bundeskanzler Olaf Scholz die &ldquo;Best of Nation&rdquo;-Medaille verliehen"
+      },
+      "wsc2022": {
+        "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Oktober 2022",
+        "title": "WorldSkills Competition 2022 Special Edition",
+        "text": "Justin Konratt holt in Goyang, Korea bei der Weltmeisterschaft die Bronzemedaille für Deutschland"
+      },
+      "einsteinCup2022": {
+        "date": "30.&nbsp;Mai&thinsp;&ndash;&thinsp;02.&nbsp;Juni 2022",
+        "title": "Albert-Einstein-Cup",
+        "text": "Die Gewinner beim Albert-Einstein-Cup in Neubrandenburg sind: Joachim Schiller (Deutschland), Justin Konratt (Deutschland) und Kantubhukta Lavanya Sai Kumar (Indien). Justin Konratt gewinnt außerdem die Zusatzdisziplin Speed-Programming"
+      }
+    },
+    "skill09": {
+      "comingSoon": {
+        "date": "&mdash;",
+        "title": "Bald verfügbar",
+        "text": "Die Geschichte ist bald verfügbar"
+      }
+    }
+  },
+  "en": {
+    "skill08": {
+      "chancellery2022": {
+        "date": "08&nbsp;December 2022",
+        "title": "Federal Chancellery",
+        "text": "Justin Konratt receives the &ldquo;Best of Nation&rdquo; medal from Chancellor Olaf Scholz"
+      },
+      "wsc2022": {
+        "date": "13&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
+        "title": "WorldSkills Competition 2022 Special Edition",
+        "text": "Justin Konratt wins the bronze medal for Germany at the World Championships in Goyang, Korea"
+      },
+      "einsteinCup2022": {
+        "date": "30&nbsp;Mai&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
+        "title": "Albert-Einstein-Cup",
+        "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Joachim Schiller (Germany), Justin Konratt (Germany) and Kantubhukta Lavanya Sai Kumar (India). Justin Konratt also wins the additional discipline of Speed-Programming"
+      }
+    },
+    "skill09": {
+      "comingSoon": {
+        "date": "&mdash;",
+        "title": "Available soon",
+        "text": "The history will be available soon"
+      }
+    }
+  }
+}
