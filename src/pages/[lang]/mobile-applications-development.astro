@@ -1,0 +1,34 @@
+---
+import { t } from "i18next";
+import SkillPage from "../../layouts/SkillPage.astro";
+import { getStaticLangPaths, updateLang } from "../../routing/lang";
+
+export const getStaticPaths = getStaticLangPaths;
+updateLang(Astro.url.pathname);
+---
+
+<SkillPage
+  skillNumber="08"
+  skillName="Mobile Applications Development"
+  img="https:////live.staticflickr.com/65535/52434467221_676ae1bf70_h.jpg"
+  nationalTeam={[]}
+  timelineEntries={["chancellery2022", "wsc2022", "einsteinCup2022"].map(
+    (entryId) => ({
+      title: t(`skills.08.timeline.${entryId}.title`),
+      date: t(`skills.08.timeline.${entryId}.date`),
+      text: t(`skills.08.timeline.${entryId}.text`),
+    })
+  )}
+  additionalLinks={[
+    {
+      name: "worldskills.org",
+      text: t("skills.08.links.wsi"),
+      href: "https://worldskills.org/skills/id/562/",
+    },
+    {
+      name: "worldskills2022se.com",
+      text: t("skills.08.links.ws2022"),
+      href: "https://worldskills2022se.com/skills/mobile-applications-development/",
+    },
+  ]}
+/>
