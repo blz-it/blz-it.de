@@ -15,7 +15,13 @@ updateLang(Astro.url.pathname);
 ---
 
 <Layout title={t("home.title")}>
-  <Hero title={t("home.title")} img="/img/hero-bg.jpg" size="lg" textCenter />
+  <Hero
+    title={t("home.title")}
+    subtitle={t("home.subtitle")}
+    img="/img/hero-bg.jpg"
+    size="lg"
+    textCenter
+  />
   <HeadedSection
     title={t("home.general.title")}
     subtitle={t("home.general.subtitle")}
