@@ -67,7 +67,9 @@
     },
     "skills": {
       "title": "Unsere Skills",
-      "text": "Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. An diesem Standort sind <1>Skill 08: Mobile Applications Development</1> und <2>Skill 09: IT Software Solutions for Business</2> vertreten. Mehr Informationen zu den einzelnen Skills sind auf den jeweiligen Unterseiten."
+      "text": "Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. An diesem Standort sind <1>Skill 08: Mobile Applications Development</1> und <2>Skill 09: IT Software Solutions for Business</2> vertreten. Mehr Informationen zu den einzelnen Skills sind auf den jeweiligen Unterseiten.",
+      "skill08": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen.",
+      "skill09": " Die Disziplin IT Software Solutions for Business bildet das gesamte Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-, Datenbank-, Mobile-App- und Webentwicklung."
     },
     "cta": {
       "title": "Werde Teil unseres Nationalteams",

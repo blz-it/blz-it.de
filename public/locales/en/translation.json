@@ -67,7 +67,9 @@
     },
     "skills": {
       "title": "Our Skills",
-      "text": "The Federal Centres of Excellence in Software Development are located at the <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. At this location, <1>Skill 08: Mobile Applications Development</1> and <2>Skill 09: IT Software Solutions for Business</2> are represented. More information on the individual skills can be found on the respective subpages."
+      "text": "The Federal Centres of Excellence in Software Development are located at the <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. At this location, <1>Skill 08: Mobile Applications Development</1> and <2>Skill 09: IT Software Solutions for Business</2> are represented. More information on the individual skills can be found on the respective subpages.",
+      "skill08": "As a software developer with a specialization in mobile applications, you are a programmer and designer in one. You ensure that the apps work on users' mobile devices, look appealing, and are fun to use.",
+      "skill09": "The skill IT Software Solutions for Business represents the entire spectrum of software-developing IT professions. All full-stack programmers are suitable. This includes desktop, server, database, mobile app and web development."
     },
     "cta": {
       "title": "Become part of our national team",
