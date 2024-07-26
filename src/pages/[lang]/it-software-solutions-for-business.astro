@@ -2,9 +2,14 @@
 import { t } from "i18next";
 import SkillPage from "../../layouts/SkillPage.astro";
 import { getStaticLangPaths, updateLang } from "../../routing/lang";
+import { load_history } from "../../utils/async_helper";
 
 export const getStaticPaths = getStaticLangPaths;
 updateLang(Astro.url.pathname);
+
+const { lang } = Astro.params;
+
+const history_data = await load_history("skill09", lang);
 ---
 
 <SkillPage
@@ -13,17 +18,10 @@ updateLang(Astro.url.pathname);
   skillName="IT Software Solutions for Business"
   img="https:////live.staticflickr.com/65535/52434272561_5e10bb3507_h.jpg"
   nationalTeam={[]}
-  timelineEntries={[
-    "wsc2024",
-    "einsteinCup2024",
-    "euroskills2023",
-    "nationalChampionship2023",
-    "wsc2022",
-    "einsteinCup2022",
-  ].map((entryId) => ({
-    title: t(`skills.09.timeline.${entryId}.title`),
-    date: t(`skills.09.timeline.${entryId}.date`),
-    text: t(`skills.09.timeline.${entryId}.text`),
+  timelineEntries={Object.values(history_data).map((entry) => ({
+    title: entry["title"],
+    date: entry["date"],
+    text: entry["text"],
   }))}
   additionalLinks={[
     {

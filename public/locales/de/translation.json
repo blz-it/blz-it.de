@@ -164,38 +164,6 @@
       "links": {
         "wsi": "Skill 08 bei WorldSkills International",
         "wsc2024": "Skill 08 bei den WorldSkills 2024 Lyon"
-      },
-      "timeline": {
-        "chancellery2022": {
-          "date": "08.&nbsp;Dezember 2022",
-          "title": "Empfang im Bundeskanzleramt",
-          "text": "Justin Konratt bekommt von Bundeskanzler Olaf Scholz die &ldquo;Best of Nation&rdquo;-Medaille verliehen."
-        },
-        "wsc2022": {
-          "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Oktober 2022",
-          "title": "WorldSkills Competition 2022 Special Edition",
-          "text": "Justin Konratt holt in Goyang, Korea bei der Weltmeisterschaft die Bronzemedaille für Deutschland."
-        },
-        "einsteinCup2022": {
-          "date": "30.&nbsp;Mai&thinsp;&ndash;&thinsp;02.&nbsp;Juni 2022",
-          "title": "Albert-Einstein-Cup",
-          "text": "Die Gewinner beim Albert-Einstein-Cup in Neubrandenburg sind: Joachim Schiller (Deutschland), Justin Konratt (Deutschland) und Kantubhukta Lavanya Sai Kumar (Indien). Justin Konratt gewinnt außerdem die Zusatzdisziplin Speed-Programming."
-        },
-        "nationalChampionship2023": {
-          "date": "25&nbsp;Mai&thinsp;&ndash;&thinsp;25&nbsp;Mai 2023",
-          "title": "Deutsche Meisterschaft",
-          "text": "Beide Skills der Deutschen Meisterschaft wurden von Daniel Kalisch, Simon Brebeck and Nils Jakubzick gewonnen. Florian Darsow ist bester im Speed-Programming."
-        },
-        "einsteinCup2024": {
-          "date": "27&nbsp;Mai&thinsp;&ndash;&thinsp;30&nbsp;Mai 2024",
-          "title": "Albert-Einstein-Cup",
-          "text": "Jongwon Kim (Südkorea), Daniel Kalisch (Deutschland) und Wei-Hung Lai (Chinesisch Taipeh) sind die Gewinner des Albert-Einstein-Cups. Stefan Kornel (Ungarn) gewinnt die zusätzliche Disziplin Speed-Programming. Der &ldquo;Hungarian Speed Test&ldquo; machte seinen ersten Auftritt und wurde von Nils Jakubzick (Deutschland) gewonnen."
-        },
-        "wsc2024": {
-          "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-          "title": "WorldSkills Lyon 2024",
-          "text": ""
-        }
       }
     },
     "09": {
@@ -211,38 +179,6 @@
       "links": {
         "wsi": "Skill 09 bei WorldSkills International",
         "wsc2024": "Skill 09 bei den WorldSkills Lyon 2024"
-      },
-      "timeline": {
-        "einsteinCup2022": {
-          "date": "30&nbsp;Mai&thinsp;&ndash;&thinsp;02&nbsp;Juni 2022",
-          "title": "Albert-Einstein-Cup",
-          "text": "Die Gewinner des Albert-Einstein-Cups in Neubrandenburg sind: Thomas Gassmann (Schweiz), Glenn Skrzypczak (Deutschland) and Bence Lakos (Ungarn). Justin Konratt gewinnt die zusätzliche Disziplin Speed-Programming."
-        },
-        "wsc2022": {
-          "date": "13&nbsp;&thinsp;&ndash;&thinsp;16&nbsp;Oktober 2022",
-          "title": "WorldSkills Competition 2022 Special Edition",
-          "text": "Glenn Skrzypczak wird Vize-Weltmeister im Speed-Programming."
-        },
-        "euroskills2023": {
-          "date": "5&nbsp;September&thinsp;&ndash;&thinsp;9&nbsp;September 2023",
-          "title": "EuroSkills Gdańsk 2023",
-          "text": "Glenn Skrzypczak erreicht bei den EuroSkills Gold und gewinnt außerdem das Speed-Programming."
-        },
-        "nationalChampionship2023": {
-          "date": "25&nbsp;Mai&thinsp;&ndash;&thinsp;25&nbsp;Mai 2023",
-          "title": "Deutsche Meisterschaft",
-          "text": "Beide Skills der Deutschen Meisterschaft wurden von Daniel Kalisch, Simon Brebeck and Nils Jakubzick gewonnen. Florian Darsow ist bester im Speed-Programming."
-        },
-        "einsteinCup2024": {
-          "date": "27&nbsp;Mai&thinsp;&ndash;&thinsp;30&nbsp;Mai 2024",
-          "title": "Albert-Einstein-Cup",
-          "text": "Jongwon Kim (Südkorea), Daniel Kalisch (Deutschland) und [Schweiz] sind die Gewinner des Albert-Einstein-Cups. Stefan Kornel (Ungarn) gewinnt die zusätzliche Disziplin Speed-Programming. Der &ldquo;Hungarian Speed Test&ldquo; wurde das erste mal durchgeführt und von Nils Jakubzick (Deutschland) gewonnen."
-        },
-        "wsc2024": {
-          "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-          "title": "WorldSkills Lyon 2024",
-          "text": ""
-        }
       }
     }
   }
