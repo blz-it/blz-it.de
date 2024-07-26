@@ -63,13 +63,13 @@
     "general": {
       "title": "Allgemeine Informationen",
       "subtitle": "Wer sind wir und was ist unser Ziel?",
-      "text": "Die Bundesleistungszentren von <0>WorldSkills Germany</0> haben die Aufgabe, zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany."
+      "text": "<0>WorldSkills International</0> hat es sich zur Aufgabe gemacht, nachhaltig die Attraktivität der beruflichen Bildung zu verbessern. Zu diesem Zweck werden alle zwei Jahre die &ldquo;Weltmeisterschaften der Berufe&ldquo; ausgetragen in der sich talentierte, junge Menschen untereinander messen. Die deutsche Ausprägung dieser Initiative ist <1>WorldSkills Germany</1>, die beispielsweise selbst nationale und internationale Wettbewerbe veranstaltet. Zu den einzelnen Berufen gehört in Deutschland jeweils ein Bundesleistungszentrum.<br/><br/>Die Bundesleistungszentren von WorldSkills Germany haben die Aufgabe, zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany."
     },
     "skills": {
       "title": "Unsere Skills",
       "text": "Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. An diesem Standort sind <1>Skill 08: Mobile Applications Development</1> und <2>Skill 09: IT Software Solutions for Business</2> vertreten. Mehr Informationen zu den einzelnen Skills sind auf den jeweiligen Unterseiten.",
       "skill08": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen.",
-      "skill09": " Die Disziplin IT Software Solutions for Business bildet das gesamte Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-, Datenbank-, Mobile-App- und Webentwicklung."
+      "skill09": "Die Disziplin IT Software Solutions for Business bildet das gesamte Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-, Datenbank-, Mobile-App- und Webentwicklung."
     },
     "cta": {
       "title": "Werde Teil unseres Nationalteams",
