@@ -25,16 +25,12 @@ const home: NavigationItem = {
           <img class="h-10 w-auto" src="/img/wsg_hands_white.svg" alt="" />
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
-          {
-            (
-              <a
-                href={home.href}
-                class="text-base font-medium text-white hover:text-gray-100"
-              >
-                {home.name}
-              </a>
-            )
-          }
+          <a
+            href={home.href}
+            class="text-base font-medium text-white hover:text-gray-100"
+          >
+            {home.name}
+          </a>
         </div>
 
         <div class="ml-10">
@@ -45,16 +41,12 @@ const home: NavigationItem = {
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
       <div class="ml-10 my-auto space-x-8 lg:hidden">
-        {
-          (
-            <a
-              href={home.href}
-              class="text-base font-medium text-white hover:text-gray-100"
-            >
-              {home.name}
-            </a>
-          )
-        }
+        <a
+          href={home.href}
+          class="text-base font-medium text-white hover:text-gray-100"
+        >
+          {home.name}
+        </a>
       </div>
       <SkillsDropdown client:load astroPath={Astro.url.pathname} />
     </div>
