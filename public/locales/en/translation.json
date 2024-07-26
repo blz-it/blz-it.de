@@ -59,14 +59,17 @@
   },
   "home": {
     "title": "Welcome to the national centers of software development",
+    "subtitle": "We offer preparation for the world championships!",
     "general": {
       "title": "General Information",
       "subtitle": "Who are we and what is our goal?",
-      "text": "The National Training Centres by <0>WorldSkills Germany</0> have the task of training future members of the German national team and thus participants in international competitions, in addition to training according to WorldSkills principles for as broad a group of participants as possible. They are appointed exclusively only once per skills discipline. The appointment is made by the skills mentors (associations, companies, institutions) together with WorldSkills Germany."
+      "text": "<0>WorldSkills International</0> have made it their mission to increase the attractivity of vocational education. For this purpose, the &ldquo;world championships of skills&ldquo; are held every two years, in which talented, young people compete with each other. The German manifestation of this initiative is <1>WorldSkills Germany</1>, which for example also hosts national and international competitions. In Germany, a National Training Centre belongs to a each skill respectively.<br/><br/>The National Training Centres by WorldSkills Germany have the task of training future members of the German national team and thus participants in international competitions, in addition to training according to WorldSkills principles for as broad a group of participants as possible. They are appointed exclusively only once per skills discipline. The appointment is made by the skills mentors (associations, companies, institutions) together with WorldSkills Germany."
     },
     "skills": {
       "title": "Our Skills",
-      "text": "The Federal Centres of Excellence in Software Development are located at the <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. At this location, <1>Skill 08: Mobile Applications Development</1> and <2>Skill 09: IT Software Solutions for Business</2> are represented. More information on the individual skills can be found on the respective subpages."
+      "text": "The Federal Centres of Excellence in Software Development are located at the <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. At this location, <1>Skill 08: Mobile Applications Development</1> and <2>Skill 09: IT Software Solutions for Business</2> are represented. More information on the individual skills can be found on the respective subpages.",
+      "skill08": "As a software developer with a specialization in mobile applications, you are a programmer and designer in one. You ensure that the apps work on users' mobile devices, look appealing, and are fun to use.",
+      "skill09": "The skill IT Software Solutions for Business represents the entire spectrum of software-developing IT professions. All full-stack programmers are suitable. This includes desktop, server, database, mobile app and web development."
     },
     "cta": {
       "title": "Become part of our national team",
@@ -84,7 +87,8 @@
       "website": "Website"
     },
     "header": {
-      "home": "Home"
+      "home": "Home",
+      "skills": "Our Skills"
     }
   },
   "legal": {
@@ -145,6 +149,7 @@
     },
     "history": "History",
     "additionalLinks": "Additional Links",
+    "contact": "Contact",
     "08": {
       "video": "https://www.youtube.com/embed/Qe0ZaQAOQUY",
       "short": "Mobile Applications Developers use technology and design to create apps which are appealing and function well on phones.",

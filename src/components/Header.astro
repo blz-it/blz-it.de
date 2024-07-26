@@ -2,25 +2,17 @@
 import { t } from "i18next";
 import { buildLink } from "../routing/buildLink";
 import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
+import { SkillsDropdown } from "./dropdowns/SkillsDropdown";
+import load from "astro-icon/lib/utils";
 
-interface NavigationItem {
+export interface NavigationItem {
   name: string;
   href: string;
 }
-const navigation: NavigationItem[] = [
-  {
-    name: t("layout.header.home"),
-    href: buildLink("/"),
-  },
-  {
-    name: "Skill 08",
-    href: buildLink("skill08"),
-  },
-  {
-    name: "Skill 09",
-    href: buildLink("skill09"),
-  },
-];
+const home: NavigationItem = {
+  name: t("layout.header.home"),
+  href: buildLink("/"),
+};
 ---
 
 <header class="bg-wsg-orange-500 shadow">
@@ -34,30 +26,37 @@ const navigation: NavigationItem[] = [
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
           {
-            navigation.map((it) => (
+            (
               <a
-                href={it.href}
+                href={home.href}
                 class="text-base font-medium text-white hover:text-gray-100"
               >
-                {it.name}
+                {home.name}
               </a>
-            ))
+            )
           }
+        </div>
+
+        <div class="ml-10">
+          <SkillsDropdown client:load astroPath={Astro.url.pathname} />
         </div>
       </div>
       <LanguageDropdown client:load astroPath={Astro.url.pathname} />
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
-      {
-        navigation.map((it) => (
-          <a
-            href={it.href}
-            class="text-base font-medium text-white hover:text-gray-100"
-          >
-            {it.name}
-          </a>
-        ))
-      }
+      <div class="ml-10 my-auto space-x-8 lg:hidden">
+        {
+          (
+            <a
+              href={home.href}
+              class="text-base font-medium text-white hover:text-gray-100"
+            >
+              {home.name}
+            </a>
+          )
+        }
+      </div>
+      <SkillsDropdown client:load astroPath={Astro.url.pathname} />
     </div>
   </nav>
 </header>
