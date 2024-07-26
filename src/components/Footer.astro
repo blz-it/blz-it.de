@@ -31,113 +31,72 @@ const socials: Social[] = [
   <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <img class="h-36 -ml-6 xl:ml-0" src="/img/wsg_horizontal.svg" alt="" />
-      <div class="mt-8 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-        <div class="md:grid md:grid-cols-2 md:gap-8">
-          <div>
-            <h3 class="text-sm font-semibold leading-6 text-white">
-              WorldSkills International
-            </h3>
-            <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a
-                  href="https://worldskills.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                  >{t("layout.footer.website")}</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://worldskills.org/skills/id/562"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                  >Skill 08</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://worldskills.org/skills/id/221"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                  >Skill 09</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-semibold leading-6 text-white">
-              WorldSkills Germany
-            </h3>
-            <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a
-                  href="https://www.worldskillsgermany.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                >
-                  {t("layout.footer.website")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.worldskillsgermany.com/de/verein/ansprechpartner"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                >
-                  {t("layout.footer.contact")}
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div
+        class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap xl:col-span-2 xl:mt-0"
+      >
+        <div>
+          <h3 class="text-sm font-semibold leading-6 text-white">
+            WorldSkills International
+          </h3>
+          <ul role="list" class="mt-6 space-y-4">
+            <li>
+              <a
+                href="https://worldskills.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+                >{t("layout.footer.website")}</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="md:grid md:grid-cols-2 md:gap-8">
-          <div>
-            <h3 class="text-sm font-semibold leading-6 text-white">
-              {t("layout.footer.contact")}
-            </h3>
-            <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a
-                  href="mailto:worldskills@jonas-wanke.com"
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                  >Skill 08</a
-                >
-              </li>
-              <li>
-                <a
-                  href="mailto:skills@kapplers.de"
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                  >Skill 09</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="mt-20 md:mt-0">
-            <h3 class="text-sm font-semibold leading-6 text-white">
-              {t("layout.footer.legal")}
-            </h3>
-            <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a
-                  href={buildLink("/imprint")}
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                  >{t("layout.footer.imprint")}</a
-                >
-              </li>
-              <li>
-                <a
-                  href={buildLink("/privacy")}
-                  class="text-sm leading-6 text-gray-300 hover:text-white"
-                  >{t("layout.footer.privacy")}</a
-                >
-              </li>
-            </ul>
-          </div>
+        <div class="mt-10 md:mt-0">
+          <h3 class="text-sm font-semibold leading-6 text-white">
+            WorldSkills Germany
+          </h3>
+          <ul role="list" class="mt-6 space-y-4">
+            <li>
+              <a
+                href="https://www.worldskillsgermany.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                {t("layout.footer.website")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.worldskillsgermany.com/de/verein/ansprechpartner"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                {t("layout.footer.contact")}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-10 md:mt-0">
+          <h3 class="text-sm font-semibold leading-6 text-white">
+            {t("layout.footer.legal")}
+          </h3>
+          <ul role="list" class="mt-6 space-y-4">
+            <li>
+              <a
+                href={buildLink("/imprint")}
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+                >{t("layout.footer.imprint")}</a
+              >
+            </li>
+            <li>
+              <a
+                href={buildLink("/privacy")}
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+                >{t("layout.footer.privacy")}</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </div>
