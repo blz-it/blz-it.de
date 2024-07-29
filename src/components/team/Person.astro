@@ -2,6 +2,7 @@
 import type { PropsOf } from "../../utils/types";
 import SocialMediaList from "../social_media/SocialMediaList.astro";
 import { PersonImage } from "./PersonImage";
+import { t } from "i18next";
 
 type Props = {
   name: string;
@@ -23,7 +24,7 @@ const { name, img, role, skill, andmore } = Astro.props;
         {role}
       </p>
       <p class="inline-block">
-        {andmore && "and more"}
+        {andmore && t("team.more")}
       </p>
     </div>
     <p>

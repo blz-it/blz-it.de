@@ -182,5 +182,9 @@
         "wsc2024": "Skill 09 bei den WorldSkills Lyon 2024"
       }
     }
+  },
+  "team": {
+    "title": "Unser Team",
+    "more": "und mehr"
   }
 }
