@@ -1,0 +1,41 @@
+[
+  {
+    "img": "/imgs/online_competition.webp",
+    "name": "Max Mustermann",
+    "lastrole": "Competitor",
+    "skill": "Skill 09",
+    "andmore": true
+  },
+  {
+    "name": "Max Mustermann",
+    "lastrole": "Competitor"
+  },
+  {
+    "name": "Max Mustermann",
+    "lastrole": "Competitor"
+  },
+  {
+    "name": "Max Mustermann",
+    "lastrole": "Competitor"
+  },
+  {
+    "name": "Max Mustermann",
+    "lastrole": "Competitor"
+  },
+  {
+    "name": "Max Mustermann",
+    "lastrole": "Competitor"
+  },
+  {
+    "name": "Max Mustermann",
+    "lastrole": "Competitor"
+  },
+  {
+    "name": "Maxine Mustermann",
+    "lastrole": "Helper"
+  },
+  {
+    "name": "Maxine Mustermann",
+    "lastrole": "Helper"
+  }
+]
