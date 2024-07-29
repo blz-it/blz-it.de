@@ -1,0 +1,17 @@
+---
+import Hero from "../../components/Hero.astro";
+import Team from "../../components/team/Team.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getStaticLangPaths, updateLang } from "../../routing/lang";
+
+export const getStaticPaths = getStaticLangPaths;
+updateLang(Astro.url.pathname);
+---
+
+<Layout title="Our Team">
+  <Hero
+    title="Our Team"
+    img="https:////live.staticflickr.com/65535/52434467221_676ae1bf70_h.jpg"
+  />
+  <Team />
+</Layout>
