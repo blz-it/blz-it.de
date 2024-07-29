@@ -4,15 +4,22 @@ import { buildLink } from "../routing/buildLink";
 import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
 import { SkillsDropdown } from "./dropdowns/SkillsDropdown";
 import load from "astro-icon/lib/utils";
+import { map } from "zod";
 
 export interface NavigationItem {
   name: string;
   href: string;
 }
-const home: NavigationItem = {
-  name: t("layout.header.home"),
-  href: buildLink("/"),
-};
+const navigationItems: NavigationItem[] = [
+  {
+    name: t("layout.header.home"),
+    href: buildLink("/"),
+  },
+  {
+    name: t("layout.header.team"),
+    href: buildLink("/our-team"),
+  },
+];
 ---
 
 <header class="bg-wsg-orange-500 shadow">
@@ -25,28 +32,36 @@ const home: NavigationItem = {
           <img class="h-10 w-auto" src="/img/wsg_hands_white.svg" alt="" />
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
-          <a
-            href={home.href}
-            class="text-base font-medium text-white hover:text-gray-100"
-          >
-            {home.name}
-          </a>
+          {
+            navigationItems.map((item) => (
+              <a
+                href={item.href}
+                class="text-base font-medium text-white hover:text-gray-100"
+              >
+                {item.name}
+              </a>
+            ))
+          }
         </div>
 
-        <div class="ml-10">
+        <div class="ml-8 hidden lg:block">
           <SkillsDropdown client:load astroPath={Astro.url.pathname} />
         </div>
       </div>
       <LanguageDropdown client:load astroPath={Astro.url.pathname} />
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
-      <div class="ml-10 my-auto space-x-8 lg:hidden">
-        <a
-          href={home.href}
-          class="text-base font-medium text-white hover:text-gray-100"
-        >
-          {home.name}
-        </a>
+      <div class="ml-8 my-auto space-x-8 lg:hidden">
+        {
+          navigationItems.map((item) => (
+            <a
+              href={item.href}
+              class="text-base font-medium text-white hover:text-gray-100"
+            >
+              {item.name}
+            </a>
+          ))
+        }
       </div>
       <SkillsDropdown client:load astroPath={Astro.url.pathname} />
     </div>
