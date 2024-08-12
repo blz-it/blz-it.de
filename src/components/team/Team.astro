@@ -14,9 +14,9 @@ const team = await load_team();
         <Person
           name={member["name"]}
           img={member["img"]}
-          role={member["lastrole"]}
+          lastRole={member["lastRole"]}
           skill={member["skill"]}
-          andmore={member["andmore"]}
+          hasMultipleRoles={member["hasMultipleRoles"]}
         />
       ))
     }

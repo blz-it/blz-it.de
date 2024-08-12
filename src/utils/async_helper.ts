@@ -9,12 +9,12 @@ export async function load_history(
   return Promise.resolve(history[language][skill]);
 }
 
-interface TeamMember {
+export interface TeamMember {
   name: string;
-  lastrole: string;
-  img?: string;
+  lastRole: string;
   skill?: string;
-  andmore?: boolean;
+  img?: string;
+  hasMultipleRoles: boolean;
 }
 
 export async function load_team(): Promise<TeamMember[]> {
