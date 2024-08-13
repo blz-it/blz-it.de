@@ -7,7 +7,7 @@ export const PersonImage = ({ img }: PersonImageProps) => {
   return (
     <img
       className={`mx-auto h-40 w-40 rounded-full shadow-lg xl:h-56 xl:w-56 object-cover ${padding}`}
-      src={img ?? "/img/wsg_hands.svg"}
+      src={img ?? "/imgs/wsg/wsg_hands.svg"}
       alt=""
     />
   );
