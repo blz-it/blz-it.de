@@ -1,49 +1,70 @@
 [
   {
-    "img": "/imgs/online_competition.webp",
-    "name": "Max Mustermann",
-    "lastRole": "Competitor",
-    "skill": "Skill 09",
+    "img": "/imgs/team/Benjamin Frost.webp",
+    "name": "Benjamin Frost",
+    "lastRole": "Jury",
     "hasMultipleRoles": true
   },
   {
-    "name": "Max Mustermann",
-    "lastRole": "Competitor",
-    "hasMultipleRoles": false
+    "img": "/imgs/team/Jonas Wanke.webp",
+    "name": "Jonas Wanke",
+    "lastRole": "Expert",
+    "skill": "Skill 08",
+    "hasMultipleRoles": true
   },
   {
-    "name": "Max Mustermann",
-    "lastRole": "Competitor",
-    "hasMultipleRoles": false
+    "img": "/imgs/team/Dr. Olaf Kappler.webp",
+    "name": "Dr. Olaf Kappler",
+    "lastRole": "Expert",
+    "skill": "Skill 09"
   },
   {
-    "name": "Max Mustermann",
-    "lastRole": "Competitor",
-    "hasMultipleRoles": false
+    "img": "/imgs/team/Doreen Kappler.webp",
+    "name": "Doreen Kappler",
+    "lastRole": "Good Fairy"
   },
   {
-    "name": "Max Mustermann",
-    "lastRole": "Competitor",
-    "hasMultipleRoles": false
+    "img": "/imgs/team/Glenn Skrzypczak.webp",
+    "name": "Glenn Skrzypczak",
+    "lastRole": "Expert",
+    "skill": "Skill 17",
+    "hasMultipleRoles": true
   },
   {
-    "name": "Max Mustermann",
-    "lastRole": "Competitor",
-    "hasMultipleRoles": false
+    "img": "/imgs/team/Elisa Boose.webp",
+    "name": "Elisa Boose",
+    "lastRole": "Trainer"
   },
   {
-    "name": "Max Mustermann",
-    "lastRole": "Competitor",
-    "hasMultipleRoles": false
+    "img": "/imgs/team/Michael Boose.webp",
+    "name": "Michael Boose",
+    "lastRole": "Trainer"
   },
   {
-    "name": "Maxine Mustermann",
-    "lastRole": "Helper",
-    "hasMultipleRoles": false
+    "img": "/imgs/team/Joachim Schiller.webp",
+    "name": "Joachim Schiller",
+    "lastRole": "Jury",
+    "hasMultipleRoles": true
   },
   {
-    "name": "Maxine Mustermann",
-    "lastRole": "Helper",
-    "hasMultipleRoles": false
+    "img": "/imgs/team/Justin Konratt.webp",
+    "name": "Justin Konratt",
+    "lastRole": "Jury",
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/imgs/team/Kai Redmann.webp",
+    "name": "Kai Redmann",
+    "lastRole": "Workshop Manager"
+  },
+  {
+    "img": "/imgs/team/Lukas Fischer.webp",
+    "name": "Lukas Fischer",
+    "lastRole": "Workshop Manager"
+  },
+  {
+    "img": "/imgs/team/Thomas Steinfeld.webp",
+    "name": "Thomas Steinfeld",
+    "lastRole": "Mr. Speed Programming"
   }
 ]

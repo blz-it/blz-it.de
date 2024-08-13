@@ -23,7 +23,7 @@ const { name, img, lastRole, skill, hasMultipleRoles } = Astro.props;
       </p>
     </div>
     <p>
-      {skill}
+      {skill || <br />}
     </p>
   </div>
 </div>

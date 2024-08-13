@@ -7,18 +7,20 @@ const team = await load_team();
 
 <div class="bg-white py-16">
   <div
-    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-20 mx-8 md:mx-24 mx-32"
+    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16 mx-8 md:mx-24 mx-32"
   >
     {
-      team.map((member) => (
-        <Person
-          name={member["name"]}
-          img={member["img"]}
-          lastRole={member["lastRole"]}
-          skill={member["skill"]}
-          hasMultipleRoles={member["hasMultipleRoles"]}
-        />
-      ))
+      team
+        .sort((first, second) => first["name"].localeCompare(second["name"]))
+        .map((member) => (
+          <Person
+            name={member["name"]}
+            img={member["img"]}
+            lastRole={member["lastRole"]}
+            skill={member["skill"]}
+            hasMultipleRoles={member["hasMultipleRoles"]}
+          />
+        ))
     }
   </div>
 </div>
