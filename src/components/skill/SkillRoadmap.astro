@@ -1,6 +1,6 @@
 ---
 import { Trans } from "astro-i18next/components";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import { buildLink } from "../../routing/buildLink";
 import EventCard from "../EventCard.astro";
 import Link from "../Link.astro";
@@ -33,7 +33,7 @@ import Link from "../Link.astro";
       img="/imgs/registration.webp"
       title={t("skills.nextWSC.registration.title")}
       date={t("skills.nextWSC.registration.date")}
-      link={buildLink("dm-registration")}
+      link={buildLink("dm-registration", i18next.language)}
       className="xl:mt-0"
       hoverTextColor="white"
     />
@@ -74,8 +74,9 @@ import Link from "../Link.astro";
   <ol class="sm:pt-8 md:pt-16 list-decimal space-y-4 text-left">
     <li>
       <Trans i18nKey="skills.nextWSC.registration.description">
-        <Link href={buildLink("dm-registration")}>You register yourself</Link> and
-        receive further information as well as, after the registration is closed,
+        <Link href={buildLink("dm-registration", i18next.language)}
+          >You register yourself</Link
+        > and receive further information as well as, after the registration is closed,
         your credentials.
       </Trans>
     </li>

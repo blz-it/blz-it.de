@@ -1,32 +1,32 @@
-import { useEffect, useState } from "react";
-import { getPathLang } from "../../routing/lang";
-import { Dropdown } from "./Dropdown";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { NavigationItem } from "../Header.astro";
+import { useTranslation } from "react-i18next";
 import { buildLink } from "../../routing/buildLink";
-import { t } from "i18next";
+import { getPathLang } from "../../routing/lang";
+import { NavigationItem } from "../Header.astro";
+import { Dropdown } from "./Dropdown";
 
 type SkillsDropdownProps = {
   astroPath: string;
 };
 
-const skills: NavigationItem[] = [
-  {
-    name: "Mobile",
-    href: buildLink("mobile-applications-development"),
-  },
-  {
-    name: "Full Stack",
-    href: buildLink("it-software-solutions-for-business"),
-  },
-];
-
 const downChevron = <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />;
 
 export const SkillsDropdown = ({ astroPath }: SkillsDropdownProps) => {
-  const lang = getPathLang(astroPath);
+  const { t, i18n } = useTranslation();
 
+  const lang = getPathLang(astroPath);
   if (!lang) return null;
+
+  const skills: NavigationItem[] = [
+    {
+      name: "Mobile",
+      href: buildLink("mobile-applications-development", i18n.language),
+    },
+    {
+      name: "Full Stack",
+      href: buildLink("it-software-solutions-for-business", i18n.language),
+    },
+  ];
 
   return (
     <Dropdown

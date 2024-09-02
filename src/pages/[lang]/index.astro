@@ -1,6 +1,6 @@
 ---
 import { Trans } from "astro-i18next/components";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import Cta from "../../components/Cta.astro";
 import Hero from "../../components/Hero.astro";
 import Link from "../../components/Link.astro";
@@ -55,43 +55,46 @@ updateLang(Astro.url.pathname);
         The Federal Centres of Excellence in Software Development are located at
         the <Link href="https://aeg-nb.de" openInNewTab
           >Albert-Einstein-Gymnasium Neubrandenburg</Link
-        >. At this location, <Link href={buildLink("skill08")}
+        >. At this location, <Link
+          href={buildLink("mobile-applications-development", i18next.language)}
           >Skill 08: Mobile Applications Development</Link
-        > and <Link href={buildLink("skill09")}
-          >Skill 09: IT Software Solutions for Business</Link
+        > and <Link
+          href={buildLink(
+            "it-software-solutions-for-business",
+            i18next.language
+          )}>Skill 09: IT Software Solutions for Business</Link
         > are represented. More information on the individual skills can be found
         on the respective subpages.
       </Trans>
     </p>
-    <table>
-      <tr class="border-b-2"
-        ><th class="border-r-2 text-xl py-1">Mobile Applications Development</th
-        >
-        <th class="text-xl">IT Software Solutions for Business</th>
-      </tr>
-      <tr>
-        <td class="border-r-2">
-          <p class="mx-10 pt-2">
-            <Trans i18nKey="home.skills.skill08">
-              As a software developer with a specialization in mobile
-              applications, you are a programmer and designer in one. You ensure
-              that the apps work on users' mobile devices, look appealing, and
-              are fun to use.
-            </Trans>
-          </p>
-        </td>
-        <td>
-          <p class="mx-10 pt-2">
-            <Trans i18nKey="home.skills.skill09">
-              The skill IT Software Solutions for Business represents the entire
-              spectrum of software-developing IT professions. All full-stack
-              programmers are suitable. This includes desktop, server, database,
-              mobile app and web development.
-            </Trans>
-          </p>
-        </td>
-      </tr>
-    </table>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-24 mx-4">
+      <div>
+        <p class="text-xl border-white border-b-2 pb-1">
+          Mobile Applications Development
+        </p>
+        <p class="md:text-justify pt-4">
+          <Trans i18nKey="home.skills.skill08">
+            As a software developer with a specialization in mobile
+            applications, you are a programmer and designer in one. You ensure
+            that the apps work on users' mobile devices, look appealing, and are
+            fun to use.
+          </Trans>
+        </p>
+      </div>
+      <div>
+        <p class="text-xl border-white border-b-2 pb-1">
+          IT Software Solutions for Business
+        </p>
+        <p class="md:text-justify pt-4">
+          <Trans i18nKey="home.skills.skill09">
+            The skill IT Software Solutions for Business represents the entire
+            spectrum of software-developing IT professions. All full-stack
+            programmers are suitable. This includes desktop, server, database,
+            mobile app and web development.
+          </Trans>
+        </p>
+      </div>
+    </div>
   </WavedSection>
   <WavedSection type={"bottom"}>
     <Cta

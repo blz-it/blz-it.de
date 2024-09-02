@@ -1,9 +1,8 @@
 ---
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import { buildLink } from "../routing/buildLink";
 import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
 import { SkillsDropdown } from "./dropdowns/SkillsDropdown";
-import load from "astro-icon/lib/utils";
 
 export interface NavigationItem {
   name: string;
@@ -11,7 +10,7 @@ export interface NavigationItem {
 }
 const home: NavigationItem = {
   name: t("layout.header.home"),
-  href: buildLink("/"),
+  href: buildLink("/", i18next.language),
 };
 ---
 
@@ -21,7 +20,7 @@ const home: NavigationItem = {
       class="flex w-full items-center justify-between border-b border-white py-6 lg:border-none"
     >
       <div class="flex items-center">
-        <a href={buildLink("/")}>
+        <a href={buildLink("/", i18next.language)}>
           <img class="h-10 w-auto" src="/img/wsg_hands_white.svg" alt="" />
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
