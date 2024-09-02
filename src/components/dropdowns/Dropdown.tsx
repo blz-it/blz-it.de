@@ -8,9 +8,10 @@ export type DropDownProps = {
   options: readonly string[];
   onChange: (option: string) => void;
   label?: string;
+  icon: JSX.Element;
 };
 
-export const Dropdown = ({ item, options, onChange, label }: DropDownProps) => {
+export const Dropdown = ({ item, options, icon, onChange, label }: DropDownProps) => {
   return (
     <Listbox
       value={item}
@@ -34,7 +35,7 @@ export const Dropdown = ({ item, options, onChange, label }: DropDownProps) => {
                 {item}
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                <ChevronUpDownIcon className="h-5 w-5" aria-hidden="true" />
+                {icon}
               </span>
             </Listbox.Button>
 

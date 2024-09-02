@@ -15,11 +15,13 @@ import HeadedSection from "../layouts/sections/HeadedSection.astro";
 import WavedSection from "../layouts/sections/WavedSection.astro";
 import { buildLink } from "../routing/buildLink";
 import type { PropsOf } from "../utils/types";
+import ContactSection from "./Contact.astro";
 
 type Props = {
   skillNumber: string;
   skillName: string;
   img: string;
+  contact: string;
   nationalTeam: PropsOf<typeof Person>[];
   timelineEntries: PropsOf<typeof TimeLineEntry>[];
   additionalLinks: PropsOf<typeof LinkCard>[];
@@ -32,16 +34,18 @@ const {
   nationalTeam,
   timelineEntries,
   additionalLinks,
+  contact,
 } = Astro.props;
 ---
 
 <Layout title={skillName}>
-  <div class="lg:text-lg">
+  <div class="lg:text-lg bg-white">
     <Hero
       title={`Skill ${skillNumber}: ${skillName}`}
       subtitle={t(`skills.${skillNumber}.short`)}
       img={img}
     />
+    <ContactSection contact={contact} />
     <HeadedSection
       title={t("skills.general.title")}
       subtitle={t("skills.general.subtitle")}

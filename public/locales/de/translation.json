@@ -59,14 +59,17 @@
   },
   "home": {
     "title": "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
+    "subtitle": "Wir bereiten auf die Weltmeisterschaften vor!",
     "general": {
       "title": "Allgemeine Informationen",
       "subtitle": "Wer sind wir und was ist unser Ziel?",
-      "text": "Die Bundesleistungszentren von <0>WorldSkills Germany</0> haben die Aufgabe, zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany."
+      "text": "<0>WorldSkills International</0> hat es sich zur Aufgabe gemacht, nachhaltig die Attraktivität der beruflichen Bildung zu verbessern. Zu diesem Zweck werden alle zwei Jahre die &ldquo;Weltmeisterschaften der Berufe&ldquo; ausgetragen in der sich talentierte, junge Menschen untereinander messen. Die deutsche Ausprägung dieser Initiative ist <1>WorldSkills Germany</1>, die beispielsweise selbst nationale und internationale Wettbewerbe veranstaltet. Zu den einzelnen Berufen gehört in Deutschland jeweils ein Bundesleistungszentrum.<br/><br/>Die Bundesleistungszentren von WorldSkills Germany haben die Aufgabe, zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany."
     },
     "skills": {
       "title": "Unsere Skills",
-      "text": "Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. An diesem Standort sind <1>Skill 08: Mobile Applications Development</1> und <2>Skill 09: IT Software Solutions for Business</2> vertreten. Mehr Informationen zu den einzelnen Skills sind auf den jeweiligen Unterseiten."
+      "text": "Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. An diesem Standort sind <1>Skill 08: Mobile Applications Development</1> und <2>Skill 09: IT Software Solutions for Business</2> vertreten. Mehr Informationen zu den einzelnen Skills sind auf den jeweiligen Unterseiten.",
+      "skill08": "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen.",
+      "skill09": "Die Disziplin IT Software Solutions for Business bildet das gesamte Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-, Datenbank-, Mobile-App- und Webentwicklung."
     },
     "cta": {
       "title": "Werde Teil unseres Nationalteams",
@@ -84,7 +87,8 @@
       "website": "Webseite"
     },
     "header": {
-      "home": "Startseite"
+      "home": "Startseite",
+      "skills": "Unsere Disziplinen"
     }
   },
   "legal": {
@@ -146,6 +150,7 @@
     },
     "history": "Geschichte",
     "additionalLinks": "Weitere Links",
+    "contact": "Kontakt",
     "08": {
       "video": "https://www.youtube.com/embed/v7I124lty3s",
       "short": "Entwickler*innen mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln.",
@@ -158,39 +163,7 @@
       },
       "links": {
         "wsi": "Skill 08 bei WorldSkills International",
-        "wsc2024": "Skill 08 bei den WorldSkills 2024 Lyon"
-      },
-      "timeline": {
-        "chancellery2022": {
-          "date": "08.&nbsp;Dezember 2022",
-          "title": "Empfang im Bundeskanzleramt",
-          "text": "Justin Konratt bekommt von Bundeskanzler Olaf Scholz die &ldquo;Best of Nation&rdquo;-Medaille verliehen."
-        },
-        "wsc2022": {
-          "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Oktober 2022",
-          "title": "WorldSkills Competition 2022 Special Edition",
-          "text": "Justin Konratt holt in Goyang, Korea bei der Weltmeisterschaft die Bronzemedaille für Deutschland."
-        },
-        "einsteinCup2022": {
-          "date": "30.&nbsp;Mai&thinsp;&ndash;&thinsp;02.&nbsp;Juni 2022",
-          "title": "Albert-Einstein-Cup",
-          "text": "Die Gewinner beim Albert-Einstein-Cup in Neubrandenburg sind: Joachim Schiller (Deutschland), Justin Konratt (Deutschland) und Kantubhukta Lavanya Sai Kumar (Indien). Justin Konratt gewinnt außerdem die Zusatzdisziplin Speed-Programming."
-        },
-        "nationalChampionship2023": {
-          "date": "22&nbsp;Mai&thinsp;&ndash;&thinsp;25&nbsp;Mai 2023",
-          "title": "Deutsche Meisterschaft",
-          "text": "Beide Skills der Deutschen Meisterschaft wurden von Daniel Kalisch, Simon Brebeck and Nils Jakubzick gewonnen. Florian Darsow ist bester im Speed-Programming."
-        },
-        "einsteinCup2024": {
-          "date": "27&nbsp;Mai&thinsp;&ndash;&thinsp;30&nbsp;Mai 2024",
-          "title": "Albert-Einstein-Cup",
-          "text": "Jongwon Kim (Südkorea), Daniel Kalisch (Deutschland) und Wei-Hung Lai (Chinesisch Taipeh) sind die Gewinner des Albert-Einstein-Cups. Stefan Kornel (Ungarn) gewinnt die zusätzliche Disziplin Speed-Programming. Der &ldquo;Hungarian Speed Test&ldquo; machte seinen ersten Auftritt und wurde von Nils Jakubzick (Deutschland) gewonnen."
-        },
-        "wsc2024": {
-          "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-          "title": "WorldSkills Lyon 2024",
-          "text": ""
-        }
+        "wsc2024": "Skill 08 bei den WorldSkills Lyon 2024"
       }
     },
     "09": {
@@ -206,38 +179,6 @@
       "links": {
         "wsi": "Skill 09 bei WorldSkills International",
         "wsc2024": "Skill 09 bei den WorldSkills Lyon 2024"
-      },
-      "timeline": {
-        "einsteinCup2022": {
-          "date": "30&nbsp;Mai&thinsp;&ndash;&thinsp;02&nbsp;Juni 2022",
-          "title": "Albert-Einstein-Cup",
-          "text": "Die Gewinner des Albert-Einstein-Cups in Neubrandenburg sind: Thomas Gassmann (Schweiz), Glenn Skrzypczak (Deutschland) and Bence Lakos (Ungarn). Justin Konratt gewinnt die zusätzliche Disziplin Speed-Programming."
-        },
-        "wsc2022": {
-          "date": "13&nbsp;&thinsp;&ndash;&thinsp;16&nbsp;Oktober 2022",
-          "title": "WorldSkills Competition 2022 Special Edition",
-          "text": "Glenn Skrzypczak wird Vize-Weltmeister im Speed-Programming."
-        },
-        "euroskills2023": {
-          "date": "5&nbsp;September&thinsp;&ndash;&thinsp;9&nbsp;September 2023",
-          "title": "EuroSkills Gdańsk 2023",
-          "text": "Glenn Skrzypczak erreicht bei den EuroSkills Gold und gewinnt außerdem das Speed-Programming."
-        },
-        "nationalChampionship2023": {
-          "date": "22&nbsp;Mai&thinsp;&ndash;&thinsp;25&nbsp;Mai 2023",
-          "title": "Deutsche Meisterschaft",
-          "text": "Beide Skills der Deutschen Meisterschaft wurden von Daniel Kalisch, Simon Brebeck and Nils Jakubzick gewonnen. Florian Darsow ist bester im Speed-Programming."
-        },
-        "einsteinCup2024": {
-          "date": "27&nbsp;Mai&thinsp;&ndash;&thinsp;30&nbsp;Mai 2024",
-          "title": "Albert-Einstein-Cup",
-          "text": "Jongwon Kim (Südkorea), Daniel Kalisch (Deutschland) und [Schweiz] sind die Gewinner des Albert-Einstein-Cups. Stefan Kornel (Ungarn) gewinnt die zusätzliche Disziplin Speed-Programming. Der &ldquo;Hungarian Speed Test&ldquo; wurde das erste mal durchgeführt und von Nils Jakubzick (Deutschland) gewonnen."
-        },
-        "wsc2024": {
-          "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-          "title": "WorldSkills Lyon 2024",
-          "text": ""
-        }
       }
     }
   }

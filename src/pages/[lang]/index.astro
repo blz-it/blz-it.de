@@ -15,14 +15,29 @@ updateLang(Astro.url.pathname);
 ---
 
 <Layout title={t("home.title")}>
-  <Hero title={t("home.title")} img="/img/hero-bg.jpg" size="lg" textCenter />
+  <Hero
+    title={t("home.title")}
+    subtitle={t("home.subtitle")}
+    img="/img/hero-bg.jpg"
+    size="lg"
+    textCenter
+  />
   <HeadedSection
     title={t("home.general.title")}
     subtitle={t("home.general.subtitle")}
   >
     <p class="text-gray-800 sm:text-xl">
       <Trans i18nKey="home.general.text">
-        The National Training Centres by <Link
+        <Link href="https://www.worldskills.com" openInNewTab
+          >WorldSkills International</Link
+        > have made it their mission to increase the attractivity of vocational education.
+        For this purpose, the &ldquo;world championships of skills&ldquo; are held
+        every two years, in which talented, young people compete with each other.
+        The German manifestation of this initiative is <Link
+          href="https://www.worldskillsgermany.com">WorldSkills Germany</Link
+        >, which for example also hosts national and international competitions.
+        In Germany, a National Training Centre belongs to a each skill
+        respectively. The National Training Centres by <Link
           href="https://www.worldskillsgermany.com"
           openInNewTab>WorldSkills Germany</Link
         > have the task of training future members of the German national team and
@@ -48,11 +63,41 @@ updateLang(Astro.url.pathname);
         on the respective subpages.
       </Trans>
     </p>
+    <table>
+      <tr class="border-b-2"
+        ><th class="border-r-2 text-xl py-1">Mobile Applications Development</th
+        >
+        <th class="text-xl">IT Software Solutions for Business</th>
+      </tr>
+      <tr>
+        <td class="border-r-2">
+          <p class="mx-10 pt-2">
+            <Trans i18nKey="home.skills.skill08">
+              As a software developer with a specialization in mobile
+              applications, you are a programmer and designer in one. You ensure
+              that the apps work on users' mobile devices, look appealing, and
+              are fun to use.
+            </Trans>
+          </p>
+        </td>
+        <td>
+          <p class="mx-10 pt-2">
+            <Trans i18nKey="home.skills.skill09">
+              The skill IT Software Solutions for Business represents the entire
+              spectrum of software-developing IT professions. All full-stack
+              programmers are suitable. This includes desktop, server, database,
+              mobile app and web development.
+            </Trans>
+          </p>
+        </td>
+      </tr>
+    </table>
   </WavedSection>
   <WavedSection type={"bottom"}>
     <Cta
       title={t("home.cta.title")}
       subtitle={t("home.cta.subtitle")}
+      action={{ label: t("home.cta.button"), url: "/dm-registration" }}
     />
   </WavedSection>
 </Layout>

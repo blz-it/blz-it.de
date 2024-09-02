@@ -59,14 +59,17 @@
   },
   "home": {
     "title": "Welcome to the national centers of software development",
+    "subtitle": "We offer preparation for the world championships!",
     "general": {
       "title": "General Information",
       "subtitle": "Who are we and what is our goal?",
-      "text": "The National Training Centres by <0>WorldSkills Germany</0> have the task of training future members of the German national team and thus participants in international competitions, in addition to training according to WorldSkills principles for as broad a group of participants as possible. They are appointed exclusively only once per skills discipline. The appointment is made by the skills mentors (associations, companies, institutions) together with WorldSkills Germany."
+      "text": "<0>WorldSkills International</0> have made it their mission to increase the attractivity of vocational education. For this purpose, the &ldquo;world championships of skills&ldquo; are held every two years, in which talented, young people compete with each other. The German manifestation of this initiative is <1>WorldSkills Germany</1>, which for example also hosts national and international competitions. In Germany, a National Training Centre belongs to a each skill respectively.<br/><br/>The National Training Centres by WorldSkills Germany have the task of training future members of the German national team and thus participants in international competitions, in addition to training according to WorldSkills principles for as broad a group of participants as possible. They are appointed exclusively only once per skills discipline. The appointment is made by the skills mentors (associations, companies, institutions) together with WorldSkills Germany."
     },
     "skills": {
       "title": "Our Skills",
-      "text": "The Federal Centres of Excellence in Software Development are located at the <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. At this location, <1>Skill 08: Mobile Applications Development</1> and <2>Skill 09: IT Software Solutions for Business</2> are represented. More information on the individual skills can be found on the respective subpages."
+      "text": "The Federal Centres of Excellence in Software Development are located at the <0>Albert-Einstein-Gymnasium Neubrandenburg</0>. At this location, <1>Skill 08: Mobile Applications Development</1> and <2>Skill 09: IT Software Solutions for Business</2> are represented. More information on the individual skills can be found on the respective subpages.",
+      "skill08": "As a software developer with a specialization in mobile applications, you are a programmer and designer in one. You ensure that the apps work on users' mobile devices, look appealing, and are fun to use.",
+      "skill09": "The skill IT Software Solutions for Business represents the entire spectrum of software-developing IT professions. All full-stack programmers are suitable. This includes desktop, server, database, mobile app and web development."
     },
     "cta": {
       "title": "Become part of our national team",
@@ -84,7 +87,8 @@
       "website": "Website"
     },
     "header": {
-      "home": "Home"
+      "home": "Home",
+      "skills": "Our Skills"
     }
   },
   "legal": {
@@ -145,6 +149,7 @@
     },
     "history": "History",
     "additionalLinks": "Additional Links",
+    "contact": "Contact",
     "08": {
       "video": "https://www.youtube.com/embed/Qe0ZaQAOQUY",
       "short": "Mobile Applications Developers use technology and design to create apps which are appealing and function well on phones.",
@@ -157,39 +162,7 @@
       },
       "links": {
         "wsi": "Skill 08 at WorldSkills International",
-        "wsc2024": "Skill 08 at the WorldSkills 2024 Lyon"
-      },
-      "timeline": {
-        "chancellery2022": {
-          "date": "08&nbsp;December 2022",
-          "title": "Federal Chancellery",
-          "text": "Justin Konratt receives the &ldquo;Best of Nation&rdquo; medal from Chancellor Olaf Scholz."
-        },
-        "wsc2022": {
-          "date": "13&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
-          "title": "WorldSkills Competition 2022 Special Edition",
-          "text": "Justin Konratt wins the bronze medal for Germany at the World Championships in Goyang (Korea)."
-        },
-        "einsteinCup2022": {
-          "date": "30&nbsp;May&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
-          "title": "Albert Einstein Cup",
-          "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Joachim Schiller (Germany), Justin Konratt (Germany), and Kantubhukta Lavanya Sai Kumar (India). Justin Konratt also wins the additional discipline of Speed Programming."
-        },
-        "nationalChampionship2023": {
-          "date": "22&thinsp;&ndash;&thinsp;25&nbsp;May 2023",
-          "title": "German National Championship",
-          "text": "Both skills of the German National Championship are won by Daniel Kalisch, Simon Brebeck, and Nils Jakubzick. Speed Programming is won by Florian Darsow."
-        },
-        "einsteinCup2024": {
-          "date": "27&thinsp;&ndash;&thinsp;30&nbsp;May 2024",
-          "title": "Albert Einstein Cup",
-          "text": "Jongwon Kim (South Korea), Daniel Kalisch (Germany), and Wei-Hung Lai (Chinese Taipei) are the winners of the Albert Einstein Cup. Stefan Kornel (Hungary) wins the additional Speed Programming discipline. The &ldquo;Hungarian Speed Test&ldquo; made its first appearance and was won by Nils Jakubzick (Germany)."
-        },
-        "wsc2024": {
-          "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-          "title": "WorldSkills Competition 2024 Lyon",
-          "text": ""
-        }
+        "wsc2024": "Skill 08 at the WorldSkills Lyon 2024"
       }
     },
     "09": {
@@ -205,38 +178,6 @@
       "links": {
         "wsi": "Skill 09 at WorldSkills International",
         "wsc2024": "Skill 09 at the WorldSkills Lyon 2024"
-      },
-      "timeline": {
-        "einsteinCup2022": {
-          "date": "30&nbsp;May&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
-          "title": "Albert Einstein Cup",
-          "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Thomas Gassmann (Switzerland), Glenn Skryzpczak (Germany), and Bence Lakos (Hungary). Justin Konratt wins the additional discipline of Speed Programming."
-        },
-        "wsc2022": {
-          "date": "13&nbsp;&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
-          "title": "WorldSkills Competition 2022 Special Edition",
-          "text": "Glenn Skrzypczak becomes the vice world-champion in the additional Speed Programming discipline."
-        },
-        "nationalChampionship2023": {
-          "date": "22&thinsp;&ndash;&thinsp;25&nbsp;May 2023",
-          "title": "German National Championship",
-          "text": "Both skills of the German National Championship are won by Daniel Kalisch, Simon Brebeck, and Nils Jakubzick. Speed Programming is won by Florian Darsow."
-        },
-        "euroskills2023": {
-          "date": "5&thinsp;&ndash;&thinsp;9&nbsp;September 2023",
-          "title": "EuroSkills Gdańsk 2023",
-          "text": "Glenn Skrzypczak achieves a gold medal at the EuroSkills and additionally wins the Speed Programming."
-        },
-        "einsteinCup2024": {
-          "date": "27&thinsp;&ndash;&thinsp;30&nbsp;May 2024",
-          "title": "Albert Einstein Cup",
-          "text": "Simon Brebeck (Germany), Lukas Hertkorn (Germany) and Besart Memeti (Switzerland), are the winners of the Albert Einstein Cup. Stefan Kornel (Hungary) wins the additional Speed Programming discipline. The &ldquo;Hungarian Speed Test&ldquo; made its first appearance and was won by Nils Jakubzick (Germany)."
-        },
-        "wsc2024": {
-          "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-          "title": "WorldSkills Lyon 2024",
-          "text": ""
-        }
       }
     }
   }
