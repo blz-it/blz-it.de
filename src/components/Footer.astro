@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import { buildLink } from "../routing/buildLink";
 
 interface Social {
@@ -84,14 +84,14 @@ const socials: Social[] = [
           <ul role="list" class="mt-6 space-y-4">
             <li>
               <a
-                href={buildLink("/imprint")}
+                href={buildLink("/imprint", i18next.language)}
                 class="text-sm leading-6 text-gray-300 hover:text-white"
                 >{t("layout.footer.imprint")}</a
               >
             </li>
             <li>
               <a
-                href={buildLink("/privacy")}
+                href={buildLink("/privacy", i18next.language)}
                 class="text-sm leading-6 text-gray-300 hover:text-white"
                 >{t("layout.footer.privacy")}</a
               >

@@ -1,6 +1,6 @@
 ---
 import { Trans } from "astro-i18next/components";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import Cta from "../../components/Cta.astro";
 import Hero from "../../components/Hero.astro";
 import Link from "../../components/Link.astro";
@@ -56,10 +56,13 @@ updateLang(Astro.url.pathname);
         the <Link href="https://aeg-nb.de" openInNewTab
           >Albert-Einstein-Gymnasium Neubrandenburg</Link
         >. At this location, <Link
-          href={buildLink("mobile-applications-development")}
+          href={buildLink("mobile-applications-development", i18next.language)}
           >Skill 08: Mobile Applications Development</Link
-        > and <Link href={buildLink("it-software-solutions-for-business")}
-          >Skill 09: IT Software Solutions for Business</Link
+        > and <Link
+          href={buildLink(
+            "it-software-solutions-for-business",
+            i18next.language
+          )}>Skill 09: IT Software Solutions for Business</Link
         > are represented. More information on the individual skills can be found
         on the respective subpages.
       </Trans>

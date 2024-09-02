@@ -9,24 +9,24 @@ type SkillsDropdownProps = {
   astroPath: string;
 };
 
-const skills: NavigationItem[] = [
-  {
-    name: "Mobile",
-    href: buildLink("mobile-applications-development"),
-  },
-  {
-    name: "Full Stack",
-    href: buildLink("it-software-solutions-for-business"),
-  },
-];
-
 const downChevron = <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />;
 
 export const SkillsDropdown = ({ astroPath }: SkillsDropdownProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const lang = getPathLang(astroPath);
   if (!lang) return null;
+
+  const skills: NavigationItem[] = [
+    {
+      name: "Mobile",
+      href: buildLink("mobile-applications-development", i18n.language),
+    },
+    {
+      name: "Full Stack",
+      href: buildLink("it-software-solutions-for-business", i18n.language),
+    },
+  ];
 
   return (
     <Dropdown
