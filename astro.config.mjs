@@ -1,12 +1,13 @@
 // @ts-check
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+import { defaultLocale, locales } from "./src/i18n";
 
 // https://astro.build/config
 export default defineConfig({
   i18n: {
-    defaultLocale: "de",
-    locales: ["de", "en"],
+    defaultLocale: defaultLocale.lang,
+    locales: Object.keys(locales),
   },
   integrations: [tailwind()],
 });
