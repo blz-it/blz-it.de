@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import HeroBg from "~/assets/hero-bg.jpg";
+
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="bg-accent-300 relative">
+  <div class="absolute inset-0">
+    <Image class="h-full w-full object-cover" src={HeroBg} alt="" />
+    <div
+      class="absolute inset-0 bg-wsg-orange-400 mix-blend-multiply"
+      aria-hidden="true"
+    >
+    </div>
+  </div>
+  <div
+    class="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-32 md:py-64 lg:px-8"
+  >
+    <h1
+      class="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl xl:text-5xl"
+    >
+      {title}
+    </h1>
+    <p class="mx-auto mt-6 max-w-4xl text-wsg-orange-1000 sm:text-xl">
+      {subtitle}
+    </p>
+  </div>
+  <svg
+    class="relative h-8 w-full sm:h-16 md:h-24"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28"
+    preserveAspectRatio="none"
+    shape-rendering="auto"
+  >
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      ></path>
+    </defs>
+    <g>
+      <use
+        class="translate-x-[-95px]"
+        xlink:href="#gentle-wave"
+        x="48"
+        y="0"
+        fill="rgba(255,255,255,0.7"></use>
+      <use
+        class="translate-x-[-20px]"
+        xlink:href="#gentle-wave"
+        x="48"
+        y="3"
+        fill="rgba(255,255,255,0.5)"></use>
+      <use
+        class="translate-x-[50px]"
+        xlink:href="#gentle-wave"
+        x="48"
+        y="5"
+        fill="rgba(255,255,255,0.3)"></use>
+      <use
+        class="translate-x-[60px]"
+        xlink:href="#gentle-wave"
+        x="48"
+        y="7"
+        fill="#fff"></use>
+    </g>
+  </svg>
+</div>

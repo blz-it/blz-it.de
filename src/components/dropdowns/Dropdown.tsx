@@ -10,21 +10,15 @@ import { CheckIcon } from "@heroicons/react/20/solid/index";
 import { clsx } from "clsx";
 import { Fragment } from "react";
 
-export type DropDownProps = {
+interface Props {
   item: string;
   options: readonly string[];
   onChange: (option: string) => void;
   label?: string;
   icon: JSX.Element;
-};
+}
 
-export const Dropdown = ({
-  item,
-  options,
-  icon,
-  onChange,
-  label,
-}: DropDownProps) => {
+export const Dropdown = ({ item, options, icon, onChange, label }: Props) => {
   return (
     <Listbox
       value={item}
@@ -38,7 +32,7 @@ export const Dropdown = ({
             </Label>
           )}
           <div className="relative">
-            <ListboxButton className="hover:bg-wsg-orange-400 focus:ring-wsi-blue-300 peer relative w-full cursor-default rounded-md py-2 pl-3 pr-10 text-left text-white hover:bg-opacity-50 focus:ring-1 sm:text-sm">
+            <ListboxButton className="peer relative w-full cursor-default rounded-md py-2 pl-3 pr-10 text-left text-white hover:bg-wsg-orange-400 hover:bg-opacity-50 focus:ring-1 focus:ring-wsi-blue-300 sm:text-sm">
               <span className="block truncate text-base font-medium">
                 {item}
               </span>
@@ -59,7 +53,7 @@ export const Dropdown = ({
                   <ListboxOption
                     key={option}
                     className={
-                      "hover:bg-wsg-orange-700 relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900"
+                      "relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 hover:bg-wsg-orange-700"
                     }
                     value={option}
                   >
@@ -75,7 +69,7 @@ export const Dropdown = ({
                         </span>
 
                         {selected ? (
-                          <span className="text-wsi-blue-300 absolute inset-y-0 right-0 flex items-center pr-4">
+                          <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-wsi-blue-300">
                             <CheckIcon className="h-5 w-5" aria-hidden="true" />
                           </span>
                         ) : null}

@@ -1,0 +1,31 @@
+---
+import type { ComponentProps } from "astro/types";
+import WaveDivider from "../dividers/WaveDivider.astro";
+import HeadedSection from "./HeadedSection.astro";
+
+type Props = ComponentProps<typeof HeadedSection> & {
+  type: ComponentProps<typeof WaveDivider>["type"];
+};
+
+const { type, ...rest } = Astro.props;
+
+const colors = {
+  brandBlue: "#003764",
+  onBrandBlue: "white",
+};
+---
+
+<div>
+  <WaveDivider
+    type={type}
+    color={colors.brandBlue}
+    bgColor={colors.onBrandBlue}
+  />
+  <HeadedSection
+    {...rest}
+    color={type === "top" ? colors.onBrandBlue : "black"}
+    bgColor={type === "top" ? colors.brandBlue : "white"}
+  >
+    <slot />
+  </HeadedSection>
+</div>
