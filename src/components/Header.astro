@@ -2,7 +2,8 @@
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import WsgHandsWhite from "~/assets/wsg_hands_white.svg";
-import { getLangFromUrl, useTranslations } from "~/i18n/utils";
+import { getLangFromUrl, getLocalePaths, useTranslations } from "~/i18n/utils";
+import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -34,7 +35,11 @@ const t = useTranslations(lang);
           <!-- <SkillsDropdown client:load astroPath={Astro.url.pathname} /> -->
         </div>
       </div>
-      <!-- <LanguageDropdown client:load astroPath={Astro.url.pathname} /> -->
+      <LanguageDropdown
+        client:load
+        lang={lang}
+        paths={getLocalePaths(Astro.url)}
+      />
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
       <div class="my-auto ml-10 space-x-8 lg:hidden">

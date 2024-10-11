@@ -15,7 +15,7 @@ export function useTranslations(lang: keyof typeof languages) {
   };
 }
 
-type LocalePath = { lang: keyof typeof languages; path: string };
+export type LocalePath = { lang: keyof typeof languages; path: string };
 export const getLocalePaths = (url: URL): LocalePath[] => {
   return Object.keys(languages).map((lang) => ({
     lang: lang as keyof typeof languages,

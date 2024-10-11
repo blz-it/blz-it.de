@@ -3,6 +3,8 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import { defaultLang, languages } from "./src/i18n/constants";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   i18n: {
@@ -12,5 +14,5 @@ export default defineConfig({
       prefixDefaultLocale: true,
     },
   },
-  integrations: [tailwind()],
+  integrations: [tailwind(), react()],
 });
