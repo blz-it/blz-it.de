@@ -1,4 +1,5 @@
 ---
+import Footer from "~/components/Footer.astro";
 import Header from "~/components/Header.astro";
 import { getLangFromUrl, getLocalePaths, useTranslations } from "~/i18n";
 
@@ -44,5 +45,6 @@ const localeDescription =
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

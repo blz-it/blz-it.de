@@ -1,0 +1,136 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import WsgHorizontal from "~/assets/wsg_horizontal.svg";
+import { getLangFromUrl, useTranslations } from "~/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const socials = [
+  {
+    name: "YouTube",
+    href: "https://youtube.de/@GermanITSkills",
+    icon: "mdi:youtube",
+  },
+  {
+    name: "Instagram",
+    href: "https://instagram.com/german.it.skills",
+    icon: "mdi:instagram",
+  },
+  {
+    name: "Facebook",
+    href: "https://facebook.com/GermanITSkills",
+    icon: "mdi:facebook",
+  },
+];
+---
+
+<footer class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+      <Image
+        class="-ml-6 h-36 xl:ml-0"
+        src={WsgHorizontal}
+        alt="WorldSkills Germany"
+      />
+      <div
+        class="gap mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:col-span-2 xl:mt-0"
+      >
+        <div>
+          <h3 class="text-sm font-semibold leading-6 text-white">
+            WorldSkills International
+          </h3>
+          <ul role="list" class="mt-6 space-y-4">
+            <li>
+              <a
+                href="https://worldskills.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+                >{t({ de: "Webseite", en: "Website" })}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-10 md:mt-0">
+          <h3 class="text-sm font-semibold leading-6 text-white">
+            WorldSkills Germany
+          </h3>
+          <ul role="list" class="mt-6 space-y-4">
+            <li>
+              <a
+                href="https://www.worldskillsgermany.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                {t({ de: "Webseite", en: "Website" })}
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.worldskillsgermany.com/de/verein/ansprechpartner"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                {t({ de: "Kontakt", en: "Contact" })}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-10 md:mt-0">
+          <h3 class="text-sm font-semibold leading-6 text-white">
+            {t({ de: "Rechtliches", en: "Legal" })}
+          </h3>
+          <ul role="list" class="mt-6 space-y-4">
+            <li>
+              <a
+                href={getRelativeLocaleUrl(lang, "imprint")}
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                {t({ de: "Impressum", en: "Imprint" })}
+              </a>
+            </li>
+            <li>
+              <a
+                href={getRelativeLocaleUrl(lang, "privacy")}
+                class="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                {t({ de: "Datenschutz", en: "Privacy Policy" })}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between"
+    >
+      <div class="flex justify-center space-x-6 md:order-2">
+        {
+          socials.map((it) => (
+            <a
+              href={it.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-gray-300"
+            >
+              <span class="sr-only">{it.name}</span>
+              <Icon name={it.icon} class="h-6 w-6" />
+            </a>
+          ))
+        }
+      </div>
+      <div class="mt-8 md:order-1 md:mt-0">
+        <p class="text-center text-base text-gray-400">
+          &copy; 2024 BLZ IT. {
+            t({ de: "Alle Rechte vorbehalten", en: "All rights reserved" })
+          }.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
