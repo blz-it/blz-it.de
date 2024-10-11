@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import WsgHandsWhite from "~/assets/wsg_hands_white.svg";
+import { getCurrentLocale, useTranslations } from "../i18n";
+
+const locale = getCurrentLocale(Astro.currentLocale);
+const t = useTranslations(Astro.currentLocale);
+---
+
+<header class="bg-wsg-orange-500 shadow">
+  <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
+    <div
+      class="flex w-full items-center justify-between border-b border-white py-6 lg:border-none"
+    >
+      <div class="flex items-center">
+        <a href={getRelativeLocaleUrl(locale.lang, "/")}>
+          <Image
+            src={WsgHandsWhite}
+            alt="WorldSkills Germany"
+            class="h-10 w-auto"
+          />
+          CUR LOC: {locale.lang}
+        </a>
+        <div class="ml-10 hidden space-x-8 lg:block">
+          <a
+            href={getRelativeLocaleUrl(locale.lang, "/")}
+            class="text-base font-medium text-white hover:text-gray-100"
+          >
+            {t({ de: "Startseite", en: "Home" })}
+          </a>
+        </div>
+
+        <div class="ml-10 hidden lg:block">
+          <!-- <SkillsDropdown client:load astroPath={Astro.url.pathname} /> -->
+        </div>
+      </div>
+      <!-- <LanguageDropdown client:load astroPath={Astro.url.pathname} /> -->
+    </div>
+    <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
+      <div class="my-auto ml-10 space-x-8 lg:hidden">
+        <a
+          href={getRelativeLocaleUrl(locale.lang, "/")}
+          class="text-base font-medium text-white hover:text-gray-100"
+        >
+          {t({ de: "Startseite", en: "Home" })}
+        </a>
+      </div>
+      <!-- <SkillsDropdown client:load astroPath={Astro.url.pathname} /> -->
+    </div>
+  </nav>
+</header>

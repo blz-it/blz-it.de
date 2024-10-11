@@ -1,0 +1,12 @@
+---
+import { localeParams, useTranslations } from "~/i18n";
+import Layout from "~/layouts/Layout.astro";
+
+export const getStaticPaths = () => localeParams;
+
+const t = useTranslations(Astro.currentLocale);
+---
+
+<Layout title={t({ de: "Startseite", en: "Home" })}>
+  <p>Hello World</p>
+</Layout>
