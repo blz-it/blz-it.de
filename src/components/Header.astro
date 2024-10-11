@@ -23,7 +23,7 @@ const t = useTranslations(lang);
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
           <a
-            href={getRelativeLocaleUrl(lang, "/")}
+            href={getRelativeLocaleUrl(lang)}
             class="text-base font-medium text-white hover:text-gray-100"
           >
             {t({ de: "Startseite", en: "Home" })}
@@ -39,7 +39,7 @@ const t = useTranslations(lang);
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
       <div class="my-auto ml-10 space-x-8 lg:hidden">
         <a
-          href={getRelativeLocaleUrl(lang, "/")}
+          href={getRelativeLocaleUrl(lang)}
           class="text-base font-medium text-white hover:text-gray-100"
         >
           {t({ de: "Startseite", en: "Home" })}
