@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import WsgHandsWhite from "~/assets/wsg_hands_white.svg";
-import { getCurrentLocale, useTranslations } from "../i18n";
+import { getLangFromUrl, useTranslations } from "~/i18n/utils";
 
-const locale = getCurrentLocale(Astro.currentLocale);
-const t = useTranslations(Astro.currentLocale);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header class="bg-wsg-orange-500 shadow">
@@ -14,17 +14,16 @@ const t = useTranslations(Astro.currentLocale);
       class="flex w-full items-center justify-between border-b border-white py-6 lg:border-none"
     >
       <div class="flex items-center">
-        <a href={getRelativeLocaleUrl(locale.lang, "/")}>
+        <a href={getRelativeLocaleUrl(lang, "/")}>
           <Image
             src={WsgHandsWhite}
             alt="WorldSkills Germany"
             class="h-10 w-auto"
           />
-          CUR LOC: {locale.lang}
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
           <a
-            href={getRelativeLocaleUrl(locale.lang, "/")}
+            href={getRelativeLocaleUrl(lang, "/")}
             class="text-base font-medium text-white hover:text-gray-100"
           >
             {t({ de: "Startseite", en: "Home" })}
@@ -40,7 +39,7 @@ const t = useTranslations(Astro.currentLocale);
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
       <div class="my-auto ml-10 space-x-8 lg:hidden">
         <a
-          href={getRelativeLocaleUrl(locale.lang, "/")}
+          href={getRelativeLocaleUrl(lang, "/")}
           class="text-base font-medium text-white hover:text-gray-100"
         >
           {t({ de: "Startseite", en: "Home" })}

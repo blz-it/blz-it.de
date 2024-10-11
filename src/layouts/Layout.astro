@@ -1,11 +1,6 @@
 ---
 import Header from "~/components/Header.astro";
-import {
-  getCurrentLocale,
-  getLocalePaths,
-  locales,
-  useTranslations,
-} from "../i18n";
+import { getLangFromUrl, getLocalePaths, useTranslations } from "~/i18n";
 
 interface Props {
   title?: string;
@@ -14,8 +9,8 @@ interface Props {
 
 const { title, description } = Astro.props;
 
-const locale = getCurrentLocale(Astro.currentLocale);
-const t = useTranslations(Astro.currentLocale);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const localeDescription =
   description ||
@@ -26,7 +21,7 @@ const localeDescription =
 ---
 
 <!doctype html>
-<html lang={locale.lang} dir={locale.dir}>
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={localeDescription} />
@@ -38,7 +33,7 @@ const localeDescription =
       getLocalePaths(Astro.url).map((props) => (
         <link
           rel="alternate"
-          hreflang={locales[props.lang].lang || props.lang}
+          hreflang={props.lang}
           href={Astro.url.origin + props.path}
         />
       ))
