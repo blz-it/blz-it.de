@@ -1,4 +1,5 @@
 ---
+import NoTranslate from "~/components/NoTranslate.astro";
 import { localeParams, useTranslations } from "~/i18n";
 import Layout from "~/layouts/Layout.astro";
 
@@ -9,6 +10,7 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={t({ de: "Datenschutz", en: "Privacy Policy" })}>
+  <NoTranslate currentLanguage={lang} availableLanguages={["de"]} />
   <div class="prose mx-auto break-words px-4 py-16">
     <h2>1. Datenschutz auf einen Blick</h2>
     <h3>Allgemeine Hinweise</h3>

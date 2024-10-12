@@ -1,4 +1,5 @@
 ---
+import NoTranslate from "~/components/NoTranslate.astro";
 import { localeParams, useTranslations } from "~/i18n";
 import Layout from "~/layouts/Layout.astro";
 
@@ -9,6 +10,7 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={t({ de: "Impressum", en: "Imprint" })}>
+  <NoTranslate currentLanguage={lang} availableLanguages={["de"]} />
   <div class="prose mx-auto break-words px-4 py-16">
     <h1>Impressum</h1>
     <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
