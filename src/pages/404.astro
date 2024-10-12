@@ -1,0 +1,32 @@
+---
+// This page automatically redirects to 404 page for user's locale
+import { defaultLang, languages } from "~/i18n";
+
+const langs = Object.keys(languages);
+---
+
+<html lang={defaultLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <title>404 PAGE NOT FOUND</title>
+    <link rel="canonical" href={Astro.site} />
+
+    <noscript>
+      <meta http-equiv="refresh" content={`0;url=/${defaultLang}/404/`} />
+    </noscript>
+
+    <script is:inline define:vars={{ langs, defaultLang }}>
+      const urlHasLang = langs.includes(location.pathname.split("/")[1]);
+
+      if (urlHasLang) {
+        location.href = `/${location.pathname.split("/")[1]}/404/`;
+      } else {
+        location.href = "/" + defaultLang + location.pathname;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>404 PAGE NOT FOUND</h1>
+    <a href="/">TOP PAGE</a>
+  </body>
+</html>
