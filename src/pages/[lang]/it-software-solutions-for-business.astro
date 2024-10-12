@@ -1,17 +1,35 @@
 ---
+import historyJson from "~/assets/history.json";
+import Skill09Image from "~/assets/skill-09.jpg";
 import { localeParams, useTranslations } from "~/i18n";
+import SkillPage from "~/layouts/SkillPage.astro";
 
 export const getStaticPaths = localeParams;
 
 const { lang } = Astro.params;
 const t = useTranslations(lang);
+
+const historyData = historyJson[lang]["skill09"];
 ---
 
 <SkillPage
   skillNumber="09"
-  contact="mailto:skills@kapplers.de"
   skillName="IT Software Solutions for Business"
-  img="https:////live.staticflickr.com/65535/52434272561_5e10bb3507_h.jpg"
+  skillDescription={t({
+    de: "Erstellen neuer Systeme und Modifizieren bestehender Systeme, um Softwarelösungen für große und kleine Unternehmen bereitzustellen.",
+    en: "Creating new systems and modifying existing ones to provide software solutions to large and small businesses.",
+  })}
+  skillInformation={{
+    description: "",
+    requirements: "",
+    videoUrl: "",
+    occupation: {
+      title: "",
+      text: "",
+    },
+  }}
+  img={Skill09Image}
+  contact="mailto:skills@kapplers.de"
   nationalTeam={[]}
   timelineEntries={Object.values(historyData).map((entry) => ({
     title: entry["title"],
@@ -21,12 +39,18 @@ const t = useTranslations(lang);
   additionalLinks={[
     {
       name: "worldskills.org",
-      text: t("skills.09.links.wsi"),
+      text: t({
+        de: "Skill 09 bei WorldSkills International",
+        en: "Skill 09 at WorldSkills International",
+      }),
       href: "https://worldskills.org/skills/id/221/",
     },
     {
       name: "worldskills2024.com",
-      text: t("skills.09.links.wsc2024"),
+      text: t({
+        de: "Skill 09 bei den WorldSkills Lyon 2024",
+        en: "Skill 09 at the WorldSkills Lyon 2024",
+      }),
       href: "https://worldskills2024.com/en/skills/it-software-solutions-for-business",
     },
   ]}
