@@ -11,7 +11,7 @@ import Layout from "~/layouts/Layout.astro";
 export const getStaticPaths = localeParams;
 
 const { lang } = Astro.params;
-const t = useTranslations(lang as any);
+const t = useTranslations(lang);
 ---
 
 <Layout title={t({ de: "Startseite", en: "Home" })}>

@@ -25,5 +25,5 @@ export const getLocalePaths = (url: URL): LocalePath[] => {
 
 export const localeParams = (() =>
   Object.keys(languages).map((lang) => ({
-    params: { lang },
+    params: { lang: lang as keyof typeof languages },
   }))) satisfies GetStaticPaths;
