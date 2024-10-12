@@ -15,4 +15,5 @@ export default defineConfig({
     },
   },
   integrations: [tailwind(), react(), icon()],
+  site: "https://blz-it.de",
 });
