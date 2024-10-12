@@ -4,9 +4,21 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import WsgHandsWhite from "~/assets/wsg-hands-white.svg";
 import { getLangFromUrl, getLocalePaths, useTranslations } from "~/i18n/utils";
 import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
+import { SkillsDropdown } from "./dropdowns/SkillsDropdown";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const skills = [
+  {
+    name: "Mobile",
+    href: getRelativeLocaleUrl(lang, "mobile-applications-development"),
+  },
+  {
+    name: "Full Stack",
+    href: getRelativeLocaleUrl(lang, "it-software-solutions-for-business"),
+  },
+];
 ---
 
 <header class="bg-wsg-orange-500 shadow">
@@ -32,7 +44,11 @@ const t = useTranslations(lang);
         </div>
 
         <div class="ml-10 hidden lg:block">
-          <!-- <SkillsDropdown client:load astroPath={Astro.url.pathname} /> -->
+          <SkillsDropdown
+            client:load
+            title={t({ de: "Unsere Disziplinen", en: "Our Skills" })}
+            skills={skills}
+          />
         </div>
       </div>
       <LanguageDropdown
@@ -50,7 +66,11 @@ const t = useTranslations(lang);
           {t({ de: "Startseite", en: "Home" })}
         </a>
       </div>
-      <!-- <SkillsDropdown client:load astroPath={Astro.url.pathname} /> -->
+      <SkillsDropdown
+        client:load
+        title={t({ de: "Unsere Disziplinen", en: "Our Skills" })}
+        skills={skills}
+      />
     </div>
   </nav>
 </header>
