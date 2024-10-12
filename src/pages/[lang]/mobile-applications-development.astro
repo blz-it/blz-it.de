@@ -1,0 +1,68 @@
+---
+import historyJson from "~/assets/history.json";
+import Skill08Image from "~/assets/skill-08.jpg";
+import { localeParams, useTranslations } from "~/i18n";
+import SkillPage from "~/layouts/SkillPage.astro";
+
+export const getStaticPaths = localeParams;
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+
+const historyData = historyJson[lang]["skill08"];
+---
+
+<SkillPage
+  skillNumber="08"
+  skillName="Mobile Applications Development"
+  skillDescription={t({
+    de: "Entwickler*innen mobiler Anwendungen nutzen Technologie und Design, um ansprechende und gut funktionierende Anwendungen für Handys zu entwickeln.",
+    en: "Mobile Applications Developers use technology and design to create apps which are appealing and function well on phones.",
+  })}
+  skillInformation={{
+    description: t({
+      de: "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen.<br /><br />Für den Beruf brauchst du ein gewisses Verständnis für Technologie und Design. Du musst die Anforderungen und Wünsche der Auftraggeber*innen verstehen und ein Produkt entwickeln, das zuverlässig, aktualisierbar und für Benutzer*innen leicht zu verstehen und zu verwenden ist.",
+      en: "As a software developer with a specialization in mobile applications, you are a programmer and designer in one. You ensure that the apps work on users' mobile devices, look appealing, and are fun to use.<br /><br />For the job, you need a certain understanding of technology and design. You need to understand the requirements and wishes of the clients and develop a product that is reliable, updatable, and easy for users to understand and use.",
+    }),
+    requirements: t({
+      de: "Du beherrschst mindestens eine Programmiersprache, z.&thinsp;B. Dart oder Kotlin, und programmierst Android-Apps, auch mit Verknüpfung zu Webschnittstellen und der Verwendung integrierter Sensoren. Du verstehst englischsprachige Aufgabenstellungen.",
+      en: "You master at least one programming language, e.g. Dart or Kotlin, and program mobile apps, including the connection to online APIs and the use of integrated sensors. You understand task in English.",
+    }),
+    videoUrl: t({
+      de: "https://www.youtube.com/embed/v7I124lty3s",
+      en: "https://www.youtube.com/embed/Qe0ZaQAOQUY",
+    }),
+    occupation: {
+      title: t({
+        de: "Ein Beruf mit Zukunft und stets am Puls der Zeit",
+        en: "A Career with a future and always on the cutting edge",
+      }),
+      text: t({
+        de: "Die Möglichkeiten der Kommunikation und des Informationsaustauschs nehmen stetig zu. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca.&nbsp;12&thinsp;% mehr IT-Talente gesucht als im Vorjahr. Der Mobile Applications Developer ist somit einer der am schnellsten wachsenden Berufe.<br /><br />Dein Hauptarbeitsmittel ist dein Laptop. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das Einzige, was du brauchst, ist eine stabile Internetverbindung.",
+        en: "The possibilities of communication and information exchange are constantly increasing. With a degree in IT, you are in demand: in 2021, about 12&thinsp;% more IT talents were sought than in the previous year. The Mobile Applications Developer is therefore one of the fastest growing occupations.<br /><br />Your main working tool is your laptop, so you are almost unrestricted in terms of work location and time, as long as there is no customer appointment. The only thing you need is a stable internet connection.",
+      }),
+    },
+  }}
+  img={Skill08Image}
+  contact="mailto:worldskills@jonas-wanke.de"
+  nationalTeam={[]}
+  timelineEntries={Object.values(historyData)}
+  additionalLinks={[
+    {
+      name: "worldskills.org",
+      text: t({
+        de: "Skill 08 bei WorldSkills International",
+        en: "Skill 08 at WorldSkills International",
+      }),
+      href: "https://worldskills.org/skills/id/562/",
+    },
+    {
+      name: "worldskills2024.com",
+      text: t({
+        de: "Skill 08 bei den WorldSkills Lyon 2024",
+        en: "Skill 08 at the WorldSkills Lyon 2024",
+      }),
+      href: "https://worldskills2024.com/en/skills/mobile-applications-development",
+    },
+  ]}
+/>
