@@ -1,18 +1,18 @@
 ---
-import { useTranslations, type languages } from "~/i18n";
+import { getLangFromUrl, useTranslations, type languages } from "~/i18n";
 
 interface Props {
   availableLanguages: (keyof typeof languages)[];
-  currentLanguage: keyof typeof languages;
 }
 
-const { availableLanguages, currentLanguage } = Astro.props;
+const { availableLanguages } = Astro.props;
 
-const t = useTranslations(currentLanguage);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 {
-  !availableLanguages.includes(currentLanguage) && (
+  !availableLanguages.includes(lang) && (
     <div class="bg-yellow-50 p-4">
       <div class="flex items-center justify-center">
         <div class="flex-shrink-0">
