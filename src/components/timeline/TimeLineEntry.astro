@@ -25,18 +25,18 @@ const props = Astro.props;
   ) : (
     <li class="timeline-item">
       <div class="timeline-info">
-        <span class="text-wrap">{props.date}</span>
+        <span class="text-wrap" set:html={props.date} />
       </div>
       <div class="timeline-marker" />
       <div class="timeline-content">
         <h3 class="timeline-title">{props.title}</h3>
-        <p>{props.text}</p>
+        <p set:html={props.text} />
       </div>
     </li>
   )
 }
 
-<style>
+<style define:vars={{ accentRGB: "#ed8a00" }}>
   .timeline-item {
     padding-left: 40px;
     position: relative;

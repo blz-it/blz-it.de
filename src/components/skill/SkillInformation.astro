@@ -21,7 +21,7 @@ const t = useTranslations(lang);
 <div class="text-left">
   <div class="items-center xl:flex">
     <div class="flex-1 gap-y-4 border-gray-200 xl:border-r xl:pr-12">
-      <p>{description}</p>
+      <p set:html={description} class="mb-16" />
       <Headline>
         {
           t({
@@ -48,6 +48,6 @@ const t = useTranslations(lang);
     <Headline class="text-lg">
       {occupation.title}
     </Headline>
-    <p>{occupation.text}</p>
+    <p set:html={occupation.text} />
   </div>
 </div>

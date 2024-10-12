@@ -46,9 +46,10 @@ const t = useTranslations(lang);
       title={`Skill ${skillNumber}: ${skillName}`}
       subtitle={skillDescription}
       img={img}
+      size="md"
     />
-    <div class="flex max-w-7xl justify-end">
-      <a class="bg-button rounded-lg px-6 py-2" href={contact}>
+    <div class="mx-auto mt-8 flex max-w-7xl justify-end px-4 sm:px-6 lg:px-8">
+      <a class="rounded-lg bg-wsi-blue-300 px-6 py-2 text-white" href={contact}>
         {t({ de: "Kontakt", en: "Contact" })}
       </a>
     </div>

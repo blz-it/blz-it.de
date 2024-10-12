@@ -1,15 +1,17 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+import { clsx } from "clsx";
 import HeroBgImage from "~/assets/hero-bg.jpg";
 
 interface Props {
   title: string;
   subtitle: string;
   img?: ImageMetadata;
+  size?: "md" | "lg";
 }
 
-const { title, subtitle, img = HeroBgImage } = Astro.props;
+const { title, subtitle, img = HeroBgImage, size = "lg" } = Astro.props;
 ---
 
 <div class="bg-accent-300 relative">
@@ -22,7 +24,11 @@ const { title, subtitle, img = HeroBgImage } = Astro.props;
     </div>
   </div>
   <div
-    class="relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-32 md:py-64 lg:px-8"
+    class={clsx(
+      "relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8",
+      { "py-8 sm:py-16 md:py-32": size === "md" },
+      { "py-16 sm:py-32 md:py-64": size === "lg" },
+    )}
   >
     <h1
       class="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl xl:text-5xl"
