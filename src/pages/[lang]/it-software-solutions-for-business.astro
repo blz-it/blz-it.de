@@ -1,0 +1,33 @@
+---
+import { localeParams, useTranslations } from "~/i18n";
+
+export const getStaticPaths = localeParams;
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+---
+
+<SkillPage
+  skillNumber="09"
+  contact="mailto:skills@kapplers.de"
+  skillName="IT Software Solutions for Business"
+  img="https:////live.staticflickr.com/65535/52434272561_5e10bb3507_h.jpg"
+  nationalTeam={[]}
+  timelineEntries={Object.values(historyData).map((entry) => ({
+    title: entry["title"],
+    date: entry["date"],
+    text: entry["text"],
+  }))}
+  additionalLinks={[
+    {
+      name: "worldskills.org",
+      text: t("skills.09.links.wsi"),
+      href: "https://worldskills.org/skills/id/221/",
+    },
+    {
+      name: "worldskills2024.com",
+      text: t("skills.09.links.wsc2024"),
+      href: "https://worldskills2024.com/en/skills/it-software-solutions-for-business",
+    },
+  ]}
+/>

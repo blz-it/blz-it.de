@@ -1,0 +1,250 @@
+---
+interface TimelineInfoItem {
+  date: string;
+  title: string;
+  text: string;
+}
+
+interface TimelinePeriodItem {
+  period: string;
+}
+
+type Props = TimelineInfoItem | TimelinePeriodItem;
+const props = Astro.props;
+---
+
+{
+  "period" in props ? (
+    <li class="timeline-item period">
+      <div class="timeline-info" />
+      <div class="timeline-marker" />
+      <div class="timeline-content">
+        <h2 class="timeline-title">{props.period}</h2>
+      </div>
+    </li>
+  ) : (
+    <li class="timeline-item">
+      <div class="timeline-info">
+        <span class="text-wrap">{props.date}</span>
+      </div>
+      <div class="timeline-marker" />
+      <div class="timeline-content">
+        <h3 class="timeline-title">{props.title}</h3>
+        <p>{props.text}</p>
+      </div>
+    </li>
+  )
+}
+
+<style>
+  .timeline-item {
+    padding-left: 40px;
+    position: relative;
+    margin-inline: 3rem;
+    text-align: left;
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline-info {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+  }
+
+  .timeline-marker:before {
+    background: var(--accentRGB);
+    border: 3px solid transparent;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    transition:
+      background 0.3s ease-in-out,
+      border 0.3s ease-in-out;
+  }
+
+  .timeline-marker:after {
+    content: "";
+    width: 3px;
+    background: #ccd5db;
+    display: block;
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    left: 6px;
+  }
+
+  .timeline-marker.timeline-item:last-child,
+  .timeline-marker.timeline-item:last-child:after {
+    content: none;
+  }
+
+  .timeline-item:not(.period):hover .timeline-marker:before {
+    background: transparent;
+    border: 3px solid var(--accentRGB);
+  }
+
+  .timeline-title {
+    font-weight: bold;
+    font-size: large;
+    margin: -0.25rem 0 0.5rem 0;
+  }
+
+  .timeline-content {
+    padding-bottom: 40px;
+  }
+
+  .timeline-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .period {
+    padding: 0;
+  }
+
+  .period .timeline-info {
+    display: none;
+  }
+
+  .period .timeline-content {
+    padding: 40px 0 70px;
+  }
+
+  .period .timeline-title {
+    margin: 0;
+  }
+
+  .period .timeline-marker:before {
+    background: transparent;
+    content: "";
+    width: 15px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    top: 0;
+    bottom: 30px;
+    position: absolute;
+    border-top: 3px solid #ccd5db;
+    border-bottom: 3px solid #ccd5db;
+  }
+
+  .period .timeline-marker:after {
+    content: "";
+    height: 32px;
+    top: auto;
+  }
+
+  @media (min-width: 640px) {
+    .timeline-item {
+      display: table-row;
+      padding: 0;
+    }
+    .timeline-info,
+    .timeline-marker,
+    .timeline-content,
+    .period .timeline-info {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .timeline-marker {
+      position: relative;
+    }
+    .timeline-content {
+      padding-left: 30px;
+    }
+    .timeline-info {
+      padding-right: 30px;
+      text-align: right;
+    }
+    .period .timeline-title {
+      position: relative;
+      left: -45px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .timeline-item,
+    .timeline-info,
+    .timeline-marker,
+    .timeline-content {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .timeline-item {
+      padding-bottom: 40px;
+      overflow: hidden;
+    }
+    .timeline-marker {
+      position: absolute;
+      left: 50%;
+      margin-left: -7.5px;
+    }
+    .timeline-info,
+    .timeline-content {
+      width: 50%;
+    }
+    .timeline-item:nth-child(odd) .timeline-info {
+      float: left;
+      text-align: right;
+      padding-right: 30px;
+    }
+    .timeline-item:nth-child(odd) .timeline-content {
+      float: right;
+      text-align: left;
+      padding-left: 30px;
+    }
+    .timeline-item:nth-child(even) .timeline-info {
+      float: right;
+      text-align: left;
+      padding-left: 30px;
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+      float: left;
+      text-align: right;
+      padding-right: 30px;
+    }
+    .timeline-item.period .timeline-content {
+      width: 100%;
+      text-align: center;
+    }
+    .timeline-item.period {
+      padding: 50px 0 90px;
+    }
+    .period .timeline-marker:after {
+      height: 30px;
+      bottom: 0;
+      top: auto;
+    }
+    .period .timeline-title {
+      left: auto;
+    }
+  }
+
+  .marker-outline .timeline-item:hover .timeline-marker:before {
+    background: var(--accentRGB);
+  }
+
+  .marker-outline .timeline-marker:before {
+    background: transparent;
+    border-color: var(--accentRGB);
+  }
+</style>

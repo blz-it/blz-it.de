@@ -1,0 +1,152 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import AlbertEinsteinCupImage from "~/assets/aec.webp";
+import GermanChampionshipImage from "~/assets/german-championship.webp";
+import OnlineCompetitionImage from "~/assets/online-competition.webp";
+import RegistrationImage from "~/assets/registration.webp";
+import WsgHandsImage from "~/assets/wsg-hands.svg";
+import { getLangFromUrl, useTranslations } from "~/i18n";
+import EventCard from "../EventCard.astro";
+import Link from "../Link.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div>
+  <div
+    class="flex flex-col items-center gap-8 sm:flex-row sm:justify-evenly md:block"
+  >
+    <svg
+      class="pointer-events-none absolute hidden max-w-[60rem] md:block lg:max-w-[76rem]"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="-160 0 1100 1800"
+    >
+      <defs>
+        <linearGradient id="strokeGradient">
+          <stop stop-color="#ffa11f" offset="0"></stop>
+          <stop stop-color="#ed8b00" offset="1"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        d="M41 197l96 4c133 15 279 100 366 82s187-121 217-123 130-46 118 165-42 424-185 410-299-198-423-197-156 91-135 247 44 299 173 275 386-56 396 13 52 322-100 380-255 10-317 16"
+        fill="none"
+        stroke-width="5"
+        stroke='url("#strokeGradient")'
+        stroke-linecap="round"
+        stroke-dasharray="13 22"></path>
+    </svg>
+    <EventCard
+      img={RegistrationImage}
+      title={t({ de: "Registrierung", en: "Registration" })}
+      date={t({
+        de: "25. Januar – 24. Februar 2023",
+        en: "25 January – 24 February 2023",
+      })}
+      link={getRelativeLocaleUrl(lang, "dm-registration")}
+      className="xl:mt-0"
+      hoverTextColor="white"
+    />
+    <EventCard
+      img={OnlineCompetitionImage}
+      title={t({ de: "Online-Vorausscheidung", en: "Online Competition" })}
+      date={t({
+        de: "28. Februar – 27. März 2023",
+        en: "28 February – 27 March 2023",
+      })}
+      link={getRelativeLocaleUrl(lang, "dm-registration")}
+      className="md:float-right md:mt-[-4rem]"
+      hoverTextColor="white"
+    />
+    <EventCard
+      img={GermanChampionshipImage}
+      title={t({ de: "Deutsche Meisterschaft", en: "German Championship" })}
+      date={t({ de: "22. – 25. Mai 2023", en: "22 – 25 May 2023" })}
+      link="https://www.worldskillsgermany.com/de/termine/dm-mobile-app-development-it-software-solutions-for-business/"
+      className="lg:mt-54 md:ml-20 md:mt-48 lg:ml-24 xl:ml-32 xl:mt-72"
+      hoverTextColor="white"
+    />
+    <EventCard
+      img={AlbertEinsteinCupImage}
+      title={t({ de: "Albert-Einstein-Cup", en: "Albert Einstein Cup" })}
+      date={t({ de: "27. – 30. Mai 2024", en: "27 – 30 May 2024" })}
+      link="https://youtu.be/Cvrt7g8es9k"
+      className="md:float-right md:mr-20 md:mt-[-4rem] lg:mr-24 xl:mr-32"
+      hoverTextColor="white"
+    />
+    <EventCard
+      img={WsgHandsImage}
+      title="WorldSkills Lyon"
+      date={t({ de: "10. – 15. September 2024", en: "10 – 15 September 2024" })}
+      link="https://worldskills2024.com/"
+      className="md:ml-60 md:mt-64 lg:ml-72 lg:mt-72 xl:ml-96 xl:mt-96"
+      hoverTextColor="white"
+    />
+  </div>
+
+  <ol class="list-decimal space-y-4 text-left sm:pt-8 md:pt-16">
+    <li>
+      <Link href={getRelativeLocaleUrl(lang, "dm-registration")}>
+        {t({ de: "Du registrierst dich", en: "You register yourself" })}
+      </Link>
+      {
+        t({
+          de: "und erhältst weitere Informationen sowie nach Abschluss des Registrierungszeitraumes deine Zugangsdaten.",
+          en: "and receive further information as well as, after the registration is closed, your credentials.",
+        })
+      }
+    </li>
+    <li>
+      {
+        t({
+          de: "Innerhalb der Laufzeit des Online-Ausscheids löst du zu einem Zeitpunkt deiner Wahl mehrere anspruchsvolle Testaufgaben, die jeweils ca. 60 – 120 Minuten dauern. Diese kannst du auch über mehrere Tage verteilen. Die Wahl deiner Programmiersprache spielt hierbei noch keine Rolle.",
+          en: "During this month, you solve multiple complex tasks at a time of your choosing. Each task takes around 60 – 120 minutes, but you can distribute them across multiple days. The programming language that you use is not relevant.",
+        })
+      }
+    </li>
+    <li>
+      {
+        t({
+          de: "Die gemeinsame Deutsche Meisterschaft für beide Skills findet am Bundesleistungszentrum in Neubrandenburg statt. Hier werden über vier Tage anspruchsvolle Desktopanwendungen und Android-Apps programmiert. Damit wird das gemeinsame vier- bis sechsköpfige Nationalteam bestimmt. Es sind nur noch die folgenden Entwicklungsumgebungen/Programmiersprachen zugelassen:",
+          en: "The shared German Championship for both Skills takes place at the National Training Centre in Neubrandenburg. Over four competition days, you will develop complex desktop and Android applications. This determines the joint four- to six-strong national team. Only the following development environments / programming languages can be used:",
+        })
+      }
+      <ul class="list-disc pl-4 pt-4">
+        <li>
+          Visual Studio (C#) {
+            t({ de: "für Desktopanwendungen", en: "for desktop applications" })
+          }
+        </li>
+        <li>
+          Xamarin (C#), Flutter (Dart), {t({ de: "und", en: "and" })} Android Studio
+          (Kotlin or Java) {
+            t({ de: "für App-Entwicklung", en: "for app development" })
+          }
+        </li>
+        <li>Microsoft SQL Server</li>
+      </ul>
+    </li>
+    <li>
+      {
+        t({
+          de: "Das gemeinsame Nationalteam wird von unserem Trainerteam in mehreren Trainingslagern und online auf die weiteren Wettkämpfe vorbereitet und im Februar 2024 im Rahmen eines Wettkampfes auf die beiden Skill-Teams aufgeteilt.",
+          en: "The joint national team is being prepared for the following competitions online and in multiple training camps by our trainer team. In February&nbsp;2024, the Competitors are divided into two separate national teams, one for each Skill.",
+        })
+      }
+      {
+        t({
+          de: "Beim Albert-Einstein-Cup treten beide Nationalteams in ihren Wettbewerbsberufen gegen die besten Softwareentwickler*innen Europas und anderer Kontinente an. Im Ergebnis werden die beiden deutschen Teilnehmer*innen für die WorldSkills Lyon 2024 bestimmt.",
+          en: "At the Albert Einstein Cup, both national teams compete against the best software developers of Europe and other continents in their respective Skill. As a result, the two German Competitors for the WorldSkills Lyon 2024 will be determined.",
+        })
+      }
+    </li>
+    <li>
+      {
+        t({
+          de: "Jeweils ein*e Teilnehmer*in vertritt Deutschland in den beiden Skills bei den WorldSkills in Lyon. Der Wettkampf geht über vier Tage.",
+          en: "In each of the two Skills, one Competitor represents Germany at the WorldSkills in Lyon. The Competition takes place over four days.",
+        })
+      }
+    </li>
+  </ol>
+</div>

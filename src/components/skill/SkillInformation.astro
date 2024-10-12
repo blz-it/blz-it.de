@@ -1,0 +1,53 @@
+---
+import { getLangFromUrl, useTranslations } from "~/i18n";
+import Headline from "../typography/Headline.astro";
+
+interface Props {
+  description: string;
+  requirements: string;
+  videoUrl: string;
+  occupation: {
+    title: string;
+    text: string;
+  };
+}
+
+const { description, requirements, videoUrl, occupation } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="text-left">
+  <div class="items-center xl:flex">
+    <div class="flex-1 gap-y-4 border-gray-200 xl:border-r xl:pr-12">
+      <p>{description}</p>
+      <Headline>
+        {
+          t({
+            de: "Was solltest du an Erfahrungen mitbringen?",
+            en: "What experience should you bring with you?",
+          })
+        }
+      </Headline>
+      <p>{requirements}</p>
+      <!-- <Trans i18nKey={"skills.general.interested"}>
+        You are interested?{" "}
+        <Link href={buildLink("dm-registration")}>Apply now!</Link>
+      </Trans> -->
+    </div>
+    <div class="mt-20 flex-1 xl:mt-0 xl:pl-12">
+      <iframe
+        class="mx-auto aspect-[560/315] w-full shadow-md sm:w-3/4 md:w-7/12 xl:w-full"
+        src={videoUrl}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="mt-16">
+    <Headline class="text-lg">
+      {occupation.title}
+    </Headline>
+    <p>{occupation.text}</p>
+  </div>
+</div>

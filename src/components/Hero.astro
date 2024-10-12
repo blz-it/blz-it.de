@@ -1,18 +1,20 @@
 ---
+import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import HeroBg from "~/assets/hero-bg.jpg";
+import HeroBgImage from "~/assets/hero-bg.jpg";
 
 interface Props {
   title: string;
   subtitle: string;
+  img?: ImageMetadata;
 }
 
-const { title, subtitle } = Astro.props;
+const { title, subtitle, img = HeroBgImage } = Astro.props;
 ---
 
 <div class="bg-accent-300 relative">
   <div class="absolute inset-0">
-    <Image class="h-full w-full object-cover" src={HeroBg} alt="" />
+    <Image class="h-full w-full object-cover" src={img} alt="" />
     <div
       class="absolute inset-0 bg-wsg-orange-400 mix-blend-multiply"
       aria-hidden="true"

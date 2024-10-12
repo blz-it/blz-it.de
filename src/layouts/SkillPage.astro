@@ -1,0 +1,95 @@
+---
+import type { ImageMetadata } from "astro";
+import type { ComponentProps } from "astro/types";
+import Hero from "~/components/Hero.astro";
+import LinkCard from "~/components/LinkCard.astro";
+import HeadedSection from "~/components/sections/HeadedSection.astro";
+import WavedSection from "~/components/sections/WavedSection.astro";
+import SkillInformation from "~/components/skill/SkillInformation.astro";
+import SkillRoadmap from "~/components/skill/SkillRoadmap.astro";
+import type Person from "~/components/team/Person.astro";
+import TimeLine from "~/components/timeline/TimeLine.astro";
+import { getLangFromUrl, useTranslations } from "~/i18n";
+import Layout from "./Layout.astro";
+
+interface Props {
+  skillNumber: string;
+  skillName: string;
+  skillDescription: string;
+  skillInformation: ComponentProps<typeof SkillInformation>;
+  img: ImageMetadata;
+  contact: string;
+  nationalTeam: ComponentProps<typeof Person>[];
+  timelineEntries: ComponentProps<typeof TimeLine>["entries"];
+  additionalLinks: ComponentProps<typeof LinkCard>[];
+}
+
+const {
+  skillNumber,
+  skillName,
+  skillDescription,
+  skillInformation,
+  img,
+  nationalTeam,
+  timelineEntries,
+  additionalLinks,
+  contact,
+} = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={skillName}>
+  <div class="bg-white lg:text-lg">
+    <Hero
+      title={`Skill ${skillNumber}: ${skillName}`}
+      subtitle={skillDescription}
+      img={img}
+    />
+    <div class="flex max-w-7xl justify-end">
+      <a class="bg-button rounded-lg px-6 py-2" href={contact}>
+        {t({ de: "Kontakt", en: "Contact" })}
+      </a>
+    </div>
+    <HeadedSection
+      title={t({ de: "Allgemeine Informationen", en: "General Information" })}
+      subtitle={t({
+        de: "Wer sind wir und was ist unser Ziel?",
+        en: "Who are we and what is our goal?",
+      })}
+    >
+      <SkillInformation {...skillInformation} />
+    </HeadedSection>
+    <WavedSection type="top" title="WorldSkills Lyon 2024">
+      <div class="px-4">
+        <SkillRoadmap />
+      </div>
+    </WavedSection>
+    <!-- <WavedSection type="bottom" title={t("skills.nationalTeam.title")}>
+      {
+        nationalTeam.length ? (
+          <Team members={nationalTeam} />
+        ) : (
+          <div>
+            <Trans i18nKey={"skills.nationalTeam.noTeam"}>
+              There is currently no national team.{" "}
+              <Link href={buildLink("dm-registration")}>Apply now!</Link>
+            </Trans>
+          </div>
+        )
+      }
+    </WavedSection> -->
+    <WavedSection type="bottom" title={t({ de: "Geschichte", en: "History" })}>
+      <TimeLine entries={timelineEntries} />
+    </WavedSection>
+    <WavedSection
+      type="top"
+      title={t({ de: "Weitere Links", en: "Additional Links" })}
+    >
+      <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
+        {additionalLinks.map((link) => <LinkCard {...link} />)}
+      </dl>
+    </WavedSection>
+  </div>
+</Layout>

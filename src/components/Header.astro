@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import WsgHandsWhite from "~/assets/wsg-hands-white.svg";
+import WsgHandsWhiteImage from "~/assets/wsg-hands-white.svg";
 import { getLangFromUrl, getLocalePaths, useTranslations } from "~/i18n/utils";
 import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
 import { SkillsDropdown } from "./dropdowns/SkillsDropdown";
@@ -29,7 +29,7 @@ const skills = [
       <div class="flex items-center">
         <a href={getRelativeLocaleUrl(lang, "/")}>
           <Image
-            src={WsgHandsWhite}
+            src={WsgHandsWhiteImage}
             alt="WorldSkills Germany"
             class="h-10 w-auto"
           />

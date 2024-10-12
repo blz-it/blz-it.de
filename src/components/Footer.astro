@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import WsgHorizontal from "~/assets/wsg-horizontal.svg";
+import WsgHorizontalImage from "~/assets/wsg-horizontal.svg";
 import { getLangFromUrl, useTranslations } from "~/i18n";
 
 const lang = getLangFromUrl(Astro.url);
@@ -32,7 +32,7 @@ const socials = [
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <Image
         class="-ml-6 h-36 xl:ml-0"
-        src={WsgHorizontal}
+        src={WsgHorizontalImage}
         alt="WorldSkills Germany"
       />
       <div
