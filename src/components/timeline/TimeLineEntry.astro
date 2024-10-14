@@ -1,42 +1,42 @@
 ---
-type TimelineInfoItem = {
+interface TimelineInfoItem {
   date: string;
   title: string;
   text: string;
-};
+}
 
-type TimelinePeriodItem = {
+interface TimelinePeriodItem {
   period: string;
-};
+}
 
 type Props = TimelineInfoItem | TimelinePeriodItem;
-const { date, title, text, period } = Astro.props;
+const props = Astro.props;
 ---
 
 {
-  period ? (
+  "period" in props ? (
     <li class="timeline-item period">
       <div class="timeline-info" />
       <div class="timeline-marker" />
       <div class="timeline-content">
-        <h2 class="timeline-title">{period}</h2>
+        <h2 class="timeline-title">{props.period}</h2>
       </div>
     </li>
   ) : (
     <li class="timeline-item">
       <div class="timeline-info">
-        <span class="text-wrap" set:html={date} />
+        <span class="text-wrap" set:html={props.date} />
       </div>
       <div class="timeline-marker" />
       <div class="timeline-content">
-        <h3 class="timeline-title">{title}</h3>
-        <p set:html={text} />
+        <h3 class="timeline-title">{props.title}</h3>
+        <p set:html={props.text} />
       </div>
     </li>
   )
 }
 
-<style>
+<style define:vars={{ accentRGB: "#ed8a00" }}>
   .timeline-item {
     padding-left: 40px;
     position: relative;
@@ -76,7 +76,9 @@ const { date, title, text, period } = Astro.props;
     top: 4px;
     left: 0;
     width: 15px;
-    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+    transition:
+      background 0.3s ease-in-out,
+      border 0.3s ease-in-out;
   }
 
   .timeline-marker:after {

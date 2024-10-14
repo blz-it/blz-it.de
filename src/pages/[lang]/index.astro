@@ -1,106 +1,150 @@
 ---
-import { Trans } from "astro-i18next/components";
-import i18next, { t } from "i18next";
-import Cta from "../../components/Cta.astro";
-import Hero from "../../components/Hero.astro";
-import Link from "../../components/Link.astro";
-import Layout from "../../layouts/Layout.astro";
-import HeadedSection from "../../layouts/sections/HeadedSection.astro";
-import WavedSection from "../../layouts/sections/WavedSection.astro";
-import { buildLink } from "../../routing/buildLink";
-import { getStaticLangPaths, updateLang } from "../../routing/lang";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Cta from "~/components/Cta.astro";
+import Hero from "~/components/Hero.astro";
+import Link from "~/components/Link.astro";
+import HeadedSection from "~/components/sections/HeadedSection.astro";
+import WavedSection from "~/components/sections/WavedSection.astro";
+import { localeParams, useTranslations } from "~/i18n";
+import Layout from "~/layouts/Layout.astro";
 
-export const getStaticPaths = getStaticLangPaths;
-updateLang(Astro.url.pathname);
+export const getStaticPaths = localeParams;
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
 ---
 
-<Layout title={t("home.title")}>
+<Layout title={t({ de: "Startseite", en: "Home" })}>
   <Hero
-    title={t("home.title")}
-    subtitle={t("home.subtitle")}
-    img="/img/hero-bg.jpg"
-    size="lg"
-    textCenter
+    title={t({
+      de: "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
+      en: "Welcome to the national centers of software development",
+    })}
+    subtitle={t({
+      de: "Wir bereiten auf die Weltmeisterschaften vor!",
+      en: "We offer preparation for the world championships!",
+    })}
   />
   <HeadedSection
-    title={t("home.general.title")}
-    subtitle={t("home.general.subtitle")}
+    title={t({ de: "Allgemeine Informationen", en: "General Information" })}
+    subtitle={t({
+      de: "Wer sind wir und was ist unser Ziel?",
+      en: "Who are we and what is our goal?",
+    })}
   >
-    <p class="text-gray-800 sm:text-xl">
-      <Trans i18nKey="home.general.text">
-        <Link href="https://www.worldskills.com" openInNewTab
-          >WorldSkills International</Link
-        > have made it their mission to increase the attractivity of vocational education.
-        For this purpose, the &ldquo;world championships of skills&ldquo; are held
-        every two years, in which talented, young people compete with each other.
-        The German manifestation of this initiative is <Link
-          href="https://www.worldskillsgermany.com">WorldSkills Germany</Link
-        >, which for example also hosts national and international competitions.
-        In Germany, a National Training Centre belongs to a each skill
-        respectively. The National Training Centres by <Link
-          href="https://www.worldskillsgermany.com"
-          openInNewTab>WorldSkills Germany</Link
-        > have the task of training future members of the German national team and
-        thus participants in international competitions, in addition to training
-        according to WorldSkills principles for as broad a group of participants
-        as possible. They are appointed exclusively only once per skills discipline.
-        The appointment is made by the skills mentors (associations, companies, institutions)
-        together with WorldSkills Germany.
-      </Trans>
-    </p>
+    <div class="space-y-8 text-gray-800 sm:text-xl">
+      <p>
+        <Link href="https://www.worldskills.com" isExternal>
+          WorldSkills International
+        </Link>
+        {
+          t({
+            de: 'hat es sich zur Aufgabe gemacht, nachhaltig die Attraktivität der beruflichen Bildung zu verbessern. Zu diesem Zweck werden alle zwei Jahre die "Weltmeisterschaften der Berufe" ausgetragen, in der sich talentierte, junge Menschen untereinander messen. Die deutsche Ausprägung dieser Initiative ist',
+            en: 'have made it their mission to increase the attractivity of vocational education. For this purpose, the "world championships of skills" are held every two years, in which talented, young people compete with each other. The German manifestation of this initiative is',
+          })
+        }
+        <Link href="https://www.worldskillsgermany.com" isExternal>
+          WorldSkills Germany</Link
+        >{
+          t({
+            de: ", die beispielsweise selbst nationale und internationale Wettbewerbe veranstaltet. Zu den einzelnen Berufen gehört in Deutschland jeweils ein Bundesleistungszentrum.",
+            en: ", which for example also hosts national and international competitions. In Germany, a National Training Centre belongs to a each skill respectively.",
+          })
+        }
+      </p>
+      <p>
+        {
+          t({
+            de: "Die Bundesleistungszentren von WorldSkills Germany haben die Aufgabe, zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der deutschen Nationalmannschaft und somit Teilnehmer an internationalen Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände, Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany.",
+            en: "The National Training Centres by WorldSkills Germany have the task of training future members of the German national team and thus participants in international competitions, in addition to training according to WorldSkills principles for as broad a group of participants as possible. They are appointed exclusively only once per skills discipline. The appointment is made by the skills mentors (associations, companies, institutions) together with WorldSkills Germany.",
+          })
+        }
+      </p>
+    </div>
   </HeadedSection>
-  <WavedSection type={"top"} title={t("home.skills.title")}>
+  <WavedSection
+    type="top"
+    title={t({
+      de: "Unsere Skills",
+      en: "Our Skills",
+    })}
+  >
     <p class="sm:text-xl">
-      <Trans i18nKey="home.skills.text">
-        The Federal Centres of Excellence in Software Development are located at
-        the <Link href="https://aeg-nb.de" openInNewTab
-          >Albert-Einstein-Gymnasium Neubrandenburg</Link
-        >. At this location, <Link
-          href={buildLink("mobile-applications-development", i18next.language)}
-          >Skill 08: Mobile Applications Development</Link
-        > and <Link
-          href={buildLink(
-            "it-software-solutions-for-business",
-            i18next.language
-          )}>Skill 09: IT Software Solutions for Business</Link
-        > are represented. More information on the individual skills can be found
-        on the respective subpages.
-      </Trans>
+      {
+        t({
+          de: "Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am",
+          en: "The National Training Centres in Software Development are located at the",
+        })
+      }
+      <Link href="https://aeg-nb.de" isExternal>
+        Albert-Einstein-Gymnasium Neubrandenburg</Link
+      >{
+        t({
+          de: ". An diesem Standort sind",
+          en: ". At this location,",
+        })
+      }
+      <Link
+        href={getRelativeLocaleUrl(lang, "mobile-applications-development")}
+      >
+        Skill 08: Mobile Applications Development
+      </Link>
+      {t({ de: "und", en: "and" })}
+      <Link
+        href={getRelativeLocaleUrl(lang, "it-software-solutions-for-business")}
+      >
+        Skill 09: IT Software Solutions for Business
+      </Link>
+      {
+        t({
+          de: "vertreten. Mehr Informationen zu den einzelnen Skills finden sich auf den jeweiligen Unterseiten.",
+          en: "are represented. More information on the individual skills can be found on the respective subpages.",
+        })
+      }
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-24 mx-4">
+    <div class="mx-4 grid grid-cols-1 gap-x-24 gap-y-8 md:grid-cols-2">
       <div>
-        <p class="text-xl border-white border-b-2 pb-1">
+        <p class="border-b-2 border-white pb-1 text-xl">
           Mobile Applications Development
         </p>
-        <p class="md:text-justify pt-4">
-          <Trans i18nKey="home.skills.skill08">
-            As a software developer with a specialization in mobile
-            applications, you are a programmer and designer in one. You ensure
-            that the apps work on users' mobile devices, look appealing, and are
-            fun to use.
-          </Trans>
+        <p class="pt-4 md:text-justify">
+          {
+            t({
+              de: "Als Softwareentwickler*in mit der Spezialisierung auf Mobile Applications bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen.",
+              en: "As a software developer with a specialization in mobile applications, you are a programmer and designer in one. You ensure that the apps work on users' mobile devices, look appealing, and are fun to use.",
+            })
+          }
         </p>
       </div>
       <div>
-        <p class="text-xl border-white border-b-2 pb-1">
+        <p class="border-b-2 border-white pb-1 text-xl">
           IT Software Solutions for Business
         </p>
-        <p class="md:text-justify pt-4">
-          <Trans i18nKey="home.skills.skill09">
-            The skill IT Software Solutions for Business represents the entire
-            spectrum of software-developing IT professions. All full-stack
-            programmers are suitable. This includes desktop, server, database,
-            mobile app and web development.
-          </Trans>
+        <p class="pt-4 md:text-justify">
+          {
+            t({
+              de: "Die Disziplin IT Software Solutions for Business bildet das gesamte Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-, Datenbank-, Mobile-App- und Webentwicklung.",
+              en: "The skill IT Software Solutions for Business represents the entire spectrum of software-developing IT professions. All full-stack programmers are suitable. This includes desktop, server, database, mobile app, and web development.",
+            })
+          }
         </p>
       </div>
     </div>
   </WavedSection>
-  <WavedSection type={"bottom"}>
+  <WavedSection type="bottom">
     <Cta
-      title={t("home.cta.title")}
-      subtitle={t("home.cta.subtitle")}
-      action={{ label: t("home.cta.button"), url: "/dm-registration" }}
+      title={t({
+        de: "Werde Teil unseres Nationalteams",
+        en: "Become part of our national team",
+      })}
+      subtitle={t({
+        de: "Wolltest du schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen? Die nächste Registrierung startet Anfang 2025.",
+        en: "Have you always wanted to take part in a software development competition and compete with the best of the best? The next registration starts in the beginning of 2025.",
+      })}
+      action={{
+        label: t({ de: "Registriere dich jetzt", en: "Register now" }),
+        url: getRelativeLocaleUrl(lang, "dm-registration"),
+      }}
     />
   </WavedSection>
 </Layout>

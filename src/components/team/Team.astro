@@ -1,10 +1,10 @@
 ---
-import type { PropsOf } from "../../utils/types";
+import type { ComponentProps } from "astro/types";
 import Person from "./Person.astro";
 
-type Props = {
-  members: PropsOf<typeof Person>[];
-};
+interface Props {
+  members: ComponentProps<typeof Person>[];
+}
 
 const { members } = Astro.props;
 ---
@@ -13,5 +13,11 @@ const { members } = Astro.props;
   role="list"
   class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:max-w-5xl lg:grid-cols-3"
 >
-  {members.map((member) => <Person {...member} />)}
+  {
+    members.map((member) => (
+      <li>
+        <Person {...member} />
+      </li>
+    ))
+  }
 </ul>

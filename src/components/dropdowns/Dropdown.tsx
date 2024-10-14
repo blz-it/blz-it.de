@@ -1,17 +1,24 @@
+import {
+  Label,
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+  Transition,
+} from "@headlessui/react";
+import { CheckIcon } from "@heroicons/react/20/solid/index";
+import { clsx } from "clsx";
 import { Fragment } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid/index";
-import classNames from "classnames";
 
-export type DropDownProps = {
+interface Props {
   item: string;
   options: readonly string[];
   onChange: (option: string) => void;
   label?: string;
   icon: JSX.Element;
-};
+}
 
-export const Dropdown = ({ item, options, icon, onChange, label }: DropDownProps) => {
+export const Dropdown = ({ item, options, icon, onChange, label }: Props) => {
   return (
     <Listbox
       value={item}
@@ -20,24 +27,19 @@ export const Dropdown = ({ item, options, icon, onChange, label }: DropDownProps
       {({ open }) => (
         <div className="min-w-[6rem]">
           {label && (
-            <Listbox.Label className="block text-sm font-medium text-gray-700 mb-1">
+            <Label className="mb-1 block text-sm font-medium text-gray-700">
               {label}
-            </Listbox.Label>
+            </Label>
           )}
           <div className="relative">
-            <Listbox.Button
-              className={classNames(
-                "peer relative w-full cursor-default rounded-md py-2 pl-3 pr-10 text-left text-white sm:text-sm",
-                "hover:bg-wsg-orange-400 hover:bg-opacity-50 focus:ring-1 focus:ring-wsi-blue-300"
-              )}
-            >
+            <ListboxButton className="peer relative w-full cursor-default rounded-md py-2 pl-3 pr-10 text-left text-white hover:bg-wsg-orange-400 hover:bg-opacity-50 focus:ring-1 focus:ring-wsi-blue-300 sm:text-sm">
               <span className="block truncate text-base font-medium">
                 {item}
               </span>
               <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                 {icon}
               </span>
-            </Listbox.Button>
+            </ListboxButton>
 
             <Transition
               show={open}
@@ -46,9 +48,9 @@ export const Dropdown = ({ item, options, icon, onChange, label }: DropDownProps
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              <ListboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                 {options.map((option) => (
-                  <Listbox.Option
+                  <ListboxOption
                     key={option}
                     className={
                       "relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 hover:bg-wsg-orange-700"
@@ -58,9 +60,9 @@ export const Dropdown = ({ item, options, icon, onChange, label }: DropDownProps
                     {({ selected }) => (
                       <>
                         <span
-                          className={classNames(
+                          className={clsx(
                             selected ? "font-semibold" : "font-normal",
-                            "block truncate"
+                            "block truncate",
                           )}
                         >
                           {option}
@@ -73,9 +75,9 @@ export const Dropdown = ({ item, options, icon, onChange, label }: DropDownProps
                         ) : null}
                       </>
                     )}
-                  </Listbox.Option>
+                  </ListboxOption>
                 ))}
-              </Listbox.Options>
+              </ListboxOptions>
             </Transition>
           </div>
         </div>

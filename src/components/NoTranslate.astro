@@ -1,0 +1,44 @@
+---
+import { getLangFromUrl, useTranslations, type Language } from "~/i18n";
+
+interface Props {
+  availableLanguages: Language[];
+}
+
+const { availableLanguages } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+{
+  !availableLanguages.includes(lang) && (
+    <div class="bg-yellow-50 p-4">
+      <div class="flex items-center justify-center">
+        <div class="flex-shrink-0">
+          <svg
+            class="h-5 w-5 text-yellow-400"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495ZM10 5a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 5Zm0 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="ml-3">
+          <p class="text-sm text-yellow-700">
+            {t({
+              de: "Diese Seite ist in der gewählten Sprache nicht verfügbar.",
+              en: "This page is not available in the selected language.",
+            })}
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}

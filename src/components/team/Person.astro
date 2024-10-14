@@ -1,8 +1,8 @@
 ---
-import type { PropsOf } from "../../utils/types";
-import SocialMediaList from "../social_media/SocialMediaList.astro";
+import type { ComponentProps } from "astro/types";
+import SocialMediaList from "./SocialMediaList.astro";
 
-type Props = PropsOf<typeof SocialMediaList> & {
+type Props = ComponentProps<typeof SocialMediaList> & {
   name: string;
   img: string;
   info?: string;
@@ -11,19 +11,17 @@ type Props = PropsOf<typeof SocialMediaList> & {
 const { name, img, info, links = [] } = Astro.props;
 ---
 
-<li>
-  <div class="space-y-6">
-    <img
-      class="mx-auto h-40 w-40 rounded-full shadow-lg xl:h-56 xl:w-56 object-cover"
-      src={img}
-      alt=""
-    />
-    <div class="space-y-2">
-      <div class="space-y-1 text-lg font-medium leading-6">
-        <h3>{name}</h3>
-        {info && <p class="text-wsg-orange-500">{info}</p>}
-      </div>
-      <SocialMediaList links={links} />
+<div class="space-y-6">
+  <img
+    class="mx-auto h-40 w-40 rounded-full object-cover shadow-lg xl:h-56 xl:w-56"
+    src={img}
+    alt=""
+  />
+  <div class="space-y-2">
+    <div class="space-y-1 text-lg font-medium leading-6">
+      <h3>{name}</h3>
+      {info && <p class="text-wsg-orange-500">{info}</p>}
     </div>
+    <SocialMediaList links={links} />
   </div>
-</li>
+</div>

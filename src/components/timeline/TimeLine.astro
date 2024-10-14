@@ -1,9 +1,9 @@
 ---
-import type { PropsOf } from "../../utils/types";
+import type { ComponentProps } from "astro/types";
 import TimeLineEntry from "./TimeLineEntry.astro";
 
 type Props = {
-  entries: PropsOf<typeof TimeLineEntry>[];
+  entries: ComponentProps<typeof TimeLineEntry>[];
 };
 const { entries } = Astro.props;
 ---
