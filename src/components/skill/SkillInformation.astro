@@ -1,53 +1,40 @@
 ---
-import { getLangFromUrl, useTranslations } from "~/i18n";
+import { t } from "i18next";
 import Headline from "../typography/Headline.astro";
 
-interface Props {
-  description: string;
-  requirements: string;
-  videoUrl: string;
-  occupation: {
-    title: string;
-    text: string;
-  };
-}
+type Props = {
+  skillNumber: string;
+};
 
-const { description, requirements, videoUrl, occupation } = Astro.props;
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const { skillNumber } = Astro.props;
 ---
 
 <div class="text-left">
-  <div class="items-center xl:flex">
-    <div class="flex-1 gap-y-4 border-gray-200 xl:border-r xl:pr-12">
-      <p set:html={description} class="mb-16" />
-      <Headline>
-        {
-          t({
-            de: "Was solltest du an Erfahrungen mitbringen?",
-            en: "What experience should you bring with you?",
-          })
-        }
-      </Headline>
-      <p>{requirements}</p>
+  <div class="xl:flex items-center">
+    <div class="flex-1 xl:pr-12 xl:border-r border-gray-200">
+      <p class="" set:html={t(`skills.${skillNumber}.description`)} />
+      <br />
+      <br />
+      <Headline>{t(`skills.${skillNumber}.requirementsTitle`)}</Headline>
+      <p set:html={t(`skills.${skillNumber}.requirements`)} />
+      <br />
       <!-- <Trans i18nKey={"skills.general.interested"}>
         You are interested?{" "}
         <Link href={buildLink("dm-registration")}>Apply now!</Link>
       </Trans> -->
     </div>
-    <div class="mt-20 flex-1 xl:mt-0 xl:pl-12">
+    <div class="flex-1 xl:pl-12 mt-20 xl:mt-0">
       <iframe
-        class="mx-auto aspect-[560/315] w-full shadow-md sm:w-3/4 md:w-7/12 xl:w-full"
-        src={videoUrl}
+        class="w-full sm:w-3/4 md:w-7/12 xl:w-full aspect-[560/315] mx-auto shadow-md"
+        src={t(`skills.${skillNumber}.video`)}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </div>
   </div>
   <div class="mt-16">
-    <Headline class="text-lg">
-      {occupation.title}
-    </Headline>
-    <p set:html={occupation.text} />
+    <Headline class="text-lg"
+      >{t(`skills.${skillNumber}.occupation.title`)}</Headline
+    >
+    <p set:html={t(`skills.${skillNumber}.occupation.text`)} />
   </div>
 </div>

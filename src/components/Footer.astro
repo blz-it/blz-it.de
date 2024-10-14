@@ -1,18 +1,18 @@
 ---
-import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import WsgHorizontalImage from "~/assets/img/wsg-horizontal.svg";
-import { getLangFromUrl, useTranslations } from "~/i18n";
+import { Icon } from "astro-icon";
+import i18next, { t } from "i18next";
+import { buildLink } from "../routing/buildLink";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const socials = [
+interface Social {
+  name: string;
+  href: string;
+  icon: string;
+}
+const socials: Social[] = [
   {
     name: "YouTube",
     href: "https://youtube.de/@GermanITSkills",
-    icon: "mdi:youtube",
+    icon: "bi:youtube",
   },
   {
     name: "Instagram",
@@ -22,7 +22,7 @@ const socials = [
   {
     name: "Facebook",
     href: "https://facebook.com/GermanITSkills",
-    icon: "mdi:facebook",
+    icon: "ic:baseline-facebook",
   },
 ];
 ---
@@ -30,13 +30,9 @@ const socials = [
 <footer class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <Image
-        class="-ml-6 h-36 xl:ml-0"
-        src={WsgHorizontalImage}
-        alt="WorldSkills Germany"
-      />
+      <img class="h-36 -ml-6 xl:ml-0" src="/img/wsg_horizontal.svg" alt="" />
       <div
-        class="gap mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:col-span-2 xl:mt-0"
+        class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap xl:col-span-2 xl:mt-0"
       >
         <div>
           <h3 class="text-sm font-semibold leading-6 text-white">
@@ -49,8 +45,8 @@ const socials = [
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-sm leading-6 text-gray-300 hover:text-white"
-                >{t({ de: "Webseite", en: "Website" })}
-              </a>
+                >{t("layout.footer.website")}</a
+              >
             </li>
           </ul>
         </div>
@@ -66,7 +62,7 @@ const socials = [
                 rel="noopener noreferrer"
                 class="text-sm leading-6 text-gray-300 hover:text-white"
               >
-                {t({ de: "Webseite", en: "Website" })}
+                {t("layout.footer.website")}
               </a>
             </li>
             <li>
@@ -76,31 +72,29 @@ const socials = [
                 rel="noopener noreferrer"
                 class="text-sm leading-6 text-gray-300 hover:text-white"
               >
-                {t({ de: "Kontakt", en: "Contact" })}
+                {t("layout.footer.contact")}
               </a>
             </li>
           </ul>
         </div>
         <div class="mt-10 md:mt-0">
           <h3 class="text-sm font-semibold leading-6 text-white">
-            {t({ de: "Rechtliches", en: "Legal" })}
+            {t("layout.footer.legal")}
           </h3>
           <ul role="list" class="mt-6 space-y-4">
             <li>
               <a
-                href={getRelativeLocaleUrl(lang, "imprint")}
+                href={buildLink("/imprint", i18next.language)}
                 class="text-sm leading-6 text-gray-300 hover:text-white"
+                >{t("layout.footer.imprint")}</a
               >
-                {t({ de: "Impressum", en: "Imprint" })}
-              </a>
             </li>
             <li>
               <a
-                href={getRelativeLocaleUrl(lang, "privacy")}
+                href={buildLink("/privacy", i18next.language)}
                 class="text-sm leading-6 text-gray-300 hover:text-white"
+                >{t("layout.footer.privacy")}</a
               >
-                {t({ de: "Datenschutz", en: "Privacy Policy" })}
-              </a>
             </li>
           </ul>
         </div>
@@ -126,9 +120,7 @@ const socials = [
       </div>
       <div class="mt-8 md:order-1 md:mt-0">
         <p class="text-center text-base text-gray-400">
-          &copy; 2024 BLZ IT. {
-            t({ de: "Alle Rechte vorbehalten", en: "All rights reserved" })
-          }.
+          &copy; 2024 BLZ IT. {t("layout.footer.allRightsReserved")}.
         </p>
       </div>
     </div>

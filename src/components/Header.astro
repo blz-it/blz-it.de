@@ -1,24 +1,17 @@
 ---
-import { Image } from "astro:assets";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import WsgHandsWhiteImage from "~/assets/img/wsg-hands-white.svg";
-import { getLangFromUrl, getLocalePaths, useTranslations } from "~/i18n/utils";
+import i18next, { t } from "i18next";
+import { buildLink } from "../routing/buildLink";
 import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
 import { SkillsDropdown } from "./dropdowns/SkillsDropdown";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const skills = [
-  {
-    name: "Mobile",
-    href: getRelativeLocaleUrl(lang, "mobile-applications-development"),
-  },
-  {
-    name: "Full-Stack",
-    href: getRelativeLocaleUrl(lang, "it-software-solutions-for-business"),
-  },
-];
+export interface NavigationItem {
+  name: string;
+  href: string;
+}
+const home: NavigationItem = {
+  name: t("layout.header.home"),
+  href: buildLink("/", i18next.language),
+};
 ---
 
 <header class="bg-wsg-orange-500 shadow">
@@ -27,50 +20,34 @@ const skills = [
       class="flex w-full items-center justify-between border-b border-white py-6 lg:border-none"
     >
       <div class="flex items-center">
-        <a href={getRelativeLocaleUrl(lang, "/")}>
-          <Image
-            src={WsgHandsWhiteImage}
-            alt="WorldSkills Germany"
-            class="h-10 w-auto"
-          />
+        <a href={buildLink("/", i18next.language)}>
+          <img class="h-10 w-auto" src="/img/wsg_hands_white.svg" alt="" />
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
           <a
-            href={getRelativeLocaleUrl(lang)}
+            href={home.href}
             class="text-base font-medium text-white hover:text-gray-100"
           >
-            {t({ de: "Startseite", en: "Home" })}
+            {home.name}
           </a>
         </div>
 
         <div class="ml-10 hidden lg:block">
-          <SkillsDropdown
-            client:load
-            title={t({ de: "Unsere Disziplinen", en: "Our Skills" })}
-            skills={skills}
-          />
+          <SkillsDropdown client:load astroPath={Astro.url.pathname} />
         </div>
       </div>
-      <LanguageDropdown
-        client:load
-        lang={lang}
-        paths={getLocalePaths(Astro.url)}
-      />
+      <LanguageDropdown client:load astroPath={Astro.url.pathname} />
     </div>
     <div class="flex flex-wrap justify-center gap-x-6 py-4 lg:hidden">
-      <div class="my-auto ml-10 space-x-8 lg:hidden">
+      <div class="ml-10 my-auto space-x-8 lg:hidden">
         <a
-          href={getRelativeLocaleUrl(lang)}
+          href={home.href}
           class="text-base font-medium text-white hover:text-gray-100"
         >
-          {t({ de: "Startseite", en: "Home" })}
+          {home.name}
         </a>
       </div>
-      <SkillsDropdown
-        client:load
-        title={t({ de: "Unsere Disziplinen", en: "Our Skills" })}
-        skills={skills}
-      />
+      <SkillsDropdown client:load astroPath={Astro.url.pathname} />
     </div>
   </nav>
 </header>
