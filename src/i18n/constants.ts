@@ -3,4 +3,6 @@ export const languages = {
   en: "English",
 };
 
+export type Language = keyof typeof languages;
+
 export const defaultLang = "de";

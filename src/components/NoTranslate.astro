@@ -1,8 +1,8 @@
 ---
-import { getLangFromUrl, useTranslations, type languages } from "~/i18n";
+import { getLangFromUrl, useTranslations, type Language } from "~/i18n";
 
 interface Props {
-  availableLanguages: (keyof typeof languages)[];
+  availableLanguages: Language[];
 }
 
 const { availableLanguages } = Astro.props;
