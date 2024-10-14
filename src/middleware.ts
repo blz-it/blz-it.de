@@ -11,17 +11,18 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
   }
 
   const [, lang] = ctx.url.pathname.split("/");
-  if (!(lang in languages)) {
-    return Response.redirect(
-      new URL(`/${defaultLang}${ctx.url.pathname}`, ctx.url),
-      301,
-    );
-  }
+  const isValidLanguage = lang in languages;
 
-  const response = await next();
+  const response = await next(
+    isValidLanguage
+      ? undefined
+      : new URL(`/${defaultLang}${ctx.url.pathname}`, ctx.url),
+  );
 
   if (response.status === 404) {
-    return next(new URL(`/${lang}/404`, ctx.url));
+    return next(
+      new URL(`/${isValidLanguage ? lang : defaultLang}/404`, ctx.url),
+    );
   }
 
   return response;
