@@ -1,0 +1,31 @@
+---
+import { t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+
+import { getStaticLangPaths, updateLang } from "../../routing/lang";
+
+export const getStaticPaths = getStaticLangPaths;
+updateLang(Astro.url.pathname);
+---
+
+<!-- TODO(Benjamin-Frost): Change styling as soon as #14 is merged -->
+<Layout title="DM Registration">
+  <div class="mx-auto max-w-4xl py-12">
+    <div class="bg-white p-8 rounded-xl">
+      <h2 class="text-2xl sm:text-3xl text-center">
+        {t("dmRegistration.title")}
+      </h2>
+      <p
+      class="mt-8 text-sm"
+      set:html={t("dmRegistration.requirements")}
+      />
+      <!-- <div class="rounded-md mt-8 p-4 bg-blue-50">
+        <p
+          class="text-sm text-center text-blue-700"
+          set:html={t("dmRegistration.ageDisclaimer")}
+        />
+      </div> -->
+      <!-- <DmRegistrationForm client:only /> -->
+    </div>
+  </div>
+</Layout>

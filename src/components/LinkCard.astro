@@ -1,11 +1,12 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from "astro-icon";
+import classNames from "classnames";
 
-interface Props {
+type Props = {
   name: string;
   text: string;
   href: string;
-}
+};
 
 const { name, text, href } = Astro.props;
 ---
@@ -14,20 +15,26 @@ const { name, text, href } = Astro.props;
   href={href}
   target="_blank"
   rel="noopener noreferrer"
-  class="group flex justify-between overflow-hidden rounded-lg bg-white px-4 py-5 text-left shadow outline outline-0 transition hover:shadow-md hover:outline-1 hover:outline-gray-200 sm:p-6"
+  class={classNames(
+    "group flex justify-between text-left overflow-hidden rounded-lg bg-white px-4 py-5 sm:p-6 shadow outline outline-0",
+    "transition hover:shadow-md hover:outline-1 hover:outline-gray-200"
+  )}
 >
   <div>
     <dt class="truncate text-sm font-medium text-gray-400">
       {name}
     </dt>
     <dd
-      class="mt-1 text-2xl font-semibold tracking-tight text-gray-900 transition group-hover:text-wsg-orange-500"
+      class={classNames(
+        "mt-1 text-2xl font-semibold tracking-tight text-gray-900",
+        "transition group-hover:text-wsg-orange-500"
+      )}
     >
       {text}
     </dd>
   </div>
   <Icon
-    name="mdi:external-link"
-    class="h-5 w-5 text-black transition group-hover:drop-shadow"
+    name="ri:external-link-fill"
+    class="w-5 h-5 text-black transition group-hover:drop-shadow"
   />
 </a>

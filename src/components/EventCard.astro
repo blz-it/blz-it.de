@@ -1,16 +1,14 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
-import { clsx } from "clsx";
+import classNames from "classnames";
 
-interface Props {
+type Props = {
   className?: string;
   title: string;
-  img: ImageMetadata;
+  img: string;
   date: string;
   link: string;
   hoverTextColor?: "black" | "white";
-}
+};
 
 const {
   className,
@@ -25,53 +23,53 @@ const hoverTextShadowColor =
 ---
 
 <div
-  class={clsx(
+  class={classNames(
     className,
-    "grid grid-cols-8 grid-rows-11 w-1/2 md:w-3/12 aspect-[18/24]",
+    "grid grid-cols-8 grid-rows-11 w-1/2 md:w-3/12 aspect-[18/24]"
   )}
 >
   <a
     target="_blank"
     rel="noopener noreferrer"
     href={link}
-    class="bg-group peer col-start-1 col-end-8 row-start-1 row-end-11 rounded-lg bg-wsg-orange-500 shadow-2xl"
+    class="bg-group peer rounded-lg shadow-2xl bg-wsg-orange-500 col-start-1 col-end-8 row-start-1 row-end-11"
   >
   </a>
   <a
     target="_blank"
     rel="noopener noreferrer"
     href={link}
-    class={clsx(
+    class={classNames(
       "relative rounded-lg shadow-2xl bg-white",
       "col-start-2 row-start-2 col-end-9 row-end-12 overflow-hidden",
       "group transition-all",
-      "hover:mt-[-1rem] hover:ml-[-1rem] peer-hover:mt-[-1rem] peer-hover:ml-[-1rem]",
+      "hover:mt-[-1rem] hover:ml-[-1rem] peer-hover:mt-[-1rem] peer-hover:ml-[-1rem]"
     )}
   >
-    <div class="pointer-events-none absolute z-10 w-full px-3 pt-2 text-sm">
+    <div class="absolute w-full pointer-events-none z-10 text-sm pt-2 px-3">
       <h4
-        class={clsx(
+        class={classNames(
           "card-title peer md:text-lg md:font-bold mt-1 text-left",
           "transition-all duration-300",
-          "group-hover:mt-0 group-hover:text-base group-hover:font-normal",
+          "group-hover:mt-0 group-hover:text-base group-hover:font-normal"
         )}
       >
         {title}
       </h4>
       <p
         set:html={date}
-        class={clsx(
+        class={classNames(
           "card-date",
           "text-center md:text-base text-gray-200 tracking-wider mt-8 sm:mt-4 md:mt-8",
-          "transition-all group-hover:opacity-0 group-hover:mt-0",
+          "transition-all group-hover:opacity-0 group-hover:mt-0"
         )}
       />
     </div>
     <div
-      class="overlay absolute h-full w-full bg-black opacity-50 transition-opacity hover:opacity-0 peer-hover:opacity-0"
+      class="overlay absolute w-full h-full opacity-50 bg-black transition-opacity hover:opacity-0 peer-hover:opacity-0"
     >
     </div>
-    <Image class="h-full w-full object-cover" src={img} alt="" />
+    <img class="w-full h-full object-cover" src={img} />
   </a>
 </div>
 

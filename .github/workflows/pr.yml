@@ -1,0 +1,38 @@
+name: Pull Request
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  assign-author:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Assign author to PR
+        uses: technote-space/assign-author@v1
+
+  approve-dependabot-pr:
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Enable auto-merge
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          # If we'd use `secrets.GITHUB_TOKEN`, our CI isn't triggered on the
+          # merge's push event.
+          # https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow
+          GITHUB_TOKEN: ${{ secrets.PR_AUTOMERGE_TOKEN }}
+      - uses: dependabot/fetch-metadata@v1.6.0
+        id: dependabot-metadata
+      - name: Approve patch and minor updates
+        if: steps.dependabot-metadata.outputs.update-type == 'version-update:semver-patch' || steps.dependabot-metadata.outputs.update-type == 'version-update:semver-minor'
+        run: gh pr review "$PR_URL" --approve
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

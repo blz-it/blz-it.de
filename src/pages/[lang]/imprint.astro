@@ -1,17 +1,13 @@
 ---
-import NoTranslate from "~/components/NoTranslate.astro";
-import { localeParams, useTranslations } from "~/i18n";
-import Layout from "~/layouts/Layout.astro";
+import { t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import { getStaticLangPaths } from "../../routing/lang";
 
-export const getStaticPaths = localeParams;
-
-const { lang } = Astro.params;
-const t = useTranslations(lang);
+export const getStaticPaths = getStaticLangPaths;
 ---
 
-<Layout title={t({ de: "Impressum", en: "Imprint" })}>
-  <NoTranslate availableLanguages={["de"]} />
-  <div class="prose mx-auto break-words px-4 py-16">
+<Layout title={t("legal.imprint")}>
+  <div class="prose mx-auto py-16 px-4 break-words">
     <h1>Impressum</h1>
     <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
     <p>

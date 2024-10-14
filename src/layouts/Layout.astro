@@ -1,51 +1,61 @@
 ---
-import "@fontsource/poppins";
-import Footer from "~/components/Footer.astro";
-import Header from "~/components/Header.astro";
-import { getLangFromUrl, getLocalePaths, useTranslations } from "~/i18n";
+import { HeadHrefLangs } from "astro-i18next/components";
+import i18next from "i18next";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import classNames from "classnames";
 
-interface Props {
-  title?: string;
-  description?: string;
+export interface Props {
+  title: string;
+  mainClass?: string;
 }
 
-const { title, description } = Astro.props;
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const localeDescription =
-  description ||
-  t({
-    de: "Willkommen bei den Bundesleistungszentren der Softwareentwicklung",
-    en: "Welcome to the national centers of software development",
-  });
+const { title, mainClass } = Astro.props;
 ---
 
-<!doctype html>
-<html lang={lang}>
+<!DOCTYPE html>
+<html lang={i18next.language}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={localeDescription} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
-    <title>BLZ IT{title ? ` | ${title}` : ""}</title>
-    {
-      getLocalePaths(Astro.url).map((props) => (
-        <link
-          rel="alternate"
-          hreflang={props.lang}
-          href={Astro.url.origin + props.path}
-        />
-      ))
-    }
+    <title>BLZ IT | {title}</title>
+    <HeadHrefLangs />
   </head>
-  <body class="flex min-h-screen flex-col">
-    <Header />
-    <main class="my-auto">
-      <slot />
-    </main>
-    <Footer />
+  <body class="font-['Poppins']">
+    <div class="flex flex-col h-screen">
+      <Header />
+      <main class={classNames(mainClass, "mb-auto")}>
+        <slot />
+      </main>
+      <Footer />
+    </div>
+    <style is:global>
+      :root {
+        --accent: 237, 139, 0;
+        --accentRGB: #ed8a00;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #ff671f 30%,
+          white 60%
+        );
+
+        --background: #f6f6f6;
+        --surface: #fff;
+      }
+
+      html {
+        font-family: system-ui, sans-serif;
+        background-color: var(--background);
+      }
+    </style>
   </body>
 </html>
