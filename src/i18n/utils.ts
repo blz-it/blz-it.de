@@ -15,11 +15,19 @@ export function useTranslations(lang: Language) {
   };
 }
 
+const removeLocalePrefix = (path: string): string => {
+  const localePattern = new RegExp(
+    `^/(${Object.keys(languages).join("|")})\\b`,
+  );
+  return path.replace(localePattern, "");
+};
+
 export type LocalePath = { lang: Language; path: string };
 export const getLocalePaths = (url: URL): LocalePath[] => {
+  const cleanPath = removeLocalePrefix(url.pathname);
   return Object.keys(languages).map((lang) => ({
     lang: lang as Language,
-    path: getRelativeLocaleUrl(lang, url.pathname.replace(/^\/[a-zA-Z-]+/, "")),
+    path: getRelativeLocaleUrl(lang, cleanPath),
   }));
 };
 
