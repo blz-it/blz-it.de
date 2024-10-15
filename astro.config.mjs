@@ -10,7 +10,6 @@ export default defineConfig({
   i18n: {
     defaultLocale: defaultLang,
     locales: Object.keys(languages),
-    routing: "manual", // see: src/middleware.ts
   },
   integrations: [tailwind(), react(), icon()],
   site: "https://blz-it.de",
