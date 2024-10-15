@@ -1,0 +1,43 @@
+---
+import historyJson from "~/assets/data/history.json";
+import Skill08Image from "~/assets/img/skill-08.jpg";
+import { defaultLang, type Language } from "~/i18n";
+import SkillPage from "~/layouts/SkillPage.astro";
+
+const lang = (Astro.currentLocale || defaultLang) as Language;
+const historyData = historyJson[lang]["skill08"];
+---
+
+<SkillPage
+  skillNumber="08"
+  skillName="Mobile Applications Development"
+  skillDescription="Mobile Applications Developers use technology and design to create apps which are appealing and function well on phones."
+  ,
+  skillInformation={{
+    description:
+      "As a software developer with a specialization in mobile applications, you are a programmer and designer in one. You ensure that the apps work on users' mobile devices, look appealing, and are fun to use.<br /><br />For the job, you need a certain understanding of technology and design. You need to understand the requirements and wishes of the clients and develop a product that is reliable, updatable, and easy for users to understand and use.",
+    requirements:
+      "You master at least one programming language, e.g. Dart or Kotlin, and program mobile apps, including the connection to online APIs and the use of integrated sensors. You understand task in English.",
+    videoUrl: "https://www.youtube.com/embed/Qe0ZaQAOQUY",
+    occupation: {
+      title: "A Career with a future and always on the cutting edge",
+      text: "The possibilities of communication and information exchange are constantly increasing. With a degree in IT, you are in demand: in 2021, about 12&thinsp;% more IT talents were sought than in the previous year. The Mobile Applications Developer is therefore one of the fastest growing occupations.<br /><br />Your main working tool is your laptop, so you are almost unrestricted in terms of work location and time, as long as there is no customer appointment. The only thing you need is a stable internet connection.",
+    },
+  }}
+  img={Skill08Image}
+  contact="mailto:worldskills@jonas-wanke.de"
+  nationalTeam={[]}
+  timelineEntries={Object.values(historyData)}
+  additionalLinks={[
+    {
+      name: "worldskills.org",
+      text: "Skill 08 at WorldSkills International",
+      href: "https://worldskills.org/skills/id/562/",
+    },
+    {
+      name: "worldskills2024.com",
+      text: "Skill 08 at the WorldSkills Lyon 2024",
+      href: "https://worldskills2024.com/en/skills/mobile-applications-development",
+    },
+  ]}
+/>

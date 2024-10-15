@@ -1,0 +1,105 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Cta from "~/components/Cta.astro";
+import Hero from "~/components/Hero.astro";
+import Link from "~/components/Link.astro";
+import HeadedSection from "~/components/sections/HeadedSection.astro";
+import WavedSection from "~/components/sections/WavedSection.astro";
+import { defaultLang, type Language } from "~/i18n";
+import Layout from "~/layouts/Layout.astro";
+
+const lang = (Astro.currentLocale || defaultLang) as Language;
+---
+
+<Layout title="Startseite">
+  <Hero
+    title="Willkommen bei den Bundesleistungszentren der Softwareentwicklung"
+    subtitle="Wir bereiten auf die Weltmeisterschaften vor!"
+    ,
+  />
+  <HeadedSection
+    title="Allgemeine Informationen"
+    subtitle="Wer sind wir und was ist unser Ziel?"
+  >
+    <div class="space-y-8 text-gray-800 sm:text-xl">
+      <p>
+        <Link href="https://www.worldskills.com" isExternal>
+          WorldSkills International
+        </Link>
+        hat es sich zur Aufgabe gemacht, nachhaltig die Attraktivität der beruflichen
+        Bildung zu verbessern. Zu diesem Zweck werden alle zwei Jahre die "Weltmeisterschaften
+        der Berufe" ausgetragen, in der sich talentierte, junge Menschen untereinander
+        messen. Die deutsche Ausprägung dieser Initiative ist
+        <Link href="https://www.worldskillsgermany.com" isExternal>
+          WorldSkills Germany</Link
+        >, die beispielsweise selbst nationale und internationale Wettbewerbe
+        veranstaltet. Zu den einzelnen Berufen gehört in Deutschland jeweils ein
+        Bundesleistungszentrum.
+      </p>
+      <p>
+        Die Bundesleistungszentren von WorldSkills Germany haben die Aufgabe,
+        zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine
+        möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der
+        deutschen Nationalmannschaft und somit Teilnehmer an internationalen
+        Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur
+        einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände,
+        Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany.
+      </p>
+    </div>
+  </HeadedSection>
+  <WavedSection type="top" title="Unsere Skills">
+    <p class="sm:text-xl">
+      Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am
+      <Link href="https://aeg-nb.de" isExternal>
+        Albert-Einstein-Gymnasium Neubrandenburg</Link
+      >. An diesem Standort sind
+      <Link
+        href={getRelativeLocaleUrl(lang, "mobile-applications-development")}
+      >
+        Skill 08: Mobile Applications Development
+      </Link>
+      und
+      <Link
+        href={getRelativeLocaleUrl(lang, "it-software-solutions-for-business")}
+      >
+        Skill 09: IT Software Solutions for Business
+      </Link>
+      vertreten. Mehr Informationen zu den einzelnen Skills finden sich auf den jeweiligen
+      Unterseiten.
+    </p>
+    <div class="mx-4 grid grid-cols-1 gap-x-24 gap-y-8 md:grid-cols-2">
+      <div>
+        <p class="border-b-2 border-white pb-1 text-xl">
+          Mobile Applications Development
+        </p>
+        <p class="pt-4 md:text-justify">
+          Als Softwareentwickler*in mit der Spezialisierung auf Mobile
+          Applications bist du Programmierer*in und Designer*in in einem. Du
+          sorgst dafür, dass die Apps auf den mobilen Endgeräten der
+          Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen.
+        </p>
+      </div>
+      <div>
+        <p class="border-b-2 border-white pb-1 text-xl">
+          IT Software Solutions for Business
+        </p>
+        <p class="pt-4 md:text-justify">
+          Die Disziplin IT Software Solutions for Business bildet das gesamte
+          Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle
+          Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-,
+          Datenbank-, Mobile-App- und Webentwicklung.
+        </p>
+      </div>
+    </div>
+  </WavedSection>
+  <WavedSection type="bottom">
+    <Cta
+      title="Werde Teil unseres Nationalteams"
+      subtitle="Wolltest du schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen? Die nächste Registrierung startet Anfang 2025."
+      action={{
+        label: "Registriere dich jetzt",
+        url: getRelativeLocaleUrl(lang, "dm-registration"),
+      }}
+    />
+  </WavedSection>
+</Layout>
