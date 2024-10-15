@@ -1,0 +1,102 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Cta from "~/components/Cta.astro";
+import Hero from "~/components/Hero.astro";
+import Link from "~/components/Link.astro";
+import HeadedSection from "~/components/sections/HeadedSection.astro";
+import WavedSection from "~/components/sections/WavedSection.astro";
+import { defaultLang, type Language } from "~/i18n";
+import Layout from "~/layouts/Layout.astro";
+
+const lang = (Astro.currentLocale || defaultLang) as Language;
+---
+
+<Layout title="Home">
+  <Hero
+    title="Welcome to the national centers of software development"
+    subtitle="We offer preparation for the world championships!"
+  />
+  <HeadedSection
+    title="General Information"
+    subtitle="Who are we and what is our goal?"
+  >
+    <div class="space-y-8 text-gray-800 sm:text-xl">
+      <p>
+        <Link href="https://www.worldskills.com" isExternal>
+          WorldSkills International
+        </Link>
+        have made it their mission to increase the attractivity of vocational education.
+        For this purpose, the "world championships of skills" are held every two
+        years, in which talented, young people compete with each other. The German
+        manifestation of this initiative is
+        <Link href="https://www.worldskillsgermany.com" isExternal>
+          WorldSkills Germany</Link
+        >, which, for example, also hosts national and international
+        competitions. In Germany, each skill has a National Training Centre.
+      </p>
+      <p>
+        The National Training Centres by WorldSkills Germany have the task of
+        training future members of the German national team and thus
+        participants in international competitions, in addition to training
+        according to WorldSkills principles for as broad a group of participants
+        as possible. They are appointed exclusively only once per skills
+        discipline. The appointment is made by the skills mentors (associations,
+        companies, institutions) together with WorldSkills Germany.
+      </p>
+    </div>
+  </HeadedSection>
+  <WavedSection type="top" title="Our Skills">
+    <p class="sm:text-xl">
+      The National Training Centres in Software Development are located at the
+      <Link href="https://aeg-nb.de" isExternal>
+        Albert-Einstein-Gymnasium Neubrandenburg</Link
+      >. At this location,
+      <Link
+        href={getRelativeLocaleUrl(lang, "mobile-applications-development")}
+      >
+        Skill 08: Mobile Applications Development
+      </Link>
+      und
+      <Link
+        href={getRelativeLocaleUrl(lang, "it-software-solutions-for-business")}
+      >
+        Skill 09: IT Software Solutions for Business
+      </Link>
+      are represented. More information on the individual skills can be found on
+      the respective subpages.
+    </p>
+    <div class="mx-4 grid grid-cols-1 gap-x-24 gap-y-8 md:grid-cols-2">
+      <div>
+        <p class="border-b-2 border-white pb-1 text-xl">
+          Mobile Applications Development
+        </p>
+        <p class="pt-4 md:text-justify">
+          As a software developer with a specialization in mobile applications,
+          you are a programmer and designer in one. You ensure that the apps
+          work on users' mobile devices, look appealing, and are fun to use.
+        </p>
+      </div>
+      <div>
+        <p class="border-b-2 border-white pb-1 text-xl">
+          IT Software Solutions for Business
+        </p>
+        <p class="pt-4 md:text-justify">
+          The skill IT Software Solutions for Business represents the entire
+          spectrum of software-developing IT professions. All full-stack
+          programmers are suitable. This includes desktop, server, database,
+          mobile app, and web development.
+        </p>
+      </div>
+    </div>
+  </WavedSection>
+  <WavedSection type="bottom">
+    <Cta
+      title="Become part of our national team"
+      subtitle="Have you always wanted to take part in a software development competition and compete with the best of the best? The next registration starts in the beginning of 2025."
+      action={{
+        label: "Register now",
+        url: getRelativeLocaleUrl(lang, "dm-registration"),
+      }}
+    />
+  </WavedSection>
+</Layout>
