@@ -14,7 +14,7 @@ export default defineConfig({
   integrations: [tailwind(), react(), icon()],
   site: "https://blz-it.de",
   redirects: {
-    "/skill08": "/mobile-applications-development",
-    "/skill09": "/it-software-solutions-for-business",
+    "/de/skill08": "/mobile-applications-development",
+    "/de/skill09": "/it-software-solutions-for-business",
   },
 });
