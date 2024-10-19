@@ -1,5 +1,4 @@
 import {
-  Label,
   Listbox,
   ListboxButton,
   ListboxOption,
@@ -10,35 +9,37 @@ import { CheckIcon } from "@heroicons/react/20/solid/index";
 import { clsx } from "clsx";
 import { Fragment } from "react";
 
-interface Props {
-  item: string;
-  options: readonly string[];
-  onChange: (option: string) => void;
-  label?: string;
-  icon: JSX.Element;
+type Item<T> = { label: string; value: T };
+
+interface Props<T> {
+  item: Item<T>;
+  options: Item<T>[];
+  onChange: (option: T) => void;
+  leftIcon?: JSX.Element;
+  rightIcon?: JSX.Element;
 }
 
-export const Dropdown = ({ item, options, icon, onChange, label }: Props) => {
+export function Dropdown<T>({
+  item,
+  options,
+  onChange,
+  leftIcon,
+  rightIcon,
+}: Props<T>) {
   return (
     <Listbox
       value={item}
-      onChange={(option) => option !== item && onChange(option)}
+      onChange={(option) =>
+        option.value !== item.value && onChange(option.value)
+      }
     >
       {({ open }) => (
         <div className="min-w-[6rem]">
-          {label && (
-            <Label className="mb-1 block text-sm font-medium text-gray-700">
-              {label}
-            </Label>
-          )}
           <div className="relative">
-            <ListboxButton className="peer relative w-full cursor-default rounded-md py-2 pl-3 pr-10 text-left text-white hover:bg-wsg-orange-400 hover:bg-opacity-50 focus:ring-1 focus:ring-wsi-blue-300 sm:text-sm">
-              <span className="block truncate text-base font-medium">
-                {item}
-              </span>
-              <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                {icon}
-              </span>
+            <ListboxButton className="peer flex w-full items-center gap-2 rounded-md px-4 py-2 text-left text-white hover:bg-wsg-orange-400 hover:bg-opacity-50 focus:ring-1 focus:ring-wsi-blue-300 sm:text-sm">
+              {leftIcon && <span>{leftIcon}</span>}
+              <span className="flex-1 text-base font-medium">{item.label}</span>
+              {rightIcon && <span>{rightIcon}</span>}
             </ListboxButton>
 
             <Transition
@@ -49,11 +50,11 @@ export const Dropdown = ({ item, options, icon, onChange, label }: Props) => {
               leaveTo="opacity-0"
             >
               <ListboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                {options.map((option) => (
+                {options.map((option, index) => (
                   <ListboxOption
-                    key={option}
+                    key={index}
                     className={
-                      "relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 hover:bg-wsg-orange-700"
+                      "relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 hover:bg-wsg-orange-700"
                     }
                     value={option}
                   >
@@ -65,14 +66,14 @@ export const Dropdown = ({ item, options, icon, onChange, label }: Props) => {
                             "block truncate",
                           )}
                         >
-                          {option}
+                          {option.label}
                         </span>
 
-                        {selected ? (
+                        {selected && (
                           <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-wsi-blue-300">
                             <CheckIcon className="h-5 w-5" aria-hidden="true" />
                           </span>
-                        ) : null}
+                        )}
                       </>
                     )}
                   </ListboxOption>
@@ -84,4 +85,4 @@ export const Dropdown = ({ item, options, icon, onChange, label }: Props) => {
       )}
     </Listbox>
   );
-};
+}
