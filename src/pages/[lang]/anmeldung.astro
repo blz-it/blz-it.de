@@ -1,0 +1,33 @@
+---
+import { localeParams, useTranslations } from "~/i18n";
+import Layout from "../../layouts/Layout.astro";
+
+// import DmRegistrationForm from "~/components/forms/dm-registration-form";
+
+export const getStaticPaths = localeParams;
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+---
+
+<!-- TODO(Benjamin-Frost): Change styling as soon as #14 is merged -->
+<Layout title="DM Registration">
+  <div class="mx-auto max-w-4xl py-12">
+    <div class="rounded-xl bg-white p-8">
+      <h2 class="text-center text-2xl sm:text-3xl">
+        {t({ en: "title", de: "title" })}
+      </h2>
+      <p
+        class="mt-8 text-sm"
+        set:html={t({ en: "requirements", de: "requirements" })}
+      />
+      <!-- <div class="rounded-md mt-8 p-4 bg-blue-50">
+        <p
+          class="text-sm text-center text-blue-700"
+          set:html={t("dmRegistration.ageDisclaimer")}
+        />
+      </div> -->
+      <!-- <DmRegistrationForm client:only /> -->
+    </div>
+  </div>
+</Layout>
