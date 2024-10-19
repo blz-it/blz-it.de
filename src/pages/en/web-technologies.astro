@@ -1,0 +1,42 @@
+---
+import historyJson from "~/assets/data/history.json";
+import Skill09Image from "~/assets/img/skill-09.jpg";
+import { defaultLang, type Language } from "~/i18n";
+import SkillPage from "~/layouts/SkillPage.astro";
+
+const lang = (Astro.currentLocale || defaultLang) as Language;
+const historyData = historyJson[lang]["skill17"];
+---
+
+<SkillPage
+  skillNumber="17"
+  skillName="Web Technologies"
+  skillDescription="Planning, designing, and testing of websites, as well as their maintenance and the integration of third-party and social media platforms."
+  skillInformation={{
+    description:
+      "Working with web technologies is a key skill in a world where the World Wide Web is increasingly taking centre stage. It is also one of the most complex and diverse skills of all. It is also one of the most complex and diverse professions around.<br /><br />Web designers and developers first build a professional relationship with their clients to develop a comprehensive understanding of their website requirements. Strong design and communication skills combined with an understanding of target groups, markets and trends are essential. During the development process, web designers and developers create databases, develop programmes and test and debug websites.",
+    requirements:
+      "You are proficient in at least one programming language, e.g., JavaScript, can design and program interactive web applications, have experience with databases (SQL) and understand English-language tasks.",
+    videoUrl: "https://www.youtube-nocookie.com/embed/EzRZSSZ4RAI",
+    occupation: {
+      title: "A career with a future and always on the cutting edge",
+      text: "More and more information is being obtained via the Internet. A professional web presence is therefore particularly important for companies. With a degree in IT, you are in demand: in 2021, around 12&thinsp;% more IT talent was sought than in the previous year. As a web developer, you are therefore one of the fastest growing occupational groups.<br /><br />Your main work tool is your computer. This means that you are almost unbound in terms of where and when you work, unless you have a customer appointment. The only thing you need is a stable internet connection.",
+    },
+  }}
+  img={Skill09Image}
+  contact="mailto:glenn.skrzypczak@gmail.com"
+  nationalTeam={[]}
+  timelineEntries={Object.values(historyData)}
+  additionalLinks={[
+    {
+      name: "worldskills.org",
+      text: "Skill 17 bei WorldSkills International",
+      href: "https://worldskills.org/skills/id/127/",
+    },
+    {
+      name: "worldskills2024.com",
+      text: "Skill 17 bei den WorldSkills Lyon 2024",
+      href: "https://worldskills2024.com/en/skills/web-technologies",
+    },
+  ]}
+/>
