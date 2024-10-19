@@ -40,51 +40,47 @@ const lang = (Astro.currentLocale || defaultLang) as Language;
         zusätzlich zu den Trainings nach WorldSkills-Prinzipien für eine
         möglichst breite Teilnehmerschaft auch die zukünftigen Mitglieder der
         deutschen Nationalmannschaft und somit Teilnehmer an internationalen
-        Wettbewerben zu trainieren. Sie werden pro Skill-Disziplin exklusiv nur
-        einmal ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände,
+        Wettbewerben zu trainieren. Sie werden pro Disziplin exklusiv nur einmal
+        ernannt. Die Ernennung erfolgt durch die Skills-Paten (Verbände,
         Unternehmen, Institutionen) gemeinsam mit WorldSkills Germany.
       </p>
     </div>
   </HeadedSection>
-  <WavedSection type="top" title="Unsere Skills">
+  <WavedSection type="top" title="Unsere Disziplinen">
     <p class="sm:text-xl">
       Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am
       <Link href="https://aeg-nb.de" isExternal>
         Albert-Einstein-Gymnasium Neubrandenburg</Link
-      >. An diesem Standort sind
+      >. An diesem Standort sind die Disziplinen
       <Link
         href={getRelativeLocaleUrl(lang, "mobile-applications-development")}
       >
-        Skill 08: Mobile Applications Development
+        App-Entwicklung
       </Link>
       und
       <Link
         href={getRelativeLocaleUrl(lang, "it-software-solutions-for-business")}
       >
-        Skill 09: IT Software Solutions for Business
+        Software-Entwicklung
       </Link>
-      vertreten. Mehr Informationen zu den einzelnen Skills finden sich auf den jeweiligen
-      Unterseiten.
+      vertreten. Mehr Informationen zu den einzelnen Disziplinen finden sich auf
+      den jeweiligen Unterseiten.
     </p>
     <div class="mx-4 grid grid-cols-1 gap-x-24 gap-y-8 md:grid-cols-2">
       <div>
-        <p class="border-b-2 border-white pb-1 text-xl">
-          Mobile Applications Development
-        </p>
+        <p class="border-b-2 border-white pb-1 text-xl">App-Entwicklung</p>
         <p class="pt-4 md:text-justify">
-          Als Softwareentwickler*in mit der Spezialisierung auf Mobile
-          Applications bist du Programmierer*in und Designer*in in einem. Du
-          sorgst dafür, dass die Apps auf den mobilen Endgeräten der
-          Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen.
+          Als Softwareentwickler*in mit der Spezialisierung auf mobile Apps bist
+          du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass
+          die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren,
+          ansprechend aussehen und Spaß machen.
         </p>
       </div>
       <div>
-        <p class="border-b-2 border-white pb-1 text-xl">
-          IT Software Solutions for Business
-        </p>
+        <p class="border-b-2 border-white pb-1 text-xl">Software-Entwicklung</p>
         <p class="pt-4 md:text-justify">
-          Die Disziplin IT Software Solutions for Business bildet das gesamte
-          Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle
+          Die Disziplin Software-Entwicklung bildet das gesamte Spektrum der
+          Software-entwickelnden IT-Berufe ab. Geeignet sind alle
           Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-,
           Datenbank-, Mobile-App- und Webentwicklung.
         </p>
