@@ -63,6 +63,13 @@
         "title": "WorldSkills Lyon 2024",
         "text": ""
       }
+    },
+    "skill17": {
+      "todo": {
+        "date": "2024",
+        "title": "Folgt bald",
+        "text": ""
+      }
     }
   },
   "en": {
@@ -127,6 +134,13 @@
       "wsc2024": {
         "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
         "title": "WorldSkills Lyon 2024",
+        "text": ""
+      }
+    },
+    "skill17": {
+      "todo": {
+        "date": "2024",
+        "title": "Coming soon",
         "text": ""
       }
     }

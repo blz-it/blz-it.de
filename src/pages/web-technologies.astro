@@ -1,0 +1,42 @@
+---
+import historyJson from "~/assets/data/history.json";
+import Skill09Image from "~/assets/img/skill-09.jpg";
+import { defaultLang, type Language } from "~/i18n";
+import SkillPage from "~/layouts/SkillPage.astro";
+
+const lang = (Astro.currentLocale || defaultLang) as Language;
+const historyData = historyJson[lang]["skill17"];
+---
+
+<SkillPage
+  skillNumber="17"
+  skillName="Web-Entwicklung"
+  skillDescription="Planung und Gestaltung sowie Testen von Webseiten, deren Pflege, Einbindung von Plattformen Dritter und Integration von Social-Media-Plattformen."
+  skillInformation={{
+    description:
+      "Die Arbeit mit Webtechnologien ist eine Schlüsselqualifikation in einer Welt, in der das World Wide Web immer mehr in den Mittelpunkt rückt. Sie ist auch eine der komplexesten und vielfältigsten Fähigkeiten überhaupt. Es ist auch eines der komplexesten und vielfältigsten Berufsfelder überhaupt.<br /><br />Web-Designer*innen und -entwickler*innen bauen zunächst eine professionelle Beziehung zu ihren Kund*innen auf, um ein umfassendes Verständnis für die Anforderungen an ihre Webseite zu entwickeln. Starke Design- und Kommunikationsfähigkeiten in Verbindung mit einem Verständnis für Zielgruppen, Märkte und Trends sind dabei unerlässlich. Während des Entwicklungsprozesses erstellen Webdesigner*innen und -entwickler*innen Datenbanken, entwickeln Programme und testen und debuggen Webseiten.",
+    requirements:
+      "Du beherrschst mindestens eine Programmiersprache, z.&thinsp;B. JavaScript, gestaltest und programmierst interaktive Webanwendungen, hast Erfahrung mit Datenbanken (SQL) und verstehst englischsprachige Aufgabenstellungen.",
+    videoUrl: "https://www.youtube-nocookie.com/embed/EzRZSSZ4RAI",
+    occupation: {
+      title: "Ein Beruf mit Zukunft und stets am Puls der Zeit",
+      text: "Immer mehr Informationen werden über das Internet bezogen. Gerade für Unternehmen ist daher ein professioneller Webauftritt von großer Bedeutung. Mit einem Abschluss in der IT bist du gefragt: Im Jahr 2021 wurden ca. 12&thinsp;% mehr IT-Talente gesucht als im Vorjahr. Als Webentwickler gehörst du somit zu einer der am schnellsten wachsenden Berufsgruppen.<br /><br />Dein Hauptarbeitsmittel ist dein Computer. Du bist also in Sachen Arbeitsort und -zeit fast ungebunden, sofern kein Kundentermin ansteht. Das Einzige, was du brauchst, ist eine stabile Internetverbindung.",
+    },
+  }}
+  img={Skill09Image}
+  contact="mailto:glenn.skrzypczak@gmail.com"
+  nationalTeam={[]}
+  timelineEntries={Object.values(historyData)}
+  additionalLinks={[
+    {
+      name: "worldskills.org",
+      text: "Skill 17 bei WorldSkills International",
+      href: "https://worldskills.org/skills/id/127/",
+    },
+    {
+      name: "worldskills2024.com",
+      text: "Skill 17 bei den WorldSkills Lyon 2024",
+      href: "https://worldskills2024.com/en/skills/web-technologies",
+    },
+  ]}
+/>
