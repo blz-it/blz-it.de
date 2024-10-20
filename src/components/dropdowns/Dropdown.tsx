@@ -54,7 +54,7 @@ export function Dropdown<T>({
                   <ListboxOption
                     key={index}
                     className={
-                      "relative cursor-pointer select-none px-4 py-2 text-gray-900 hover:bg-wsg-orange-700"
+                      "relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 hover:bg-wsg-orange-700"
                     }
                     value={option}
                   >
