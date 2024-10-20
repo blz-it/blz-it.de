@@ -5,6 +5,7 @@ import Hero from "~/components/Hero.astro";
 import Link from "~/components/Link.astro";
 import HeadedSection from "~/components/sections/HeadedSection.astro";
 import WavedSection from "~/components/sections/WavedSection.astro";
+import SkillCard from "~/components/skill/SkillCard.astro";
 import { defaultLang, type Language } from "~/i18n";
 import Layout from "~/layouts/Layout.astro";
 
@@ -51,40 +52,36 @@ const lang = (Astro.currentLocale || defaultLang) as Language;
       Die Bundesleistungszentren der Softwareentwicklung haben ihren Standort am
       <Link href="https://aeg-nb.de" isExternal>
         Albert-Einstein-Gymnasium Neubrandenburg</Link
-      >. An diesem Standort sind die Disziplinen
-      <Link
-        href={getRelativeLocaleUrl(lang, "mobile-applications-development")}
-      >
-        App-Entwicklung
-      </Link>
-      und
-      <Link
-        href={getRelativeLocaleUrl(lang, "it-software-solutions-for-business")}
-      >
-        Software-Entwicklung
-      </Link>
-      vertreten. Mehr Informationen zu den einzelnen Disziplinen finden sich auf
-      den jeweiligen Unterseiten.
+      >. Mehr Informationen zu den einzelnen Disziplinen finden sich auf den
+      jeweiligen Unterseiten:
     </p>
-    <div class="mx-4 grid grid-cols-1 gap-x-24 gap-y-8 md:grid-cols-2">
-      <div>
-        <p class="border-b-2 border-white pb-1 text-xl">App-Entwicklung</p>
-        <p class="pt-4 md:text-justify">
-          Als Softwareentwickler*in mit der Spezialisierung auf mobile Apps bist
-          du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass
-          die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren,
-          ansprechend aussehen und Spaß machen.
-        </p>
-      </div>
-      <div>
-        <p class="border-b-2 border-white pb-1 text-xl">Software-Entwicklung</p>
-        <p class="pt-4 md:text-justify">
-          Die Disziplin Software-Entwicklung bildet das gesamte Spektrum der
-          Software-entwickelnden IT-Berufe ab. Geeignet sind alle
-          Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-,
-          Datenbank-, Mobile-App- und Webentwicklung.
-        </p>
-      </div>
+    <div
+      class="mx-4 grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3 lg:gap-x-12"
+    >
+      <SkillCard
+        name="App-Entwicklung"
+        description="Als Softwareentwickler*in mit der Spezialisierung auf mobile Apps bist du Programmierer*in und Designer*in in einem. Du sorgst dafür, dass die Apps auf den mobilen Endgeräten der Benutzer*innen funktionieren, ansprechend aussehen und Spaß machen."
+        action={{
+          label: "Mehr erfahren",
+          url: getRelativeLocaleUrl(lang, "mobile-applications-development"),
+        }}
+      />
+      <SkillCard
+        name="Software-Entwicklung"
+        description="Diese Disziplin bildet das gesamte Spektrum der Software-entwickelnden IT-Berufe ab. Geeignet sind alle Full-Stack-Programmierer*innen. Dazu zählen Desktop-, Server-, Datenbank-, Mobile-App- und Webentwicklung."
+        action={{
+          label: "Mehr erfahren",
+          url: getRelativeLocaleUrl(lang, "it-software-solutions-for-business"),
+        }}
+      />
+      <SkillCard
+        name="Web-Entwicklung"
+        description="Hier geht es um die Planung und Gestaltung sowie das Testen von Webseiten, deren Pflege, Einbindung von Plattformen Dritter und Integration von Social-Media-Plattformen."
+        action={{
+          label: "Mehr erfahren",
+          url: getRelativeLocaleUrl(lang, "web-technologies"),
+        }}
+      />
     </div>
   </WavedSection>
   <WavedSection type="bottom">
