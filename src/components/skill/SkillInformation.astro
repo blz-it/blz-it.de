@@ -30,7 +30,7 @@ const t = useTranslations(lang);
           })
         }
       </Headline>
-      <p>{requirements}</p>
+      <p set:html={requirements} />
       <!-- <Trans i18nKey={"skills.general.interested"}>
         You are interested?{" "}
         <Link href={buildLink("dm-registration")}>Apply now!</Link>
