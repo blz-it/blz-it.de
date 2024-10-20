@@ -48,23 +48,11 @@ const lang = (Astro.currentLocale || defaultLang) as Language;
   </HeadedSection>
   <WavedSection type="top" title="Our Skills">
     <p class="sm:text-xl">
-      The National Training Centres in Software Development are located at the
+      The National Training Centers in Software Development are located at the
       <Link href="https://aeg-nb.de" isExternal>
         Albert-Einstein-Gymnasium Neubrandenburg</Link
-      >. At this location,
-      <Link
-        href={getRelativeLocaleUrl(lang, "mobile-applications-development")}
-      >
-        Mobile Applications Development
-      </Link>
-      und
-      <Link
-        href={getRelativeLocaleUrl(lang, "it-software-solutions-for-business")}
-      >
-        IT Software Solutions for Business
-      </Link>
-      are represented. More information on the individual skills can be found on
-      the respective subpages.
+      >. More information on the individual skills can be found on their
+      respective pages:
     </p>
     <div
       class="mx-4 grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3 lg:gap-x-12"
@@ -93,29 +81,7 @@ const lang = (Astro.currentLocale || defaultLang) as Language;
           url: getRelativeLocaleUrl(lang, "web-technologies"),
         }}
       />
-    </div><!-- 
-    <div class="mx-4 grid grid-cols-1 gap-x-24 gap-y-8 md:grid-cols-2">
-      <div>
-        <p class="border-b-2 border-white pb-1 text-xl">
-          Mobile Applications Development
-        </p>
-        <p class="pt-4 md:text-justify">
-          As a software developer with a specialization in mobile applications,
-          you are a programmer and designer in one. You ensure that the apps
-          work on users' mobile devices, look appealing, and are fun to use.
-        </p>
-      </div>
-      <div>
-        <p class="border-b-2 border-white pb-1 text-xl">
-          IT Software Solutions for Business
-        </p>
-        <p class="pt-4 md:text-justify">
-          The skill IT Software Solutions for Business represents the entire
-          spectrum of software-developing IT professions. All full-stack
-          programmers are suitable. This includes desktop, server, database,
-          mobile app, and web development.
-        </p>
-      </div> -->
+    </div>
   </WavedSection>
   <WavedSection type="bottom">
     <Cta
