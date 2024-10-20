@@ -11,11 +11,14 @@ const t = useTranslations(lang);
 
 const skills = [
   {
-    name: "Mobile",
+    name: t({ de: "App-Entwicklung", en: "Mobile Applications Development" }),
     href: getRelativeLocaleUrl(lang, "mobile-applications-development"),
   },
   {
-    name: "Full-Stack",
+    name: t({
+      de: "Software-Entwicklung",
+      en: "IT Software Solutions for Business",
+    }),
     href: getRelativeLocaleUrl(lang, "it-software-solutions-for-business"),
   },
   {
