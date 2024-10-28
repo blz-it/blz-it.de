@@ -4,7 +4,7 @@ import { PersonImage } from "./PersonImage";
 
 interface Props {
   name: string;
-  lastRole: string;
+  lastRole: { de: string; en: string };
   img?: string;
   skill?: string;
   hasMultipleRoles?: boolean;
@@ -22,7 +22,7 @@ const t = useTranslations(lang);
     <h3 class="mb-1 text-lg font-medium">{name}</h3>
     <div>
       <p class="inline-block">
-        {lastRole}
+        {t(lastRole)}
       </p>
       <p class="inline-block">
         {hasMultipleRoles && t({ de: "und mehr", en: "and more" })}
