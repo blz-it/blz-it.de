@@ -1,5 +1,7 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { getLangFromUrl, useTranslations } from "~/i18n";
+import Link from "../Link.astro";
 import Headline from "../typography/Headline.astro";
 
 interface Props {
@@ -31,10 +33,17 @@ const t = useTranslations(lang);
         }
       </Headline>
       <p set:html={requirements} />
-      <!-- <Trans i18nKey={"skills.general.interested"}>
-        You are interested?{" "}
-        <Link href={buildLink("dm-registration")}>Apply now!</Link>
-      </Trans> -->
+      <p class="mt-4">
+        {
+          t({
+            de: "Du bist interessiert?",
+            en: "You are interested?",
+          })
+        }
+        <Link href={getRelativeLocaleUrl(lang, "anmeldung")}>
+          {t({ de: "Jetzt bewerben!", en: "Apply now!" })}
+        </Link>
+      </p>
     </div>
     <div class="mt-20 flex-1 xl:mt-0 xl:pl-12">
       <iframe
