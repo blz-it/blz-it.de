@@ -1,0 +1,70 @@
+[
+  {
+    "img": "/src/assets/img/team/Benjamin Frost.webp",
+    "name": "Benjamin Frost",
+    "lastRole": "Jury",
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Jonas Wanke.webp",
+    "name": "Jonas Wanke",
+    "lastRole": "Expert",
+    "skill": "Skill 08",
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Dr. Olaf Kappler.webp",
+    "name": "Dr. Olaf Kappler",
+    "lastRole": "Expert",
+    "skill": "Skill 09"
+  },
+  {
+    "img": "/src/assets/img/team/Doreen Kappler.webp",
+    "name": "Doreen Kappler",
+    "lastRole": "Good Fairy"
+  },
+  {
+    "img": "/src/assets/img/team/Glenn Skrzypczak.webp",
+    "name": "Glenn Skrzypczak",
+    "lastRole": "Expert",
+    "skill": "Skill 17",
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Elisa Boose.webp",
+    "name": "Elisa Boose",
+    "lastRole": "Trainer"
+  },
+  {
+    "img": "/src/assets/img/team/Michael Boose.webp",
+    "name": "Michael Boose",
+    "lastRole": "Trainer"
+  },
+  {
+    "img": "/src/assets/img/team/Joachim Schiller.webp",
+    "name": "Joachim Schiller",
+    "lastRole": "Jury",
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Justin Konratt.webp",
+    "name": "Justin Konratt",
+    "lastRole": "Jury",
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Kai Redmann.webp",
+    "name": "Kai Redmann",
+    "lastRole": "Workshop Manager"
+  },
+  {
+    "img": "/src/assets/img/team/Lukas Fischer.webp",
+    "name": "Lukas Fischer",
+    "lastRole": "Workshop Manager"
+  },
+  {
+    "img": "/src/assets/img/team/Thomas Steinfeld.webp",
+    "name": "Thomas Steinfeld",
+    "lastRole": "Mr. Speed Programming"
+  }
+]

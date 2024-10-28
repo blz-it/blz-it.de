@@ -1,13 +1,11 @@
 ---
-import { load_team } from "../../utils/async_helper";
 import Person from "./Person.astro";
-
-const team = await load_team();
+import team from "~/assets/data/team.json";
 ---
 
 <div class="bg-white py-16">
   <div
-    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16 mx-8 md:mx-24 mx-32"
+    class="mx-8 grid grid-cols-2 gap-y-16 md:mx-24 md:grid-cols-3 lg:grid-cols-4"
   >
     {
       team

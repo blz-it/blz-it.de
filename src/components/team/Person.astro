@@ -1,24 +1,32 @@
 ---
-import { TeamMember } from "../../utils/async_helper";
-import type { PropsOf } from "../../utils/types";
-import SocialMediaList from "../social_media/SocialMediaList.astro";
+import { getLangFromUrl, useTranslations } from "~/i18n/utils";
+import { type TeamMember } from "../../utils/async_helper";
 import { PersonImage } from "./PersonImage";
 
-type Props = TeamMember;
+interface Props {
+  name: string;
+  lastRole: string;
+  img?: string;
+  skill?: string;
+  hasMultipleRoles?: boolean;
+}
 
-const { name, img, lastRole, skill, hasMultipleRoles } = Astro.props;
+const { name, img, lastRole, skill, hasMultipleRoles = false } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="space-y-6">
   <PersonImage img={img} />
-  <div class="text-center text-md font-light">
-    <h3 class="text-lg font-medium mb-1">{name}</h3>
+  <div class="text-md text-center font-light">
+    <h3 class="mb-1 text-lg font-medium">{name}</h3>
     <div>
       <p class="inline-block">
         {lastRole}
       </p>
       <p class="inline-block">
-        {hasMultipleRoles && t("team.more")}
+        {hasMultipleRoles && t({ de: "und mehr", en: "and more" })}
       </p>
     </div>
     <p>
