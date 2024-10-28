@@ -91,6 +91,16 @@ export default function RegistrationForm() {
   } = useForm<Participant>({ resolver: zodResolver(participantSchema) });
 
   const onSubmit = handleSubmit(async (data) => {
+    // check that birthday is after 2004-01-01
+    const birthday = new Date(data.birthday);
+    if (birthday < new Date("2004-01-01")) {
+      setMessage({
+        type: "error",
+        text: "Es können nur Personen teilnehmen, die 2004 oder später geboren sind.",
+      });
+      return;
+    }
+
     const response = await fetch(
       "https://registration-api.blz-it.de/participants",
       {
