@@ -1,0 +1,18 @@
+---
+import Hero from "../../components/Hero.astro";
+import TeamPage from "../../components/team/Team.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getStaticLangPaths, updateLang } from "../../routing/lang";
+import { t } from "i18next";
+
+export const getStaticPaths = getStaticLangPaths;
+updateLang(Astro.url.pathname);
+---
+
+<Layout title={t("team.title")}>
+  <Hero
+    title={t("team.title")}
+    img="https:////live.staticflickr.com/65535/52434467221_676ae1bf70_h.jpg"
+  />
+  <TeamPage />
+</Layout>
