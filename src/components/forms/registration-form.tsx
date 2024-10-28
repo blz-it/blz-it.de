@@ -49,7 +49,7 @@ export const participantSchema = z.object({
       "SCHLESWIG_HOLSTEIN",
       "THURINGIA",
     ],
-    { required_error: "Das Bundesland ist erforderlich." },
+    { message: "Das Bundesland ist erforderlich." },
   ),
   city: z
     .string()
@@ -64,7 +64,7 @@ export const participantSchema = z.object({
       .optional(),
   ),
   occupation: z.enum(["APPRENTICE", "PUPIL", "STUDENT", "EMPLOYEE", "OTHER"], {
-    required_error: "Die Beschäftigungsart ist erforderlich.",
+    message: "Die Beschäftigungsart ist erforderlich.",
   }),
   company: z.preprocess(fixOptional, institutionSchema.optional()),
   educationalInsitution: z.preprocess(
@@ -88,7 +88,10 @@ export default function RegistrationForm() {
     handleSubmit,
     reset,
     formState: { isSubmitting, errors },
+    watch,
   } = useForm<Participant>({ resolver: zodResolver(participantSchema) });
+
+  const occupation = watch("occupation");
 
   const onSubmit = handleSubmit(async (data) => {
     // check that birthday is after 2004-01-01
@@ -180,8 +183,12 @@ export default function RegistrationForm() {
                 id="state"
                 label="Bundesland"
                 error={errors.state?.message}
+                defaultValue=""
                 {...register("state")}
               >
+                <option value="" disabled>
+                  Option auswählen
+                </option>
                 <option value="BADEN_WUERTTEMBERG">Baden-Württemberg</option>
                 <option value="BAVARIA">Bayern</option>
                 <option value="BERLIN">Berlin</option>
@@ -218,10 +225,14 @@ export default function RegistrationForm() {
             <div className="sm:col-span-3">
               <Select
                 id="occupation"
-                label="Beruf"
+                label="Beschäftigung"
                 error={errors.occupation?.message}
+                defaultValue=""
                 {...register("occupation")}
               >
+                <option value="" disabled>
+                  Option auswählen
+                </option>
                 <option value="APPRENTICE">Auszubildende*r</option>
                 <option value="PUPIL">Schüler*in</option>
                 <option value="STUDENT">Student*in</option>
@@ -254,36 +265,74 @@ export default function RegistrationForm() {
           </div>
         </div>
 
-        <div className="pt-8">
-          <div>
-            <h3 className="text-lg font-medium leading-6 text-gray-900">
-              Deine Firma
-            </h3>
-            <p className="mt-1 text-sm text-gray-500">
-              Falls du in einer Firma arbeitest, kannst du diese hier angeben.
-            </p>
-          </div>
-          <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-6">
-            <div className="sm:col-span-3">
-              <Input
-                id="company-name"
-                label="Firmenname"
-                type="text"
-                error={errors.company?.name?.message}
-                {...register("company.name")}
-              />
+        {(occupation === "APPRENTICE" || occupation === "EMPLOYEE") && (
+          <div className="pt-8">
+            <div>
+              <h3 className="text-lg font-medium leading-6 text-gray-900">
+                Deine Firma
+              </h3>
+              <p className="mt-1 text-sm text-gray-500">
+                Falls du in einer Firma arbeitest, kannst du diese hier angeben.
+              </p>
             </div>
-            <div className="sm:col-span-3">
-              <Input
-                id="company-address-city"
-                label="Stadt"
-                type="text"
-                error={errors.company?.city?.message}
-                {...register("company.city")}
-              />
+            <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-6">
+              <div className="sm:col-span-3">
+                <Input
+                  id="company-name"
+                  label="Name"
+                  type="text"
+                  error={errors.company?.name?.message}
+                  {...register("company.name")}
+                />
+              </div>
+              <div className="sm:col-span-3">
+                <Input
+                  id="company-city"
+                  label="Stadt"
+                  type="text"
+                  error={errors.company?.city?.message}
+                  {...register("company.city")}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        )}
+
+        {(occupation === "APPRENTICE" ||
+          occupation === "PUPIL" ||
+          occupation === "STUDENT") && (
+          <div className="pt-8">
+            <div>
+              <h3 className="text-lg font-medium leading-6 text-gray-900">
+                Deine (Hoch-)Schule
+              </h3>
+              <p className="mt-1 text-sm text-gray-500">
+                Falls du an einer (Hoch-)Schule bist, kannst du diese hier
+                angeben.
+              </p>
+            </div>
+            <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-6">
+              <div className="sm:col-span-3">
+                <Input
+                  id="educational-institute-name"
+                  label="Name"
+                  type="text"
+                  error={errors.educationalInsitution?.name?.message}
+                  {...register("educationalInsitution.name")}
+                />
+              </div>
+              <div className="sm:col-span-3">
+                <Input
+                  id="educational-institute-city"
+                  label="Stadt"
+                  type="text"
+                  error={errors.educationalInsitution?.city?.message}
+                  {...register("educationalInsitution.city")}
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="pt-5">
