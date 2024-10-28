@@ -7,7 +7,6 @@ import HeadedSection from "~/components/sections/HeadedSection.astro";
 import WavedSection from "~/components/sections/WavedSection.astro";
 import SkillInformation from "~/components/skill/SkillInformation.astro";
 import SkillRoadmap from "~/components/skill/SkillRoadmap.astro";
-import type Person from "~/components/team/Person.astro";
 import TimeLine from "~/components/timeline/TimeLine.astro";
 import { getLangFromUrl, useTranslations } from "~/i18n";
 import Layout from "./Layout.astro";
@@ -18,7 +17,6 @@ interface Props {
   skillInformation: ComponentProps<typeof SkillInformation>;
   img: ImageMetadata;
   contact: string;
-  nationalTeam: ComponentProps<typeof Person>[];
   timelineEntries: ComponentProps<typeof TimeLine>["entries"];
   additionalLinks: ComponentProps<typeof LinkCard>[];
 }
@@ -28,7 +26,6 @@ const {
   skillDescription,
   skillInformation,
   img,
-  nationalTeam,
   timelineEntries,
   additionalLinks,
   contact,
