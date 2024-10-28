@@ -1,0 +1,44 @@
+---
+import { InformationCircleIcon } from "@heroicons/react/20/solid";
+import RegistrationForm from "~/components/forms/registration-form";
+import NoTranslate from "~/components/NoTranslate.astro";
+import { localeParams } from "~/i18n";
+import Layout from "~/layouts/Layout.astro";
+
+export const getStaticPaths = localeParams;
+---
+
+<Layout title="Anmeldung zur Deutschen Meisterschaft">
+  <NoTranslate availableLanguages={["de"]} />
+  <div class="mx-auto max-w-4xl py-12">
+    <div class="rounded-xl border-2 p-8">
+      <h2 class="text-center text-2xl sm:text-3xl">
+        Anmeldung zur Deutschen Meisterschaft
+      </h2>
+      <p class="mt-8">
+        Der Online-Vorausscheid wird für alle drei Disziplinen gemeinsam
+        durchgeführt. Je nachdem, für welche Disziplin oder welche Disziplinen
+        du dich interessierst, bekommst du unterschiedliche Aufgaben.<br /><br
+        />Bei den Deutschen Meisterschaften im Juni tritt jede Person dann nur
+        noch in einer Disziplin an.
+      </p>
+      <div class="my-8 rounded-md bg-blue-50 p-4">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <InformationCircleIcon
+              aria-hidden="true"
+              className="h-5 w-5 text-blue-400"
+            />
+          </div>
+          <div class="ml-3 flex-1">
+            <p class="text-sm text-blue-600">
+              Es können nur Personen teilnehmen, die 2004 oder später geboren
+              sind.
+            </p>
+          </div>
+        </div>
+      </div>
+      <RegistrationForm client:load />
+    </div>
+  </div>
+</Layout>
