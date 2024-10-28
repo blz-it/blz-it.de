@@ -38,7 +38,7 @@ const t = useTranslations(lang);
     </svg>
     <EventCard
       img={RegistrationImage}
-      title={t({ de: "Registrierung", en: "Registration" })}
+      title={t({ de: "Anmeldung", en: "Registration" })}
       date={t({
         de: "1. November 2024 – 21. Februar 2025",
         en: "1 November 2024 – 21 February 2025",
@@ -76,7 +76,7 @@ const t = useTranslations(lang);
     />
     <EventCard
       img={WsgHandsImage}
-      title="WorldSkills Lyon"
+      title="WorldSkills Shanghai"
       date={t({ de: "22. – 27. September 2026", en: "22 – 27 September 2026" })}
       link="https://worldskills2024.com/"
       className="md:ml-60 md:mt-64 lg:ml-72 lg:mt-72 xl:ml-96 xl:mt-96"
@@ -87,12 +87,12 @@ const t = useTranslations(lang);
   <ol class="list-decimal space-y-4 text-left sm:pt-8 md:pt-16">
     <li>
       <Link href={getRelativeLocaleUrl(lang, "anmeldung")}>
-        {t({ de: "Du registrierst dich", en: "You register yourself" })}
+        {t({ de: "Du meldest dich an", en: "You register yourself" })}
       </Link>
       {
         t({
-          de: "und erhältst weitere Informationen sowie nach Abschluss des Registrierungszeitraumes deine Zugangsdaten.",
-          en: "and receive further information as well as, after the registration is closed, your credentials.",
+          de: "und erhältst vor dem Start des Online-Vorausscheides deine Zugangsdaten.",
+          en: "and receive your credentials before the online preliminary competition starts.",
         })
       }
     </li>
@@ -100,51 +100,37 @@ const t = useTranslations(lang);
       {
         t({
           de: "Innerhalb der Laufzeit des Online-Ausscheids löst du zu einem Zeitpunkt deiner Wahl mehrere anspruchsvolle Testaufgaben, die jeweils ca. 60 – 120 Minuten dauern. Diese kannst du auch über mehrere Tage verteilen. Die Wahl deiner Programmiersprache spielt hierbei noch keine Rolle.",
-          en: "During this month, you solve multiple complex tasks at a time of your choosing. Each task takes around 60 – 120 minutes, but you can distribute them across multiple days. The programming language that you use is not relevant.",
+          en: "During the online preliminary competition, you solve multiple complex tasks at a time of your choosing. Each task takes around 60 – 120 minutes, but you can distribute them across multiple days. The programming language that you use is not relevant.",
         })
       }
     </li>
     <li>
       {
         t({
-          de: "Die gemeinsame Deutsche Meisterschaft für beide Disziplinen findet am Bundesleistungszentrum in Neubrandenburg statt. Hier werden über vier Tage anspruchsvolle Desktopanwendungen und Android-Apps programmiert. Damit wird das gemeinsame vier- bis sechsköpfige Nationalteam bestimmt. Es sind nur noch die folgenden Entwicklungsumgebungen/Programmiersprachen zugelassen:",
-          en: "The shared German Championship for both Skills takes place at the National Training Centre in Neubrandenburg. Over four competition days, you will develop complex desktop and Android applications. This determines the joint four- to six-strong national team. Only the following development environments / programming languages can be used:",
-        })
-      }
-      <ul class="list-disc pl-4 pt-4">
-        <li>
-          Visual Studio (C#) {
-            t({ de: "für Desktopanwendungen", en: "for desktop applications" })
-          }
-        </li>
-        <li>
-          Xamarin (C#), Flutter (Dart), {t({ de: "und", en: "and" })} Android Studio
-          (Kotlin or Java) {
-            t({ de: "für App-Entwicklung", en: "for app development" })
-          }
-        </li>
-        <li>Microsoft SQL Server</li>
-      </ul>
-    </li>
-    <li>
-      {
-        t({
-          de: "Das gemeinsame Nationalteam wird von unserem Trainerteam in mehreren Trainingslagern und online auf die weiteren Wettkämpfe vorbereitet und im Februar 2024 im Rahmen eines Wettkampfes auf ein Team pro Disziplin aufgeteilt.",
-          en: "The joint national team is being prepared for the following competitions online and in multiple training camps by our trainer team. In February 2024, the Competitors are divided into two separate national teams, one for each Skill.",
-        })
-      }
-      {
-        t({
-          de: "Beim Albert-Einstein-Cup treten beide Nationalteams in ihren Wettbewerbsberufen gegen die besten Softwareentwickler*innen Europas und anderer Kontinente an. Im Ergebnis werden die beiden deutschen Teilnehmer*innen für die WorldSkills Lyon 2024 bestimmt.",
-          en: "At the Albert Einstein Cup, both national teams compete against the best software developers of Europe and other continents in their respective Skill. As a result, the two German Competitors for the WorldSkills Lyon 2024 will be determined.",
+          de: "Am Bundesleistungszentrum, dem Albert-Einstein-Gymnasium in Neubrandenburg, finden die Deutschen Meisterschaften der drei Disziplinen zusammen statt. Hier werden über vier Tage anspruchsvolle Android-, Desktop- bzw. Web-Apps entwickelt. Am Ende steht für jede Disziplin das Nationalteam fest.",
+          en: "The German Championships for the three skills take place together at the National Training Center, the Albert-Einstein-Gymnasium in Neubrandenburg. Sophisticated Android, desktop, and web apps are developed here over four days. At the end, the national team is determined for each skills.",
         })
       }
     </li>
     <li>
       {
         t({
-          de: "Jeweils ein*e Teilnehmer*in vertritt Deutschland in den beiden Disziplinen bei den WorldSkills in Lyon. Der Wettkampf geht über vier Tage.",
-          en: "In each of the two Skills, one Competitor represents Germany at the WorldSkills in Lyon. The Competition takes place over four days.",
+          de: "Die Nationalteams werden von unserem Trainerteam in mehreren Trainingslagern und online auf die weiteren Wettbewerbe vorbereitet.",
+          en: "The national teams are being prepared for the following competitions in multiple training camps and online by our trainer team.",
+        })
+      }
+      {
+        t({
+          de: "Die Mitglieder der drei Nationalteams treten beim Albert-Einstein-Cup in ihren Disziplinen gegen die besten Softwareentwickler*innen der Welt an. Im Ergebnis werden die drei deutschen Teilnehmer*innen für die WorldSkills Shanghai 2026 bestimmt.",
+          en: "The members of the three national teams compete against the best software developers in the world in their skills at the Albert Einstein Cup. The results will determine the three German competitors for WorldSkills Shanghai 2026.",
+        })
+      }
+    </li>
+    <li>
+      {
+        t({
+          de: "Jeweils ein*e Teilnehmer*in vertritt Deutschland in den drei Disziplinen bei den WorldSkills in Shanghai. Der Wettkampf geht über vier Tage.",
+          en: "In each of the three Skills, one competitor represents Germany at the WorldSkills in Shanghai. The competition takes place over four days.",
         })
       }
     </li>
