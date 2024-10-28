@@ -9,38 +9,63 @@ import { Select } from "./component/select";
 import { fixOptional } from "./utils";
 
 const institutionSchema = z.object({
-  name: z.string().min(1).max(255),
-  city: z.string().min(1).max(255),
+  name: z
+    .string()
+    .min(1, "Der Name darf nicht leer sein.")
+    .max(255, "Der Name darf nicht länger als 255 Zeichen sein."),
+  city: z
+    .string()
+    .min(1, "Die Stadt darf nicht leer sein.")
+    .max(255, "Die Stadt darf nicht länger als 255 Zeichen sein."),
 });
 
 export const participantSchema = z.object({
-  firstName: z.string().min(1).max(255),
-  lastName: z.string().min(1).max(255),
-  birthday: z
+  firstName: z
     .string()
-    .regex(/^\d{4}-\d{2}-\d{2}$/, "Invalid date (YYYY-MM-DD)"),
-  email: z.string().email(),
-  state: z.enum([
-    "BADEN_WUERTTEMBERG",
-    "BAVARIA",
-    "BERLIN",
-    "BRANDENBURG",
-    "BREMEN",
-    "HAMBURG",
-    "HESSE",
-    "MECKLENBURG_WESTERN_POMERANIA",
-    "LOWER_SAXONY",
-    "NORTH_RHINE_WESTPHALIA",
-    "RHINELAND_PALATINATE",
-    "SAARLAND",
-    "SAXONY",
-    "SAXONY_ANHALT",
-    "SCHLESWIG_HOLSTEIN",
-    "THURINGIA",
-  ]),
-  city: z.string().min(1).max(255),
-  phone: z.preprocess(fixOptional, z.string().min(1).max(255).optional()),
-  occupation: z.enum(["APPRENTICE", "PUPIL", "STUDENT", "EMPLOYEE", "OTHER"]),
+    .min(1, "Der Vorname darf nicht leer sein.")
+    .max(255, "Der Vorname darf nicht länger als 255 Zeichen sein."),
+  lastName: z
+    .string()
+    .min(1, "Der Nachname darf nicht leer sein.")
+    .max(255, "Der Nachname darf nicht länger als 255 Zeichen sein."),
+  birthday: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Ungültiges Datum"),
+  email: z.string().email("Ungültige E-Mail-Adresse."),
+  state: z.enum(
+    [
+      "BADEN_WUERTTEMBERG",
+      "BAVARIA",
+      "BERLIN",
+      "BRANDENBURG",
+      "BREMEN",
+      "HAMBURG",
+      "HESSE",
+      "MECKLENBURG_WESTERN_POMERANIA",
+      "LOWER_SAXONY",
+      "NORTH_RHINE_WESTPHALIA",
+      "RHINELAND_PALATINATE",
+      "SAARLAND",
+      "SAXONY",
+      "SAXONY_ANHALT",
+      "SCHLESWIG_HOLSTEIN",
+      "THURINGIA",
+    ],
+    { required_error: "Das Bundesland ist erforderlich." },
+  ),
+  city: z
+    .string()
+    .min(1, "Die Stadt darf nicht leer sein.")
+    .max(255, "Die Stadt darf nicht länger als 255 Zeichen sein."),
+  phone: z.preprocess(
+    fixOptional,
+    z
+      .string()
+      .min(1, "Die Telefonnummer darf nicht leer sein.")
+      .max(255, "Die Telefonnummer darf nicht länger als 255 Zeichen sein.")
+      .optional(),
+  ),
+  occupation: z.enum(["APPRENTICE", "PUPIL", "STUDENT", "EMPLOYEE", "OTHER"], {
+    required_error: "Die Beschäftigungsart ist erforderlich.",
+  }),
   company: z.preprocess(fixOptional, institutionSchema.optional()),
   educationalInsitution: z.preprocess(
     fixOptional,
