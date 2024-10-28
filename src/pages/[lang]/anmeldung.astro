@@ -1,0 +1,47 @@
+---
+import { InformationCircleIcon } from "@heroicons/react/20/solid";
+import NoTranslate from "~/components/NoTranslate.astro";
+import { localeParams } from "~/i18n";
+import Layout from "~/layouts/Layout.astro";
+
+export const getStaticPaths = localeParams;
+---
+
+<Layout title="Anmeldung zur Deutschen Meisterschaft">
+  <NoTranslate availableLanguages={["de"]} />
+  <div class="mx-auto max-w-4xl py-12">
+    <div class="rounded-xl border-2 p-8">
+      <h2 class="text-center text-2xl sm:text-3xl">
+        Anmeldung zur Deutschen Meisterschaft
+      </h2>
+      <p class="mt-8">
+        Der Online-Wettkampf und die Deutschen Meisterschaften werden von allen
+        drei Skills gemeinsam durchgeführt. Die Aufteilung des Nationalteams auf
+        Skill&nbsp;08, Skill&nbsp;09 und Skill&nbsp;17 erfolgt erst im
+        Februar&nbsp;2025 im Rahmen eines Wettkampfes, also vor dem
+        internationalen Albert-Einstein-Cup.<br /><br />Um teilzunehmen solltest
+        du mindestens eine Programmiersprache beherrschen, Android-Apps
+        programmieren können, grundlegende Kenntnisse in UML und Datenbanken
+        besitzen und englischsprachige Aufgabenstellungen verstehen können.
+      </p>
+      <div class="mt-8 rounded-md bg-blue-50 p-4">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <InformationCircleIcon
+              aria-hidden="true"
+              className="h-5 w-5 text-blue-400"
+            />
+          </div>
+          <div class="ml-3 flex-1">
+            <p class="text-sm text-blue-600">
+              Bitte beachte, dass du im Wettkampfjahr 2025 nicht älter als
+              22&nbsp;Jahre werden darfst, d.&thinsp;h. Jahrgänge 01.01.2004 und
+              aufwärts.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <DmRegistrationForm client:only /> -->
+    </div>
+  </div>
+</Layout>
