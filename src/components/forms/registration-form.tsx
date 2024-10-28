@@ -265,14 +265,21 @@ export default function RegistrationForm() {
           </div>
         </div>
 
-        {(occupation === "APPRENTICE" || occupation === "EMPLOYEE") && (
+        {(occupation === "APPRENTICE" ||
+          occupation === "STUDENT" ||
+          occupation === "EMPLOYEE" ||
+          occupation == "OTHER") && (
           <div className="pt-8">
             <div>
               <h3 className="text-lg font-medium leading-6 text-gray-900">
                 Deine Firma
               </h3>
               <p className="mt-1 text-sm text-gray-500">
-                Falls du in einer Firma arbeitest, kannst du diese hier angeben.
+                {occupation === "APPRENTICE"
+                  ? "Bitte gib hier die Firma an, von der du ausgebildet wirst."
+                  : occupation === "EMPLOYEE"
+                    ? "Bitte gib hier die Firma an, bei der du arbeitest."
+                    : "Falls du in einer Firma arbeitest, kannst du diese hier angeben."}
               </p>
             </div>
             <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-6">
@@ -300,15 +307,21 @@ export default function RegistrationForm() {
 
         {(occupation === "APPRENTICE" ||
           occupation === "PUPIL" ||
-          occupation === "STUDENT") && (
+          occupation === "STUDENT" ||
+          occupation === "OTHER") && (
           <div className="pt-8">
             <div>
               <h3 className="text-lg font-medium leading-6 text-gray-900">
-                Deine (Hoch-)Schule
+                {occupation === "PUPIL"
+                  ? "Deine Schule"
+                  : "Deine Universität/Hochschule"}
               </h3>
               <p className="mt-1 text-sm text-gray-500">
-                Falls du an einer (Hoch-)Schule bist, kannst du diese hier
-                angeben.
+                {occupation === "PUPIL"
+                  ? "Bitte gib hier deine Schule an."
+                  : occupation == "STUDENT"
+                    ? "Bitte gib hier deine Universität oder Hochschule an."
+                    : "Falls du an einer Universität oder Hochschule bist, kannst du diese hier angeben."}
               </p>
             </div>
             <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-6">
