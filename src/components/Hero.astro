@@ -6,7 +6,7 @@ import HeroBgImage from "~/assets/img/hero-bg.jpg";
 
 interface Props {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   img?: ImageMetadata;
   size?: "md" | "lg";
 }
@@ -27,7 +27,7 @@ const { title, subtitle, img = HeroBgImage, size = "lg" } = Astro.props;
     class={clsx(
       "relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8",
       { "py-8 sm:py-16 md:py-32": size === "md" },
-      { "py-16 sm:py-32 md:py-64": size === "lg" },
+      { "py-16 sm:py-32 md:py-64": size === "lg" }
     )}
   >
     <h1

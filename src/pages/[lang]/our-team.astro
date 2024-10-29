@@ -1,0 +1,17 @@
+---
+import TeamImage from "~/assets/img/team.webp";
+import { getLangFromUrl, localeParams, useTranslations } from "~/i18n/utils";
+import Hero from "../../components/Hero.astro";
+import TeamList from "../../components/team/Team.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export const getStaticPaths = localeParams;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t({ de: "Unser Team", en: "Our Team" })}>
+  <Hero title={t({ de: "Unser Team", en: "Our Team" })} img={TeamImage} />
+  <TeamList />
+</Layout>
