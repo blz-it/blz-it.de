@@ -1,27 +1,36 @@
 ---
-import type { ComponentProps } from "astro/types";
-import SocialMediaList from "./SocialMediaList.astro";
+import { getLangFromUrl, useTranslations } from "~/i18n/utils";
+import { PersonImage } from "./PersonImage";
+import type { Language } from "~/i18n";
 
-type Props = ComponentProps<typeof SocialMediaList> & {
+interface Props {
   name: string;
-  img: string;
-  info?: string;
-};
+  lastRole: Record<Language, string>;
+  img?: string;
+  skill?: Record<Language, string>;
+  hasMultipleRoles?: boolean;
+}
 
-const { name, img, info, links = [] } = Astro.props;
+const { name, img, lastRole, skill, hasMultipleRoles = false } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="space-y-6">
-  <img
-    class="mx-auto h-40 w-40 rounded-full object-cover shadow-lg xl:h-56 xl:w-56"
-    src={img}
-    alt=""
-  />
-  <div class="space-y-2">
-    <div class="space-y-1 text-lg font-medium leading-6">
-      <h3>{name}</h3>
-      {info && <p class="text-wsg-orange-500">{info}</p>}
+  <PersonImage img={img} />
+  <div class="text-md text-center font-light">
+    <h3 class="mb-1 text-lg font-medium">{name}</h3>
+    <div>
+      <p class="inline-block">
+        {t(lastRole)}
+      </p>
+      <p class="inline-block">
+        {hasMultipleRoles && t({ de: "und mehr", en: "and more" })}
+      </p>
     </div>
-    <SocialMediaList links={links} />
+    <p>
+      {skill || <br />}
+    </p>
   </div>
 </div>

@@ -1,0 +1,79 @@
+[
+  {
+    "img": "/src/assets/img/team/Benjamin Frost.webp",
+    "name": "Benjamin Frost",
+    "lastRole": { "de": "Jury", "en": "Jury" },
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Jonas Wanke.webp",
+    "name": "Jonas Wanke",
+    "lastRole": { "en": "Expert", "de": "Bundestrainer" },
+    "skill": {
+      "de": "App-Entwicklung",
+      "en": "Mobile Applications Development"
+    },
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Dr. Olaf Kappler.webp",
+    "name": "Dr. Olaf Kappler",
+    "lastRole": { "en": "Expert", "de": "Bundestrainer" },
+    "skill": {
+      "de": "Software-Entwicklung",
+      "en": "Software Applications Development"
+    }
+  },
+  {
+    "img": "/src/assets/img/team/Doreen Kappler.webp",
+    "name": "Doreen Kappler",
+    "lastRole": { "de": "Good Fairy", "en": "Good Fairy" }
+  },
+  {
+    "img": "/src/assets/img/team/Glenn Skrzypczak.webp",
+    "name": "Glenn Skrzypczak",
+    "lastRole": { "en": "Expert", "de": "Bundestrainer" },
+    "skill": {
+      "de": "Web-Entwicklung",
+      "en": "Web Technologies"
+    },
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Elisa Boose.webp",
+    "name": "Elisa Boose",
+    "lastRole": { "en": "Trainer", "de": "Trainer" }
+  },
+  {
+    "img": "/src/assets/img/team/Michael Boose.webp",
+    "name": "Michael Boose",
+    "lastRole": { "en": "Trainer", "de": "Trainer" }
+  },
+  {
+    "img": "/src/assets/img/team/Joachim Schiller.webp",
+    "name": "Joachim Schiller",
+    "lastRole": { "de": "Jury", "en": "Jury" },
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Justin Konratt.webp",
+    "name": "Justin Konratt",
+    "lastRole": { "de": "Jury", "en": "Jury" },
+    "hasMultipleRoles": true
+  },
+  {
+    "img": "/src/assets/img/team/Kai Redmann.webp",
+    "name": "Kai Redmann",
+    "lastRole": { "en": "Workshop-Manager", "de": "Workshop Manager" }
+  },
+  {
+    "img": "/src/assets/img/team/Lukas Fischer.webp",
+    "name": "Lukas Fischer",
+    "lastRole": { "en": "Workshop-Manager", "de": "Workshop Manager" }
+  },
+  {
+    "img": "/src/assets/img/team/Thomas Steinfeld.webp",
+    "name": "Thomas Steinfeld",
+    "lastRole": { "en": "Mr. Speed Programming", "de": "Mr. Speed Programming" }
+  }
+]
