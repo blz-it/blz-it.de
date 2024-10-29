@@ -1,12 +1,12 @@
 [
   {
-    "img": "/src/assets/img/team/Benjamin Frost.webp",
+    "img": "/src/assets/img/team/benjamin-frost.webp",
     "name": "Benjamin Frost",
     "lastRole": { "de": "Jury", "en": "Jury" },
     "hasMultipleRoles": true
   },
   {
-    "img": "/src/assets/img/team/Jonas Wanke.webp",
+    "img": "/src/assets/img/team/jonas-wanke.webp",
     "name": "Jonas Wanke",
     "lastRole": { "en": "Expert", "de": "Bundestrainer" },
     "skill": {
@@ -16,7 +16,7 @@
     "hasMultipleRoles": true
   },
   {
-    "img": "/src/assets/img/team/Dr. Olaf Kappler.webp",
+    "img": "/src/assets/img/team/olaf-kappler.webp",
     "name": "Dr. Olaf Kappler",
     "lastRole": { "en": "Expert", "de": "Bundestrainer" },
     "skill": {
@@ -25,12 +25,12 @@
     }
   },
   {
-    "img": "/src/assets/img/team/Doreen Kappler.webp",
+    "img": "/src/assets/img/team/doreen-kappler.webp",
     "name": "Doreen Kappler",
     "lastRole": { "de": "Good Fairy", "en": "Good Fairy" }
   },
   {
-    "img": "/src/assets/img/team/Glenn Skrzypczak.webp",
+    "img": "/src/assets/img/team/glenn-skrzypczak.webp",
     "name": "Glenn Skrzypczak",
     "lastRole": { "en": "Expert", "de": "Bundestrainer" },
     "skill": {
@@ -40,39 +40,39 @@
     "hasMultipleRoles": true
   },
   {
-    "img": "/src/assets/img/team/Elisa Boose.webp",
+    "img": "/src/assets/img/team/elisa-boose.webp",
     "name": "Elisa Boose",
     "lastRole": { "en": "Trainer", "de": "Trainer" }
   },
   {
-    "img": "/src/assets/img/team/Michael Boose.webp",
+    "img": "/src/assets/img/team/michael-boose.webp",
     "name": "Michael Boose",
     "lastRole": { "en": "Trainer", "de": "Trainer" }
   },
   {
-    "img": "/src/assets/img/team/Joachim Schiller.webp",
+    "img": "/src/assets/img/team/joachim-schiller.webp",
     "name": "Joachim Schiller",
     "lastRole": { "de": "Jury", "en": "Jury" },
     "hasMultipleRoles": true
   },
   {
-    "img": "/src/assets/img/team/Justin Konratt.webp",
+    "img": "/src/assets/img/team/justin-konratt.webp",
     "name": "Justin Konratt",
     "lastRole": { "de": "Jury", "en": "Jury" },
     "hasMultipleRoles": true
   },
   {
-    "img": "/src/assets/img/team/Kai Redmann.webp",
+    "img": "/src/assets/img/team/kai-redmann.webp",
     "name": "Kai Redmann",
     "lastRole": { "en": "Workshop-Manager", "de": "Workshop Manager" }
   },
   {
-    "img": "/src/assets/img/team/Lukas Fischer.webp",
+    "img": "/src/assets/img/team/lukas-fischer.webp",
     "name": "Lukas Fischer",
     "lastRole": { "en": "Workshop-Manager", "de": "Workshop Manager" }
   },
   {
-    "img": "/src/assets/img/team/Thomas Steinfeld.webp",
+    "img": "/src/assets/img/team/thomas-steinfeld.webp",
     "name": "Thomas Steinfeld",
     "lastRole": { "en": "Mr. Speed Programming", "de": "Mr. Speed Programming" }
   }

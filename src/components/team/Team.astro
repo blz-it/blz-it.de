@@ -1,6 +1,6 @@
 ---
-import Person from "./Person.astro";
 import team from "~/assets/data/team.json";
+import Person from "./Person.astro";
 ---
 
 <div class="bg-white py-16">
@@ -13,7 +13,7 @@ import team from "~/assets/data/team.json";
         .map((member) => (
           <Person
             name={member["name"]}
-            img={member["img"]}
+            imagePath={member["img"]}
             lastRole={member["lastRole"]}
             skill={member["skill"]}
             hasMultipleRoles={member["hasMultipleRoles"]}
