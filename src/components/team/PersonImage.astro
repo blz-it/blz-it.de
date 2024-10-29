@@ -16,7 +16,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 <Image
   class={clsx(
     "mx-auto h-40 w-40 rounded-full object-cover shadow-lg xl:h-56 xl:w-56",
-    imagePath || "p-5"
+    !!imagePath || "p-5"
   )}
   src={imagePath ? images[imagePath]() : WsgHandsImage}
   alt=""
