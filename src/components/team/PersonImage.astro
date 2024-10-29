@@ -9,14 +9,14 @@ interface Props {
 
 const { imagePath } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/**/*.{jpeg,jpg,png,gif,webp}",
+  "/src/assets/**/*.{jpeg,jpg,png,gif,webp}"
 );
 ---
 
 <Image
   class={clsx(
     "mx-auto h-40 w-40 rounded-full object-cover shadow-lg xl:h-56 xl:w-56",
-    imagePath && "p-5",
+    imagePath || "p-5"
   )}
   src={imagePath ? images[imagePath]() : WsgHandsImage}
   alt=""
