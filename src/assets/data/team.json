@@ -8,15 +8,15 @@
   {
     "img": "/src/assets/img/team/Jonas Wanke.webp",
     "name": "Jonas Wanke",
-    "lastRole": { "en": "Expert", "de": "Experte" },
-    "skill": "Skill 08",
+    "lastRole": { "en": "Expert", "de": "Bundestrainer" },
+    "skill": "Mobile Applications Development",
     "hasMultipleRoles": true
   },
   {
     "img": "/src/assets/img/team/Dr. Olaf Kappler.webp",
     "name": "Dr. Olaf Kappler",
-    "lastRole": { "en": "Expert", "de": "Experte" },
-    "skill": "Skill 09"
+    "lastRole": { "en": "Expert", "de": "Bundestrainer" },
+    "skill": "IT Software Solutions for Business"
   },
   {
     "img": "/src/assets/img/team/Doreen Kappler.webp",
@@ -26,8 +26,8 @@
   {
     "img": "/src/assets/img/team/Glenn Skrzypczak.webp",
     "name": "Glenn Skrzypczak",
-    "lastRole": { "en": "Expert", "de": "Experte" },
-    "skill": "Skill 17",
+    "lastRole": { "en": "Expert", "de": "Bundestrainer" },
+    "skill": "Web Technologies",
     "hasMultipleRoles": true
   },
   {
@@ -55,12 +55,12 @@
   {
     "img": "/src/assets/img/team/Kai Redmann.webp",
     "name": "Kai Redmann",
-    "lastRole": { "en": "Workshop Manager", "de": "Workshop Manager" }
+    "lastRole": { "en": "Workshop-Manager", "de": "Workshop Manager" }
   },
   {
     "img": "/src/assets/img/team/Lukas Fischer.webp",
     "name": "Lukas Fischer",
-    "lastRole": { "en": "Workshop Manager", "de": "Workshop Manager" }
+    "lastRole": { "en": "Workshop-Manager", "de": "Workshop Manager" }
   },
   {
     "img": "/src/assets/img/team/Thomas Steinfeld.webp",

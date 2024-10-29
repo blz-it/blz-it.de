@@ -1,10 +1,11 @@
 ---
 import { getLangFromUrl, useTranslations } from "~/i18n/utils";
 import { PersonImage } from "./PersonImage";
+import type { Language } from "~/i18n";
 
 interface Props {
   name: string;
-  lastRole: { de: string; en: string };
+  lastRole: Record<Language, string>;
   img?: string;
   skill?: string;
   hasMultipleRoles?: boolean;
