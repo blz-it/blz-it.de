@@ -24,7 +24,7 @@ const skills = [
   {
     name: t({
       de: "Web-Entwicklung",
-      en: "Web Technologies",
+      en: "Web Technologies"
     }),
     href: getRelativeLocaleUrl(lang, "web-technologies"),
   },
@@ -46,26 +46,19 @@ const skills = [
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
           <a
-            href={getRelativeLocaleUrl(lang, "/")}
+            href={getRelativeLocaleUrl(lang)}
             class="text-base font-medium text-white hover:text-gray-100"
           >
             {t({ de: "Startseite", en: "Home" })}
           </a>
         </div>
+
         <div class="ml-10 hidden lg:block">
           <SkillsDropdown
             client:load
             title={t({ de: "Unsere Disziplinen", en: "Our Skills" })}
             skills={skills}
           />
-        </div>
-        <div class="ml-10 hidden space-x-8 lg:block">
-          <a
-            href={getRelativeLocaleUrl(lang, "/our-team")}
-            class="text-base font-medium text-white hover:text-gray-100"
-          >
-            {t({ de: "Unser Team", en: "Our Team" })}
-          </a>
         </div>
       </div>
       <LanguageDropdown
