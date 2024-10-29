@@ -1,24 +1,30 @@
 ---
-import { getLangFromUrl, useTranslations } from "~/i18n/utils";
-import { PersonImage } from "./PersonImage";
 import type { Language } from "~/i18n";
+import { getLangFromUrl, useTranslations } from "~/i18n/utils";
+import PersonImage from "./PersonImage.astro";
 
 interface Props {
   name: string;
   lastRole: Record<Language, string>;
-  img?: string;
+  imagePath?: string;
   skill?: Record<Language, string>;
   hasMultipleRoles?: boolean;
 }
 
-const { name, img, lastRole, skill, hasMultipleRoles = false } = Astro.props;
+const {
+  name,
+  imagePath,
+  lastRole,
+  skill,
+  hasMultipleRoles = false,
+} = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <div class="space-y-6">
-  <PersonImage img={img} />
+  <PersonImage imagePath={imagePath} />
   <div class="text-md text-center font-light">
     <h3 class="mb-1 text-lg font-medium">{name}</h3>
     <div>
