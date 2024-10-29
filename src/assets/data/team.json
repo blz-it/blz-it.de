@@ -9,14 +9,20 @@
     "img": "/src/assets/img/team/Jonas Wanke.webp",
     "name": "Jonas Wanke",
     "lastRole": { "en": "Expert", "de": "Bundestrainer" },
-    "skill": "Mobile Applications Development",
+    "skill": {
+      "de": "App-Entwicklung",
+      "en": "Mobile Applications Development"
+    },
     "hasMultipleRoles": true
   },
   {
     "img": "/src/assets/img/team/Dr. Olaf Kappler.webp",
     "name": "Dr. Olaf Kappler",
     "lastRole": { "en": "Expert", "de": "Bundestrainer" },
-    "skill": "IT Software Solutions for Business"
+    "skill": {
+      "de": "Software-Entwicklung",
+      "en": "IT Software Solutions for Business"
+    }
   },
   {
     "img": "/src/assets/img/team/Doreen Kappler.webp",
@@ -27,7 +33,10 @@
     "img": "/src/assets/img/team/Glenn Skrzypczak.webp",
     "name": "Glenn Skrzypczak",
     "lastRole": { "en": "Expert", "de": "Bundestrainer" },
-    "skill": "Web Technologies",
+    "skill": {
+      "de": "Web-Entwicklung",
+      "en": "Web Technologies"
+    },
     "hasMultipleRoles": true
   },
   {
