@@ -1,148 +1,148 @@
 {
   "de": {
-    "skill08": {
-      "einsteinCup2022": {
-        "date": "30.&nbsp;Mai&thinsp;&ndash;&thinsp;02.&nbsp;Juni 2022",
-        "title": "Albert-Einstein-Cup",
-        "text": "Die Gewinner beim Albert-Einstein-Cup in Neubrandenburg sind: Joachim Schiller (Deutschland), Justin Konratt (Deutschland) und Kantubhukta Lavanya Sai Kumar (Indien). Justin Konratt gewinnt außerdem die Zusatzdisziplin Speed-Programming."
+    "skill08": [
+      {
+        "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
+        "title": "WorldSkills Lyon 2024",
+        "text": "Daniel Kalisch gewinnt die Bronzemedaille für Deutschland."
       },
-      "wsc2022": {
-        "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Oktober 2022",
-        "title": "WorldSkills Competition 2022 Special Edition",
-        "text": "Justin Konratt holt die Bronzemedaille für Deutschland."
-      },
-      "chancellery2022": {
-        "date": "08.&nbsp;Dezember 2022",
-        "title": "Empfang im Bundeskanzleramt",
-        "text": "Justin Konratt bekommt von Bundeskanzler Olaf Scholz die &ldquo;Best of Nation&rdquo;-Medaille verliehen."
-      },
-      "nationalChampionship2023": {
-        "date": "25&nbsp;Mai&thinsp;&ndash;&thinsp;25&nbsp;Mai 2023",
-        "title": "Deutsche Meisterschaft",
-        "text": "Beide Disziplinen der Deutschen Meisterschaft wurden von Daniel Kalisch, Simon Brebeck and Nils Jakubzick gewonnen. Florian Darsow ist bester im Speed-Programming."
-      },
-      "einsteinCup2024": {
+      {
         "date": "27&nbsp;Mai&thinsp;&ndash;&thinsp;30&nbsp;Mai 2024",
         "title": "Albert-Einstein-Cup",
         "text": "Jongwon Kim (Südkorea), Daniel Kalisch (Deutschland) und Wei-Hung Lai (Chinesisch Taipeh) sind die Gewinner des Albert-Einstein-Cups. Stefan Kornel (Ungarn) gewinnt die zusätzliche Disziplin Speed-Programming. Der &ldquo;Hungarian Speed Test&ldquo; machte seinen ersten Auftritt und wurde von Nils Jakubzick (Deutschland) gewonnen."
       },
-      "wsc2024": {
-        "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-        "title": "WorldSkills Lyon 2024",
-        "text": "Daniel Kalisch gewinnt die Bronzemedaille für Deutschland."
-      }
-    },
-    "skill09": {
-      "einsteinCup2022": {
-        "date": "30&nbsp;Mai&thinsp;&ndash;&thinsp;02&nbsp;Juni 2022",
-        "title": "Albert-Einstein-Cup",
-        "text": "Die Gewinner des Albert-Einstein-Cups in Neubrandenburg sind: Thomas Gassmann (Schweiz), Glenn Skrzypczak (Deutschland) and Bence Lakos (Ungarn). Justin Konratt gewinnt die zusätzliche Disziplin Speed-Programming."
-      },
-      "wsc2022": {
-        "date": "13&nbsp;&thinsp;&ndash;&thinsp;16&nbsp;Oktober 2022",
-        "title": "WorldSkills Competition 2022 Special Edition",
-        "text": "Glenn Skrzypczak wird Vize-Weltmeister im Speed-Programming."
-      },
-      "euroskills2023": {
-        "date": "5&nbsp;September&thinsp;&ndash;&thinsp;9&nbsp;September 2023",
-        "title": "EuroSkills Gdańsk 2023",
-        "text": "Glenn Skrzypczak erreicht bei den EuroSkills Gold und gewinnt außerdem das Speed-Programming."
-      },
-      "nationalChampionship2023": {
-        "date": "25&nbsp;Mai&thinsp;&ndash;&thinsp;25&nbsp;Mai 2023",
+      {
+        "date": "22&nbsp;Mai&thinsp;&ndash;&thinsp;25&nbsp;Mai 2023",
         "title": "Deutsche Meisterschaft",
         "text": "Beide Disziplinen der Deutschen Meisterschaft wurden von Daniel Kalisch, Simon Brebeck and Nils Jakubzick gewonnen. Florian Darsow ist bester im Speed-Programming."
       },
-      "einsteinCup2024": {
+      {
+        "date": "08.&nbsp;Dezember 2022",
+        "title": "Empfang im Bundeskanzleramt",
+        "text": "Justin Konratt bekommt von Bundeskanzler Olaf Scholz die &ldquo;Best of Nation&rdquo;-Medaille verliehen."
+      },
+      {
+        "date": "13.&thinsp;&ndash;&thinsp;16.&nbsp;Oktober 2022",
+        "title": "WorldSkills Competition 2022 Special Edition",
+        "text": "Justin Konratt holt die Bronzemedaille für Deutschland."
+      },
+      {
+        "date": "30.&nbsp;Mai&thinsp;&ndash;&thinsp;02.&nbsp;Juni 2022",
+        "title": "Albert-Einstein-Cup",
+        "text": "Die Gewinner beim Albert-Einstein-Cup in Neubrandenburg sind: Joachim Schiller (Deutschland), Justin Konratt (Deutschland) und Kantubhukta Lavanya Sai Kumar (Indien). Justin Konratt gewinnt außerdem die Zusatzdisziplin Speed-Programming."
+      }
+    ],
+    "skill09": [
+      {
+        "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
+        "title": "WorldSkills Lyon 2024",
+        "text": "Simon Brebeck gewinnt eine Exzellenzmedaille und wird zweiter im Speed Programming."
+      },
+      {
         "date": "27&nbsp;Mai&thinsp;&ndash;&thinsp;30&nbsp;Mai 2024",
         "title": "Albert-Einstein-Cup",
         "text": "Simon Brebeck (Deutschland), Lukas Hertkorn (Deutschland) und Besart Memeti (Schweiz) sind die Gewinner des Albert-Einstein-Cups. Kornél Stefán (Ungarn) gewinnt die zusätzliche Disziplin Speed-Programming. Der &ldquo;Hungarian Speed Test&ldquo; wurde das erste Mal durchgeführt und von Nils Jakubzick (Deutschland) gewonnen."
       },
-      "wsc2024": {
-        "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-        "title": "WorldSkills Lyon 2024",
-        "text": "Simon Brebeck gewinnt eine Exzellenzmedaille und wird zweiter im Speed Programming."
+      {
+        "date": "5&nbsp;September&thinsp;&ndash;&thinsp;9&nbsp;September 2023",
+        "title": "EuroSkills Gdańsk 2023",
+        "text": "Glenn Skrzypczak erreicht bei den EuroSkills Gold und gewinnt außerdem das Speed-Programming."
+      },
+      {
+        "date": "25&nbsp;Mai&thinsp;&ndash;&thinsp;25&nbsp;Mai 2023",
+        "title": "Deutsche Meisterschaft",
+        "text": "Beide Disziplinen der Deutschen Meisterschaft wurden von Daniel Kalisch, Simon Brebeck and Nils Jakubzick gewonnen. Florian Darsow ist bester im Speed-Programming."
+      },
+      {
+        "date": "13&nbsp;&thinsp;&ndash;&thinsp;16&nbsp;Oktober 2022",
+        "title": "WorldSkills Competition 2022 Special Edition",
+        "text": "Glenn Skrzypczak wird Vize-Weltmeister im Speed-Programming."
+      },
+      {
+        "date": "30&nbsp;Mai&thinsp;&ndash;&thinsp;02&nbsp;Juni 2022",
+        "title": "Albert-Einstein-Cup",
+        "text": "Die Gewinner des Albert-Einstein-Cups in Neubrandenburg sind: Thomas Gassmann (Schweiz), Glenn Skrzypczak (Deutschland) and Bence Lakos (Ungarn). Justin Konratt gewinnt die zusätzliche Disziplin Speed-Programming."
       }
-    },
-    "skill17": {
-      "todo": {
-        "date": "2024",
-        "title": "Folgt bald",
-        "text": ""
+    ],
+    "skill17": [
+      {
+        "date": "30&nbsp;Mai 2024",
+        "title": "Bundestrainer",
+        "text": "Glenn Skrzypczak wird zum Bundestrainer für Web-Technologien ernannt."
       }
-    }
+    ]
   },
   "en": {
-    "skill08": {
-      "einsteinCup2022": {
-        "date": "30&nbsp;May&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
-        "title": "Albert Einstein Cup",
-        "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Joachim Schiller (Germany), Justin Konratt (Germany), and Kantubhukta Lavanya Sai Kumar (India). Justin Konratt also wins the additional discipline of Speed Programming."
+    "skill08": [
+      {
+        "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
+        "title": "WorldSkills Competition 2024 Lyon",
+        "text": "Daniel Kalisch wins a bronze medal for Germany."
       },
-      "wsc2022": {
-        "date": "13&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
-        "title": "WorldSkills Competition 2022 Special Edition",
-        "text": "Justin Konratt wins the bronze medal for Germany."
-      },
-      "chancellery2022": {
-        "date": "08&nbsp;December 2022",
-        "title": "Federal Chancellery",
-        "text": "Justin Konratt receives the &ldquo;Best of Nation&rdquo; medal from Chancellor Olaf Scholz."
-      },
-      "nationalChampionship2023": {
-        "date": "25&thinsp;&ndash;&thinsp;25&nbsp;May 2023",
-        "title": "German National Championship",
-        "text": "Both skills of the German National Championship are won by Daniel Kalisch, Simon Brebeck, and Nils Jakubzick. Speed Programming is won by Florian Darsow."
-      },
-      "einsteinCup2024": {
+      {
         "date": "27&thinsp;&ndash;&thinsp;30&nbsp;May 2024",
         "title": "Albert Einstein Cup",
         "text": "Jongwon Kim (South Korea), Daniel Kalisch (Germany), and Wei-Hung Lai (Chinese Taipei) are the winners of the Albert Einstein Cup. Stefan Kornel (Hungary) wins the additional Speed Programming discipline. The &ldquo;Hungarian Speed Test&ldquo; made its first appearance and was won by Nils Jakubzick (Germany)."
       },
-      "wsc2024": {
-        "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-        "title": "WorldSkills Competition 2024 Lyon",
-        "text": "Daniel Kalisch wins a bronze medal for Germany."
-      }
-    },
-    "skill09": {
-      "einsteinCup2022": {
-        "date": "30&nbsp;May&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
-        "title": "Albert Einstein Cup",
-        "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Thomas Gassmann (Switzerland), Glenn Skryzpczak (Germany), and Bence Lakos (Hungary). Justin Konratt wins the additional discipline of Speed Programming."
-      },
-      "wsc2022": {
-        "date": "13&nbsp;&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
-        "title": "WorldSkills Competition 2022 Special Edition",
-        "text": "Glenn Skrzypczak becomes the vice world-champion in the additional Speed Programming discipline."
-      },
-      "nationalChampionship2023": {
-        "date": "25&thinsp;&ndash;&thinsp;25&nbsp;May 2023",
+      {
+        "date": "22&thinsp;&ndash;&thinsp;25&nbsp;May 2023",
         "title": "German National Championship",
         "text": "Both skills of the German National Championship are won by Daniel Kalisch, Simon Brebeck, and Nils Jakubzick. Speed Programming is won by Florian Darsow."
       },
-      "euroskills2023": {
-        "date": "5&thinsp;&ndash;&thinsp;9&nbsp;September 2023",
-        "title": "EuroSkills Gdańsk 2023",
-        "text": "Glenn Skrzypczak achieves a gold medal at the EuroSkills and additionally wins the Speed Programming."
+      {
+        "date": "08&nbsp;December 2022",
+        "title": "Federal Chancellery",
+        "text": "Justin Konratt receives the &ldquo;Best of Nation&rdquo; medal from Chancellor Olaf Scholz."
       },
-      "einsteinCup2024": {
+      {
+        "date": "13&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
+        "title": "WorldSkills Competition 2022 Special Edition",
+        "text": "Justin Konratt wins the bronze medal for Germany."
+      },
+      {
+        "date": "30&nbsp;May&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
+        "title": "Albert Einstein Cup",
+        "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Joachim Schiller (Germany), Justin Konratt (Germany), and Kantubhukta Lavanya Sai Kumar (India). Justin Konratt also wins the additional discipline of Speed Programming."
+      }
+    ],
+    "skill09": [
+      {
+        "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
+        "title": "WorldSkills Lyon 2024",
+        "text": "Simon Brebeck wins a Medallion for Excellence and places second in Speedprogramming."
+      },
+      {
         "date": "27&thinsp;&ndash;&thinsp;30&nbsp;May 2024",
         "title": "Albert Einstein Cup",
         "text": "Simon Brebeck (Germany), Lukas Hertkorn (Germany) and Besart Memeti (Switzerland), are the winners of the Albert Einstein Cup. Stefan Kornel (Hungary) wins the additional Speed Programming discipline. The &ldquo;Hungarian Speed Test&ldquo; made its first appearance and was won by Nils Jakubzick (Germany)."
       },
-      "wsc2024": {
-        "date": "10&thinsp;&ndash;&thinsp;15&nbsp;September 2024",
-        "title": "WorldSkills Lyon 2024",
-        "text": "Simon Brebeck wins a Medallion for Excellence and places second in Speedprogramming."
+      {
+        "date": "5&thinsp;&ndash;&thinsp;9&nbsp;September 2023",
+        "title": "EuroSkills Gdańsk 2023",
+        "text": "Glenn Skrzypczak achieves a gold medal at the EuroSkills and additionally wins the Speed Programming."
+      },
+      {
+        "date": "25&thinsp;&ndash;&thinsp;25&nbsp;May 2023",
+        "title": "German National Championship",
+        "text": "Both skills of the German National Championship are won by Daniel Kalisch, Simon Brebeck, and Nils Jakubzick. Speed Programming is won by Florian Darsow."
+      },
+      {
+        "date": "13&nbsp;&thinsp;&ndash;&thinsp;16&nbsp;October 2022",
+        "title": "WorldSkills Competition 2022 Special Edition",
+        "text": "Glenn Skrzypczak becomes the vice world-champion in the additional Speed Programming discipline."
+      },
+      {
+        "date": "30&nbsp;May&thinsp;&ndash;&thinsp;02&nbsp;June 2022",
+        "title": "Albert Einstein Cup",
+        "text": "The winners of the Albert Einstein Cup in Neubrandenburg are: Thomas Gassmann (Switzerland), Glenn Skryzpczak (Germany), and Bence Lakos (Hungary). Justin Konratt wins the additional discipline of Speed Programming."
       }
-    },
-    "skill17": {
-      "todo": {
-        "date": "2024",
-        "title": "Coming soon",
-        "text": ""
+    ],
+    "skill17": [
+      {
+        "date": "30&nbsp;May 2024",
+        "title": "Expert",
+        "text": "Glenn Skrzypczak becomes the German expert for Web Technologies."
       }
-    }
+    ]
   }
 }
