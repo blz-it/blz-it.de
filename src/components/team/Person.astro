@@ -36,7 +36,7 @@ const t = useTranslations(lang);
       </p>
     </div>
     <p>
-      {skill || <br />}
+      {skill ? t(skill) : <br />}
     </p>
   </div>
 </div>
