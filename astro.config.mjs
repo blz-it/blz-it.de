@@ -15,6 +15,9 @@ export default defineConfig({
   site: "https://blz-it.de",
   redirects: {
     "/de/skill08": "/mobile-applications-development",
-    "/de/skill09": "/it-software-solutions-for-business",
+    "/de/skill09": "/software-applications-development",
+    "/it-software-solutions-for-business": "/software-applications-development",
+    "/en/it-software-solutions-for-business":
+      "/en/software-applications-development",
   },
 });
