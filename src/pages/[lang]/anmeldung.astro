@@ -1,10 +1,13 @@
 ---
 import { InformationCircleIcon } from "@heroicons/react/20/solid";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import RegistrationForm from "~/components/forms/registration-form";
+import Link from "~/components/Link.astro";
 import NoTranslate from "~/components/NoTranslate.astro";
-import { localeParams } from "~/i18n";
+import { defaultLang, localeParams, type Language } from "~/i18n";
 import Layout from "~/layouts/Layout.astro";
 
+const lang = (Astro.currentLocale || defaultLang) as Language;
 export const getStaticPaths = localeParams;
 ---
 
@@ -16,13 +19,35 @@ export const getStaticPaths = localeParams;
         Anmeldung zum Online-Vorausscheid
       </h2>
       <p class="mt-8">
-        Der Online-Vorausscheid wird für alle drei Disziplinen gemeinsam
-        durchgeführt. Je nachdem, für welche Disziplin oder welche Disziplinen
-        du dich interessierst, bekommst du unterschiedliche Aufgaben.<br /><br
-        />Bei den Deutschen Meisterschaften im Juni tritt jede Person dann nur
-        noch in einer Disziplin an. Genauere Informationen dazu erhältst du
-        während des Online-Vorausscheids.
+        Der Online-Vorausscheid wird vom 28. Dezember 2024 bis 28. Februar 2025
+        für alle drei Disziplinen gemeinsam durchgeführt. Je nachdem, für welche
+        Disziplin oder welche Disziplinen du dich interessierst, bearbeitest du
+        unterschiedliche Aufgaben.<br /><br />Bei den Deutschen Meisterschaften
+        vom 2. bis 5. Juni 2025 tritt jede Person dann nur noch in einer
+        Disziplin an. Mehr Informationen zu den Disziplinen und den weiteren
+        Runden des Wettbewerbs gibt es hier:
       </p>
+      <ul class="mt-4 list-disc pl-8">
+        <li>
+          <Link
+            href={getRelativeLocaleUrl(lang, "mobile-applications-development")}
+            >App-Entwicklung</Link
+          >
+        </li>
+        <li>
+          <Link
+            href={getRelativeLocaleUrl(
+              lang,
+              "software-applications-development"
+            )}>Software-Entwicklung</Link
+          >
+        </li>
+        <li>
+          <Link href={getRelativeLocaleUrl(lang, "web-technologies")}
+            >Web-Entwicklung</Link
+          >
+        </li>
+      </ul>
       <div class="my-8 rounded-md bg-blue-50 p-4">
         <div class="flex items-center">
           <div class="flex-shrink-0">

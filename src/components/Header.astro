@@ -37,7 +37,7 @@ const skills = [
       class="flex w-full items-center justify-between border-b border-white py-6 lg:border-none"
     >
       <div class="flex items-center">
-        <a href={getRelativeLocaleUrl(lang, "/")}>
+        <a href={getRelativeLocaleUrl(lang)}>
           <Image
             src={WsgHandsWhiteImage}
             alt="WorldSkills Germany"
@@ -46,10 +46,18 @@ const skills = [
         </a>
         <div class="ml-10 hidden space-x-8 lg:block">
           <a
-            href={getRelativeLocaleUrl(lang, "/")}
+            href={getRelativeLocaleUrl(lang)}
             class="text-base font-medium text-white hover:text-gray-100"
           >
             {t({ de: "Startseite", en: "Home" })}
+          </a>
+        </div>
+        <div class="ml-10 hidden space-x-8 lg:block">
+          <a
+            href={getRelativeLocaleUrl(lang, "anmeldung")}
+            class="text-base font-medium text-white hover:text-gray-100"
+          >
+            {t({ de: "Anmeldung", en: "Registration" })}
           </a>
         </div>
         <div class="ml-10 hidden lg:block">
@@ -81,6 +89,14 @@ const skills = [
           class="text-base font-medium text-white hover:text-gray-100"
         >
           {t({ de: "Startseite", en: "Home" })}
+        </a>
+      </div>
+      <div class="my-auto ml-10 space-x-8 lg:hidden">
+        <a
+          href={getRelativeLocaleUrl(lang, "anmeldung")}
+          class="text-base font-medium text-white hover:text-gray-100"
+        >
+          {t({ de: "Anmeldung", en: "Registration" })}
         </a>
       </div>
       <SkillsDropdown
