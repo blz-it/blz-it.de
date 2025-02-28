@@ -1,5 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { isRegistrationEnabled } from "~/config";
 import { getLangFromUrl, useTranslations } from "~/i18n";
 import Link from "../Link.astro";
 import Headline from "../typography/Headline.astro";
@@ -33,17 +34,19 @@ const t = useTranslations(lang);
         }
       </Headline>
       <p set:html={requirements} />
-      <p class="mt-4">
-        {
-          t({
-            de: "Du bist interessiert?",
-            en: "You are interested?",
-          })
-        }
-        <Link href={getRelativeLocaleUrl(lang, "anmeldung")}>
-          {t({ de: "Jetzt anmelden!", en: "Register now!" })}
-        </Link>
-      </p>
+      {
+        isRegistrationEnabled && (
+          <p class="mt-4">
+            {t({
+              de: "Du bist interessiert?",
+              en: "You are interested?",
+            })}
+            <Link href={getRelativeLocaleUrl(lang, "anmeldung")}>
+              {t({ de: "Jetzt anmelden!", en: "Register now!" })}
+            </Link>
+          </p>
+        )
+      }
     </div>
     <div class="mt-20 flex-1 xl:mt-0 xl:pl-12">
       <iframe

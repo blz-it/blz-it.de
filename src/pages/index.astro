@@ -6,6 +6,7 @@ import Link from "~/components/Link.astro";
 import HeadedSection from "~/components/sections/HeadedSection.astro";
 import WavedSection from "~/components/sections/WavedSection.astro";
 import SkillCard from "~/components/skill/SkillCard.astro";
+import { isRegistrationEnabled } from "~/config";
 import { defaultLang, type Language } from "~/i18n";
 import Layout from "~/layouts/Layout.astro";
 
@@ -83,14 +84,18 @@ const lang = (Astro.currentLocale || defaultLang) as Language;
       />
     </div>
   </WavedSection>
-  <WavedSection type="bottom">
-    <Cta
-      title="Werde Teil unseres Nationalteams"
-      subtitle="Du wolltest schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen?"
-      action={{
-        label: "Melde dich jetzt an",
-        url: getRelativeLocaleUrl(lang, "anmeldung"),
-      }}
-    />
-  </WavedSection>
+  {
+    isRegistrationEnabled && (
+      <WavedSection type="bottom">
+        <Cta
+          title="Werde Teil unseres Nationalteams"
+          subtitle="Du wolltest schon immer an einem Wettbewerb im Bereich der Softwareentwicklung teilnehmen und dich mit den Besten der Besten messen?"
+          action={{
+            label: "Melde dich jetzt an",
+            url: getRelativeLocaleUrl(lang, "anmeldung"),
+          }}
+        />
+      </WavedSection>
+    )
+  }
 </Layout>
