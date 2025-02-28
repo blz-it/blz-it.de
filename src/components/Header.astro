@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import WsgHandsWhiteImage from "~/assets/img/wsg-hands-white.svg";
+import { isRegistrationEnabled } from "~/config";
 import { getLangFromUrl, getLocalePaths, useTranslations } from "~/i18n/utils";
 import { LanguageDropdown } from "./dropdowns/LanguageDropdown";
 import { SkillsDropdown } from "./dropdowns/SkillsDropdown";
@@ -52,14 +53,18 @@ const skills = [
             {t({ de: "Startseite", en: "Home" })}
           </a>
         </div>
-        <div class="ml-10 hidden space-x-8 lg:block">
-          <a
-            href={getRelativeLocaleUrl(lang, "anmeldung")}
-            class="text-base font-medium text-white hover:text-gray-100"
-          >
-            {t({ de: "Anmeldung", en: "Registration" })}
-          </a>
-        </div>
+        {
+          isRegistrationEnabled && (
+            <div class="ml-10 hidden space-x-8 lg:block">
+              <a
+                href={getRelativeLocaleUrl(lang, "anmeldung")}
+                class="text-base font-medium text-white hover:text-gray-100"
+              >
+                {t({ de: "Anmeldung", en: "Registration" })}
+              </a>
+            </div>
+          )
+        }
         <div class="ml-10 hidden lg:block">
           <SkillsDropdown
             client:load
@@ -91,14 +96,18 @@ const skills = [
           {t({ de: "Startseite", en: "Home" })}
         </a>
       </div>
-      <div class="my-auto ml-10 space-x-8 lg:hidden">
-        <a
-          href={getRelativeLocaleUrl(lang, "anmeldung")}
-          class="text-base font-medium text-white hover:text-gray-100"
-        >
-          {t({ de: "Anmeldung", en: "Registration" })}
-        </a>
-      </div>
+      {
+        isRegistrationEnabled && (
+          <div class="my-auto ml-10 space-x-8 lg:hidden">
+            <a
+              href={getRelativeLocaleUrl(lang, "anmeldung")}
+              class="text-base font-medium text-white hover:text-gray-100"
+            >
+              {t({ de: "Anmeldung", en: "Registration" })}
+            </a>
+          </div>
+        )
+      }
       <SkillsDropdown
         client:load
         title={t({ de: "Unsere Disziplinen", en: "Our Skills" })}

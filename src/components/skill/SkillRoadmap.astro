@@ -5,6 +5,7 @@ import GermanChampionshipImage from "~/assets/img/german-championship.webp";
 import OnlineCompetitionImage from "~/assets/img/online-competition.webp";
 import RegistrationImage from "~/assets/img/registration.webp";
 import WsgHandsImage from "~/assets/img/wsg-hands.svg";
+import { isRegistrationEnabled } from "~/config";
 import { getLangFromUrl, useTranslations } from "~/i18n";
 import EventCard from "../EventCard.astro";
 import Link from "../Link.astro";
@@ -43,7 +44,9 @@ const t = useTranslations(lang);
         de: "1. November 2024 – 21. Februar 2025",
         en: "1 November 2024 – 21 February 2025",
       })}
-      link={getRelativeLocaleUrl(lang, "anmeldung")}
+      link={isRegistrationEnabled
+        ? getRelativeLocaleUrl(lang, "anmeldung")
+        : undefined}
       className="xl:mt-0"
       hoverTextColor="white"
     />
@@ -54,7 +57,9 @@ const t = useTranslations(lang);
         de: "28. Dezember 2024 – 28. Februar 2025",
         en: "28 December 2024 – 28 February 2025",
       })}
-      link={getRelativeLocaleUrl(lang, "anmeldung")}
+      link={isRegistrationEnabled
+        ? getRelativeLocaleUrl(lang, "anmeldung")
+        : undefined}
       className="md:float-right md:mt-[-4rem]"
       hoverTextColor="white"
     />
@@ -86,9 +91,15 @@ const t = useTranslations(lang);
 
   <ol class="list-decimal space-y-4 text-left sm:pt-8 md:pt-16">
     <li>
-      <Link href={getRelativeLocaleUrl(lang, "anmeldung")}>
-        {t({ de: "Du meldest dich an", en: "You register yourself" })}
-      </Link>
+      {
+        isRegistrationEnabled ? (
+          <Link href={getRelativeLocaleUrl(lang, "anmeldung")}>
+            {t({ de: "Du meldest dich an", en: "You register yourself" })}
+          </Link>
+        ) : (
+          t({ de: "Du meldest dich an", en: "You register yourself" })
+        )
+      }
       {
         t({
           de: "und erhältst vor dem Start des Online-Vorausscheides deine Zugangsdaten.",
